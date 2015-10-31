@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/RAM_ram_bank.v"
+verilog work "RAM_addresser_and_data.v"
