@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Oct 19 19:53:55 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "test_rx" LOCATE = SITE "C4" LEVEL 1;
+COMP "test_tx" LOCATE = SITE "D4" LEVEL 1;
+COMP "clock" LOCATE = SITE "E3" LEVEL 1;
+SCHEMATIC END;
+

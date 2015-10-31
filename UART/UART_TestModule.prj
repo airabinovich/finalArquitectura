@@ -1,0 +1,6 @@
+verilog work "FFD.v"
+verilog work "tx.v"
+verilog work "rx.v"
+verilog work "fifo_interface.v"
+verilog work "baud_rate_generator.v"
+verilog work "TestModule.v"

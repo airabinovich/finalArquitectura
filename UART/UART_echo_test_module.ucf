@@ -1,0 +1,7 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "echo_test_rx" LOC = N17;
+NET "echo_test_tx" LOC = N18;
+NET "clock" LOC = V10;
+NET "echo_test_reset" LOC = B8;

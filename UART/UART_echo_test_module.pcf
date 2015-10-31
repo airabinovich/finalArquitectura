@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Oct 30 17:41:59 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "echo_test_reset" LOCATE = SITE "B8" LEVEL 1;
+COMP "clock" LOCATE = SITE "V10" LEVEL 1;
+COMP "echo_test_rx" LOCATE = SITE "N17" LEVEL 1;
+COMP "echo_test_tx" LOCATE = SITE "N18" LEVEL 1;
+SCHEMATIC END;
+

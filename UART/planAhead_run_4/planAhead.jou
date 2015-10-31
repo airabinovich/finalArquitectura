@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Oct 30 16:45:31 2015
+# Process ID: 4896
+# Log file: C:/Users/Ariel/Xilinx/Workspace/UART/planAhead_run_4/planAhead.log
+# Journal file: C:/Users/Ariel/Xilinx/Workspace/UART/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/Ariel/Xilinx/Workspace/UART/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin N18 [get_ports echo_test_rx]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports echo_test_tx]
+endgroup
+startgroup
+set_property package_pin A2 [get_ports echo_test_tx]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports echo_test_rx]
+endgroup
+startgroup
+set_property package_pin N18 [get_ports echo_test_tx]
+endgroup
+startgroup
+set_property package_pin V10 [get_ports clock]
+endgroup
+startgroup
+set_property package_pin B8 [get_ports echo_test_reset]
+endgroup
+save_constraints

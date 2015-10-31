@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Port Id="clock" Dir="IN"/>
+		<Port Id="echo_test_rx" Dir="IN"/>
+		<Port Id="echo_test_reset" Dir="IN"/>
+		<Port Id="echo_test_tx" Dir="OUT"/>
+	</Ifc>
+</Interface>
+
