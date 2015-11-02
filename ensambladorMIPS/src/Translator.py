@@ -74,7 +74,6 @@ class Translator(object):
         Constructor
         TODO define fields
         '''
-        self.field = 0;
     
     def getFieldsFromInstruction(self,instruction):
         """
@@ -101,7 +100,7 @@ class Translator(object):
         code = [l for l in code if l]    #removes empty lines and only comment lines
         return code
         
-    def translate(self, code):
+    def getHexFromAsm(self, code):
         '''
         @param code: text containing MIPS IV assembler 
         @return: a translation to hex codified lines in list of strings format
@@ -111,15 +110,11 @@ class Translator(object):
         decodedInstructions = [self.getFieldsFromInstruction(instruction) for instruction in codeLines]
         resultCodes = list()
         for instruction in decodedInstructions:
-            print instruction
             instructionData = ASM2HEX[instruction["instruction_name"]]
             instructionParams = instruction["params"]   # list of tuples of instruction parameters
             argumentValues = [(int(instructionParams[i][1]) << instructionData[i+1][1]) for i in range(len(instructionParams))]
-            print [hex(i) for i in argumentValues]
             argumentsCode = reduce(lambda x, y: x | y,argumentValues)
-            print hex(argumentsCode)
-            print hex(instructionData[0][1])
             instructionCode = int(instructionData[0][1]) | argumentsCode
-            resultCodes += [hex(instructionCode).strip("L")]
+            resultCodes += [hex(instructionCode).strip("L")[2:]]
             
         return resultCodes
