@@ -79,18 +79,16 @@ class Translator(object):
     def getFieldsFromInstruction(self,instruction):
         """
         @param the full instruction
-        @return: list of instruction fields to search in the ASM2HEX dictionary
+        @return: list of tuples containing instruction fields and corresponding values
         """
         if not isinstance(instruction, str): raise TypeError
         (instrCode, instrParams) = split(instruction, " ", 1)
         instrCode = instrCode.upper()
         fieldNames = [fn[0] for fn in ASM2HEX[instrCode]][1:]
-        fieldValuesAux = list()
-        for instrParam in instrParams:
-            fieldValuesAux += [split(params.strip().strip(")"),"(") for params in split(instrParam, ",")]
+        fieldValuesAux = [split(instrParam.strip().strip(")"),"(") for instrParam in split(instrParams,",")]
         fieldValues = list(chain.from_iterable(fieldValuesAux))
         fieldValues = [fv for fv in fieldValues if fv]
-        return [(fieldNames[i], fieldValues[i]) for i in range(len(fieldNames))]
+        return {"instruction_name":instrCode, "params":[(fieldNames[i], fieldValues[i]) for i in range(len(fieldNames))]}
         
         
     def getInstructionsListFromText(self, text):
@@ -105,9 +103,23 @@ class Translator(object):
         
     def translate(self, code):
         '''
-        @param code: a list of MIPS IV assembler code lines 
+        @param code: text containing MIPS IV assembler 
         @return: a translation to hex codified lines in list of strings format
         '''
-        if not isinstance(code, list): raise TypeError
-        raise NotImplementedError
-        """TODO implement translation"""
+        if not isinstance(code, str): raise TypeError
+        codeLines = self.getInstructionsListFromText(code)
+        decodedInstructions = [self.getFieldsFromInstruction(instruction) for instruction in codeLines]
+        resultCodes = list()
+        for instruction in decodedInstructions:
+            print instruction
+            instructionData = ASM2HEX[instruction["instruction_name"]]
+            instructionParams = instruction["params"]   # list of tuples of instruction parameters
+            argumentValues = [(int(instructionParams[i][1]) << instructionData[i+1][1]) for i in range(len(instructionParams))]
+            print [hex(i) for i in argumentValues]
+            argumentsCode = reduce(lambda x, y: x | y,argumentValues)
+            print hex(argumentsCode)
+            print hex(instructionData[0][1])
+            instructionCode = int(instructionData[0][1]) | argumentsCode
+            resultCodes += [hex(instructionCode).strip("L")]
+            
+        return resultCodes
