@@ -115,6 +115,9 @@ class Translator(object):
             argumentValues = [(int(instructionParams[i][1]) << instructionData[i+1][1]) for i in range(len(instructionParams))]
             argumentsCode = reduce(lambda x, y: x | y,argumentValues)
             instructionCode = int(instructionData[0][1]) | argumentsCode
-            resultCodes += [hex(instructionCode).strip("L")[2:]]
-            
+            instrCodeHex = hex(instructionCode).strip("L")[2:]
+            while len(instrCodeHex) < 8:
+                instrCodeHex = '0'+instrCodeHex
+            resultCodes += [instrCodeHex]
+        
         return resultCodes
