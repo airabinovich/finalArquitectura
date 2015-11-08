@@ -1,0 +1,3 @@
+verilog work "REGBANK_registro.v"
+verilog work "REGBANK_demux.v"
+verilog work "REGBANK_banco.v"

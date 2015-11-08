@@ -1,0 +1,428 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: REGBANK_banco.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "REGBANK_banco.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "REGBANK_banco"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : REGBANK_banco
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\REGBANK\REGBANK_registro.v" into library work
+Parsing module <REGBANK_registro>.
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\REGBANK\REGBANK_demux.v" into library work
+Parsing module <REGBANK_demux>.
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\REGBANK\REGBANK_banco.v" into library work
+Parsing module <REGBANK_banco>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <REGBANK_banco>.
+
+Elaborating module <REGBANK_demux(select_bits=5)>.
+
+Elaborating module <REGBANK_registro(bits_wide=32)>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <REGBANK_banco>.
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\REGBANK\REGBANK_banco.v".
+        addr_bits = 5
+        word_wide = 32
+    Summary:
+	no macro.
+Unit <REGBANK_banco> synthesized.
+
+Synthesizing Unit <REGBANK_demux>.
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\REGBANK\REGBANK_demux.v".
+        select_bits = 5
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <REGBANK_demux> synthesized.
+
+Synthesizing Unit <REGBANK_registro>.
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\REGBANK\REGBANK_registro.v".
+        bits_wide = 32
+    Found 32-bit register for signal <Z_3_o_dff_4_OUT>.
+    Found 1-bit register for signal <read_enable_clock_DFF_33>.
+    Found 32-bit register for signal <data>.
+    Found 1-bit tristate buffer for signal <data_out<31>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<30>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<29>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<28>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<27>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<26>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<25>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<24>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<23>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<22>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<21>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<20>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<19>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<18>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<17>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<16>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<15>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<14>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<13>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<12>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<11>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<10>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<9>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<8>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<7>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<6>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<5>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<4>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<3>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<2>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<1>> created at line 30
+    Found 1-bit tristate buffer for signal <data_out<0>> created at line 30
+    Summary:
+	inferred  65 D-type flip-flop(s).
+	inferred  32 Tristate(s).
+Unit <REGBANK_registro> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 96
+ 1-bit register                                        : 32
+ 32-bit register                                       : 64
+# Multiplexers                                         : 64
+ 1-bit 2-to-1 multiplexer                              : 64
+# Tristates                                            : 1024
+ 1-bit tristate buffer                                 : 1024
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 2080
+ Flip-Flops                                            : 2080
+# Multiplexers                                         : 64
+ 1-bit 2-to-1 multiplexer                              : 64
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2040 - Unit REGBANK_banco: 32 multi-source signals are replaced by logic (pull-up yes): data_bus<0>_MLTSRCEDGE, data_bus<10>_MLTSRCEDGE, data_bus<11>_MLTSRCEDGE, data_bus<12>_MLTSRCEDGE, data_bus<13>_MLTSRCEDGE, data_bus<14>_MLTSRCEDGE, data_bus<15>_MLTSRCEDGE, data_bus<16>_MLTSRCEDGE, data_bus<17>_MLTSRCEDGE, data_bus<18>_MLTSRCEDGE, data_bus<19>_MLTSRCEDGE, data_bus<1>_MLTSRCEDGE, data_bus<20>_MLTSRCEDGE, data_bus<21>_MLTSRCEDGE, data_bus<22>_MLTSRCEDGE, data_bus<23>_MLTSRCEDGE, data_bus<24>_MLTSRCEDGE, data_bus<25>_MLTSRCEDGE, data_bus<26>_MLTSRCEDGE, data_bus<27>_MLTSRCEDGE, data_bus<28>_MLTSRCEDGE, data_bus<29>_MLTSRCEDGE, data_bus<2>_MLTSRCEDGE, data_bus<30>_MLTSRCEDGE, data_bus<31>_MLTSRCEDGE, data_bus<3>_MLTSRCEDGE, data_bus<4>_MLTSRCEDGE, data_bus<5>_MLTSRCEDGE, data_bus<6>_MLTSRCEDGE, data_bus<7>_MLTSRCEDGE, data_bus<8>_MLTSRCEDGE, data_bus<9>_MLTSRCEDGE.
+
+Optimizing unit <REGBANK_banco> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block REGBANK_banco, actual ratio is 38.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2080
+ Flip-Flops                                            : 2080
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : REGBANK_banco.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1097
+#      GND                         : 1
+#      LUT2                        : 1
+#      LUT4                        : 512
+#      LUT6                        : 70
+#      MUXCY                       : 512
+#      VCC                         : 1
+# FlipFlops/Latches                : 2080
+#      FD                          : 1056
+#      FDE                         : 1024
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 39
+#      IBUF                        : 7
+#      IOBUF                       : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            2080  out of  18224    11%  
+ Number of Slice LUTs:                  583  out of   9112     6%  
+    Number used as Logic:               583  out of   9112     6%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2628
+   Number with an unused Flip Flop:     548  out of   2628    20%  
+   Number with an unused LUT:          2045  out of   2628    77%  
+   Number of fully used LUT-FF pairs:    35  out of   2628     1%  
+   Number of unique control sets:        33
+
+IO Utilization: 
+ Number of IOs:                          40
+ Number of bonded IOBs:                  40  out of    232    17%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 2080  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.128ns (Maximum Frequency: 886.643MHz)
+   Minimum input arrival time before clock: 5.043ns
+   Maximum output required time after clock: 7.329ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 1.128ns (frequency: 886.643MHz)
+  Total number of paths / destination ports: 1024 / 1024
+-------------------------------------------------------------------------
+Delay:               1.128ns (Levels of Logic = 0)
+  Source:            banco_bank<31>/data_31 (FF)
+  Destination:       banco_bank<31>/data_out_31 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: banco_bank<31>/data_31 to banco_bank<31>/data_out_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  banco_bank<31>/data_31 (banco_bank<31>/data_31)
+     FD:D                      0.102          banco_bank<31>/data_out_31
+    ----------------------------------------
+    Total                      1.128ns (0.549ns logic, 0.579ns route)
+                                       (48.7% logic, 51.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 7360 / 2080
+-------------------------------------------------------------------------
+Offset:              5.043ns (Levels of Logic = 2)
+  Source:            addr_bus<4> (PAD)
+  Destination:       banco_bank<30>/data_31 (FF)
+  Destination Clock: clock rising
+
+  Data Path: addr_bus<4> to banco_bank<30>/data_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   1.222   2.004  addr_bus_4_IBUF (addr_bus_4_IBUF)
+     LUT6:I0->O           32   0.203   1.291  write_enable_addresser/Mmux_out<16>11 (write_enable_bus<16>)
+     FDE:CE                    0.322          banco_bank<16>/data_0
+    ----------------------------------------
+    Total                      5.043ns (1.747ns logic, 3.296ns route)
+                                       (34.6% logic, 65.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 3072 / 32
+-------------------------------------------------------------------------
+Offset:              7.329ns (Levels of Logic = 3)
+  Source:            banco_bank<13>/read_enable_clock_DFF_33 (FF)
+  Destination:       data_bus<31> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: banco_bank<13>/read_enable_clock_DFF_33 to data_bus<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              33   0.447   1.670  banco_bank<13>/read_enable_clock_DFF_33 (banco_bank<13>/read_enable_clock_DFF_33)
+     LUT6:I0->O            1   0.203   0.944  data_bus<0>Control11 (data_bus<0>Control11)
+     LUT6:I0->O           32   0.203   1.291  data_bus<0>Control17 (data_bus<0>Control1)
+     IOBUF:T->IO               2.571          data_bus_31_IOBUF (data_bus<31>)
+    ----------------------------------------
+    Total                      7.329ns (3.424ns logic, 3.905ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    1.128|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.29 secs
+ 
+--> 
+
+Total memory usage is 263496 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
