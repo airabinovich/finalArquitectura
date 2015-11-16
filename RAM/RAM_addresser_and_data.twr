@@ -1,0 +1,84 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml RAM_addresser_and_data.twx RAM_addresser_and_data.ncd -o
+RAM_addresser_and_data.twr RAM_addresser_and_data.pcf
+
+Design file:              RAM_addresser_and_data.ncd
+Physical constraint file: RAM_addresser_and_data.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock
+-------------+------------+------------+------------+------------+------------------+--------+
+             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+-------------+------------+------------+------------+------------+------------------+--------+
+address_in<0>|    1.139(R)|      SLOW  |   -0.090(R)|      SLOW  |clock_BUFGP       |   0.000|
+address_in<1>|    1.052(R)|      SLOW  |   -0.009(R)|      SLOW  |clock_BUFGP       |   0.000|
+address_in<2>|    0.948(R)|      FAST  |    0.097(R)|      SLOW  |clock_BUFGP       |   0.000|
+address_in<3>|    1.144(R)|      FAST  |   -0.087(R)|      SLOW  |clock_BUFGP       |   0.000|
+data_in<0>   |    0.688(R)|      FAST  |    0.280(R)|      SLOW  |clock_BUFGP       |   0.000|
+data_in<1>   |    0.638(R)|      FAST  |    0.364(R)|      SLOW  |clock_BUFGP       |   0.000|
+data_in<2>   |    0.395(R)|      FAST  |    0.611(R)|      SLOW  |clock_BUFGP       |   0.000|
+data_in<3>   |    0.677(R)|      FAST  |    0.155(R)|      SLOW  |clock_BUFGP       |   0.000|
+read_mode    |    1.249(R)|      SLOW  |   -0.279(R)|      SLOW  |clock_BUFGP       |   0.000|
+write_mode   |    1.452(R)|      SLOW  |   -0.474(R)|      SLOW  |clock_BUFGP       |   0.000|
+-------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clock to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+data_out<0> |         8.613(R)|      SLOW  |         4.243(R)|      FAST  |clock_BUFGP       |   0.000|
+data_out<1> |         8.794(R)|      SLOW  |         4.339(R)|      FAST  |clock_BUFGP       |   0.000|
+data_out<2> |         8.703(R)|      SLOW  |         4.819(R)|      FAST  |clock_BUFGP       |   0.000|
+data_out<3> |         9.074(R)|      SLOW  |         5.070(R)|      FAST  |clock_BUFGP       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+read_mode      |reading        |    6.550|
+read_mode      |writing        |    6.649|
+write_mode     |reading        |    6.753|
+write_mode     |writing        |    6.852|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Nov 10 19:32:07 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 220 MB
+
+
+

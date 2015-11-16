@@ -4,7 +4,7 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   21:43:12 11/07/2015
+// Create Date:   20:57:54 11/15/2015
 // Design Name:   REGBANK_banco
 // Module Name:   C:/Users/Ariel/Documents/finalArquitectura/REGBANK/REGBANK_banco_test.v
 // Project Name:  REGBANK
@@ -26,57 +26,65 @@ module REGBANK_banco_test;
 
 	// Inputs
 	reg clock;
-	reg read_enable;
-	reg write_enable;
-	reg [4:0] addr_bus;
-	reg [31:0] data_reg;
-	// Bidirs
-	wire [31:0] data_bus;
+	reg regWrite;
+	reg [4:0] readReg1;
+	reg [4:0] readReg2;
+	reg [4:0] writeReg;
+	reg [31:0] writeData;
+
+	// Outputs
+	wire [31:0] readData1;
+	wire [31:0] readData2;
 
 	// Instantiate the Unit Under Test (UUT)
 	REGBANK_banco uut (
 		.clock(clock), 
-		.read_enable(read_enable), 
-		.write_enable(write_enable), 
-		.addr_bus(addr_bus), 
-		.data_bus(data_bus)
+		.regWrite(regWrite), 
+		.readReg1(readReg1), 
+		.readReg2(readReg2), 
+		.writeReg(writeReg), 
+		.writeData(writeData), 
+		.readData1(readData1), 
+		.readData2(readData2)
 	);
 
-	assign data_bus = data_reg;
-	
 	initial begin
 		// Initialize Inputs
 		clock = 0;
-		read_enable = 0;
-		write_enable = 0;
-		addr_bus = 0;
+		regWrite = 0;
+		readReg1 = 0;
+		readReg2 = 0;
+		writeReg = 0;
+		writeData = 0;
 
-		// Wait 100 ns for global reset to finish
 		#10;
+		regWrite = 0;
+		writeReg = 0;
+		writeData = 32'hFFFFFFFF;
+		regWrite = 1;
+		#2;
+		regWrite = 0;
+		writeReg = 1;
+		writeData = 32'hAAAAAAAA;
+		regWrite = 1;
+		readReg1 = 0;
+		#2;
+		regWrite = 0;
+		writeReg = 2;
+		writeData = 32'h55555555;
+		regWrite = 1;
+		readReg2 = 1;
+		#2;
+		regWrite = 0;
+		readReg1 = 2;
 		
-		data_reg = 32'hFFFFFFFF;
-		write_enable = 1;
-      #10;
-		write_enable = 0;
-		read_enable = 1;
-		#10;
-		addr_bus = 5'd1;
-		data_reg = 32'hAAAAAAAA;
-		write_enable = 1;
-		#10;
-		write_enable = 0;
-		addr_bus = 5'd0;
-		read_enable = 1;
-		#10;
-		data_reg = 32'h00000000;
-		write_enable = 1;
-		// Add stimulus here
-		
+
 	end
-
-always begin
-	clock = ~clock;
-	#1;
-end
+      
+	always begin
+		clock = ~clock;
+		#1;
+	end
+		
 endmodule
 

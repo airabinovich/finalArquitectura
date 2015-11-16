@@ -16,8 +16,8 @@
 
   <files>
     <file xil_pn:name="REGBANK_registro.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
     <file xil_pn:name="REGBANK_reg_test.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
@@ -26,12 +26,12 @@
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="15"/>
     </file>
     <file xil_pn:name="REGBANK_banco.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="3"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
     <file xil_pn:name="REGBANK_demux.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
     <file xil_pn:name="REGBANK_demux_test.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
@@ -40,10 +40,10 @@
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="40"/>
     </file>
     <file xil_pn:name="REGBANK_banco_test.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="4"/>
-      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="53"/>
-      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="53"/>
-      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="53"/>
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
+      <association xil_pn:name="PostMapSimulation" xil_pn:seqID="56"/>
+      <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="56"/>
+      <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="56"/>
     </file>
   </files>
 

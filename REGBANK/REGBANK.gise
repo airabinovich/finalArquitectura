@@ -78,13 +78,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1446943908" xil_pn:in_ck="-8555154945201782620" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1446943908">
+    <transform xil_pn:end_ts="1447632500" xil_pn:in_ck="-8555154945201782620" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1447632500">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="REGBANK_banco.v"/>
       <outfile xil_pn:name="REGBANK_banco_test.v"/>
       <outfile xil_pn:name="REGBANK_demux.v"/>
@@ -104,14 +100,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1446943908" xil_pn:in_ck="-8555154945201782620" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1446943908">
+    <transform xil_pn:end_ts="1447632505" xil_pn:in_ck="-8555154945201782620" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1447632505">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="REGBANK_banco.v"/>
       <outfile xil_pn:name="REGBANK_banco_test.v"/>
       <outfile xil_pn:name="REGBANK_demux.v"/>
@@ -119,13 +110,10 @@
       <outfile xil_pn:name="REGBANK_reg_test.v"/>
       <outfile xil_pn:name="REGBANK_registro.v"/>
     </transform>
-    <transform xil_pn:end_ts="1446943912" xil_pn:in_ck="-8555154945201782620" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4787322194529062269" xil_pn:start_ts="1446943908">
+    <transform xil_pn:end_ts="1447632512" xil_pn:in_ck="-8555154945201782620" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4787322194529062269" xil_pn:start_ts="1447632505">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="REGBANK_banco_test_beh.prj"/>
       <outfile xil_pn:name="REGBANK_banco_test_isim_beh.exe"/>
@@ -134,10 +122,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1446943912" xil_pn:in_ck="888256885915234841" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1677677299489953830" xil_pn:start_ts="1446943912">
+    <transform xil_pn:end_ts="1447632513" xil_pn:in_ck="888256885915234841" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1677677299489953830" xil_pn:start_ts="1447632512">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="REGBANK_banco_test_isim_beh.wdb"/>
@@ -172,10 +159,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1446944477" xil_pn:in_ck="8201713784244384300" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6801121415442730831" xil_pn:start_ts="1446944460">
+    <transform xil_pn:end_ts="1447631807" xil_pn:in_ck="8201713784244384300" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="6801121415442730831" xil_pn:start_ts="1447631793">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="REGBANK_banco.lso"/>
       <outfile xil_pn:name="REGBANK_banco.ngc"/>
       <outfile xil_pn:name="REGBANK_banco.ngr"/>
@@ -186,8 +174,6 @@
       <outfile xil_pn:name="REGBANK_banco_test_beh.prj"/>
       <outfile xil_pn:name="REGBANK_banco_test_stx_beh.prj"/>
       <outfile xil_pn:name="REGBANK_banco_xst.xrpt"/>
-      <outfile xil_pn:name="REGBANK_demux.ngr"/>
-      <outfile xil_pn:name="REGBANK_registro.ngr"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
