@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Ariel\Documents\finalArquitectura\RAM\RAM_addresser_and_data.ncd
+OUTFILE=C:\Users\Ariel\Documents\finalArquitectura\RAM\RAM_addresser_and_data.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Ariel\Documents\finalArquitectura\RAM
+LICENSE=WebPack
+USER_INFO=210790645_0_0_619
