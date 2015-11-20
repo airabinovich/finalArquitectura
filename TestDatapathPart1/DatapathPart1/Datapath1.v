@@ -20,91 +20,263 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Datapath1(
 		input clock,
-		input [31:0]instruction,
-		input resetGral
+		input [31:0]instruction, //hardcodeo la instruccion porq no hay instruction memory
+		input resetGral,
+		
+		//señales desconectadas por ahora, las saco para evitar warnings
+		output [7:0]fetchOut,	// no tengo instruction memory, veo el PC aca
+		output ALUzero,
+		output ALUOverflow,
+		output [4:0]rsEXOut
     );
-	 reg [31:0] IF_ID;
-	 reg [120:0] ID_EX;
-	 wire RegDst;
-	 wire Branch;
-	 wire MemRead;
-	 wire MemtoReg;
-	 wire [1:0]AluOp;
-	 wire MemWrite;
-	 wire AluSrc;
-	 wire RegWrite;
+	 //aca asigno salidas, esto hay que borrarlo despues:
+			 assign fetchOut = pcFE;
+			 assign rsEXOut = rsEX;
+			 assign ALUzero=aluZero;
+			 assign ALUOverflow=aluOverflow;
+	 
+	 
+	 reg [128:0] ID_EX;
+	 reg [106:0] EX_MEM;
+	 
+	 reg [2:0]instructionMemSize;
+	 
+	 wire [31:0]instructionID;
+	 wire [7:0] pcID;
+	  	 
+	 wire regWrite;
+	 wire regWriteEX;
+	 wire regWriteMEM;
+	 wire regWriteWB;
+	 
+	 wire memToReg;
+	 wire memToRegEX;
+	 wire memToRegMEM;
+	 wire memToRegWB;
+	 
+	 wire [3:0]memWrite;
+	 wire [3:0]memWriteEX;
+	 wire [3:0]memWriteMEM;
+	 
+	 wire [3:0]aluControl;
+	 wire [3:0]aluControlEX;
+	 
+	 wire aluSrc;
+	 wire aluSrcEX;
+	 
+	 wire regDst;
+	 wire regDstEX;
+	 
+	 wire branch;
+		 
+	 wire [1:0] memReadWidth;
+	 wire [1:0] memReadWidthEX;
+	 wire [1:0] memReadWidthMEM;
+
 	 wire [31:0]sigExtOut;
-	 wire [4:0]writeRegister;
-	 wire [3:0]aluOperationCode;
-	 wire [31:0]aluOperand2;
-	 wire [31:0]aluOutput;
+	 wire [31:0]sigExtEX;
+
+	 wire [31:0]aluOut;
+	 wire [31:0]aluOutMEM;
+	 wire [31:0]aluOutWB;
+	 
 	 wire aluZero;
 	 wire aluOverflow;
+
 	 wire [31:0]readData1;
+	 wire [31:0]readData1EX;
 	 wire [31:0]readData2;
-	 assign writeRegister = (RegDst)? IF_ID[15:11] : IF_ID[20:16];
-	 assign aluOperand2 = (ID_EX[102])? ID_EX[37:6] : ID_EX[69:38];
+	 wire [31:0]readData2EX;
+	 
+	 wire [31:0]readDataMemory;
+	 wire [31:0]readDataMemoryMasked;
+	 
+	 wire [31:0]memoryOutWB;
+	 
+	 wire [7:0] PC;
+	 wire [7:0] pcFE;
+	 
+	 wire [7:0] pcNext;
+	 wire [7:0] pcNextID;
+	 
+	 wire [4:0]rsEX;
+	 wire [4:0]rtEX;
+	 wire [4:0]rdEX;
+		
+	 wire [4:0]writeRegisterMEM;
+	 wire [4:0]writeRegisterWB;
+	 
+	 wire [7:0]pcBranchAddr;
+	  
+	 wire [31:0] writeDataMEM;
+	 
+	 //Multiplexores:
+		 //Declaracion
+		 wire [4:0]writeRegister;
+		 wire [31:0]aluOperand2;
+//		 wire [31:0]sigExtShifted; //No se usa el shifted porque se accede con valores absolutos a la memoria de instr
+		 wire [31:0] resultWB;
+				
+		 //Asignacion		
+		 assign writeRegister = (regDstEX)? rdEX : rtEX;
+		 assign aluOperand2 = (aluSrcEX)? sigExtEX: readData2EX;
+//		 assign sigExtShifted = sigExtOut<<2; //No se usa el shifted porque se accede con valores absolutos a la memoria de instr
+		 assign pcSrc = branch & (readData1==readData2);
+		 assign resultWB = (memToRegWB)? memoryOutWB : aluOutWB;
+		 assign PC = (pcSrc)? pcBranchAddr : pcNext;
 	  ControlUnit control(
-	 	.Special(IF_ID[31:26]),
-		.RegDst(RegDst),
-		.Branch(Branch),
-		.MemRead(MemRead),
-		.MemtoReg(MemtoReg),
-		.AluOp(AluOp),
-		.MemWrite(MemWrite),
-		.ALUSrc(AluSrc),
-		.RegWrite(RegWrite)
+	 	.Special(instructionID[31:26]),
+		.instructionCode(instructionID[5:0]),
+		.RegDst(regDst),
+		.Branch(branch),
+		.MemtoReg(memToReg),
+		.MemWrite(memWrite),
+		.ALUSrc(aluSrc),
+		.RegWrite(regWrite),
+		.memReadWidth(memReadWidth), // 0:Word 1:Halfword 2:Byte
+	   .aluOperation(aluControl)
 	 );
 	 
-	 AluControl alu_control(
-			.aluOp(ID_EX[107:106]),
-			.instructionCodeLowBits(ID_EX[5:0]),
-			.instructionCodeHighBits(ID_EX[114:109]),
-			.aluOperation(aluOperationCode)
-	 );
 	 
+	 RAM ram(
+	  .clka(clock), // input clka
+	  .wea(memWriteMEM), 
+	  .addra(aluOutMEM[7:0]), // input [7 : 0] addra
+	  .dina(writeDataMEM), // input [31 : 0] dina
+	  .douta(readDataMemory) // output [31 : 0] douta
+	);
 
 	 REGBANK_banco bank(
 		.clock(clock),
-		.regWrite(ID_EX[115]),
-		.readReg1(IF_ID[25:21]),
-		.readReg2(IF_ID[20:16]),
-		.writeReg(ID_EX[120:116]),
+		.regWrite(regWriteWB),
+		.readReg1(instructionID[25:21]),
+		.readReg2(instructionID[20:16]),
+		.writeReg(writeRegisterWB),
 		.reset(resetGral),
-		.writeData(aluOutput),
+		.writeData(resultWB),
 		.readData1(readData1),
 		.readData2(readData2)
 	 );
 	 
 	 ALU alu(
-		.op_code(aluOperationCode),
-		.operand1(ID_EX[101:70]),
+		.op_code(aluControlEX),
+		.operand1(readData1EX),
 		.operand2(aluOperand2),
-		.result(aluOutput),
+		.result(aluOut),
 		.zero(aluZero),
 		.overflow(aluOverflow)
 	 );
 	 SigExt sigext(
-		.in(IF_ID[15:0]),
+		.in(instructionID[15:0]),
 		.out(sigExtOut)
 	 );
+	 
+	 Adder branchPCAdd(
+		.a(pcNextID),
+		.b(sigExtOut[7:0]),
+		.sum(pcBranchAddr)
+	 );
+	 
+	 Adder PCAdd(
+		.a(pcFE),
+		.b(8'b1),
+		.sum(pcNext)
+	 );
 
-	 always @(posedge clock) begin
-		ID_EX[5:0]<=IF_ID[5:0];
-		ID_EX[37:6]<=sigExtOut;
-		ID_EX[69:38]<=readData2;
-		ID_EX[101:70]<=readData1;
-		ID_EX[102]<=AluSrc;
-		ID_EX[103]<=MemWrite;
-		ID_EX[104]<=MemRead;
-		ID_EX[105]<=MemtoReg;
-		ID_EX[107:106]<=AluOp;
-		ID_EX[108]<=Branch;
-		ID_EX[114:109]<=IF_ID[31:26];
-		ID_EX[115]<=RegWrite;
-		ID_EX[120:116]<=writeRegister;
-		IF_ID<=instruction;
-	 end
+			
+		
+			
+			IF_ID if_id(
+					.clock(clock),
+					.reset(resetGral),
+					.instruction(instruction),
+					.pcNext(pcNext),
+					.instructionOut(instructionID),
+					.pcNextOut(pcNextID),
+					.clear(pcSrc)
+			);
+			
+			
+		  EX_MEM ex_mem(
+				.clock(clock),
+				.reset(resetGral),
+				.writeRegister(writeRegister),
+				.writeData(readData2EX),
+				.aluOut(aluOut),
+				.regWrite(regWriteEX),
+				.memToReg(memToRegEX),
+				.memWrite(memWriteEX),
+				.memReadWidth(memReadWidthEX),
+				
+				.writeRegisterOut(writeRegisterMEM),
+				.writeDataOut(writeDataMEM),
+				.aluOutOut(aluOutMEM),
+				.regWriteOut(regWriteMEM),
+				.memToRegOut(memToRegMEM),
+				.memWriteOut(memWriteMEM),
+				.memReadWidthOut(memReadWidthMEM)
+    );
+			
+		 ID_EX id_ex(
+			.clock(clock),
+			.reset(resetGral),
+			.rs(instructionID[25:21]),
+			.rt(instructionID[20:16]),
+			.rd(instructionID[15:11]),
+			.aluOperation(aluControl),
+			.sigExt(sigExtOut),
+			.readData1(readData1),
+			.readData2(readData2),
+			.aluSrc(aluSrc),
+			.regDst(regDst),
+			.memWrite(memWrite),
+			.memToReg(memToReg),
+			.memReadWidth(memReadWidth),
+			.regWrite(regWrite),
+
+			
+			.aluOperationOut(aluControlEX),
+			.sigExtOut(sigExtEX),
+			.readData1Out(readData1EX),
+			.readData2Out(readData2EX),
+			.aluSrcOut(aluSrcEX),
+			.memWriteOut(memWriteEX),
+			.memToRegOut(memToRegEX),
+			.memReadWidthOut(memReadWidthEX),
+			.rsOut(rsEX),
+			.rtOut(rtEX),
+			.rdOut(rdEX),
+			.regDstOut(regDstEX),
+			.regWriteOut(regWriteEX)		
+    );			
+	 
+	 MemoryLoadMask mask (
+		.dataIn(readDataMemory),
+		.maskLength(memReadWidthMEM),
+		.dataOut(readDataMemoryMasked)
+	 );
+	 MEM_WB mem_wb(
+		.clock(clock),
+		.reset(resetGral),
+		.writeRegister(writeRegisterMEM),
+		.aluOut(aluOutMEM),
+		.memoryOut(readDataMemoryMasked),
+		.regWrite(regWriteMEM),
+		.memToReg(memToRegMEM),
+		
+		.writeRegisterOut(writeRegisterWB),
+		.aluOutOut(aluOutWB),
+		.memoryOutOut(memoryOutWB),
+		.regWriteOut(regWriteWB),
+		.memToRegOut(memToRegWB)
+    );
+	 
+	 FE fetch(
+		.clock(clock),
+		.reset(resetGral),
+		.pc(PC),
+		.pcOut(pcFE)
+	 );
 
 
 endmodule

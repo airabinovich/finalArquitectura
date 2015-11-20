@@ -39,7 +39,8 @@ module ALU #(parameter N=32)(
 			6: {overflow,result} = operand1 | operand2;									//OR
 			7: {overflow,result} = operand1 ^ operand2;									//XOR
 			8: {overflow,result} = ~(operand1 | operand2);								//NOR
-			9: {overflow,result} = (operand1 < operand2);								//SLT			
+			9: {overflow,result} = (operand1 < operand2);								//SLT
+			default: {overflow,result} = 0;
 		endcase	
 		zero= (result==0)? 1'b1:1'b0;
 	end
