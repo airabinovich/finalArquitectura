@@ -29,7 +29,7 @@ module IF_ID(
 		output reg[7:0] pcNextOut
     );
 	 
-	 always @(posedge clock,posedge reset)begin
+	 always @(negedge clock,posedge reset)begin
 		if(reset)begin
 			instructionOut<=0;
 			pcNextOut<=0;

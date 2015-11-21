@@ -26,9 +26,9 @@ module MemoryLoadMask(
 	 
 	 always @* begin
 		case (maskLength)
-			1: dataOut<=dataIn;
-			2: dataOut<=dataIn&32'hFFFF;
-			3: dataOut<=dataIn&32'hFF;
+			0: dataOut<=dataIn;
+			1: dataOut<=dataIn&32'hFFFF;
+			2: dataOut<=dataIn&32'hFF;
 			default: dataOut<=dataIn;
 		endcase
 	 

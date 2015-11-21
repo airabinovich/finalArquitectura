@@ -26,7 +26,7 @@ module FE(
 		output reg [7:0]pcOut
     );
 	 
-	 always @(posedge clock,posedge reset)begin
+	 always @(negedge clock,posedge reset)begin
 			if(reset)begin
 				pcOut<=0;
 			end

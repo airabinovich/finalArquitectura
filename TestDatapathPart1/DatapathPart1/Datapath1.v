@@ -20,20 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Datapath1(
 		input clock,
-		input [31:0]instruction, //hardcodeo la instruccion porq no hay instruction memory
 		input resetGral,
 		
-		//señales desconectadas por ahora, las saco para evitar warnings
-		output [7:0]fetchOut,	// no tengo instruction memory, veo el PC aca
 		output ALUzero,
-		output ALUOverflow,
-		output [4:0]rsEXOut
-    );
-	 //aca asigno salidas, esto hay que borrarlo despues:
-			 assign fetchOut = pcFE;
-			 assign rsEXOut = rsEX;
-			 assign ALUzero=aluZero;
-			 assign ALUOverflow=aluOverflow;
+		output ALUOverflow
+    ); 
+		assign ALUzero=aluZero;
+		assign ALUOverflow=aluOverflow;
 	 
 	 
 	 reg [128:0] ID_EX;
@@ -41,8 +34,8 @@ module Datapath1(
 	 
 	 reg [2:0]instructionMemSize;
 	 
+	 wire [31:0]instruction;
 	 wire [31:0]instructionID;
-	 wire [7:0] pcID;
 	  	 
 	 wire regWrite;
 	 wire regWriteEX;
@@ -117,7 +110,8 @@ module Datapath1(
 	 wire [4:0]writeRegisterWB;
 	 
 	 wire [7:0]pcBranchAddr;
-	  
+	 
+	 wire [31:0] writeDataEX; 
 	 wire [31:0] writeDataMEM;
 	 
 	 //Salidas Hazard Unit
@@ -161,6 +155,7 @@ module Datapath1(
 		 //Asignacion
 		 assign srcAEX= (forwardAEX==0)? readData1EX : ((forwardAEX==1)? resultWB : aluOutMEM);
 		 assign srcBEX= (forwardBEX==0)? readData2EX : ((forwardBEX==1)? resultWB : aluOutMEM);
+		 assign writeDataEX = srcBEX;
 		 assign branchSrcA= (forwardAID)? aluOutMEM: readData1;
 		 assign branchSrcB= (forwardBID)? aluOutMEM: readData2;
 		 
@@ -183,11 +178,17 @@ module Datapath1(
 	 
 	 
 	 RAM ram(
-	  .clka(~clock), // input clka niego el clock para no perder un ciclo en la lectura
+	  .clka(clock), // input clka niego el clock para no perder un ciclo en la lectura
 	  .wea(memWriteMEM), 
 	  .addra(aluOutMEM[7:0]), // input [7 : 0] addra
 	  .dina(writeDataMEM), // input [31 : 0] dina
 	  .douta(readDataMemory) // output [31 : 0] douta
+	);
+	
+	instructionROM instructionMemory (
+	  .clka(clock), // input clka
+	  .addra(pcFE), // input [7 : 0] addra
+	  .douta(instruction) // output [31 : 0] douta
 	);
 
 	 REGBANK_banco bank(
@@ -247,7 +248,7 @@ module Datapath1(
 				.clock(clock),
 				.reset(resetGral),
 				.writeRegister(writeRegister),
-				.writeData(readData2EX),
+				.writeData(writeDataEX),
 				.aluOut(aluOut),
 				.regWrite(regWriteEX),
 				.memToReg(memToRegEX),

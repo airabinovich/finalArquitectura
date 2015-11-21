@@ -14,6 +14,10 @@ if __name__ == '__main__':
     instructionList = list()
     with open(sys.argv[1],"r") as source:
         text = source.read()
+        lastLine = text.split("\n")[-1]
+        if "END" not in lastLine.split(";")[0]:
+            print "ERROR: END instruction not detected"
+            exit(1)
         instructionList = tr.getHexFromAsm(text)
     
     outputFileName = "out.coe"

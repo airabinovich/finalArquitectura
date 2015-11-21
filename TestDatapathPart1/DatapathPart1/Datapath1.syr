@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: Datapath1.prj
 
@@ -108,33 +108,35 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\SigExt.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\SigExt.v" into library work
 Parsing module <SigExt>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v" into library work
 Parsing module <REGBANK_banco>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MEM_WB.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\MEM_WB.v" into library work
 Parsing module <MEM_WB>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v" into library work
 Parsing module <MemoryLoadMask>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\RAM.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\RAM.v" into library work
 Parsing module <RAM>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\IF_ID.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\instructionROM.v" into library work
+Parsing module <instructionROM>.
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\IF_ID.v" into library work
 Parsing module <IF_ID>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v" into library work
 Parsing module <ID_EX>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v" into library work
 Parsing module <HazardsUnit>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v" into library work
 Parsing module <FE>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v" into library work
 Parsing module <EX_MEM>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ControlUnit.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ControlUnit.v" into library work
 Parsing module <ControlUnit>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ALU.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ALU.v" into library work
 Parsing module <ALU>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Adder.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\Adder.v" into library work
 Parsing module <Adder>.
-Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v" into library work
+Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v" into library work
 Parsing module <Datapath1>.
 
 =========================================================================
@@ -146,7 +148,10 @@ Elaborating module <Datapath1>.
 Elaborating module <ControlUnit>.
 
 Elaborating module <RAM>.
-WARNING:HDLCompiler:1499 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\RAM.v" Line 39: Empty module <RAM> remains a black box.
+WARNING:HDLCompiler:1499 - "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\RAM.v" Line 39: Empty module <RAM> remains a black box.
+
+Elaborating module <instructionROM>.
+WARNING:HDLCompiler:1499 - "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\instructionROM.v" Line 39: Empty module <instructionROM> remains a black box.
 
 Elaborating module <REGBANK_banco>.
 
@@ -175,24 +180,24 @@ Elaborating module <HazardsUnit>.
 =========================================================================
 
 Synthesizing Unit <Datapath1>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v".
-    Found 32-bit comparator equal for signal <n0009> created at line 149
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v".
+    Found 32-bit comparator equal for signal <n0007> created at line 143
     Summary:
 	inferred   1 Comparator(s).
 	inferred  11 Multiplexer(s).
 Unit <Datapath1> synthesized.
 
 Synthesizing Unit <ControlUnit>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ControlUnit.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ControlUnit.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <ControlUnit> synthesized.
 
 Synthesizing Unit <REGBANK_banco>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v".
         addr_bits = 5
         word_wide = 32
-    Found 1024-bit register for signal <n0044[1023:0]>.
+    Found 1024-bit register for signal <n0043[1023:0]>.
     Found 32-bit 32-to-1 multiplexer for signal <readData1> created at line 39.
     Found 32-bit 32-to-1 multiplexer for signal <readData2> created at line 40.
     Summary:
@@ -201,7 +206,7 @@ Synthesizing Unit <REGBANK_banco>.
 Unit <REGBANK_banco> synthesized.
 
 Synthesizing Unit <ALU>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ALU.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ALU.v".
         N = 32
     Found 33-bit subtractor for signal <operand1[31]_operand2[31]_sub_5_OUT> created at line 37.
     Found 33-bit adder for signal <operand1[31]_operand2[31]_add_3_OUT> created at line 36.
@@ -219,20 +224,20 @@ Synthesizing Unit <ALU>.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <SigExt>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\SigExt.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\SigExt.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <SigExt> synthesized.
 
 Synthesizing Unit <Adder>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Adder.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\Adder.v".
     Found 8-bit adder for signal <sum> created at line 27.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <Adder> synthesized.
 
 Synthesizing Unit <IF_ID>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\IF_ID.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\IF_ID.v".
     Found 8-bit register for signal <pcNextOut>.
     Found 32-bit register for signal <instructionOut>.
     Summary:
@@ -241,7 +246,7 @@ Synthesizing Unit <IF_ID>.
 Unit <IF_ID> synthesized.
 
 Synthesizing Unit <EX_MEM>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v".
     Found 32-bit register for signal <writeDataOut>.
     Found 32-bit register for signal <aluOutOut>.
     Found 4-bit register for signal <memWriteOut>.
@@ -254,7 +259,7 @@ Synthesizing Unit <EX_MEM>.
 Unit <EX_MEM> synthesized.
 
 Synthesizing Unit <ID_EX>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v".
     Found 32-bit register for signal <sigExtOut>.
     Found 32-bit register for signal <readData1Out>.
     Found 32-bit register for signal <readData2Out>.
@@ -277,14 +282,14 @@ Synthesizing Unit <ID_EX>.
 Unit <ID_EX> synthesized.
 
 Synthesizing Unit <MemoryLoadMask>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v".
-    Found 32-bit 3-to-1 multiplexer for signal <dataOut> created at line 28.
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v".
+    Found 32-bit 4-to-1 multiplexer for signal <dataOut> created at line 28.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <MemoryLoadMask> synthesized.
 
 Synthesizing Unit <MEM_WB>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MEM_WB.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\MEM_WB.v".
     Found 32-bit register for signal <aluOutOut>.
     Found 32-bit register for signal <memoryOutOut>.
     Found 5-bit register for signal <writeRegisterOut>.
@@ -295,14 +300,14 @@ Synthesizing Unit <MEM_WB>.
 Unit <MEM_WB> synthesized.
 
 Synthesizing Unit <FE>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v".
     Found 8-bit register for signal <pcOut>.
     Summary:
 	inferred   8 D-type flip-flop(s).
 Unit <FE> synthesized.
 
 Synthesizing Unit <HazardsUnit>.
-    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v".
+    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v".
     Found 5-bit comparator equal for signal <rsID[4]_rtEX[4]_equal_1_o> created at line 50
     Found 5-bit comparator equal for signal <rtID[4]_rtEX[4]_equal_2_o> created at line 50
     Found 5-bit comparator equal for signal <rsID[4]_writeRegMEM[4]_equal_3_o> created at line 55
@@ -344,8 +349,8 @@ Macro Statistics
  2-bit 2-to-1 multiplexer                              : 3
  32-bit 12-to-1 multiplexer                            : 1
  32-bit 2-to-1 multiplexer                             : 44
- 32-bit 3-to-1 multiplexer                             : 1
  32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 2
  5-bit 2-to-1 multiplexer                              : 5
  8-bit 2-to-1 multiplexer                              : 1
@@ -363,7 +368,9 @@ Macro Statistics
 =========================================================================
 
 Reading core <ipcore_dir/RAM.ngc>.
+Reading core <ipcore_dir/instructionROM.ngc>.
 Loading core <RAM> for timing and area information for instance <ram>.
+Loading core <instructionROM> for timing and area information for instance <instructionMemory>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -385,8 +392,8 @@ Macro Statistics
  2-bit 2-to-1 multiplexer                              : 3
  32-bit 12-to-1 multiplexer                            : 1
  32-bit 2-to-1 multiplexer                             : 44
- 32-bit 3-to-1 multiplexer                             : 1
  32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 2
  5-bit 2-to-1 multiplexer                              : 5
  8-bit 2-to-1 multiplexer                              : 1
@@ -402,6 +409,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2261 - The FF/Latch <sigExtOut_14> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_3> 
+INFO:Xst:2261 - The FF/Latch <sigExtOut_15> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_4> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_16> in Unit <ID_EX> is equivalent to the following 15 FFs/Latches, which will be removed : <sigExtOut_17> <sigExtOut_18> <sigExtOut_19> <sigExtOut_20> <sigExtOut_21> <sigExtOut_22> <sigExtOut_23> <sigExtOut_24> <sigExtOut_25> <sigExtOut_26> <sigExtOut_27> <sigExtOut_28> <sigExtOut_29> <sigExtOut_30> <sigExtOut_31> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_6> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <saOut_0> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_7> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <saOut_1> 
@@ -411,8 +420,6 @@ INFO:Xst:2261 - The FF/Latch <sigExtOut_10> in Unit <ID_EX> is equivalent to the
 INFO:Xst:2261 - The FF/Latch <sigExtOut_11> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_0> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_12> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_1> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_13> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_2> 
-INFO:Xst:2261 - The FF/Latch <sigExtOut_14> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_3> 
-INFO:Xst:2261 - The FF/Latch <sigExtOut_15> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_4> 
 
 Optimizing unit <EX_MEM> ...
 
@@ -467,29 +474,29 @@ Top Level Output File Name         : Datapath1.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2880
-#      GND                         : 2
-#      INV                         : 2
-#      LUT2                        : 31
-#      LUT3                        : 84
+# BELS                             : 2879
+#      GND                         : 3
+#      INV                         : 1
+#      LUT2                        : 16
+#      LUT3                        : 99
 #      LUT4                        : 205
-#      LUT5                        : 1330
-#      LUT6                        : 974
+#      LUT5                        : 1327
+#      LUT6                        : 975
 #      MUXCY                       : 97
 #      MUXF7                       : 79
-#      VCC                         : 2
+#      VCC                         : 3
 #      XORCY                       : 74
 # FlipFlops/Latches                : 1326
-#      FDC                         : 254
-#      FDCE                        : 48
-#      FDCE_1                      : 1024
-# RAMS                             : 1
-#      RAMB8BWER                   : 1
+#      FDC_1                       : 254
+#      FDCE                        : 1024
+#      FDCE_1                      : 48
+# RAMS                             : 2
+#      RAMB8BWER                   : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 48
-#      IBUF                        : 33
-#      OBUF                        : 15
+# IO Buffers                       : 3
+#      IBUF                        : 1
+#      OBUF                        : 2
 
 Device utilization summary:
 ---------------------------
@@ -499,19 +506,19 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1326  out of  18224     7%  
- Number of Slice LUTs:                 2626  out of   9112    28%  
-    Number used as Logic:              2626  out of   9112    28%  
+ Number of Slice LUTs:                 2623  out of   9112    28%  
+    Number used as Logic:              2623  out of   9112    28%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3734
-   Number with an unused Flip Flop:    2408  out of   3734    64%  
-   Number with an unused LUT:          1108  out of   3734    29%  
-   Number of fully used LUT-FF pairs:   218  out of   3734     5%  
+ Number of LUT Flip Flop pairs used:   3699
+   Number with an unused Flip Flop:    2373  out of   3699    64%  
+   Number with an unused LUT:          1076  out of   3699    29%  
+   Number of fully used LUT-FF pairs:   250  out of   3699     6%  
    Number of unique control sets:         3
 
 IO Utilization: 
- Number of IOs:                          49
- Number of bonded IOBs:                  49  out of    232    21%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    232     1%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
@@ -539,7 +546,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 1327  |
+clock                              | BUFGP                  | 1328  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -552,7 +559,7 @@ Speed Grade: -3
 
    Minimum period: 13.912ns (Maximum Frequency: 71.880MHz)
    Minimum input arrival time before clock: 3.937ns
-   Maximum output required time after clock: 18.457ns
+   Maximum output required time after clock: 18.338ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -562,92 +569,92 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
   Clock period: 13.912ns (frequency: 71.880MHz)
-  Total number of paths / destination ports: 428491 / 2450
+  Total number of paths / destination ports: 429712 / 2466
 -------------------------------------------------------------------------
 Delay:               6.956ns (Levels of Logic = 17)
   Source:            bank/banco_0_832 (FF)
   Destination:       if_id/instructionOut_0 (FF)
-  Source Clock:      clock falling
-  Destination Clock: clock rising
+  Source Clock:      clock rising
+  Destination Clock: clock falling
 
   Data Path: bank/banco_0_832 to if_id/instructionOut_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE_1:C->Q           3   0.447   0.898  bank/banco_0_832 (bank/banco_0_832)
+     FDCE:C->Q             3   0.447   0.898  bank/banco_0_832 (bank/banco_0_832)
      LUT6:I2->O            1   0.203   0.827  bank/Mmux_readData1_81 (bank/Mmux_readData1_81)
      LUT6:I2->O            1   0.203   0.000  bank/Mmux_readData1_3 (bank/Mmux_readData1_3)
      MUXF7:I1->O           2   0.140   0.617  bank/Mmux_readData1_2_f7 (readData1<0>)
      LUT4:I3->O            1   0.205   0.944  Mmux_branchSrcA11 (branchSrcA<0>)
-     LUT6:I0->O            1   0.203   0.000  Mcompar_n0009_lut<0> (Mcompar_n0009_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  Mcompar_n0009_cy<0> (Mcompar_n0009_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<1> (Mcompar_n0009_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<2> (Mcompar_n0009_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<3> (Mcompar_n0009_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<4> (Mcompar_n0009_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<5> (Mcompar_n0009_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<6> (Mcompar_n0009_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<7> (Mcompar_n0009_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<8> (Mcompar_n0009_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0009_cy<9> (Mcompar_n0009_cy<9>)
-     MUXCY:CI->O          40   0.213   1.406  Mcompar_n0009_cy<10> (n0009)
-     LUT4:I3->O            1   0.205   0.000  if_id/Mmux_instruction[31]_GND_8_o_mux_0_OUT321 (if_id/instruction[31]_GND_8_o_mux_0_OUT<9>)
-     FDCE:D                    0.102          if_id/instructionOut_9
+     LUT6:I0->O            1   0.203   0.000  Mcompar_n0007_lut<0> (Mcompar_n0007_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_n0007_cy<0> (Mcompar_n0007_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<1> (Mcompar_n0007_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<2> (Mcompar_n0007_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<3> (Mcompar_n0007_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<4> (Mcompar_n0007_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<5> (Mcompar_n0007_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<6> (Mcompar_n0007_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<7> (Mcompar_n0007_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<8> (Mcompar_n0007_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_n0007_cy<9> (Mcompar_n0007_cy<9>)
+     MUXCY:CI->O          40   0.213   1.406  Mcompar_n0007_cy<10> (n0007)
+     LUT5:I4->O            1   0.205   0.000  Mmux_PC81 (PC<7>)
+     FDCE_1:D                  0.102          fetch/pcOut_7
     ----------------------------------------
     Total                      6.956ns (2.264ns logic, 4.692ns route)
                                        (32.5% logic, 67.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
-  Total number of paths / destination ports: 1358 / 1358
+  Total number of paths / destination ports: 1326 / 1326
 -------------------------------------------------------------------------
 Offset:              3.937ns (Levels of Logic = 1)
   Source:            resetGral (PAD)
   Destination:       if_id/pcNextOut_0 (FF)
-  Destination Clock: clock rising
+  Destination Clock: clock falling
 
   Data Path: resetGral to if_id/pcNextOut_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O          1326   1.222   2.285  resetGral_IBUF (resetGral_IBUF)
-     FDCE:CLR                  0.430          if_id/pcNextOut_0
+     FDCE_1:CLR                0.430          if_id/pcNextOut_0
     ----------------------------------------
     Total                      3.937ns (1.652ns logic, 2.285ns route)
                                        (42.0% logic, 58.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
-  Total number of paths / destination ports: 244476 / 15
+  Total number of paths / destination ports: 244463 / 2
 -------------------------------------------------------------------------
-Offset:              18.457ns (Levels of Logic = 15)
+Offset:              18.338ns (Levels of Logic = 15)
   Source:            id_ex/rtOut_0 (FF)
   Destination:       ALUzero (PAD)
-  Source Clock:      clock rising
+  Source Clock:      clock falling
 
   Data Path: id_ex/rtOut_0 to ALUzero
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              5   0.447   1.079  id_ex/rtOut_0 (id_ex/rtOut_0)
-     LUT6:I0->O            1   0.203   0.580  hazards/rtEX[4]_regWriteMEM_AND_170_o_SW0 (N60)
+     FDC_1:C->Q            5   0.447   1.079  id_ex/rtOut_0 (id_ex/rtOut_0)
+     LUT6:I0->O            1   0.203   0.580  hazards/rtEX[4]_regWriteMEM_AND_170_o_SW0 (N66)
      LUT6:I5->O           33   0.205   1.306  hazards/rtEX[4]_regWriteMEM_AND_170_o (forwardBEX<1>)
      LUT5:I4->O           32   0.205   1.292  hazards/Mmux_forwardBEX13 (forwardBEX<0>)
-     LUT5:I4->O           12   0.205   0.909  Mmux_aluOperand2251 (Mmux_aluOperand225)
-     LUT3:I2->O           36   0.205   1.349  Mmux_aluOperand2252 (aluOperand2<31>)
+     LUT5:I4->O           13   0.205   0.933  srcBEX<31>1 (srcBEX<31>)
+     LUT3:I2->O           36   0.205   1.349  Mmux_aluOperand2251 (aluOperand2<31>)
      LUT5:I4->O            5   0.205   0.715  alu/Sh1281 (alu/Sh128)
      LUT6:I5->O            4   0.205   0.684  alu/Sh14911 (alu/Sh1491)
      LUT6:I5->O            3   0.205   0.651  alu/Sh1492 (alu/Sh149)
-     LUT5:I4->O            1   0.205   0.580  alu/Mmux_result1610_SW0 (N88)
+     LUT5:I4->O            1   0.205   0.580  alu/Mmux_result1610_SW0 (N94)
      LUT6:I5->O            1   0.205   0.580  alu/Mmux_result1610 (alu/Mmux_result1610)
      LUT6:I5->O            2   0.205   0.864  alu/Mmux_result1611 (aluOut<17>)
-     LUT5:I1->O            1   0.203   0.827  alu/zero<31>5 (alu/zero<31>4)
-     LUT6:I2->O            1   0.203   0.580  alu/zero<31>6 (alu/zero<31>5)
+     LUT5:I1->O            1   0.203   0.684  alu/zero<31>5 (alu/zero<31>4)
+     LUT6:I4->O            1   0.203   0.580  alu/zero<31>6 (alu/zero<31>5)
      LUT6:I5->O            1   0.205   0.579  alu/zero<31>7 (ALUzero_OBUF)
      OBUF:I->O                 2.571          ALUzero_OBUF (ALUzero)
     ----------------------------------------
-    Total                     18.457ns (5.882ns logic, 12.575ns route)
-                                       (31.9% logic, 68.1% route)
+    Total                     18.338ns (5.882ns logic, 12.456ns route)
+                                       (32.1% logic, 67.9% route)
 
 =========================================================================
 
@@ -659,20 +666,20 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |   12.527|    6.956|    4.256|         |
+clock          |    1.405|    4.256|   12.551|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 20.90 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.73 secs
  
 --> 
 
-Total memory usage is 275348 kilobytes
+Total memory usage is 269496 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :   13 (   0 filtered)
 

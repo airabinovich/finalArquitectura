@@ -39,7 +39,7 @@ module EX_MEM(
 		
     );
 	 
-	 always @(posedge clock,posedge reset)begin
+	 always @(negedge clock,posedge reset)begin
 		if(reset)begin
 			writeRegisterOut<=0;
 			writeDataOut<=0;

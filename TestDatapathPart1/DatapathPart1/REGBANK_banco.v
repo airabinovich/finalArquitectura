@@ -39,7 +39,7 @@ module REGBANK_banco #(parameter addr_bits=5, word_wide=32)(
 	assign readData1 = banco[readReg1];
 	assign readData2 = banco[readReg2];
 	
-	always@(negedge clock,posedge reset) begin
+	always@(posedge clock,posedge reset) begin
 		if(reset)begin
 			banco[0]=0;banco[1]=0;banco[2]=0;banco[3]=0;
 			banco[4]=0;banco[5]=0;banco[6]=0;banco[7]=0;

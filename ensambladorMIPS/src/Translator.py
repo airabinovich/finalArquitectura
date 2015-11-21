@@ -62,6 +62,8 @@ ASM2HEX = {
            "JAL":   [("code", 0x0C000000), ("instr_index", 0)],
            "JR":    [("code", 0x00000008), ("rs", 21)],
            "JALR":  [("code", 0x00000009), ("rd", 11), ("rs", 21)],
+           # END instruction
+           "END":   [("code",0xFFFFFFFF)],
 }
 
 class Translator(object):
@@ -81,6 +83,11 @@ class Translator(object):
         @return: list of tuples containing instruction fields and corresponding values
         """
         if not isinstance(instruction, str): raise TypeError
+        if ' ' not in instruction:
+            '''
+            END instruction has no params, so it won't have any whitespaces and split would crash
+            '''
+            return {"instruction_name":instruction, "params":[]}
         (instrCode, instrParams) = split(instruction, " ", 1)
         instrCode = instrCode.upper()
         fieldNames = [fn[0] for fn in ASM2HEX[instrCode]][1:]
@@ -112,8 +119,10 @@ class Translator(object):
         for instruction in decodedInstructions:
             instructionData = ASM2HEX[instruction["instruction_name"]]
             instructionParams = instruction["params"]   # list of tuples of instruction parameters
-            argumentValues = [(int(instructionParams[i][1]) << instructionData[i+1][1]) for i in range(len(instructionParams))]
-            argumentsCode = reduce(lambda x, y: x | y,argumentValues)
+            argumentsCode = 0;
+            if instructionParams: #list not empty
+                argumentValues = [(int(instructionParams[i][1]) << instructionData[i+1][1]) for i in range(len(instructionParams))]
+                argumentsCode = reduce(lambda x, y: x | y,argumentValues)
             instructionCode = int(instructionData[0][1]) | argumentsCode
             instrCodeHex = hex(instructionCode).strip("L")[2:]
             while len(instrCodeHex) < 8:

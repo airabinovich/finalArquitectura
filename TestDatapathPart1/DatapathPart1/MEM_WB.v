@@ -34,7 +34,7 @@ module MEM_WB(
 		output reg memToRegOut
     );
 	 
-	 	 always @(posedge clock,posedge reset)begin
+	 	 always @(negedge clock,posedge reset)begin
 		if(reset)begin
 			writeRegisterOut<=0;
 			aluOutOut<=0;
