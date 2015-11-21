@@ -122,6 +122,8 @@ Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Traba
 Parsing module <IF_ID>.
 Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v" into library work
 Parsing module <ID_EX>.
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v" into library work
+Parsing module <HazardsUnit>.
 Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v" into library work
 Parsing module <FE>.
 Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v" into library work
@@ -166,16 +168,18 @@ Elaborating module <MEM_WB>.
 
 Elaborating module <FE>.
 
+Elaborating module <HazardsUnit>.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <Datapath1>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v".
-    Found 32-bit comparator equal for signal <readData1[31]_readData2[31]_equal_5_o> created at line 124
+    Found 32-bit comparator equal for signal <branchSrcA[31]_branchSrcB[31]_equal_5_o> created at line 135
     Summary:
 	inferred   1 Comparator(s).
-	inferred   4 Multiplexer(s).
+	inferred   8 Multiplexer(s).
 Unit <Datapath1> synthesized.
 
 Synthesizing Unit <ControlUnit>.
@@ -188,7 +192,7 @@ Synthesizing Unit <REGBANK_banco>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v".
         addr_bits = 5
         word_wide = 32
-    Found 1024-bit register for signal <n0043[1023:0]>.
+    Found 1024-bit register for signal <n0044[1023:0]>.
     Found 32-bit 32-to-1 multiplexer for signal <readData1> created at line 39.
     Found 32-bit 32-to-1 multiplexer for signal <readData2> created at line 40.
     Summary:
@@ -266,11 +270,12 @@ Synthesizing Unit <ID_EX>.
     Found 1-bit register for signal <regDstOut>.
     Summary:
 	inferred 125 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
 Unit <ID_EX> synthesized.
 
 Synthesizing Unit <MemoryLoadMask>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v".
-    Found 32-bit 4-to-1 multiplexer for signal <dataOut> created at line 28.
+    Found 32-bit 3-to-1 multiplexer for signal <dataOut> created at line 28.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <MemoryLoadMask> synthesized.
@@ -293,6 +298,23 @@ Synthesizing Unit <FE>.
 	inferred   8 D-type flip-flop(s).
 Unit <FE> synthesized.
 
+Synthesizing Unit <HazardsUnit>.
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v".
+    Found 5-bit comparator equal for signal <rsID[4]_rtEX[4]_equal_1_o> created at line 50
+    Found 5-bit comparator equal for signal <rtID[4]_rtEX[4]_equal_2_o> created at line 50
+    Found 5-bit comparator equal for signal <rsID[4]_writeRegMEM[4]_equal_3_o> created at line 55
+    Found 5-bit comparator equal for signal <rtID[4]_writeRegMEM[4]_equal_4_o> created at line 56
+    Found 5-bit comparator equal for signal <writeRegEX[4]_rsID[4]_equal_5_o> created at line 58
+    Found 5-bit comparator equal for signal <writeRegEX[4]_rtID[4]_equal_6_o> created at line 58
+    Found 5-bit comparator equal for signal <rsEX[4]_writeRegMEM[4]_equal_9_o> created at line 61
+    Found 5-bit comparator equal for signal <rsEX[4]_writeRegWB[4]_equal_10_o> created at line 64
+    Found 5-bit comparator equal for signal <rtEX[4]_writeRegMEM[4]_equal_13_o> created at line 71
+    Found 5-bit comparator equal for signal <rtEX[4]_writeRegWB[4]_equal_14_o> created at line 74
+    Summary:
+	inferred  10 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <HazardsUnit> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
@@ -309,16 +331,20 @@ Macro Statistics
  4-bit register                                        : 3
  5-bit register                                        : 5
  8-bit register                                        : 2
-# Comparators                                          : 2
+# Comparators                                          : 12
  32-bit comparator equal                               : 1
  32-bit comparator greater                             : 1
-# Multiplexers                                         : 42
+ 5-bit comparator equal                                : 10
+# Multiplexers                                         : 61
  1-bit 12-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 4
+ 2-bit 2-to-1 multiplexer                              : 3
  32-bit 12-to-1 multiplexer                            : 1
- 32-bit 2-to-1 multiplexer                             : 35
+ 32-bit 2-to-1 multiplexer                             : 42
+ 32-bit 3-to-1 multiplexer                             : 1
  32-bit 32-to-1 multiplexer                            : 2
- 32-bit 4-to-1 multiplexer                             : 1
- 5-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 4
  8-bit 2-to-1 multiplexer                              : 1
 # Logic shifters                                       : 3
  33-bit shifter arithmetic right                       : 1
@@ -346,16 +372,20 @@ Macro Statistics
  8-bit adder                                           : 2
 # Registers                                            : 1345
  Flip-Flops                                            : 1345
-# Comparators                                          : 2
+# Comparators                                          : 12
  32-bit comparator equal                               : 1
  32-bit comparator greater                             : 1
-# Multiplexers                                         : 42
+ 5-bit comparator equal                                : 10
+# Multiplexers                                         : 61
  1-bit 12-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 4
+ 2-bit 2-to-1 multiplexer                              : 3
  32-bit 12-to-1 multiplexer                            : 1
- 32-bit 2-to-1 multiplexer                             : 35
+ 32-bit 2-to-1 multiplexer                             : 42
+ 32-bit 3-to-1 multiplexer                             : 1
  32-bit 32-to-1 multiplexer                            : 2
- 32-bit 4-to-1 multiplexer                             : 1
- 5-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 2
+ 5-bit 2-to-1 multiplexer                              : 4
  8-bit 2-to-1 multiplexer                              : 1
 # Logic shifters                                       : 3
  33-bit shifter arithmetic right                       : 1
@@ -369,23 +399,25 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <rdOut_0> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <sigExtOut_11> 
-INFO:Xst:2261 - The FF/Latch <rdOut_1> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <sigExtOut_12> 
-INFO:Xst:2261 - The FF/Latch <rdOut_2> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <sigExtOut_13> 
-INFO:Xst:2261 - The FF/Latch <rdOut_3> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <sigExtOut_14> 
-INFO:Xst:2261 - The FF/Latch <rdOut_4> in Unit <ID_EX> is equivalent to the following 17 FFs/Latches, which will be removed : <sigExtOut_15> <sigExtOut_16> <sigExtOut_17> <sigExtOut_18> <sigExtOut_19> <sigExtOut_20> <sigExtOut_21> <sigExtOut_22> <sigExtOut_23> <sigExtOut_24> <sigExtOut_25> <sigExtOut_26> <sigExtOut_27> <sigExtOut_28> <sigExtOut_29> <sigExtOut_30> <sigExtOut_31> 
+INFO:Xst:2261 - The FF/Latch <sigExtOut_11> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_0> 
+INFO:Xst:2261 - The FF/Latch <sigExtOut_12> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_1> 
+INFO:Xst:2261 - The FF/Latch <sigExtOut_13> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_2> 
+INFO:Xst:2261 - The FF/Latch <sigExtOut_14> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_3> 
+INFO:Xst:2261 - The FF/Latch <sigExtOut_15> in Unit <ID_EX> is equivalent to the following 17 FFs/Latches, which will be removed : <sigExtOut_16> <sigExtOut_17> <sigExtOut_18> <sigExtOut_19> <sigExtOut_20> <sigExtOut_21> <sigExtOut_22> <sigExtOut_23> <sigExtOut_24> <sigExtOut_25> <sigExtOut_26> <sigExtOut_27> <sigExtOut_28> <sigExtOut_29> <sigExtOut_30> <sigExtOut_31> <rdOut_4> 
 
 Optimizing unit <EX_MEM> ...
 
-Optimizing unit <ID_EX> ...
-
 Optimizing unit <MEM_WB> ...
-
-Optimizing unit <FE> ...
 
 Optimizing unit <Datapath1> ...
 
 Optimizing unit <REGBANK_banco> ...
+
+Optimizing unit <ID_EX> ...
+
+Optimizing unit <FE> ...
+
+Optimizing unit <HazardsUnit> ...
 
 Optimizing unit <ALU> ...
 INFO:Xst:2261 - The FF/Latch <id_ex/memWriteOut_3> in Unit <Datapath1> is equivalent to the following FF/Latch, which will be removed : <id_ex/memWriteOut_2> 
@@ -393,16 +425,8 @@ INFO:Xst:2261 - The FF/Latch <id_ex/memWriteOut_3> in Unit <Datapath1> is equiva
 Mapping all equations...
 Building and optimizing final netlist ...
 INFO:Xst:2261 - The FF/Latch <ex_mem/memWriteOut_3> in Unit <Datapath1> is equivalent to the following FF/Latch, which will be removed : <ex_mem/memWriteOut_2> 
-Found area constraint ratio of 100 (+ 5) on block Datapath1, actual ratio is 34.
-FlipFlop id_ex/aluSrcOut has been replicated 4 time(s)
-FlipFlop id_ex/rdOut_4 has been replicated 2 time(s)
-FlipFlop id_ex/readData1Out_0 has been replicated 1 time(s)
-FlipFlop id_ex/readData1Out_1 has been replicated 1 time(s)
-FlipFlop id_ex/readData2Out_31 has been replicated 1 time(s)
-FlipFlop if_id/instructionOut_16 has been replicated 11 time(s)
-FlipFlop if_id/instructionOut_17 has been replicated 13 time(s)
-FlipFlop if_id/instructionOut_21 has been replicated 13 time(s)
-FlipFlop if_id/instructionOut_22 has been replicated 13 time(s)
+Found area constraint ratio of 100 (+ 5) on block Datapath1, actual ratio is 38.
+FlipFlop ex_mem/regWriteOut has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -410,8 +434,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1381
- Flip-Flops                                            : 1381
+# Registers                                            : 1323
+ Flip-Flops                                            : 1323
 
 =========================================================================
 
@@ -434,22 +458,23 @@ Top Level Output File Name         : Datapath1.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2613
+# BELS                             : 2888
 #      GND                         : 2
-#      INV                         : 1
+#      INV                         : 2
 #      LUT1                        : 1
-#      LUT2                        : 54
-#      LUT3                        : 87
-#      LUT4                        : 109
-#      LUT5                        : 1160
-#      LUT6                        : 947
-#      MUXCY                       : 100
-#      MUXF7                       : 76
+#      LUT2                        : 33
+#      LUT3                        : 98
+#      LUT4                        : 205
+#      LUT5                        : 1346
+#      LUT6                        : 935
+#      MUXCY                       : 99
+#      MUXF7                       : 91
 #      VCC                         : 2
 #      XORCY                       : 74
-# FlipFlops/Latches                : 1381
-#      FDC                         : 357
-#      FDCE                        : 1024
+# FlipFlops/Latches                : 1323
+#      FDC                         : 251
+#      FDCE                        : 48
+#      FDCE_1                      : 1024
 # RAMS                             : 1
 #      RAMB8BWER                   : 1
 # Clock Buffers                    : 1
@@ -465,16 +490,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1381  out of  18224     7%  
- Number of Slice LUTs:                 2359  out of   9112    25%  
-    Number used as Logic:              2359  out of   9112    25%  
+ Number of Slice Registers:            1323  out of  18224     7%  
+ Number of Slice LUTs:                 2620  out of   9112    28%  
+    Number used as Logic:              2620  out of   9112    28%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2524
-   Number with an unused Flip Flop:    1143  out of   2524    45%  
-   Number with an unused LUT:           165  out of   2524     6%  
-   Number of fully used LUT-FF pairs:  1216  out of   2524    48%  
-   Number of unique control sets:         2
+ Number of LUT Flip Flop pairs used:   3726
+   Number with an unused Flip Flop:    2403  out of   3726    64%  
+   Number with an unused LUT:          1106  out of   3726    29%  
+   Number of fully used LUT-FF pairs:   217  out of   3726     5%  
+   Number of unique control sets:         3
 
 IO Utilization: 
  Number of IOs:                          49
@@ -506,7 +531,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 1382  |
+clock                              | BUFGP                  | 1324  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -517,9 +542,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 6.600ns (Maximum Frequency: 151.505MHz)
-   Minimum input arrival time before clock: 3.950ns
-   Maximum output required time after clock: 12.285ns
+   Minimum period: 13.524ns (Maximum Frequency: 73.942MHz)
+   Minimum input arrival time before clock: 3.936ns
+   Maximum output required time after clock: 17.697ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -528,76 +553,92 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
-  Clock period: 6.600ns (frequency: 151.505MHz)
-  Total number of paths / destination ports: 331726 / 2457
+  Clock period: 13.524ns (frequency: 73.942MHz)
+  Total number of paths / destination ports: 419152 / 2447
 -------------------------------------------------------------------------
-Delay:               6.600ns (Levels of Logic = 6)
-  Source:            id_ex/rdOut_4_1 (FF)
-  Destination:       ex_mem/aluOutOut_22 (FF)
-  Source Clock:      clock rising
+Delay:               6.762ns (Levels of Logic = 17)
+  Source:            bank/banco_0_832 (FF)
+  Destination:       if_id/instructionOut_0 (FF)
+  Source Clock:      clock falling
   Destination Clock: clock rising
 
-  Data Path: id_ex/rdOut_4_1 to ex_mem/aluOutOut_22
+  Data Path: bank/banco_0_832 to if_id/instructionOut_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             17   0.447   1.028  id_ex/rdOut_4_1 (id_ex/rdOut_4_1)
-     LUT3:I2->O           10   0.205   1.085  Mmux_aluOperand2211 (aluOperand2<28>)
-     LUT6:I3->O            9   0.205   0.934  alu/Sh1251 (alu/Sh125)
-     LUT6:I4->O            2   0.203   0.617  alu/Sh2531 (alu/Sh253)
-     LUT5:I4->O            1   0.205   0.580  alu/Mmux_result287 (alu/Mmux_result286)
-     LUT5:I4->O            1   0.205   0.580  alu/Mmux_result288 (alu/Mmux_result287)
-     LUT6:I5->O            2   0.205   0.000  alu/Mmux_result289 (aluOut<22>)
-     FDC:D                     0.102          ex_mem/aluOutOut_22
+     FDCE_1:C->Q           3   0.447   0.898  bank/banco_0_832 (bank/banco_0_832)
+     LUT6:I2->O            1   0.203   0.827  bank/Mmux_readData1_81 (bank/Mmux_readData1_81)
+     LUT6:I2->O            1   0.203   0.000  bank/Mmux_readData1_3 (bank/Mmux_readData1_3)
+     MUXF7:I1->O           2   0.140   0.617  bank/Mmux_readData1_2_f7 (readData1<0>)
+     LUT4:I3->O            1   0.205   0.944  Mmux_branchSrcA11 (branchSrcA<0>)
+     LUT6:I0->O            1   0.203   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_lut<0> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<0> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<1> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<2> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<3> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<4> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<5> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<6> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<7> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<8> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<9> (Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<9>)
+     MUXCY:CI->O          40   0.019   1.406  Mcompar_branchSrcA[31]_branchSrcB[31]_equal_5_o_cy<10> (branchSrcA[31]_branchSrcB[31]_equal_5_o)
+     LUT4:I3->O            1   0.205   0.000  if_id/Mmux_instruction[31]_GND_8_o_mux_0_OUT311 (if_id/instruction[31]_GND_8_o_mux_0_OUT<8>)
+     FDCE:D                    0.102          if_id/instructionOut_8
     ----------------------------------------
-    Total                      6.600ns (1.777ns logic, 4.823ns route)
-                                       (26.9% logic, 73.1% route)
+    Total                      6.762ns (2.070ns logic, 4.692ns route)
+                                       (30.6% logic, 69.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
-  Total number of paths / destination ports: 1463 / 1463
+  Total number of paths / destination ports: 1356 / 1355
 -------------------------------------------------------------------------
-Offset:              3.950ns (Levels of Logic = 1)
+Offset:              3.936ns (Levels of Logic = 1)
   Source:            resetGral (PAD)
-  Destination:       if_id/instructionOut_0 (FF)
+  Destination:       if_id/pcNextOut_0 (FF)
   Destination Clock: clock rising
 
-  Data Path: resetGral to if_id/instructionOut_0
+  Data Path: resetGral to if_id/pcNextOut_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1381   1.222   2.298  resetGral_IBUF (resetGral_IBUF)
-     FDC:CLR                   0.430          if_id/instructionOut_0
+     IBUF:I->O          1323   1.222   2.284  resetGral_IBUF (resetGral_IBUF)
+     FDCE:CLR                  0.430          if_id/pcNextOut_0
     ----------------------------------------
-    Total                      3.950ns (1.652ns logic, 2.298ns route)
-                                       (41.8% logic, 58.2% route)
+    Total                      3.936ns (1.652ns logic, 2.284ns route)
+                                       (42.0% logic, 58.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
-  Total number of paths / destination ports: 12096 / 15
+  Total number of paths / destination ports: 234983 / 15
 -------------------------------------------------------------------------
-Offset:              12.285ns (Levels of Logic = 9)
-  Source:            id_ex/rdOut_4_1 (FF)
+Offset:              17.697ns (Levels of Logic = 14)
+  Source:            id_ex/rsOut_2 (FF)
   Destination:       ALUzero (PAD)
   Source Clock:      clock rising
 
-  Data Path: id_ex/rdOut_4_1 to ALUzero
+  Data Path: id_ex/rsOut_2 to ALUzero
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             17   0.447   1.132  id_ex/rdOut_4_1 (id_ex/rdOut_4_1)
-     LUT3:I1->O           34   0.203   1.321  Mmux_aluOperand2251 (aluOperand2<31>)
-     LUT6:I5->O            9   0.205   0.830  alu/Sh1271 (alu/Sh127)
-     LUT6:I5->O            2   0.205   0.617  alu/Sh2511 (alu/Sh251)
-     LUT6:I5->O            1   0.205   0.684  alu/Mmux_result525 (alu/Mmux_result524)
-     LUT6:I4->O            2   0.203   0.981  alu/Mmux_result5213 (aluOut<4>)
-     LUT6:I0->O            1   0.203   0.808  alu/zero<31>2 (alu/zero<31>1)
-     LUT5:I2->O            1   0.205   0.684  alu/zero<31>4 (alu/zero<31>3)
+     FDC:C->Q              3   0.447   1.015  id_ex/rsOut_2 (id_ex/rsOut_2)
+     LUT6:I0->O            1   0.203   0.580  hazards/rsEX[4]_regWriteMEM_AND_167_o_SW0 (N12)
+     LUT6:I5->O           39   0.205   1.392  hazards/rsEX[4]_regWriteMEM_AND_167_o (forwardAEX<1>)
+     LUT5:I4->O           38   0.205   1.377  hazards/Mmux_forwardAEX13 (forwardAEX<0>)
+     LUT5:I4->O           85   0.205   1.779  srcAEX<0>1 (srcAEX<0>)
+     LUT6:I5->O            3   0.205   0.755  alu/Sh51 (alu/Sh5)
+     LUT3:I1->O            1   0.203   0.580  alu/Sh5011 (alu/Sh501)
+     LUT6:I5->O            1   0.205   0.580  alu/Mmux_result169 (alu/Mmux_result169)
+     LUT5:I4->O            1   0.205   0.580  alu/Mmux_result1610_SW0 (N36)
+     LUT6:I5->O            1   0.205   0.580  alu/Mmux_result1610 (alu/Mmux_result1610)
+     LUT6:I5->O            2   0.205   0.961  alu/Mmux_result1611 (aluOut<17>)
+     LUT6:I1->O            1   0.203   0.580  alu/zero<31>2 (alu/zero<31>1)
+     LUT5:I4->O            1   0.205   0.684  alu/zero<31>4 (alu/zero<31>3)
      LUT6:I4->O            1   0.203   0.579  alu/zero<31>7 (ALUzero_OBUF)
      OBUF:I->O                 2.571          ALUzero_OBUF (ALUzero)
     ----------------------------------------
-    Total                     12.285ns (4.650ns logic, 7.635ns route)
-                                       (37.9% logic, 62.1% route)
+    Total                     17.697ns (5.675ns logic, 12.022ns route)
+                                       (32.1% logic, 67.9% route)
 
 =========================================================================
 
@@ -609,18 +650,18 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    6.600|         |         |         |
+clock          |   11.820|    6.762|    4.256|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 22.18 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 21.18 secs
  
 --> 
 
-Total memory usage is 273300 kilobytes
+Total memory usage is 275540 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

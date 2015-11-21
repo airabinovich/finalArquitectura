@@ -21,6 +21,7 @@
 module FE(
 		input clock,
 		input reset,
+		input notEnable,
 		input [7:0]pc,
 		output reg [7:0]pcOut
     );
@@ -29,7 +30,7 @@ module FE(
 			if(reset)begin
 				pcOut<=0;
 			end
-			else begin
+			else if(~notEnable) begin
 				pcOut<=pc;
 			end
 		end

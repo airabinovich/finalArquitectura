@@ -21,6 +21,7 @@
 module IF_ID(
 		input clock,
 		input reset,
+		input notEnable,
 		input clear,
 		input[31:0] instruction,
 		input[7:0] pcNext,
@@ -33,7 +34,7 @@ module IF_ID(
 			instructionOut<=0;
 			pcNextOut<=0;
 		end
-		else begin
+		else if(~notEnable)begin
 			if(clear)begin
 				instructionOut<=0;
 			end

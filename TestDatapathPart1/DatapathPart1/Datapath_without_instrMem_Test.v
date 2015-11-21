@@ -96,7 +96,11 @@ module DatapathTest;
 					instruction={special,rs,rt,rd,zeros,operation}; // SLLV: r2 = r0 << r1 (desplazo 650 tres lugares a la izq)
 			  end
 			default: begin
-					instruction=32'hFFFFFFFF;//sumo un valor inmediato de 1 al r0 y lo guardo en r0
+					special=6'b001000;
+					rt=1;
+					rs=1;
+					immediate=1;
+					instruction={special,rs,rt,immediate};//sumo un valor inmediato de 1 al r1 y lo guardo en r1
 			end
 			7:begin
 					special=6'b101000; //Store byte en direccion 5 del reg 0

@@ -21,6 +21,7 @@
 module ID_EX(
 		input clock,
 		input reset,
+		input syncClr,
 		input [4:0] rs,
 		input [4:0] rt,
 		input [4:0] rd,
@@ -53,6 +54,21 @@ module ID_EX(
 	 
 	 	 always @(posedge clock,posedge reset)begin
 		if(reset)begin
+			 aluOperationOut<=0;
+			 sigExtOut<=0;
+			 readData1Out<=0;
+			 readData2Out<=0;
+			 aluSrcOut<=0;
+			 memWriteOut<=0;
+			 memToRegOut<=0;
+			 memReadWidthOut<=0;
+			 regWriteOut<=0;
+			 rsOut<=0;
+			 rtOut<=0;
+		    rdOut<=0;
+			 regDstOut<=0;
+		end
+		else if(syncClr)begin
 			 aluOperationOut<=0;
 			 sigExtOut<=0;
 			 readData1Out<=0;

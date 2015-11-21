@@ -110,6 +110,17 @@ module Datapath1(
 	  
 	 wire [31:0] writeDataMEM;
 	 
+	 //Salidas Hazard Unit
+	 wire stallFE;
+	 wire stallID;
+	 wire forwardAID;
+	 wire forwardBID;
+	 wire flushEX;
+	 wire [1:0] forwardAEX;
+	 wire [1:0] forwardBEX;
+	 
+	 
+	 
 	 //Multiplexores:
 		 //Declaracion
 		 wire [4:0]writeRegister;
@@ -119,11 +130,25 @@ module Datapath1(
 				
 		 //Asignacion		
 		 assign writeRegister = (regDstEX)? rdEX : rtEX;
-		 assign aluOperand2 = (aluSrcEX)? sigExtEX: readData2EX;
+		 assign aluOperand2 = (aluSrcEX)? sigExtEX: srcBEX;
 //		 assign sigExtShifted = sigExtOut<<2; //No se usa el shifted porque se accede con valores absolutos a la memoria de instr
-		 assign pcSrc = branch & (readData1==readData2);
+		 assign pcSrc = branch & (branchSrcA==branchSrcB);
 		 assign resultWB = (memToRegWB)? memoryOutWB : aluOutWB;
 		 assign PC = (pcSrc)? pcBranchAddr : pcNext;
+		 
+		 
+	//Multiplexores Hazards:
+		 //Declaracion
+		 wire [31:0]srcAEX;
+		 wire [31:0]srcBEX;
+		 wire [31:0]branchSrcA;
+		 wire [31:0]branchSrcB;
+		 //Asignacion
+		 assign srcAEX= (forwardAEX==0)? readData1EX : ((forwardAEX==1)? resultWB : aluOutMEM);
+		 assign srcBEX= (forwardBEX==0)? readData2EX : ((forwardBEX==1)? resultWB : aluOutMEM);
+		 assign branchSrcA= (forwardAID)? aluOutMEM: readData1;
+		 assign branchSrcB= (forwardBID)? aluOutMEM: readData2;
+		 
 	  ControlUnit control(
 	 	.Special(instructionID[31:26]),
 		.instructionCode(instructionID[5:0]),
@@ -139,7 +164,7 @@ module Datapath1(
 	 
 	 
 	 RAM ram(
-	  .clka(clock), // input clka
+	  .clka(~clock), // input clka niego el clock para no perder un ciclo en la lectura
 	  .wea(memWriteMEM), 
 	  .addra(aluOutMEM[7:0]), // input [7 : 0] addra
 	  .dina(writeDataMEM), // input [31 : 0] dina
@@ -160,7 +185,7 @@ module Datapath1(
 	 
 	 ALU alu(
 		.op_code(aluControlEX),
-		.operand1(readData1EX),
+		.operand1(srcAEX),
 		.operand2(aluOperand2),
 		.result(aluOut),
 		.zero(aluZero),
@@ -189,6 +214,7 @@ module Datapath1(
 			IF_ID if_id(
 					.clock(clock),
 					.reset(resetGral),
+					.notEnable(stallID),
 					.instruction(instruction),
 					.pcNext(pcNext),
 					.instructionOut(instructionID),
@@ -220,6 +246,7 @@ module Datapath1(
 		 ID_EX id_ex(
 			.clock(clock),
 			.reset(resetGral),
+			.syncClr(flushEX),
 			.rs(instructionID[25:21]),
 			.rt(instructionID[20:16]),
 			.rd(instructionID[15:11]),
@@ -274,8 +301,33 @@ module Datapath1(
 	 FE fetch(
 		.clock(clock),
 		.reset(resetGral),
+		.notEnable(stallFE),
 		.pc(PC),
 		.pcOut(pcFE)
+	 );
+	 
+	 HazardsUnit hazards (
+	 	.branchID(branch),
+		.rsID(instructionID[25:21]),
+		.rtID(instructionID[20:16]),
+		.rsEX(rsEX),
+		.rtEX(rtEX),
+		.writeRegEX(writeRegister),
+		.writeRegMEM(writeRegisterMEM),
+		.writeRegWB(writeRegisterWB),
+		.memToRegEX(memToRegEX),
+		.memToRegMEM(memToRegMEM),
+		.regWriteEX(regWriteEX),
+		.regWriteMEM(regWriteMEM),
+		.regWriteWB(regWriteWB),
+
+		.stallFE(stallFE),
+		.stallID(stallID),
+		.forwardAID(forwardAID),
+		.forwardBID(forwardBID),
+		.flushEX(flushEX),
+		.forwardAEX(forwardAEX),
+		.forwardBEX(forwardBEX)
 	 );
 
 
