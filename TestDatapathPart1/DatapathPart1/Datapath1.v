@@ -64,10 +64,17 @@ module Datapath1(
 	 wire aluSrc;
 	 wire aluSrcEX;
 	 
+	 wire aluShiftImm;
+	 wire aluShiftImmEX;
+	 
 	 wire regDst;
 	 wire regDstEX;
 	 
+	 wire loadImm;
+	 wire loadImmEX;
+	 
 	 wire branch;
+	 wire branchType;
 		 
 	 wire [1:0] memReadWidth;
 	 wire [1:0] memReadWidthEX;
@@ -75,6 +82,8 @@ module Datapath1(
 
 	 wire [31:0]sigExtOut;
 	 wire [31:0]sigExtEX;
+	 
+	 wire zeroExtendFlag;
 
 	 wire [31:0]aluOut;
 	 wire [31:0]aluOutMEM;
@@ -102,6 +111,7 @@ module Datapath1(
 	 wire [4:0]rsEX;
 	 wire [4:0]rtEX;
 	 wire [4:0]rdEX;
+	 wire [4:0]saEX;
 		
 	 wire [4:0]writeRegisterMEM;
 	 wire [4:0]writeRegisterWB;
@@ -124,17 +134,22 @@ module Datapath1(
 	 //Multiplexores:
 		 //Declaracion
 		 wire [4:0]writeRegister;
+		 wire [31:0]aluOperand1;
 		 wire [31:0]aluOperand2;
 //		 wire [31:0]sigExtShifted; //No se usa el shifted porque se accede con valores absolutos a la memoria de instr
 		 wire [31:0] resultWB;
+		 wire branchTaken;
 				
 		 //Asignacion		
 		 assign writeRegister = (regDstEX)? rdEX : rtEX;
+		 assign aluOperand1 = (loadImmEX)? 'd16 : ((aluShiftImmEX)? saEX: srcAEX);
 		 assign aluOperand2 = (aluSrcEX)? sigExtEX: srcBEX;
 //		 assign sigExtShifted = sigExtOut<<2; //No se usa el shifted porque se accede con valores absolutos a la memoria de instr
-		 assign pcSrc = branch & (branchSrcA==branchSrcB);
+		 assign pcSrc = branch & branchTaken;
+		 assign branchTaken = (branchType)? (branchSrcA!=branchSrcB) : (branchSrcA==branchSrcB); //branchType(flag from control) 1: check if branch NE 0: check if branch EQ
 		 assign resultWB = (memToRegWB)? memoryOutWB : aluOutWB;
 		 assign PC = (pcSrc)? pcBranchAddr : pcNext;
+		 
 		 
 		 
 	//Multiplexores Hazards:
@@ -154,10 +169,14 @@ module Datapath1(
 		.instructionCode(instructionID[5:0]),
 		.RegDst(regDst),
 		.Branch(branch),
+		.BranchType(branchType),
 		.MemtoReg(memToReg),
 		.MemWrite(memWrite),
 		.ALUSrc(aluSrc),
+		.ALUShiftImm(aluShiftImm),
 		.RegWrite(regWrite),
+		.LoadImm(loadImm),
+		.ZeroEx(zeroExtendFlag),
 		.memReadWidth(memReadWidth), // 0:Word 1:Halfword 2:Byte
 	   .aluOperation(aluControl)
 	 );
@@ -185,7 +204,7 @@ module Datapath1(
 	 
 	 ALU alu(
 		.op_code(aluControlEX),
-		.operand1(srcAEX),
+		.operand1(aluOperand1),
 		.operand2(aluOperand2),
 		.result(aluOut),
 		.zero(aluZero),
@@ -193,6 +212,7 @@ module Datapath1(
 	 );
 	 SigExt sigext(
 		.in(instructionID[15:0]),
+		.zeroEx(zeroExtendFlag),
 		.out(sigExtOut)
 	 );
 	 
@@ -250,12 +270,15 @@ module Datapath1(
 			.rs(instructionID[25:21]),
 			.rt(instructionID[20:16]),
 			.rd(instructionID[15:11]),
+			.sa(instructionID[10:6]),
 			.aluOperation(aluControl),
 			.sigExt(sigExtOut),
 			.readData1(readData1),
 			.readData2(readData2),
 			.aluSrc(aluSrc),
+			.aluShiftImm(aluShiftImm),
 			.regDst(regDst),
+			.loadImm(loadImm),
 			.memWrite(memWrite),
 			.memToReg(memToReg),
 			.memReadWidth(memReadWidth),
@@ -267,13 +290,16 @@ module Datapath1(
 			.readData1Out(readData1EX),
 			.readData2Out(readData2EX),
 			.aluSrcOut(aluSrcEX),
+			.aluShiftImmOut(aluShiftImmEX),
 			.memWriteOut(memWriteEX),
 			.memToRegOut(memToRegEX),
 			.memReadWidthOut(memReadWidthEX),
 			.rsOut(rsEX),
 			.rtOut(rtEX),
 			.rdOut(rdEX),
+			.saOut(saEX),
 			.regDstOut(regDstEX),
+			.loadImmOut(loadImmEX),
 			.regWriteOut(regWriteEX)		
     );			
 	 
