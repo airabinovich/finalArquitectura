@@ -48,6 +48,7 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -58,7 +59,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1448154154" xil_pn:in_ck="-8074952259586519998" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1448154154">
+    <transform xil_pn:end_ts="1448320928" xil_pn:in_ck="-8074952259586519998" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1448320928">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -80,11 +81,11 @@
       <outfile xil_pn:name="SigExt.v"/>
       <outfile xil_pn:name="SigExtTest.v"/>
     </transform>
-    <transform xil_pn:end_ts="1448154929" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2166681125337151288" xil_pn:start_ts="1448154929">
+    <transform xil_pn:end_ts="1448320938" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2166681125337151288" xil_pn:start_ts="1448320938">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1448154929" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2943059179100631174" xil_pn:start_ts="1448154929">
+    <transform xil_pn:end_ts="1448320938" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2943059179100631174" xil_pn:start_ts="1448320938">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -96,7 +97,7 @@
       <outfile xil_pn:name="ipcore_dir/instructionROM.ngc"/>
       <outfile xil_pn:name="ipcore_dir/instructionROM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1448154911" xil_pn:in_ck="4751305486486718584" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1448154911">
+    <transform xil_pn:end_ts="1448320928" xil_pn:in_ck="-8074952259586519998" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1448320928">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -117,23 +118,29 @@
       <outfile xil_pn:name="REGBANK_banco.v"/>
       <outfile xil_pn:name="SigExt.v"/>
       <outfile xil_pn:name="SigExtTest.v"/>
-      <outfile xil_pn:name="ipcore_dir/RAM.v"/>
-      <outfile xil_pn:name="ipcore_dir/instructionROM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1448154936" xil_pn:in_ck="4751305486486718584" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4837505384676443057" xil_pn:start_ts="1448154929">
+    <transform xil_pn:end_ts="1448320943" xil_pn:in_ck="4751305486486718584" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4837505384676443057" xil_pn:start_ts="1448320938">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="DatapathTestFinal_beh.prj"/>
       <outfile xil_pn:name="DatapathTestFinal_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1448154937" xil_pn:in_ck="5327569088943231328" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6079257240917214766" xil_pn:start_ts="1448154936">
+    <transform xil_pn:end_ts="1448321191" xil_pn:in_ck="3141794025726625596" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6079257240917214766" xil_pn:start_ts="1448321191">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="DatapathTestFinal_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1448033244" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1448033244">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -167,7 +174,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1448154891" xil_pn:in_ck="-120155528956188785" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="4270305935988528427" xil_pn:start_ts="1448154858">
+    <transform xil_pn:end_ts="1448320912" xil_pn:in_ck="-120155528956188785" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="4270305935988528427" xil_pn:start_ts="1448320886">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>

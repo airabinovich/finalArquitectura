@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Datapath1.prj
 
@@ -108,35 +108,35 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\SigExt.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\SigExt.v" into library work
 Parsing module <SigExt>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v" into library work
 Parsing module <REGBANK_banco>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\MEM_WB.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MEM_WB.v" into library work
 Parsing module <MEM_WB>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v" into library work
 Parsing module <MemoryLoadMask>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\RAM.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\RAM.v" into library work
 Parsing module <RAM>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\instructionROM.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\instructionROM.v" into library work
 Parsing module <instructionROM>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\IF_ID.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\IF_ID.v" into library work
 Parsing module <IF_ID>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v" into library work
 Parsing module <ID_EX>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v" into library work
 Parsing module <HazardsUnit>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v" into library work
 Parsing module <FE>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v" into library work
 Parsing module <EX_MEM>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ControlUnit.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ControlUnit.v" into library work
 Parsing module <ControlUnit>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ALU.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ALU.v" into library work
 Parsing module <ALU>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\Adder.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Adder.v" into library work
 Parsing module <Adder>.
-Analyzing Verilog file "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v" into library work
+Analyzing Verilog file "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v" into library work
 Parsing module <Datapath1>.
 
 =========================================================================
@@ -148,10 +148,10 @@ Elaborating module <Datapath1>.
 Elaborating module <ControlUnit>.
 
 Elaborating module <RAM>.
-WARNING:HDLCompiler:1499 - "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\RAM.v" Line 39: Empty module <RAM> remains a black box.
+WARNING:HDLCompiler:1499 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\RAM.v" Line 39: Empty module <RAM> remains a black box.
 
 Elaborating module <instructionROM>.
-WARNING:HDLCompiler:1499 - "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\instructionROM.v" Line 39: Empty module <instructionROM> remains a black box.
+WARNING:HDLCompiler:1499 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ipcore_dir\instructionROM.v" Line 39: Empty module <instructionROM> remains a black box.
 
 Elaborating module <REGBANK_banco>.
 
@@ -180,7 +180,7 @@ Elaborating module <HazardsUnit>.
 =========================================================================
 
 Synthesizing Unit <Datapath1>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Datapath1.v".
     Found 32-bit comparator equal for signal <n0007> created at line 143
     Summary:
 	inferred   1 Comparator(s).
@@ -188,13 +188,13 @@ Synthesizing Unit <Datapath1>.
 Unit <Datapath1> synthesized.
 
 Synthesizing Unit <ControlUnit>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ControlUnit.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ControlUnit.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <ControlUnit> synthesized.
 
 Synthesizing Unit <REGBANK_banco>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\REGBANK_banco.v".
         addr_bits = 5
         word_wide = 32
     Found 1024-bit register for signal <n0043[1023:0]>.
@@ -206,7 +206,7 @@ Synthesizing Unit <REGBANK_banco>.
 Unit <REGBANK_banco> synthesized.
 
 Synthesizing Unit <ALU>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ALU.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ALU.v".
         N = 32
     Found 33-bit subtractor for signal <operand1[31]_operand2[31]_sub_5_OUT> created at line 37.
     Found 33-bit adder for signal <operand1[31]_operand2[31]_add_3_OUT> created at line 36.
@@ -224,20 +224,20 @@ Synthesizing Unit <ALU>.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <SigExt>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\SigExt.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\SigExt.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <SigExt> synthesized.
 
 Synthesizing Unit <Adder>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\Adder.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\Adder.v".
     Found 8-bit adder for signal <sum> created at line 27.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <Adder> synthesized.
 
 Synthesizing Unit <IF_ID>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\IF_ID.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\IF_ID.v".
     Found 8-bit register for signal <pcNextOut>.
     Found 32-bit register for signal <instructionOut>.
     Summary:
@@ -246,7 +246,7 @@ Synthesizing Unit <IF_ID>.
 Unit <IF_ID> synthesized.
 
 Synthesizing Unit <EX_MEM>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\EX_MEM.v".
     Found 32-bit register for signal <writeDataOut>.
     Found 32-bit register for signal <aluOutOut>.
     Found 4-bit register for signal <memWriteOut>.
@@ -259,7 +259,7 @@ Synthesizing Unit <EX_MEM>.
 Unit <EX_MEM> synthesized.
 
 Synthesizing Unit <ID_EX>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\ID_EX.v".
     Found 32-bit register for signal <sigExtOut>.
     Found 32-bit register for signal <readData1Out>.
     Found 32-bit register for signal <readData2Out>.
@@ -282,14 +282,14 @@ Synthesizing Unit <ID_EX>.
 Unit <ID_EX> synthesized.
 
 Synthesizing Unit <MemoryLoadMask>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MemoryLoadMask.v".
     Found 32-bit 4-to-1 multiplexer for signal <dataOut> created at line 28.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <MemoryLoadMask> synthesized.
 
 Synthesizing Unit <MEM_WB>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\MEM_WB.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\MEM_WB.v".
     Found 32-bit register for signal <aluOutOut>.
     Found 32-bit register for signal <memoryOutOut>.
     Found 5-bit register for signal <writeRegisterOut>.
@@ -300,14 +300,14 @@ Synthesizing Unit <MEM_WB>.
 Unit <MEM_WB> synthesized.
 
 Synthesizing Unit <FE>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\FE.v".
     Found 8-bit register for signal <pcOut>.
     Summary:
 	inferred   8 D-type flip-flop(s).
 Unit <FE> synthesized.
 
 Synthesizing Unit <HazardsUnit>.
-    Related source file is "C:\Users\Ariel\Documents\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v".
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\DatapathPart1\HazardsUnit.v".
     Found 5-bit comparator equal for signal <rsID[4]_rtEX[4]_equal_1_o> created at line 50
     Found 5-bit comparator equal for signal <rtID[4]_rtEX[4]_equal_2_o> created at line 50
     Found 5-bit comparator equal for signal <rsID[4]_writeRegMEM[4]_equal_3_o> created at line 55
@@ -672,12 +672,12 @@ clock          |    1.405|    4.256|   12.551|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 29.00 secs
-Total CPU time to Xst completion: 28.78 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 23.51 secs
  
 --> 
 
-Total memory usage is 269688 kilobytes
+Total memory usage is 275412 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)
