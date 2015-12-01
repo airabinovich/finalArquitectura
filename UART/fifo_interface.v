@@ -21,7 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module UART_fifo_interface #(parameter bits_depth=4)(
 			input	write_flag,
-			input read_flag,
+			input read_next,
 			input	[7:0] data_in,
 			input clock,
 			input reset,
@@ -52,9 +52,9 @@ module UART_fifo_interface #(parameter bits_depth=4)(
 			data_out <= 0;
 		end
 		else begin
-			if(read_flag) begin
+			data_out <= FIFO[read_pointer];
+			if(read_next) begin
 				if(!empty_flag) begin
-					data_out <= FIFO[read_pointer];
 					read_pointer <= read_pointer + 'b1;
 					free_space <= free_space + 'b1;
 				end

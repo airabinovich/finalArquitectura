@@ -49,6 +49,9 @@ module UART_rx(
 	
 	//lógica interna de estados
 	always @(posedge clock) begin
+		if(rx_done==1)begin
+			rx_done = 0;
+		end
 		if(s_tick) begin
 			case(current_state)
 				IDLE: begin
@@ -57,6 +60,7 @@ module UART_rx(
 					next_state = (rx == B_start) ? START : IDLE;
 				end
 				START: begin
+					rx_done=0;
 					if(s >= 7) begin
 						s = 0;
 						n = 0;
@@ -82,8 +86,15 @@ module UART_rx(
 					end
 				end
 				STOP: begin
-					if(s >= 15) begin
+				   if(rx==0)begin
 						rx_done = 1;
+						next_state = START;
+						s = 0;
+						n = 0;					
+					end
+					else if(s == 15) begin
+						rx_done = 1;
+						s=0;
 						next_state = IDLE;
 					end
 					else begin

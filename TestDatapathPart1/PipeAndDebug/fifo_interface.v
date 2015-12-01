@@ -19,7 +19,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module UART_fifo_interface #(parameter bits_depth=7)(
+module UART_fifo_interface #(parameter bits_depth=4)(
 			input	write_flag,
 			input read_next,
 			input	[7:0] data_in,
@@ -27,7 +27,8 @@ module UART_fifo_interface #(parameter bits_depth=7)(
 			input reset,
 			output reg [7:0] data_out,
 			output reg empty_flag,
-			output reg full_flag	
+			output reg full_flag
+		
     );
 
 	localparam depth= 1<<(bits_depth);

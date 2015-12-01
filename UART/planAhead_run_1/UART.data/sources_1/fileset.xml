@@ -1,48 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DARoots Version="1" Minor="26">
   <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
-    <Filter Type="EDIFSrcs"/>
-    <File Path="$PPRDIR/../UART_echo_test_module.ngc">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../tx.v">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../UART_tx.ngc">
+    <File Path="$PPRDIR/../rx.v">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../UART_TestModule.ngc">
+    <File Path="$PPRDIR/../fifo_interface.v">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../UART_rx.ngc">
+    <File Path="$PPRDIR/../baud_rate_generator.v">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../UART_fifo_interface.ngc">
+    <File Path="$PPRDIR/../UART_echo_test_module.v">
       <FileInfo>
         <Attr Name="UsedInSynthesis" Val="1"/>
         <Attr Name="UsedInImplementation" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../UART_baud_rate_generator.ngc">
-      <FileInfo>
-        <Attr Name="UsedInSynthesis" Val="1"/>
-        <Attr Name="UsedInImplementation" Val="1"/>
+        <Attr Name="UsedInSimulation" Val="1"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="DesignMode" Val="GateLvl"/>
-      <Option Name="GateLvlMode" Val="EDIF"/>
-      <Option Name="TopFile" Val="$PPRDIR/../UART_echo_test_module.ngc"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="UART_echo_test_module"/>
     </Config>
   </FileSet>
 </DARoots>

@@ -1,7 +1,7 @@
 
 # PlanAhead Launch Script for Pre-Synthesis Floorplanning, created by Project Navigator
 
-create_project -name UART -dir "C:/Users/Ariel/Xilinx/Workspace/UART/planAhead_run_5" -part xc6slx16csg324-3
+create_project -name UART -dir "C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/UART/planAhead_run_2" -part xc6slx16csg324-3
 set_param project.pinAheadLayout yes
 set srcset [get_property srcset [current_run -impl]]
 set_property target_constrs_file "UART_echo_test_module.ucf" [current_fileset -constrset]

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Ariel\Xilinx\Workspace\UART\UART_echo_test_module.ncd
-OUTFILE=C:\Users\Ariel\Xilinx\Workspace\UART\UART_echo_test_module.bit
+INFILE=C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\UART\UART_echo_test_module.ncd
+OUTFILE=C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\UART\UART_echo_test_module.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\Ariel\Xilinx\Workspace\UART
+WORKINGDIR=C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\UART
 LICENSE=WebPack
 USER_INFO=210790645_0_0_619

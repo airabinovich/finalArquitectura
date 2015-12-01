@@ -46,6 +46,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 set work work
 #--------------------------------------------------------------------------------
+cp ../../../instructionROM.mif .
 mkdir work
 
 

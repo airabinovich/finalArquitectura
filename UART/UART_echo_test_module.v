@@ -28,8 +28,9 @@ module UART_echo_test_module(
 	wire 		baud_rate_rx,
 				baud_rate_tx,
 				echo_test_rx_done,
-//				echo_test_tx_done,
+				echo_test_tx_done,
 				echo_test_tx_start,
+				read_next_tx,
 				echo_test_empty_flag_rx,
 				echo_test_not_empty_flag_rx,
 				echo_test_empty_flag_tx,
@@ -61,7 +62,7 @@ module UART_echo_test_module(
 		.clock(clock),
 		.reset(echo_test_reset),
 		.write_flag(echo_test_rx_done),
-		.read_flag(echo_test_not_empty_flag_rx),
+		.read_next(echo_test_not_empty_flag_rx),
 		.data_in(echo_test_data_rx),
 		.data_out(echo_test_data),
 		.empty_flag(echo_test_empty_flag_rx)
@@ -79,21 +80,22 @@ module UART_echo_test_module(
 		.s_tick(baud_rate_tx),		
 		.tx_start(echo_test_start_tx),
 		.data_in(echo_test_data_tx),
-		.tx(echo_test_tx)
-//		.tx_done(echo_test_tx_done)
+		.tx(echo_test_tx),
+		.tx_done(echo_test_tx_done)
 	);
 	
 	UART_fifo_interface fifo_tx(
 		.clock(clock),
 		.reset(echo_test_reset),
 		.write_flag(echo_test_not_empty_flag_rx),
-		.read_flag(echo_test_not_empty_flag_tx),
+		.read_next(echo_test_not_empty_flag_tx),
 		.data_in(echo_test_data),
 		.data_out(echo_test_data_tx),
 		.empty_flag(echo_test_empty_flag_tx)
 //		.full_flag(echo_test_full_flag_tx)
 	);
 	
+//	assign read_next_tx = echo_test_not_empty_flag_tx && echo_test_tx_done;
 	assign echo_test_start_tx = echo_test_empty_flag_tx;
 	assign echo_test_not_empty_flag_tx = ~echo_test_empty_flag_tx;
 	assign echo_test_not_empty_flag_rx = ~echo_test_empty_flag_rx;

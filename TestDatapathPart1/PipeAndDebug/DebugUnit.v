@@ -75,10 +75,10 @@ module DebugUnit(
 	 
 	 always @(posedge clock, posedge reset) begin
 		if(reset)begin
-			current_state <= IDLE ;
+			current_state = IDLE ;
 		end
 		else
-			current_state <= next_state;
+			current_state = next_state;
 	 end
 	 
 	 always @(posedge clock) begin
@@ -86,42 +86,53 @@ module DebugUnit(
 			IDLE:begin
 				pipeReset<=1;
 				pipeEnable<=0;
+				sentFlag<=0;
 				if(uartDataAvailable)begin
-					readFifoFlag=1;
+					readFifoFlag<=1;
 					if(uartFifoDataIn==99)begin //'c' en ascii
 						next_state=CONTINUOUS;
 						pipeReset<=0;
-						readFifoFlag=0;
+						readFifoFlag<=0;
 					end
 					else if (uartFifoDataIn==115)begin //'s' en ascii
 						next_state=STEP;
-						readFifoFlag=0;
+						readFifoFlag<=0;
 						pipeReset<=0;
 					end
+					else
+						next_state=IDLE;
+			   end
+				else begin
+					readFifoFlag<=0;
+					next_state=IDLE;
 				end
-				else
-					readFifoFlag=0;
 			end
 			CONTINUOUS: begin
-				sentFlag=0;	
-				sendCounter=0;
+				sentFlag<=0;	
+				sendCounter<=0;
 				pipeEnable<=1;
 				if(endOfProgram)
 					next_state=SEND;
+				else
+					next_state=CONTINUOUS;
 			end
 			STEP: begin
-				sentFlag=0;
-				sendCounter=0;
+				sentFlag<=0;
+				sendCounter<=0;
 				if(uartDataAvailable)begin
-					readFifoFlag=1;
+					readFifoFlag<=1;
 					if(uartFifoDataIn==110)begin //'n' en ascii
 						next_state=SEND;
-						readFifoFlag=0;
+						readFifoFlag<=0;
 						pipeEnable<=1;
 					end
+					else
+						next_state=STEP;
 				end
-				else 
-					readFifoFlag=0;
+				else begin
+					next_state=STEP;
+					readFifoFlag<=0;
+				end
 			end
 			SEND: begin
 				pipeEnable<=0;
@@ -130,70 +141,74 @@ module DebugUnit(
 				else if(sentFlag && endOfProgram)
 					next_state=IDLE;
 				else begin
-					writeFifoFlag=1;
+					writeFifoFlag<=1;
 					case(sendCounter)
-						0:		dataToUartOutFifo<=			FE_pc;
-						1:		dataToUartOutFifo<=  		IF_ID_instruction		[7:0];
-						2:		dataToUartOutFifo<=  		IF_ID_instruction		[15:8];
-						3:		dataToUartOutFifo<=  		IF_ID_instruction 	[23:16];
-						4:		dataToUartOutFifo<=  		IF_ID_instruction 	[31:24];
-						5:		dataToUartOutFifo<=			IF_ID_pcNext;
-						6:		dataToUartOutFifo<=  {4'b0,ID_EX_aluOperation};
-						7:		dataToUartOutFifo<= 	 		ID_EX_sigExt			[7:0];
-						8:		dataToUartOutFifo<= 			ID_EX_sigExt			[15:8];
-						9:		dataToUartOutFifo<=  		ID_EX_sigExt			[23:16];
-						10:	dataToUartOutFifo<= 			ID_EX_sigExt			[31:24];
-						11:	dataToUartOutFifo<= 			ID_EX_readData1		[7:0];
-						12:	dataToUartOutFifo<= 	 		ID_EX_readData1		[15:8];
-						13:	dataToUartOutFifo<= 			ID_EX_readData1		[23:16];
-						14:	dataToUartOutFifo<= 			ID_EX_readData1		[31:24];
-						15:	dataToUartOutFifo<=  		ID_EX_readData2		[7:0];
-						16:	dataToUartOutFifo<=  		ID_EX_readData2		[15:8];
-						17:	dataToUartOutFifo<= 			ID_EX_readData2		[23:16];
-						18:	dataToUartOutFifo<=  		ID_EX_readData2		[31:24];
-						19:	dataToUartOutFifo<=	{7'b0,ID_EX_aluSrc};
-						20:	dataToUartOutFifo<=	{7'b0,ID_EX_aluShiftImm};
-						21:	dataToUartOutFifo<=	{4'b0,ID_EX_memWrite};
-						22:	dataToUartOutFifo<=	{7'b0,ID_EX_memToReg};
-						23:	dataToUartOutFifo<=	{6'b0,ID_EX_memReadWidth};
-						24:	dataToUartOutFifo<=	{3'b0,ID_EX_rs};
-						25:	dataToUartOutFifo<=	{3'b0,ID_EX_rt};
-						26:	dataToUartOutFifo<=	{3'b0,ID_EX_rd};
-						27:	dataToUartOutFifo<=	{3'b0,ID_EX_sa};
-						28:	dataToUartOutFifo<=	{7'b0,ID_EX_regDst};
-						29:	dataToUartOutFifo<=	{7'b0,ID_EX_loadImm};
-						30:	dataToUartOutFifo<=	{7'b0,ID_EX_regWrite};
-						31:	dataToUartOutFifo<=	{3'b0,EX_MEM_writeRegister};
-						32:	dataToUartOutFifo<=  		EX_MEM_writeData		[7:0];
-						33:	dataToUartOutFifo<=  		EX_MEM_writeData		[15:8];
-						34:	dataToUartOutFifo<= 			EX_MEM_writeData		[23:16];
-						35:	dataToUartOutFifo<= 			EX_MEM_writeData		[31:24];	
-						36:	dataToUartOutFifo<=  		EX_MEM_aluOut			[7:0];
-						37:	dataToUartOutFifo<=  		EX_MEM_aluOut			[15:8];
-						38:	dataToUartOutFifo<= 			EX_MEM_aluOut			[23:16];
-						39:	dataToUartOutFifo<= 			EX_MEM_aluOut			[31:24];
-						40:	dataToUartOutFifo<=	{7'b0,EX_MEM_regWrite};
-						41:	dataToUartOutFifo<=	{7'b0,EX_MEM_memToReg};
-						42:	dataToUartOutFifo<=	{4'b0,EX_MEM_memWrite};
-						43:	dataToUartOutFifo<=	{6'b0,EX_MEM_memReadWidth};
-						44:	dataToUartOutFifo<=	{3'b0,MEM_WB_writeRegister};
-						45:	dataToUartOutFifo<=  		MEM_WB_aluOut			[7:0];
-						46:	dataToUartOutFifo<=  		MEM_WB_aluOut			[15:8];
-						47:	dataToUartOutFifo<= 			MEM_WB_aluOut			[23:16];
-						48:	dataToUartOutFifo<= 			MEM_WB_aluOut			[31:24];
-						49:	dataToUartOutFifo<=  		MEM_WB_memoryOut		[7:0];
-						50:	dataToUartOutFifo<=  		MEM_WB_memoryOut		[15:8];
-						51:	dataToUartOutFifo<= 			MEM_WB_memoryOut		[23:16];
-						52:	dataToUartOutFifo<= 			MEM_WB_memoryOut		[31:24];
-						53:	dataToUartOutFifo<=	{7'b0,MEM_WB_regWrite};
-						54:	dataToUartOutFifo<=	{7'b0,MEM_WB_memToReg};
+						0:		dataToUartOutFifo=			FE_pc;
+						1:		dataToUartOutFifo=  		IF_ID_instruction		[7:0];
+						2:		dataToUartOutFifo=  		IF_ID_instruction		[15:8];
+						3:		dataToUartOutFifo=  		IF_ID_instruction 	[23:16];
+						4:		dataToUartOutFifo=  		IF_ID_instruction 	[31:24];
+						5:		dataToUartOutFifo=			IF_ID_pcNext;
+						6:		dataToUartOutFifo=  {4'b0,ID_EX_aluOperation};
+						7:		dataToUartOutFifo= 	 		ID_EX_sigExt			[7:0];
+						8:		dataToUartOutFifo= 			ID_EX_sigExt			[15:8];
+						9:		dataToUartOutFifo=  		ID_EX_sigExt			[23:16];
+						10:	dataToUartOutFifo= 			ID_EX_sigExt			[31:24];
+						11:	dataToUartOutFifo= 			ID_EX_readData1		[7:0];
+						12:	dataToUartOutFifo= 	 		ID_EX_readData1		[15:8];
+						13:	dataToUartOutFifo= 			ID_EX_readData1		[23:16];
+						14:	dataToUartOutFifo= 			ID_EX_readData1		[31:24];
+						15:	dataToUartOutFifo=  		ID_EX_readData2		[7:0];
+						16:	dataToUartOutFifo=  		ID_EX_readData2		[15:8];
+						17:	dataToUartOutFifo= 			ID_EX_readData2		[23:16];
+						18:	dataToUartOutFifo=  		ID_EX_readData2		[31:24];
+						19:	dataToUartOutFifo=	{7'b0,ID_EX_aluSrc};
+						20:	dataToUartOutFifo=	{7'b0,ID_EX_aluShiftImm};
+						21:	dataToUartOutFifo=	{4'b0,ID_EX_memWrite};
+						22:	dataToUartOutFifo=	{7'b0,ID_EX_memToReg};
+						23:	dataToUartOutFifo=	{6'b0,ID_EX_memReadWidth};
+						24:	dataToUartOutFifo=	{3'b0,ID_EX_rs};
+						25:	dataToUartOutFifo=	{3'b0,ID_EX_rt};
+						26:	dataToUartOutFifo=	{3'b0,ID_EX_rd};
+						27:	dataToUartOutFifo=	{3'b0,ID_EX_sa};
+						28:	dataToUartOutFifo=	{7'b0,ID_EX_regDst};
+						29:	dataToUartOutFifo=	{7'b0,ID_EX_loadImm};
+						30:	dataToUartOutFifo=	{7'b0,ID_EX_regWrite};
+						31:	dataToUartOutFifo=	{3'b0,EX_MEM_writeRegister};
+						32:	dataToUartOutFifo=  		EX_MEM_writeData		[7:0];
+						33:	dataToUartOutFifo=  		EX_MEM_writeData		[15:8];
+						34:	dataToUartOutFifo= 			EX_MEM_writeData		[23:16];
+						35:	dataToUartOutFifo= 			EX_MEM_writeData		[31:24];	
+						36:	dataToUartOutFifo=  		EX_MEM_aluOut			[7:0];
+						37:	dataToUartOutFifo=  		EX_MEM_aluOut			[15:8];
+						38:	dataToUartOutFifo= 			EX_MEM_aluOut			[23:16];
+						39:	dataToUartOutFifo= 			EX_MEM_aluOut			[31:24];
+						40:	dataToUartOutFifo=	{7'b0,EX_MEM_regWrite};
+						41:	dataToUartOutFifo=	{7'b0,EX_MEM_memToReg};
+						42:	dataToUartOutFifo=	{4'b0,EX_MEM_memWrite};
+						43:	dataToUartOutFifo=	{6'b0,EX_MEM_memReadWidth};
+						44:	dataToUartOutFifo=	{3'b0,MEM_WB_writeRegister};
+						45:	dataToUartOutFifo=  		MEM_WB_aluOut			[7:0];
+						46:	dataToUartOutFifo=  		MEM_WB_aluOut			[15:8];
+						47:	dataToUartOutFifo= 			MEM_WB_aluOut			[23:16];
+						48:	dataToUartOutFifo= 			MEM_WB_aluOut			[31:24];
+						49:	dataToUartOutFifo=  		MEM_WB_memoryOut		[7:0];
+						50:	dataToUartOutFifo=  		MEM_WB_memoryOut		[15:8];
+						51:	dataToUartOutFifo= 			MEM_WB_memoryOut		[23:16];
+						52:	dataToUartOutFifo= 			MEM_WB_memoryOut		[31:24];
+						53:	dataToUartOutFifo=	{7'b0,MEM_WB_regWrite};
+						54:	dataToUartOutFifo=	{7'b0,MEM_WB_memToReg};
 						
-						55:begin
-							writeFifoFlag=0;
-							sentFlag=1;
+						55:	dataToUartOutFifo= 68;
+						56:	dataToUartOutFifo= 79;
+						57:	dataToUartOutFifo= 78;
+						58:	dataToUartOutFifo= 69;
+						59:begin
+							writeFifoFlag<=0;
+							sentFlag<=1;
 						end
 					endcase
-					sendCounter=sendCounter+1;
+					sendCounter<=sendCounter+1;
 				end
 				
 			end

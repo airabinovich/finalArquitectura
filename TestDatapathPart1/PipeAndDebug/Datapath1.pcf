@@ -1,0 +1,668 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Nov 30 20:34:27 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clock" LOCATE = SITE "V10" LEVEL 1;
+COMP "uartRxPin" LOCATE = SITE "N17" LEVEL 1;
+COMP "uartTxPin" LOCATE = SITE "N18" LEVEL 1;
+PIN
+        ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram_pins<26>
+        = BEL
+        "ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram_pins<27>
+        = BEL
+        "ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+PIN
+        instructionMemory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<26>
+        = BEL
+        "instructionMemory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram"
+        PINNAME CLKAWRCLK;
+PIN
+        instructionMemory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<27>
+        = BEL
+        "instructionMemory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram"
+        PINNAME CLKBRDCLK;
+TIMEGRP clock = BEL "if_id/pcNextOut_0" BEL "if_id/pcNextOut_1" BEL
+        "if_id/pcNextOut_2" BEL "if_id/pcNextOut_3" BEL "if_id/pcNextOut_4"
+        BEL "if_id/pcNextOut_5" BEL "if_id/pcNextOut_6" BEL
+        "if_id/pcNextOut_7" BEL "if_id/instructionOut_0" BEL
+        "if_id/instructionOut_1" BEL "if_id/instructionOut_2" BEL
+        "if_id/instructionOut_3" BEL "if_id/instructionOut_4" BEL
+        "if_id/instructionOut_5" BEL "if_id/instructionOut_6" BEL
+        "if_id/instructionOut_7" BEL "if_id/instructionOut_8" BEL
+        "if_id/instructionOut_9" BEL "if_id/instructionOut_10" BEL
+        "if_id/instructionOut_11" BEL "if_id/instructionOut_12" BEL
+        "if_id/instructionOut_13" BEL "if_id/instructionOut_14" BEL
+        "if_id/instructionOut_15" BEL "if_id/instructionOut_16" BEL
+        "if_id/instructionOut_17" BEL "if_id/instructionOut_18" BEL
+        "if_id/instructionOut_19" BEL "if_id/instructionOut_20" BEL
+        "if_id/instructionOut_21" BEL "if_id/instructionOut_22" BEL
+        "if_id/instructionOut_23" BEL "if_id/instructionOut_24" BEL
+        "if_id/instructionOut_25" BEL "if_id/instructionOut_26" BEL
+        "if_id/instructionOut_27" BEL "if_id/instructionOut_28" BEL
+        "if_id/instructionOut_29" BEL "if_id/instructionOut_30" BEL
+        "if_id/instructionOut_31" BEL "uartMod/rx_baud_rate/baud_rate" BEL
+        "uartMod/tx_baud_rate/baud_rate" BEL "uartMod/rx_baud_rate/counter_0"
+        BEL "uartMod/rx_baud_rate/counter_1" BEL
+        "uartMod/rx_baud_rate/counter_2" BEL "uartMod/rx_baud_rate/counter_3"
+        BEL "uartMod/rx_baud_rate/counter_4" BEL
+        "uartMod/rx_baud_rate/counter_5" BEL "uartMod/rx_baud_rate/counter_6"
+        BEL "uartMod/rx_baud_rate/counter_7" BEL
+        "uartMod/rx_baud_rate/counter_8" BEL "uartMod/rx_baud_rate/counter_9"
+        BEL "uartMod/tx_baud_rate/counter_0" BEL
+        "uartMod/tx_baud_rate/counter_1" BEL "uartMod/tx_baud_rate/counter_2"
+        BEL "uartMod/tx_baud_rate/counter_3" BEL
+        "uartMod/tx_baud_rate/counter_4" BEL "uartMod/tx_baud_rate/counter_5"
+        BEL "uartMod/tx_baud_rate/counter_6" BEL
+        "uartMod/tx_baud_rate/counter_7" BEL "uartMod/tx_baud_rate/counter_8"
+        BEL "uartMod/tx_baud_rate/counter_9" BEL
+        "uartMod/tx_baud_rate/counter_10" BEL
+        "uartMod/tx_baud_rate/counter_11" BEL
+        "uartMod/tx_baud_rate/counter_12" BEL
+        "uartMod/tx_baud_rate/counter_13" BEL "bank/banco_0_1023" BEL
+        "bank/banco_0_1022" BEL "bank/banco_0_1021" BEL "bank/banco_0_1020"
+        BEL "bank/banco_0_1019" BEL "bank/banco_0_1018" BEL
+        "bank/banco_0_1017" BEL "bank/banco_0_1016" BEL "bank/banco_0_1015"
+        BEL "bank/banco_0_1014" BEL "bank/banco_0_1013" BEL
+        "bank/banco_0_1012" BEL "bank/banco_0_1011" BEL "bank/banco_0_1010"
+        BEL "bank/banco_0_1009" BEL "bank/banco_0_1008" BEL
+        "bank/banco_0_1007" BEL "bank/banco_0_1006" BEL "bank/banco_0_1005"
+        BEL "bank/banco_0_1004" BEL "bank/banco_0_1003" BEL
+        "bank/banco_0_1002" BEL "bank/banco_0_1001" BEL "bank/banco_0_1000"
+        BEL "bank/banco_0_999" BEL "bank/banco_0_998" BEL "bank/banco_0_997"
+        BEL "bank/banco_0_996" BEL "bank/banco_0_995" BEL "bank/banco_0_994"
+        BEL "bank/banco_0_993" BEL "bank/banco_0_992" BEL "bank/banco_0_991"
+        BEL "bank/banco_0_990" BEL "bank/banco_0_989" BEL "bank/banco_0_988"
+        BEL "bank/banco_0_987" BEL "bank/banco_0_986" BEL "bank/banco_0_985"
+        BEL "bank/banco_0_984" BEL "bank/banco_0_983" BEL "bank/banco_0_982"
+        BEL "bank/banco_0_981" BEL "bank/banco_0_980" BEL "bank/banco_0_979"
+        BEL "bank/banco_0_978" BEL "bank/banco_0_977" BEL "bank/banco_0_976"
+        BEL "bank/banco_0_975" BEL "bank/banco_0_974" BEL "bank/banco_0_973"
+        BEL "bank/banco_0_972" BEL "bank/banco_0_971" BEL "bank/banco_0_970"
+        BEL "bank/banco_0_969" BEL "bank/banco_0_968" BEL "bank/banco_0_967"
+        BEL "bank/banco_0_966" BEL "bank/banco_0_965" BEL "bank/banco_0_964"
+        BEL "bank/banco_0_963" BEL "bank/banco_0_962" BEL "bank/banco_0_961"
+        BEL "bank/banco_0_960" BEL "bank/banco_0_959" BEL "bank/banco_0_958"
+        BEL "bank/banco_0_957" BEL "bank/banco_0_956" BEL "bank/banco_0_955"
+        BEL "bank/banco_0_954" BEL "bank/banco_0_953" BEL "bank/banco_0_952"
+        BEL "bank/banco_0_951" BEL "bank/banco_0_950" BEL "bank/banco_0_949"
+        BEL "bank/banco_0_948" BEL "bank/banco_0_947" BEL "bank/banco_0_946"
+        BEL "bank/banco_0_945" BEL "bank/banco_0_944" BEL "bank/banco_0_943"
+        BEL "bank/banco_0_942" BEL "bank/banco_0_941" BEL "bank/banco_0_940"
+        BEL "bank/banco_0_939" BEL "bank/banco_0_938" BEL "bank/banco_0_937"
+        BEL "bank/banco_0_936" BEL "bank/banco_0_935" BEL "bank/banco_0_934"
+        BEL "bank/banco_0_933" BEL "bank/banco_0_932" BEL "bank/banco_0_931"
+        BEL "bank/banco_0_930" BEL "bank/banco_0_929" BEL "bank/banco_0_928"
+        BEL "bank/banco_0_927" BEL "bank/banco_0_926" BEL "bank/banco_0_925"
+        BEL "bank/banco_0_924" BEL "bank/banco_0_923" BEL "bank/banco_0_922"
+        BEL "bank/banco_0_921" BEL "bank/banco_0_920" BEL "bank/banco_0_919"
+        BEL "bank/banco_0_918" BEL "bank/banco_0_917" BEL "bank/banco_0_916"
+        BEL "bank/banco_0_915" BEL "bank/banco_0_914" BEL "bank/banco_0_913"
+        BEL "bank/banco_0_912" BEL "bank/banco_0_911" BEL "bank/banco_0_910"
+        BEL "bank/banco_0_909" BEL "bank/banco_0_908" BEL "bank/banco_0_907"
+        BEL "bank/banco_0_906" BEL "bank/banco_0_905" BEL "bank/banco_0_904"
+        BEL "bank/banco_0_903" BEL "bank/banco_0_902" BEL "bank/banco_0_901"
+        BEL "bank/banco_0_900" BEL "bank/banco_0_899" BEL "bank/banco_0_898"
+        BEL "bank/banco_0_897" BEL "bank/banco_0_896" BEL "bank/banco_0_895"
+        BEL "bank/banco_0_894" BEL "bank/banco_0_893" BEL "bank/banco_0_892"
+        BEL "bank/banco_0_891" BEL "bank/banco_0_890" BEL "bank/banco_0_889"
+        BEL "bank/banco_0_888" BEL "bank/banco_0_887" BEL "bank/banco_0_886"
+        BEL "bank/banco_0_885" BEL "bank/banco_0_884" BEL "bank/banco_0_883"
+        BEL "bank/banco_0_882" BEL "bank/banco_0_881" BEL "bank/banco_0_880"
+        BEL "bank/banco_0_879" BEL "bank/banco_0_878" BEL "bank/banco_0_877"
+        BEL "bank/banco_0_876" BEL "bank/banco_0_875" BEL "bank/banco_0_874"
+        BEL "bank/banco_0_873" BEL "bank/banco_0_872" BEL "bank/banco_0_871"
+        BEL "bank/banco_0_870" BEL "bank/banco_0_869" BEL "bank/banco_0_868"
+        BEL "bank/banco_0_867" BEL "bank/banco_0_866" BEL "bank/banco_0_865"
+        BEL "bank/banco_0_864" BEL "bank/banco_0_863" BEL "bank/banco_0_862"
+        BEL "bank/banco_0_861" BEL "bank/banco_0_860" BEL "bank/banco_0_859"
+        BEL "bank/banco_0_858" BEL "bank/banco_0_857" BEL "bank/banco_0_856"
+        BEL "bank/banco_0_855" BEL "bank/banco_0_854" BEL "bank/banco_0_853"
+        BEL "bank/banco_0_852" BEL "bank/banco_0_851" BEL "bank/banco_0_850"
+        BEL "bank/banco_0_849" BEL "bank/banco_0_848" BEL "bank/banco_0_847"
+        BEL "bank/banco_0_846" BEL "bank/banco_0_845" BEL "bank/banco_0_844"
+        BEL "bank/banco_0_843" BEL "bank/banco_0_842" BEL "bank/banco_0_841"
+        BEL "bank/banco_0_840" BEL "bank/banco_0_839" BEL "bank/banco_0_838"
+        BEL "bank/banco_0_837" BEL "bank/banco_0_836" BEL "bank/banco_0_835"
+        BEL "bank/banco_0_834" BEL "bank/banco_0_833" BEL "bank/banco_0_832"
+        BEL "bank/banco_0_831" BEL "bank/banco_0_830" BEL "bank/banco_0_829"
+        BEL "bank/banco_0_828" BEL "bank/banco_0_827" BEL "bank/banco_0_826"
+        BEL "bank/banco_0_825" BEL "bank/banco_0_824" BEL "bank/banco_0_823"
+        BEL "bank/banco_0_822" BEL "bank/banco_0_821" BEL "bank/banco_0_820"
+        BEL "bank/banco_0_819" BEL "bank/banco_0_818" BEL "bank/banco_0_817"
+        BEL "bank/banco_0_816" BEL "bank/banco_0_815" BEL "bank/banco_0_814"
+        BEL "bank/banco_0_813" BEL "bank/banco_0_812" BEL "bank/banco_0_811"
+        BEL "bank/banco_0_810" BEL "bank/banco_0_809" BEL "bank/banco_0_808"
+        BEL "bank/banco_0_807" BEL "bank/banco_0_806" BEL "bank/banco_0_805"
+        BEL "bank/banco_0_804" BEL "bank/banco_0_803" BEL "bank/banco_0_802"
+        BEL "bank/banco_0_801" BEL "bank/banco_0_800" BEL "bank/banco_0_799"
+        BEL "bank/banco_0_798" BEL "bank/banco_0_797" BEL "bank/banco_0_796"
+        BEL "bank/banco_0_795" BEL "bank/banco_0_794" BEL "bank/banco_0_793"
+        BEL "bank/banco_0_792" BEL "bank/banco_0_791" BEL "bank/banco_0_790"
+        BEL "bank/banco_0_789" BEL "bank/banco_0_788" BEL "bank/banco_0_787"
+        BEL "bank/banco_0_786" BEL "bank/banco_0_785" BEL "bank/banco_0_784"
+        BEL "bank/banco_0_783" BEL "bank/banco_0_782" BEL "bank/banco_0_781"
+        BEL "bank/banco_0_780" BEL "bank/banco_0_779" BEL "bank/banco_0_778"
+        BEL "bank/banco_0_777" BEL "bank/banco_0_776" BEL "bank/banco_0_775"
+        BEL "bank/banco_0_774" BEL "bank/banco_0_773" BEL "bank/banco_0_772"
+        BEL "bank/banco_0_771" BEL "bank/banco_0_770" BEL "bank/banco_0_769"
+        BEL "bank/banco_0_768" BEL "bank/banco_0_767" BEL "bank/banco_0_766"
+        BEL "bank/banco_0_765" BEL "bank/banco_0_764" BEL "bank/banco_0_763"
+        BEL "bank/banco_0_762" BEL "bank/banco_0_761" BEL "bank/banco_0_760"
+        BEL "bank/banco_0_759" BEL "bank/banco_0_758" BEL "bank/banco_0_757"
+        BEL "bank/banco_0_756" BEL "bank/banco_0_755" BEL "bank/banco_0_754"
+        BEL "bank/banco_0_753" BEL "bank/banco_0_752" BEL "bank/banco_0_751"
+        BEL "bank/banco_0_750" BEL "bank/banco_0_749" BEL "bank/banco_0_748"
+        BEL "bank/banco_0_747" BEL "bank/banco_0_746" BEL "bank/banco_0_745"
+        BEL "bank/banco_0_744" BEL "bank/banco_0_743" BEL "bank/banco_0_742"
+        BEL "bank/banco_0_741" BEL "bank/banco_0_740" BEL "bank/banco_0_739"
+        BEL "bank/banco_0_738" BEL "bank/banco_0_737" BEL "bank/banco_0_736"
+        BEL "bank/banco_0_735" BEL "bank/banco_0_734" BEL "bank/banco_0_733"
+        BEL "bank/banco_0_732" BEL "bank/banco_0_731" BEL "bank/banco_0_730"
+        BEL "bank/banco_0_729" BEL "bank/banco_0_728" BEL "bank/banco_0_727"
+        BEL "bank/banco_0_726" BEL "bank/banco_0_725" BEL "bank/banco_0_724"
+        BEL "bank/banco_0_723" BEL "bank/banco_0_722" BEL "bank/banco_0_721"
+        BEL "bank/banco_0_720" BEL "bank/banco_0_719" BEL "bank/banco_0_718"
+        BEL "bank/banco_0_717" BEL "bank/banco_0_716" BEL "bank/banco_0_715"
+        BEL "bank/banco_0_714" BEL "bank/banco_0_713" BEL "bank/banco_0_712"
+        BEL "bank/banco_0_711" BEL "bank/banco_0_710" BEL "bank/banco_0_709"
+        BEL "bank/banco_0_708" BEL "bank/banco_0_707" BEL "bank/banco_0_706"
+        BEL "bank/banco_0_705" BEL "bank/banco_0_704" BEL "bank/banco_0_703"
+        BEL "bank/banco_0_702" BEL "bank/banco_0_701" BEL "bank/banco_0_700"
+        BEL "bank/banco_0_699" BEL "bank/banco_0_698" BEL "bank/banco_0_697"
+        BEL "bank/banco_0_696" BEL "bank/banco_0_695" BEL "bank/banco_0_694"
+        BEL "bank/banco_0_693" BEL "bank/banco_0_692" BEL "bank/banco_0_691"
+        BEL "bank/banco_0_690" BEL "bank/banco_0_689" BEL "bank/banco_0_688"
+        BEL "bank/banco_0_687" BEL "bank/banco_0_686" BEL "bank/banco_0_685"
+        BEL "bank/banco_0_684" BEL "bank/banco_0_683" BEL "bank/banco_0_682"
+        BEL "bank/banco_0_681" BEL "bank/banco_0_680" BEL "bank/banco_0_679"
+        BEL "bank/banco_0_678" BEL "bank/banco_0_677" BEL "bank/banco_0_676"
+        BEL "bank/banco_0_675" BEL "bank/banco_0_674" BEL "bank/banco_0_673"
+        BEL "bank/banco_0_672" BEL "bank/banco_0_671" BEL "bank/banco_0_670"
+        BEL "bank/banco_0_669" BEL "bank/banco_0_668" BEL "bank/banco_0_667"
+        BEL "bank/banco_0_666" BEL "bank/banco_0_665" BEL "bank/banco_0_664"
+        BEL "bank/banco_0_663" BEL "bank/banco_0_662" BEL "bank/banco_0_661"
+        BEL "bank/banco_0_660" BEL "bank/banco_0_659" BEL "bank/banco_0_658"
+        BEL "bank/banco_0_657" BEL "bank/banco_0_656" BEL "bank/banco_0_655"
+        BEL "bank/banco_0_654" BEL "bank/banco_0_653" BEL "bank/banco_0_652"
+        BEL "bank/banco_0_651" BEL "bank/banco_0_650" BEL "bank/banco_0_649"
+        BEL "bank/banco_0_648" BEL "bank/banco_0_647" BEL "bank/banco_0_646"
+        BEL "bank/banco_0_645" BEL "bank/banco_0_644" BEL "bank/banco_0_643"
+        BEL "bank/banco_0_642" BEL "bank/banco_0_641" BEL "bank/banco_0_640"
+        BEL "bank/banco_0_639" BEL "bank/banco_0_638" BEL "bank/banco_0_637"
+        BEL "bank/banco_0_636" BEL "bank/banco_0_635" BEL "bank/banco_0_634"
+        BEL "bank/banco_0_633" BEL "bank/banco_0_632" BEL "bank/banco_0_631"
+        BEL "bank/banco_0_630" BEL "bank/banco_0_629" BEL "bank/banco_0_628"
+        BEL "bank/banco_0_627" BEL "bank/banco_0_626" BEL "bank/banco_0_625"
+        BEL "bank/banco_0_624" BEL "bank/banco_0_623" BEL "bank/banco_0_622"
+        BEL "bank/banco_0_621" BEL "bank/banco_0_620" BEL "bank/banco_0_619"
+        BEL "bank/banco_0_618" BEL "bank/banco_0_617" BEL "bank/banco_0_616"
+        BEL "bank/banco_0_615" BEL "bank/banco_0_614" BEL "bank/banco_0_613"
+        BEL "bank/banco_0_612" BEL "bank/banco_0_611" BEL "bank/banco_0_610"
+        BEL "bank/banco_0_609" BEL "bank/banco_0_608" BEL "bank/banco_0_607"
+        BEL "bank/banco_0_606" BEL "bank/banco_0_605" BEL "bank/banco_0_604"
+        BEL "bank/banco_0_603" BEL "bank/banco_0_602" BEL "bank/banco_0_601"
+        BEL "bank/banco_0_600" BEL "bank/banco_0_599" BEL "bank/banco_0_598"
+        BEL "bank/banco_0_597" BEL "bank/banco_0_596" BEL "bank/banco_0_595"
+        BEL "bank/banco_0_594" BEL "bank/banco_0_593" BEL "bank/banco_0_592"
+        BEL "bank/banco_0_591" BEL "bank/banco_0_590" BEL "bank/banco_0_589"
+        BEL "bank/banco_0_588" BEL "bank/banco_0_587" BEL "bank/banco_0_586"
+        BEL "bank/banco_0_585" BEL "bank/banco_0_584" BEL "bank/banco_0_583"
+        BEL "bank/banco_0_582" BEL "bank/banco_0_581" BEL "bank/banco_0_580"
+        BEL "bank/banco_0_579" BEL "bank/banco_0_578" BEL "bank/banco_0_577"
+        BEL "bank/banco_0_576" BEL "bank/banco_0_575" BEL "bank/banco_0_574"
+        BEL "bank/banco_0_573" BEL "bank/banco_0_572" BEL "bank/banco_0_571"
+        BEL "bank/banco_0_570" BEL "bank/banco_0_569" BEL "bank/banco_0_568"
+        BEL "bank/banco_0_567" BEL "bank/banco_0_566" BEL "bank/banco_0_565"
+        BEL "bank/banco_0_564" BEL "bank/banco_0_563" BEL "bank/banco_0_562"
+        BEL "bank/banco_0_561" BEL "bank/banco_0_560" BEL "bank/banco_0_559"
+        BEL "bank/banco_0_558" BEL "bank/banco_0_557" BEL "bank/banco_0_556"
+        BEL "bank/banco_0_555" BEL "bank/banco_0_554" BEL "bank/banco_0_553"
+        BEL "bank/banco_0_552" BEL "bank/banco_0_551" BEL "bank/banco_0_550"
+        BEL "bank/banco_0_549" BEL "bank/banco_0_548" BEL "bank/banco_0_547"
+        BEL "bank/banco_0_546" BEL "bank/banco_0_545" BEL "bank/banco_0_544"
+        BEL "bank/banco_0_543" BEL "bank/banco_0_542" BEL "bank/banco_0_541"
+        BEL "bank/banco_0_540" BEL "bank/banco_0_539" BEL "bank/banco_0_538"
+        BEL "bank/banco_0_537" BEL "bank/banco_0_536" BEL "bank/banco_0_535"
+        BEL "bank/banco_0_534" BEL "bank/banco_0_533" BEL "bank/banco_0_532"
+        BEL "bank/banco_0_531" BEL "bank/banco_0_530" BEL "bank/banco_0_529"
+        BEL "bank/banco_0_528" BEL "bank/banco_0_527" BEL "bank/banco_0_526"
+        BEL "bank/banco_0_525" BEL "bank/banco_0_524" BEL "bank/banco_0_523"
+        BEL "bank/banco_0_522" BEL "bank/banco_0_521" BEL "bank/banco_0_520"
+        BEL "bank/banco_0_519" BEL "bank/banco_0_518" BEL "bank/banco_0_517"
+        BEL "bank/banco_0_516" BEL "bank/banco_0_515" BEL "bank/banco_0_514"
+        BEL "bank/banco_0_513" BEL "bank/banco_0_512" BEL "bank/banco_0_511"
+        BEL "bank/banco_0_510" BEL "bank/banco_0_509" BEL "bank/banco_0_508"
+        BEL "bank/banco_0_507" BEL "bank/banco_0_506" BEL "bank/banco_0_505"
+        BEL "bank/banco_0_504" BEL "bank/banco_0_503" BEL "bank/banco_0_502"
+        BEL "bank/banco_0_501" BEL "bank/banco_0_500" BEL "bank/banco_0_499"
+        BEL "bank/banco_0_498" BEL "bank/banco_0_497" BEL "bank/banco_0_496"
+        BEL "bank/banco_0_495" BEL "bank/banco_0_494" BEL "bank/banco_0_493"
+        BEL "bank/banco_0_492" BEL "bank/banco_0_491" BEL "bank/banco_0_490"
+        BEL "bank/banco_0_489" BEL "bank/banco_0_488" BEL "bank/banco_0_487"
+        BEL "bank/banco_0_486" BEL "bank/banco_0_485" BEL "bank/banco_0_484"
+        BEL "bank/banco_0_483" BEL "bank/banco_0_482" BEL "bank/banco_0_481"
+        BEL "bank/banco_0_480" BEL "bank/banco_0_479" BEL "bank/banco_0_478"
+        BEL "bank/banco_0_477" BEL "bank/banco_0_476" BEL "bank/banco_0_475"
+        BEL "bank/banco_0_474" BEL "bank/banco_0_473" BEL "bank/banco_0_472"
+        BEL "bank/banco_0_471" BEL "bank/banco_0_470" BEL "bank/banco_0_469"
+        BEL "bank/banco_0_468" BEL "bank/banco_0_467" BEL "bank/banco_0_466"
+        BEL "bank/banco_0_465" BEL "bank/banco_0_464" BEL "bank/banco_0_463"
+        BEL "bank/banco_0_462" BEL "bank/banco_0_461" BEL "bank/banco_0_460"
+        BEL "bank/banco_0_459" BEL "bank/banco_0_458" BEL "bank/banco_0_457"
+        BEL "bank/banco_0_456" BEL "bank/banco_0_455" BEL "bank/banco_0_454"
+        BEL "bank/banco_0_453" BEL "bank/banco_0_452" BEL "bank/banco_0_451"
+        BEL "bank/banco_0_450" BEL "bank/banco_0_449" BEL "bank/banco_0_448"
+        BEL "bank/banco_0_447" BEL "bank/banco_0_446" BEL "bank/banco_0_445"
+        BEL "bank/banco_0_444" BEL "bank/banco_0_443" BEL "bank/banco_0_442"
+        BEL "bank/banco_0_441" BEL "bank/banco_0_440" BEL "bank/banco_0_439"
+        BEL "bank/banco_0_438" BEL "bank/banco_0_437" BEL "bank/banco_0_436"
+        BEL "bank/banco_0_435" BEL "bank/banco_0_434" BEL "bank/banco_0_433"
+        BEL "bank/banco_0_432" BEL "bank/banco_0_431" BEL "bank/banco_0_430"
+        BEL "bank/banco_0_429" BEL "bank/banco_0_428" BEL "bank/banco_0_427"
+        BEL "bank/banco_0_426" BEL "bank/banco_0_425" BEL "bank/banco_0_424"
+        BEL "bank/banco_0_423" BEL "bank/banco_0_422" BEL "bank/banco_0_421"
+        BEL "bank/banco_0_420" BEL "bank/banco_0_419" BEL "bank/banco_0_418"
+        BEL "bank/banco_0_417" BEL "bank/banco_0_416" BEL "bank/banco_0_415"
+        BEL "bank/banco_0_414" BEL "bank/banco_0_413" BEL "bank/banco_0_412"
+        BEL "bank/banco_0_411" BEL "bank/banco_0_410" BEL "bank/banco_0_409"
+        BEL "bank/banco_0_408" BEL "bank/banco_0_407" BEL "bank/banco_0_406"
+        BEL "bank/banco_0_405" BEL "bank/banco_0_404" BEL "bank/banco_0_403"
+        BEL "bank/banco_0_402" BEL "bank/banco_0_401" BEL "bank/banco_0_400"
+        BEL "bank/banco_0_399" BEL "bank/banco_0_398" BEL "bank/banco_0_397"
+        BEL "bank/banco_0_396" BEL "bank/banco_0_395" BEL "bank/banco_0_394"
+        BEL "bank/banco_0_393" BEL "bank/banco_0_392" BEL "bank/banco_0_391"
+        BEL "bank/banco_0_390" BEL "bank/banco_0_389" BEL "bank/banco_0_388"
+        BEL "bank/banco_0_387" BEL "bank/banco_0_386" BEL "bank/banco_0_385"
+        BEL "bank/banco_0_384" BEL "bank/banco_0_383" BEL "bank/banco_0_382"
+        BEL "bank/banco_0_381" BEL "bank/banco_0_380" BEL "bank/banco_0_379"
+        BEL "bank/banco_0_378" BEL "bank/banco_0_377" BEL "bank/banco_0_376"
+        BEL "bank/banco_0_375" BEL "bank/banco_0_374" BEL "bank/banco_0_373"
+        BEL "bank/banco_0_372" BEL "bank/banco_0_371" BEL "bank/banco_0_370"
+        BEL "bank/banco_0_369" BEL "bank/banco_0_368" BEL "bank/banco_0_367"
+        BEL "bank/banco_0_366" BEL "bank/banco_0_365" BEL "bank/banco_0_364"
+        BEL "bank/banco_0_363" BEL "bank/banco_0_362" BEL "bank/banco_0_361"
+        BEL "bank/banco_0_360" BEL "bank/banco_0_359" BEL "bank/banco_0_358"
+        BEL "bank/banco_0_357" BEL "bank/banco_0_356" BEL "bank/banco_0_355"
+        BEL "bank/banco_0_354" BEL "bank/banco_0_353" BEL "bank/banco_0_352"
+        BEL "bank/banco_0_351" BEL "bank/banco_0_350" BEL "bank/banco_0_349"
+        BEL "bank/banco_0_348" BEL "bank/banco_0_347" BEL "bank/banco_0_346"
+        BEL "bank/banco_0_345" BEL "bank/banco_0_344" BEL "bank/banco_0_343"
+        BEL "bank/banco_0_342" BEL "bank/banco_0_341" BEL "bank/banco_0_340"
+        BEL "bank/banco_0_339" BEL "bank/banco_0_338" BEL "bank/banco_0_337"
+        BEL "bank/banco_0_336" BEL "bank/banco_0_335" BEL "bank/banco_0_334"
+        BEL "bank/banco_0_333" BEL "bank/banco_0_332" BEL "bank/banco_0_331"
+        BEL "bank/banco_0_330" BEL "bank/banco_0_329" BEL "bank/banco_0_328"
+        BEL "bank/banco_0_327" BEL "bank/banco_0_326" BEL "bank/banco_0_325"
+        BEL "bank/banco_0_324" BEL "bank/banco_0_323" BEL "bank/banco_0_322"
+        BEL "bank/banco_0_321" BEL "bank/banco_0_320" BEL "bank/banco_0_319"
+        BEL "bank/banco_0_318" BEL "bank/banco_0_317" BEL "bank/banco_0_316"
+        BEL "bank/banco_0_315" BEL "bank/banco_0_314" BEL "bank/banco_0_313"
+        BEL "bank/banco_0_312" BEL "bank/banco_0_311" BEL "bank/banco_0_310"
+        BEL "bank/banco_0_309" BEL "bank/banco_0_308" BEL "bank/banco_0_307"
+        BEL "bank/banco_0_306" BEL "bank/banco_0_305" BEL "bank/banco_0_304"
+        BEL "bank/banco_0_303" BEL "bank/banco_0_302" BEL "bank/banco_0_301"
+        BEL "bank/banco_0_300" BEL "bank/banco_0_299" BEL "bank/banco_0_298"
+        BEL "bank/banco_0_297" BEL "bank/banco_0_296" BEL "bank/banco_0_295"
+        BEL "bank/banco_0_294" BEL "bank/banco_0_293" BEL "bank/banco_0_292"
+        BEL "bank/banco_0_291" BEL "bank/banco_0_290" BEL "bank/banco_0_289"
+        BEL "bank/banco_0_288" BEL "bank/banco_0_287" BEL "bank/banco_0_286"
+        BEL "bank/banco_0_285" BEL "bank/banco_0_284" BEL "bank/banco_0_283"
+        BEL "bank/banco_0_282" BEL "bank/banco_0_281" BEL "bank/banco_0_280"
+        BEL "bank/banco_0_279" BEL "bank/banco_0_278" BEL "bank/banco_0_277"
+        BEL "bank/banco_0_276" BEL "bank/banco_0_275" BEL "bank/banco_0_274"
+        BEL "bank/banco_0_273" BEL "bank/banco_0_272" BEL "bank/banco_0_271"
+        BEL "bank/banco_0_270" BEL "bank/banco_0_269" BEL "bank/banco_0_268"
+        BEL "bank/banco_0_267" BEL "bank/banco_0_266" BEL "bank/banco_0_265"
+        BEL "bank/banco_0_264" BEL "bank/banco_0_263" BEL "bank/banco_0_262"
+        BEL "bank/banco_0_261" BEL "bank/banco_0_260" BEL "bank/banco_0_259"
+        BEL "bank/banco_0_258" BEL "bank/banco_0_257" BEL "bank/banco_0_256"
+        BEL "bank/banco_0_255" BEL "bank/banco_0_254" BEL "bank/banco_0_253"
+        BEL "bank/banco_0_252" BEL "bank/banco_0_251" BEL "bank/banco_0_250"
+        BEL "bank/banco_0_249" BEL "bank/banco_0_248" BEL "bank/banco_0_247"
+        BEL "bank/banco_0_246" BEL "bank/banco_0_245" BEL "bank/banco_0_244"
+        BEL "bank/banco_0_243" BEL "bank/banco_0_242" BEL "bank/banco_0_241"
+        BEL "bank/banco_0_240" BEL "bank/banco_0_239" BEL "bank/banco_0_238"
+        BEL "bank/banco_0_237" BEL "bank/banco_0_236" BEL "bank/banco_0_235"
+        BEL "bank/banco_0_234" BEL "bank/banco_0_233" BEL "bank/banco_0_232"
+        BEL "bank/banco_0_231" BEL "bank/banco_0_230" BEL "bank/banco_0_229"
+        BEL "bank/banco_0_228" BEL "bank/banco_0_227" BEL "bank/banco_0_226"
+        BEL "bank/banco_0_225" BEL "bank/banco_0_224" BEL "bank/banco_0_223"
+        BEL "bank/banco_0_222" BEL "bank/banco_0_221" BEL "bank/banco_0_220"
+        BEL "bank/banco_0_219" BEL "bank/banco_0_218" BEL "bank/banco_0_217"
+        BEL "bank/banco_0_216" BEL "bank/banco_0_215" BEL "bank/banco_0_214"
+        BEL "bank/banco_0_213" BEL "bank/banco_0_212" BEL "bank/banco_0_211"
+        BEL "bank/banco_0_210" BEL "bank/banco_0_209" BEL "bank/banco_0_208"
+        BEL "bank/banco_0_207" BEL "bank/banco_0_206" BEL "bank/banco_0_205"
+        BEL "bank/banco_0_204" BEL "bank/banco_0_203" BEL "bank/banco_0_202"
+        BEL "bank/banco_0_201" BEL "bank/banco_0_200" BEL "bank/banco_0_199"
+        BEL "bank/banco_0_198" BEL "bank/banco_0_197" BEL "bank/banco_0_196"
+        BEL "bank/banco_0_195" BEL "bank/banco_0_194" BEL "bank/banco_0_193"
+        BEL "bank/banco_0_192" BEL "bank/banco_0_191" BEL "bank/banco_0_190"
+        BEL "bank/banco_0_189" BEL "bank/banco_0_188" BEL "bank/banco_0_187"
+        BEL "bank/banco_0_186" BEL "bank/banco_0_185" BEL "bank/banco_0_184"
+        BEL "bank/banco_0_183" BEL "bank/banco_0_182" BEL "bank/banco_0_181"
+        BEL "bank/banco_0_180" BEL "bank/banco_0_179" BEL "bank/banco_0_178"
+        BEL "bank/banco_0_177" BEL "bank/banco_0_176" BEL "bank/banco_0_175"
+        BEL "bank/banco_0_174" BEL "bank/banco_0_173" BEL "bank/banco_0_172"
+        BEL "bank/banco_0_171" BEL "bank/banco_0_170" BEL "bank/banco_0_169"
+        BEL "bank/banco_0_168" BEL "bank/banco_0_167" BEL "bank/banco_0_166"
+        BEL "bank/banco_0_165" BEL "bank/banco_0_164" BEL "bank/banco_0_163"
+        BEL "bank/banco_0_162" BEL "bank/banco_0_161" BEL "bank/banco_0_160"
+        BEL "bank/banco_0_159" BEL "bank/banco_0_158" BEL "bank/banco_0_157"
+        BEL "bank/banco_0_156" BEL "bank/banco_0_155" BEL "bank/banco_0_154"
+        BEL "bank/banco_0_153" BEL "bank/banco_0_152" BEL "bank/banco_0_151"
+        BEL "bank/banco_0_150" BEL "bank/banco_0_149" BEL "bank/banco_0_148"
+        BEL "bank/banco_0_147" BEL "bank/banco_0_146" BEL "bank/banco_0_145"
+        BEL "bank/banco_0_144" BEL "bank/banco_0_143" BEL "bank/banco_0_142"
+        BEL "bank/banco_0_141" BEL "bank/banco_0_140" BEL "bank/banco_0_139"
+        BEL "bank/banco_0_138" BEL "bank/banco_0_137" BEL "bank/banco_0_136"
+        BEL "bank/banco_0_135" BEL "bank/banco_0_134" BEL "bank/banco_0_133"
+        BEL "bank/banco_0_132" BEL "bank/banco_0_131" BEL "bank/banco_0_130"
+        BEL "bank/banco_0_129" BEL "bank/banco_0_128" BEL "bank/banco_0_127"
+        BEL "bank/banco_0_126" BEL "bank/banco_0_125" BEL "bank/banco_0_124"
+        BEL "bank/banco_0_123" BEL "bank/banco_0_122" BEL "bank/banco_0_121"
+        BEL "bank/banco_0_120" BEL "bank/banco_0_119" BEL "bank/banco_0_118"
+        BEL "bank/banco_0_117" BEL "bank/banco_0_116" BEL "bank/banco_0_115"
+        BEL "bank/banco_0_114" BEL "bank/banco_0_113" BEL "bank/banco_0_112"
+        BEL "bank/banco_0_111" BEL "bank/banco_0_110" BEL "bank/banco_0_109"
+        BEL "bank/banco_0_108" BEL "bank/banco_0_107" BEL "bank/banco_0_106"
+        BEL "bank/banco_0_105" BEL "bank/banco_0_104" BEL "bank/banco_0_103"
+        BEL "bank/banco_0_102" BEL "bank/banco_0_101" BEL "bank/banco_0_100"
+        BEL "bank/banco_0_99" BEL "bank/banco_0_98" BEL "bank/banco_0_97" BEL
+        "bank/banco_0_96" BEL "bank/banco_0_95" BEL "bank/banco_0_94" BEL
+        "bank/banco_0_93" BEL "bank/banco_0_92" BEL "bank/banco_0_91" BEL
+        "bank/banco_0_90" BEL "bank/banco_0_89" BEL "bank/banco_0_88" BEL
+        "bank/banco_0_87" BEL "bank/banco_0_86" BEL "bank/banco_0_85" BEL
+        "bank/banco_0_84" BEL "bank/banco_0_83" BEL "bank/banco_0_82" BEL
+        "bank/banco_0_81" BEL "bank/banco_0_80" BEL "bank/banco_0_79" BEL
+        "bank/banco_0_78" BEL "bank/banco_0_77" BEL "bank/banco_0_76" BEL
+        "bank/banco_0_75" BEL "bank/banco_0_74" BEL "bank/banco_0_73" BEL
+        "bank/banco_0_72" BEL "bank/banco_0_71" BEL "bank/banco_0_70" BEL
+        "bank/banco_0_69" BEL "bank/banco_0_68" BEL "bank/banco_0_67" BEL
+        "bank/banco_0_66" BEL "bank/banco_0_65" BEL "bank/banco_0_64" BEL
+        "bank/banco_0_63" BEL "bank/banco_0_62" BEL "bank/banco_0_61" BEL
+        "bank/banco_0_60" BEL "bank/banco_0_59" BEL "bank/banco_0_58" BEL
+        "bank/banco_0_57" BEL "bank/banco_0_56" BEL "bank/banco_0_55" BEL
+        "bank/banco_0_54" BEL "bank/banco_0_53" BEL "bank/banco_0_52" BEL
+        "bank/banco_0_51" BEL "bank/banco_0_50" BEL "bank/banco_0_49" BEL
+        "bank/banco_0_48" BEL "bank/banco_0_47" BEL "bank/banco_0_46" BEL
+        "bank/banco_0_45" BEL "bank/banco_0_44" BEL "bank/banco_0_43" BEL
+        "bank/banco_0_42" BEL "bank/banco_0_41" BEL "bank/banco_0_40" BEL
+        "bank/banco_0_39" BEL "bank/banco_0_38" BEL "bank/banco_0_37" BEL
+        "bank/banco_0_36" BEL "bank/banco_0_35" BEL "bank/banco_0_34" BEL
+        "bank/banco_0_33" BEL "bank/banco_0_32" BEL "bank/banco_0_31" BEL
+        "bank/banco_0_30" BEL "bank/banco_0_29" BEL "bank/banco_0_28" BEL
+        "bank/banco_0_27" BEL "bank/banco_0_26" BEL "bank/banco_0_25" BEL
+        "bank/banco_0_24" BEL "bank/banco_0_23" BEL "bank/banco_0_22" BEL
+        "bank/banco_0_21" BEL "bank/banco_0_20" BEL "bank/banco_0_19" BEL
+        "bank/banco_0_18" BEL "bank/banco_0_17" BEL "bank/banco_0_16" BEL
+        "bank/banco_0_15" BEL "bank/banco_0_14" BEL "bank/banco_0_13" BEL
+        "bank/banco_0_12" BEL "bank/banco_0_11" BEL "bank/banco_0_10" BEL
+        "bank/banco_0_9" BEL "bank/banco_0_8" BEL "bank/banco_0_7" BEL
+        "bank/banco_0_6" BEL "bank/banco_0_5" BEL "bank/banco_0_4" BEL
+        "bank/banco_0_3" BEL "bank/banco_0_2" BEL "bank/banco_0_1" BEL
+        "bank/banco_0_0" BEL "ex_mem/eopOut" BEL "ex_mem/memToRegOut" BEL
+        "ex_mem/regWriteOut" BEL "ex_mem/writeRegisterOut_4" BEL
+        "ex_mem/writeRegisterOut_3" BEL "ex_mem/writeRegisterOut_2" BEL
+        "ex_mem/writeRegisterOut_1" BEL "ex_mem/writeRegisterOut_0" BEL
+        "ex_mem/memReadWidthOut_1" BEL "ex_mem/memReadWidthOut_0" BEL
+        "ex_mem/memWriteOut_3" BEL "ex_mem/memWriteOut_1" BEL
+        "ex_mem/memWriteOut_0" BEL "ex_mem/aluOutOut_31" BEL
+        "ex_mem/aluOutOut_30" BEL "ex_mem/aluOutOut_29" BEL
+        "ex_mem/aluOutOut_28" BEL "ex_mem/aluOutOut_27" BEL
+        "ex_mem/aluOutOut_26" BEL "ex_mem/aluOutOut_25" BEL
+        "ex_mem/aluOutOut_24" BEL "ex_mem/aluOutOut_23" BEL
+        "ex_mem/aluOutOut_22" BEL "ex_mem/aluOutOut_21" BEL
+        "ex_mem/aluOutOut_20" BEL "ex_mem/aluOutOut_19" BEL
+        "ex_mem/aluOutOut_18" BEL "ex_mem/aluOutOut_17" BEL
+        "ex_mem/aluOutOut_16" BEL "ex_mem/aluOutOut_15" BEL
+        "ex_mem/aluOutOut_14" BEL "ex_mem/aluOutOut_13" BEL
+        "ex_mem/aluOutOut_12" BEL "ex_mem/aluOutOut_11" BEL
+        "ex_mem/aluOutOut_10" BEL "ex_mem/aluOutOut_9" BEL
+        "ex_mem/aluOutOut_8" BEL "ex_mem/aluOutOut_7" BEL "ex_mem/aluOutOut_6"
+        BEL "ex_mem/aluOutOut_5" BEL "ex_mem/aluOutOut_4" BEL
+        "ex_mem/aluOutOut_3" BEL "ex_mem/aluOutOut_2" BEL "ex_mem/aluOutOut_1"
+        BEL "ex_mem/aluOutOut_0" BEL "ex_mem/writeDataOut_31" BEL
+        "ex_mem/writeDataOut_30" BEL "ex_mem/writeDataOut_29" BEL
+        "ex_mem/writeDataOut_28" BEL "ex_mem/writeDataOut_27" BEL
+        "ex_mem/writeDataOut_26" BEL "ex_mem/writeDataOut_25" BEL
+        "ex_mem/writeDataOut_24" BEL "ex_mem/writeDataOut_23" BEL
+        "ex_mem/writeDataOut_22" BEL "ex_mem/writeDataOut_21" BEL
+        "ex_mem/writeDataOut_20" BEL "ex_mem/writeDataOut_19" BEL
+        "ex_mem/writeDataOut_18" BEL "ex_mem/writeDataOut_17" BEL
+        "ex_mem/writeDataOut_16" BEL "ex_mem/writeDataOut_15" BEL
+        "ex_mem/writeDataOut_14" BEL "ex_mem/writeDataOut_13" BEL
+        "ex_mem/writeDataOut_12" BEL "ex_mem/writeDataOut_11" BEL
+        "ex_mem/writeDataOut_10" BEL "ex_mem/writeDataOut_9" BEL
+        "ex_mem/writeDataOut_8" BEL "ex_mem/writeDataOut_7" BEL
+        "ex_mem/writeDataOut_6" BEL "ex_mem/writeDataOut_5" BEL
+        "ex_mem/writeDataOut_4" BEL "ex_mem/writeDataOut_3" BEL
+        "ex_mem/writeDataOut_2" BEL "ex_mem/writeDataOut_1" BEL
+        "ex_mem/writeDataOut_0" BEL "id_ex/eopOut" BEL "id_ex/regDstOut" BEL
+        "id_ex/regWriteOut" BEL "id_ex/loadImmOut" BEL "id_ex/aluShiftImmOut"
+        BEL "id_ex/aluSrcOut" BEL "id_ex/memToRegOut" BEL "id_ex/rtOut_4" BEL
+        "id_ex/rtOut_3" BEL "id_ex/rtOut_2" BEL "id_ex/rtOut_1" BEL
+        "id_ex/rtOut_0" BEL "id_ex/rsOut_4" BEL "id_ex/rsOut_3" BEL
+        "id_ex/rsOut_2" BEL "id_ex/rsOut_1" BEL "id_ex/rsOut_0" BEL
+        "id_ex/memReadWidthOut_1" BEL "id_ex/memReadWidthOut_0" BEL
+        "id_ex/aluOperationOut_3" BEL "id_ex/aluOperationOut_2" BEL
+        "id_ex/aluOperationOut_1" BEL "id_ex/aluOperationOut_0" BEL
+        "id_ex/memWriteOut_3" BEL "id_ex/memWriteOut_1" BEL
+        "id_ex/memWriteOut_0" BEL "id_ex/readData1Out_31" BEL
+        "id_ex/readData1Out_30" BEL "id_ex/readData1Out_29" BEL
+        "id_ex/readData1Out_28" BEL "id_ex/readData1Out_27" BEL
+        "id_ex/readData1Out_26" BEL "id_ex/readData1Out_25" BEL
+        "id_ex/readData1Out_24" BEL "id_ex/readData1Out_23" BEL
+        "id_ex/readData1Out_22" BEL "id_ex/readData1Out_21" BEL
+        "id_ex/readData1Out_20" BEL "id_ex/readData1Out_19" BEL
+        "id_ex/readData1Out_18" BEL "id_ex/readData1Out_17" BEL
+        "id_ex/readData1Out_16" BEL "id_ex/readData1Out_15" BEL
+        "id_ex/readData1Out_14" BEL "id_ex/readData1Out_13" BEL
+        "id_ex/readData1Out_12" BEL "id_ex/readData1Out_11" BEL
+        "id_ex/readData1Out_10" BEL "id_ex/readData1Out_9" BEL
+        "id_ex/readData1Out_8" BEL "id_ex/readData1Out_7" BEL
+        "id_ex/readData1Out_6" BEL "id_ex/readData1Out_5" BEL
+        "id_ex/readData1Out_4" BEL "id_ex/readData1Out_3" BEL
+        "id_ex/readData1Out_2" BEL "id_ex/readData1Out_1" BEL
+        "id_ex/readData1Out_0" BEL "id_ex/sigExtOut_16" BEL
+        "id_ex/sigExtOut_15" BEL "id_ex/sigExtOut_14" BEL "id_ex/sigExtOut_13"
+        BEL "id_ex/sigExtOut_12" BEL "id_ex/sigExtOut_11" BEL
+        "id_ex/sigExtOut_10" BEL "id_ex/sigExtOut_9" BEL "id_ex/sigExtOut_8"
+        BEL "id_ex/sigExtOut_7" BEL "id_ex/sigExtOut_6" BEL
+        "id_ex/sigExtOut_5" BEL "id_ex/sigExtOut_4" BEL "id_ex/sigExtOut_3"
+        BEL "id_ex/sigExtOut_2" BEL "id_ex/sigExtOut_1" BEL
+        "id_ex/sigExtOut_0" BEL "id_ex/readData2Out_31" BEL
+        "id_ex/readData2Out_30" BEL "id_ex/readData2Out_29" BEL
+        "id_ex/readData2Out_28" BEL "id_ex/readData2Out_27" BEL
+        "id_ex/readData2Out_26" BEL "id_ex/readData2Out_25" BEL
+        "id_ex/readData2Out_24" BEL "id_ex/readData2Out_23" BEL
+        "id_ex/readData2Out_22" BEL "id_ex/readData2Out_21" BEL
+        "id_ex/readData2Out_20" BEL "id_ex/readData2Out_19" BEL
+        "id_ex/readData2Out_18" BEL "id_ex/readData2Out_17" BEL
+        "id_ex/readData2Out_16" BEL "id_ex/readData2Out_15" BEL
+        "id_ex/readData2Out_14" BEL "id_ex/readData2Out_13" BEL
+        "id_ex/readData2Out_12" BEL "id_ex/readData2Out_11" BEL
+        "id_ex/readData2Out_10" BEL "id_ex/readData2Out_9" BEL
+        "id_ex/readData2Out_8" BEL "id_ex/readData2Out_7" BEL
+        "id_ex/readData2Out_6" BEL "id_ex/readData2Out_5" BEL
+        "id_ex/readData2Out_4" BEL "id_ex/readData2Out_3" BEL
+        "id_ex/readData2Out_2" BEL "id_ex/readData2Out_1" BEL
+        "id_ex/readData2Out_0" BEL "mem_wb/memToRegOut" BEL
+        "mem_wb/regWriteOut" BEL "mem_wb/eopOut" BEL "mem_wb/memoryOutOut_31"
+        BEL "mem_wb/memoryOutOut_30" BEL "mem_wb/memoryOutOut_29" BEL
+        "mem_wb/memoryOutOut_28" BEL "mem_wb/memoryOutOut_27" BEL
+        "mem_wb/memoryOutOut_26" BEL "mem_wb/memoryOutOut_25" BEL
+        "mem_wb/memoryOutOut_24" BEL "mem_wb/memoryOutOut_23" BEL
+        "mem_wb/memoryOutOut_22" BEL "mem_wb/memoryOutOut_21" BEL
+        "mem_wb/memoryOutOut_20" BEL "mem_wb/memoryOutOut_19" BEL
+        "mem_wb/memoryOutOut_18" BEL "mem_wb/memoryOutOut_17" BEL
+        "mem_wb/memoryOutOut_16" BEL "mem_wb/memoryOutOut_15" BEL
+        "mem_wb/memoryOutOut_14" BEL "mem_wb/memoryOutOut_13" BEL
+        "mem_wb/memoryOutOut_12" BEL "mem_wb/memoryOutOut_11" BEL
+        "mem_wb/memoryOutOut_10" BEL "mem_wb/memoryOutOut_9" BEL
+        "mem_wb/memoryOutOut_8" BEL "mem_wb/memoryOutOut_7" BEL
+        "mem_wb/memoryOutOut_6" BEL "mem_wb/memoryOutOut_5" BEL
+        "mem_wb/memoryOutOut_4" BEL "mem_wb/memoryOutOut_3" BEL
+        "mem_wb/memoryOutOut_2" BEL "mem_wb/memoryOutOut_1" BEL
+        "mem_wb/memoryOutOut_0" BEL "mem_wb/aluOutOut_31" BEL
+        "mem_wb/aluOutOut_30" BEL "mem_wb/aluOutOut_29" BEL
+        "mem_wb/aluOutOut_28" BEL "mem_wb/aluOutOut_27" BEL
+        "mem_wb/aluOutOut_26" BEL "mem_wb/aluOutOut_25" BEL
+        "mem_wb/aluOutOut_24" BEL "mem_wb/aluOutOut_23" BEL
+        "mem_wb/aluOutOut_22" BEL "mem_wb/aluOutOut_21" BEL
+        "mem_wb/aluOutOut_20" BEL "mem_wb/aluOutOut_19" BEL
+        "mem_wb/aluOutOut_18" BEL "mem_wb/aluOutOut_17" BEL
+        "mem_wb/aluOutOut_16" BEL "mem_wb/aluOutOut_15" BEL
+        "mem_wb/aluOutOut_14" BEL "mem_wb/aluOutOut_13" BEL
+        "mem_wb/aluOutOut_12" BEL "mem_wb/aluOutOut_11" BEL
+        "mem_wb/aluOutOut_10" BEL "mem_wb/aluOutOut_9" BEL
+        "mem_wb/aluOutOut_8" BEL "mem_wb/aluOutOut_7" BEL "mem_wb/aluOutOut_6"
+        BEL "mem_wb/aluOutOut_5" BEL "mem_wb/aluOutOut_4" BEL
+        "mem_wb/aluOutOut_3" BEL "mem_wb/aluOutOut_2" BEL "mem_wb/aluOutOut_1"
+        BEL "mem_wb/aluOutOut_0" BEL "mem_wb/writeRegisterOut_4" BEL
+        "mem_wb/writeRegisterOut_3" BEL "mem_wb/writeRegisterOut_2" BEL
+        "mem_wb/writeRegisterOut_1" BEL "mem_wb/writeRegisterOut_0" BEL
+        "fetch/pcOut_7" BEL "fetch/pcOut_6" BEL "fetch/pcOut_5" BEL
+        "fetch/pcOut_4" BEL "fetch/pcOut_3" BEL "fetch/pcOut_2" BEL
+        "fetch/pcOut_1" BEL "fetch/pcOut_0" BEL
+        "debugUnit/dataToUartOutFifo_7" BEL "debugUnit/dataToUartOutFifo_6"
+        BEL "debugUnit/dataToUartOutFifo_5" BEL
+        "debugUnit/dataToUartOutFifo_4" BEL "debugUnit/dataToUartOutFifo_3"
+        BEL "debugUnit/dataToUartOutFifo_2" BEL
+        "debugUnit/dataToUartOutFifo_1" BEL "debugUnit/dataToUartOutFifo_0"
+        BEL "debugUnit/sendCounter_7" BEL "debugUnit/sendCounter_6" BEL
+        "debugUnit/sendCounter_5" BEL "debugUnit/sendCounter_4" BEL
+        "debugUnit/sendCounter_3" BEL "debugUnit/sendCounter_2" BEL
+        "debugUnit/sendCounter_1" BEL "debugUnit/sendCounter_0" BEL
+        "debugUnit/readFifoFlag" BEL "debugUnit/current_state_1" BEL
+        "debugUnit/current_state_0" BEL "debugUnit/next_state_1" BEL
+        "debugUnit/next_state_0" BEL "debugUnit/pipeReset" BEL
+        "debugUnit/pipeEnable" BEL "debugUnit/writeFifoFlag" BEL
+        "uartMod/fifo_tx/read_pointer_7" BEL "uartMod/fifo_tx/read_pointer_6"
+        BEL "uartMod/fifo_tx/read_pointer_5" BEL
+        "uartMod/fifo_tx/read_pointer_4" BEL "uartMod/fifo_tx/read_pointer_3"
+        BEL "uartMod/fifo_tx/read_pointer_2" BEL
+        "uartMod/fifo_tx/read_pointer_1" BEL "uartMod/fifo_tx/read_pointer_0"
+        BEL "uartMod/fifo_tx/write_pointer_7" BEL
+        "uartMod/fifo_tx/write_pointer_6" BEL
+        "uartMod/fifo_tx/write_pointer_5" BEL
+        "uartMod/fifo_tx/write_pointer_4" BEL
+        "uartMod/fifo_tx/write_pointer_3" BEL
+        "uartMod/fifo_tx/write_pointer_2" BEL
+        "uartMod/fifo_tx/write_pointer_1" BEL
+        "uartMod/fifo_tx/write_pointer_0" BEL "uartMod/fifo_tx/data_out_7" BEL
+        "uartMod/fifo_tx/data_out_6" BEL "uartMod/fifo_tx/data_out_5" BEL
+        "uartMod/fifo_tx/data_out_4" BEL "uartMod/fifo_tx/data_out_3" BEL
+        "uartMod/fifo_tx/data_out_2" BEL "uartMod/fifo_tx/data_out_1" BEL
+        "uartMod/fifo_tx/data_out_0" BEL "uartMod/fifo_tx/free_space_8" BEL
+        "uartMod/fifo_tx/free_space_7" BEL "uartMod/fifo_tx/free_space_6" BEL
+        "uartMod/fifo_tx/free_space_5" BEL "uartMod/fifo_tx/free_space_4" BEL
+        "uartMod/fifo_tx/free_space_3" BEL "uartMod/fifo_tx/free_space_2" BEL
+        "uartMod/fifo_tx/free_space_1" BEL "uartMod/fifo_tx/free_space_0" BEL
+        "uartMod/receptor/s_3" BEL "uartMod/receptor/s_2" BEL
+        "uartMod/receptor/s_1" BEL "uartMod/receptor/s_0" BEL
+        "uartMod/receptor/rx_done" BEL "uartMod/receptor/current_state_1" BEL
+        "uartMod/receptor/current_state_0" BEL "uartMod/receptor/next_state_1"
+        BEL "uartMod/receptor/next_state_0" BEL "uartMod/receptor/n_3" BEL
+        "uartMod/receptor/n_2" BEL "uartMod/receptor/n_1" BEL
+        "uartMod/receptor/n_0" BEL "uartMod/receptor/d_out_7" BEL
+        "uartMod/receptor/d_out_6" BEL "uartMod/receptor/d_out_5" BEL
+        "uartMod/receptor/d_out_4" BEL "uartMod/receptor/d_out_3" BEL
+        "uartMod/receptor/d_out_2" BEL "uartMod/receptor/d_out_1" BEL
+        "uartMod/receptor/d_out_0" BEL "uartMod/fifo_rx/read_pointer_3" BEL
+        "uartMod/fifo_rx/read_pointer_2" BEL "uartMod/fifo_rx/read_pointer_1"
+        BEL "uartMod/fifo_rx/read_pointer_0" BEL
+        "uartMod/fifo_rx/write_pointer_3" BEL
+        "uartMod/fifo_rx/write_pointer_2" BEL
+        "uartMod/fifo_rx/write_pointer_1" BEL
+        "uartMod/fifo_rx/write_pointer_0" BEL "uartMod/fifo_rx/data_out_7" BEL
+        "uartMod/fifo_rx/data_out_6" BEL "uartMod/fifo_rx/data_out_5" BEL
+        "uartMod/fifo_rx/data_out_4" BEL "uartMod/fifo_rx/data_out_3" BEL
+        "uartMod/fifo_rx/data_out_2" BEL "uartMod/fifo_rx/data_out_1" BEL
+        "uartMod/fifo_rx/data_out_0" BEL "uartMod/fifo_rx/free_space_4" BEL
+        "uartMod/fifo_rx/free_space_3" BEL "uartMod/fifo_rx/free_space_2" BEL
+        "uartMod/fifo_rx/free_space_1" BEL "uartMod/fifo_rx/free_space_0" BEL
+        "uartMod/transmisor/B_sent_2" BEL "uartMod/transmisor/B_sent_1" BEL
+        "uartMod/transmisor/B_sent_0" BEL "uartMod/transmisor/tx" BEL
+        "uartMod/transmisor/tx_done" BEL "uartMod/transmisor/current_state_1"
+        BEL "uartMod/transmisor/current_state_0" BEL
+        "uartMod/transmisor/next_state_1" BEL
+        "uartMod/transmisor/next_state_0" BEL "uartMod/transmisor/d_in_7" BEL
+        "uartMod/transmisor/d_in_6" BEL "uartMod/transmisor/d_in_5" BEL
+        "uartMod/transmisor/d_in_4" BEL "uartMod/transmisor/d_in_3" BEL
+        "uartMod/transmisor/d_in_2" BEL "uartMod/transmisor/d_in_1" BEL
+        "uartMod/transmisor/d_in_0" BEL "debugUnit/sentFlag" BEL
+        "mem_wb/regWriteOut_1" BEL "ex_mem/regWriteOut_1" BEL
+        "clock_BUFGP/BUFG" PIN
+        "ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram_pins<26>"
+        PIN
+        "ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram_pins<27>"
+        PIN
+        "instructionMemory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<26>"
+        PIN
+        "instructionMemory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<27>"
+        BEL "uartMod/fifo_tx/Mram_FIFO121/SP" BEL
+        "uartMod/fifo_tx/Mram_FIFO121/DP" BEL
+        "uartMod/fifo_tx/Mram_FIFO112/SP" BEL
+        "uartMod/fifo_tx/Mram_FIFO112/DP" BEL
+        "uartMod/fifo_tx/Mram_FIFO122/SP" BEL
+        "uartMod/fifo_tx/Mram_FIFO122/DP" BEL
+        "uartMod/fifo_tx/Mram_FIFO102/SP" BEL
+        "uartMod/fifo_tx/Mram_FIFO102/DP" BEL
+        "uartMod/fifo_tx/Mram_FIFO101/SP" BEL
+        "uartMod/fifo_tx/Mram_FIFO101/DP" BEL
+        "uartMod/fifo_tx/Mram_FIFO111/SP" BEL
+        "uartMod/fifo_tx/Mram_FIFO111/DP" BEL "uartMod/fifo_tx/Mram_FIFO91/SP"
+        BEL "uartMod/fifo_tx/Mram_FIFO91/DP" BEL
+        "uartMod/fifo_tx/Mram_FIFO92/SP" BEL "uartMod/fifo_tx/Mram_FIFO92/DP"
+        BEL "uartMod/fifo_rx/Mram_FIFO22/SP" BEL
+        "uartMod/fifo_rx/Mram_FIFO22/DP" BEL "uartMod/fifo_rx/Mram_FIFO21/SP"
+        BEL "uartMod/fifo_rx/Mram_FIFO21/DP" BEL
+        "uartMod/fifo_tx/Mram_FIFO1_RAMA" BEL
+        "uartMod/fifo_tx/Mram_FIFO1_RAMB" BEL
+        "uartMod/fifo_tx/Mram_FIFO1_RAMC" BEL
+        "uartMod/fifo_tx/Mram_FIFO1_RAMD" BEL
+        "uartMod/fifo_tx/Mram_FIFO2_RAMA" BEL
+        "uartMod/fifo_tx/Mram_FIFO2_RAMB" BEL
+        "uartMod/fifo_tx/Mram_FIFO2_RAMC" BEL
+        "uartMod/fifo_tx/Mram_FIFO2_RAMD" BEL
+        "uartMod/fifo_tx/Mram_FIFO3_RAMA" BEL
+        "uartMod/fifo_tx/Mram_FIFO3_RAMB" BEL
+        "uartMod/fifo_tx/Mram_FIFO3_RAMC" BEL
+        "uartMod/fifo_tx/Mram_FIFO3_RAMD" BEL
+        "uartMod/fifo_tx/Mram_FIFO4_RAMA" BEL
+        "uartMod/fifo_tx/Mram_FIFO4_RAMB" BEL
+        "uartMod/fifo_tx/Mram_FIFO4_RAMC" BEL
+        "uartMod/fifo_tx/Mram_FIFO4_RAMD" BEL
+        "uartMod/fifo_tx/Mram_FIFO5_RAMA" BEL
+        "uartMod/fifo_tx/Mram_FIFO5_RAMB" BEL
+        "uartMod/fifo_tx/Mram_FIFO5_RAMC" BEL
+        "uartMod/fifo_tx/Mram_FIFO5_RAMD" BEL
+        "uartMod/fifo_tx/Mram_FIFO6_RAMA" BEL
+        "uartMod/fifo_tx/Mram_FIFO6_RAMB" BEL
+        "uartMod/fifo_tx/Mram_FIFO6_RAMC" BEL
+        "uartMod/fifo_tx/Mram_FIFO6_RAMD" BEL
+        "uartMod/fifo_tx/Mram_FIFO7_RAMA" BEL
+        "uartMod/fifo_tx/Mram_FIFO7_RAMB" BEL
+        "uartMod/fifo_tx/Mram_FIFO7_RAMC" BEL
+        "uartMod/fifo_tx/Mram_FIFO7_RAMD" BEL
+        "uartMod/fifo_tx/Mram_FIFO8_RAMA" BEL
+        "uartMod/fifo_tx/Mram_FIFO8_RAMB" BEL
+        "uartMod/fifo_tx/Mram_FIFO8_RAMC" BEL
+        "uartMod/fifo_tx/Mram_FIFO8_RAMD" BEL
+        "uartMod/fifo_rx/Mram_FIFO1_RAMA_D1" BEL
+        "uartMod/fifo_rx/Mram_FIFO1_RAMA" BEL
+        "uartMod/fifo_rx/Mram_FIFO1_RAMB_D1" BEL
+        "uartMod/fifo_rx/Mram_FIFO1_RAMB" BEL
+        "uartMod/fifo_rx/Mram_FIFO1_RAMC_D1" BEL
+        "uartMod/fifo_rx/Mram_FIFO1_RAMC" BEL
+        "uartMod/fifo_rx/Mram_FIFO1_RAMD_D1" BEL
+        "uartMod/fifo_rx/Mram_FIFO1_RAMD";
+TS_clock = PERIOD TIMEGRP "clock" 105 MHz HIGH 50%;
+SCHEMATIC END;
+

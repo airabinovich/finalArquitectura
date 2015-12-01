@@ -95,6 +95,9 @@ module UART_tx (
 					tx_done = 1;
 					next_state=IDLE;
 				end
+				else if (tx_done==1) begin
+					tx_done=0;
+				end
 			end
 		endcase
 	end

@@ -89,7 +89,7 @@ module UART_uart(
 		.tx_done(uart_tx_done)
 	);
 	
-	UART_fifo_interface fifo_tx(
+	UART_fifo_interface #(.bits_depth(8))fifo_tx(
 		.clock(clock),
 		.reset(uart_reset),
 		.write_flag(writeFlag),

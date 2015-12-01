@@ -2,6 +2,7 @@
 _xmsgs\pn_parser.xmsgs
 instructionROM.asy
 instructionROM.gise
+instructionROM.mif
 instructionROM.ngc
 instructionROM.sym
 instructionROM.v

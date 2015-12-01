@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: Datapath1.prj
 
@@ -51,7 +51,7 @@ Target Device                      : xc6slx16-3-csg324
 ---- Source Options
 Top Module Name                    : Datapath1
 Automatic FSM Extraction           : YES
-FSM Encoding Algorithm             : Auto
+FSM Encoding Algorithm             : One-Hot
 Safe Implementation                : No
 FSM Style                          : LUT
 RAM Extraction                     : Yes
@@ -188,7 +188,7 @@ Elaborating module <FE>.
 Elaborating module <HazardsUnit>.
 
 Elaborating module <DebugUnit>.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\DebugUnit.v" Line 196: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\DebugUnit.v" Line 211: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:1016 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\UART_echo_test_module.v" Line 66: Port full_flag is not connected to this instance
 WARNING:HDLCompiler:1016 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\UART_echo_test_module.v" Line 92: Port full_flag is not connected to this instance
 
@@ -197,22 +197,30 @@ Elaborating module <UART_uart>.
 Elaborating module <UART_baud_rate_generator(COUNT=651)>.
 
 Elaborating module <UART_rx>.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\rx.v" Line 66: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\rx.v" Line 77: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\rx.v" Line 70: Result of 5-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\rx.v" Line 81: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\rx.v" Line 90: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\rx.v" Line 85: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\rx.v" Line 101: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <UART_fifo_interface>.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 50: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 57: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 58: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 63: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 65: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 68: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 51: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 58: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 59: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 64: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 66: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 69: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <UART_baud_rate_generator(COUNT=10416)>.
 
 Elaborating module <UART_tx>.
+
+Elaborating module <UART_fifo_interface(bits_depth=8)>.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 51: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 58: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 59: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 64: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 66: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 69: Result of 9-bit expression is truncated to fit in 8-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -379,12 +387,12 @@ Synthesizing Unit <DebugUnit>.
     Found 8-bit register for signal <sendCounter>.
     Found 1-bit register for signal <readFifoFlag>.
     Found 1-bit register for signal <pipeReset>.
-    Found 8-bit adder for signal <sendCounter[7]_GND_16_o_add_71_OUT> created at line 196.
-    Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_79_OUT> created at line 85.
+    Found 8-bit adder for signal <sendCounter[7]_GND_16_o_add_75_OUT> created at line 211.
+    Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_83_OUT> created at line 85.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  25 D-type flip-flop(s).
-	inferred  72 Multiplexer(s).
+	inferred  71 Multiplexer(s).
 Unit <DebugUnit> synthesized.
 
 Synthesizing Unit <UART_uart>.
@@ -414,38 +422,39 @@ Synthesizing Unit <UART_rx>.
     Found 1-bit register for signal <rx_done>.
     Found 2-bit register for signal <next_state>.
     Found 4-bit register for signal <s>.
-    Found 8-bit register for signal <d_out>.
     Found 4-bit register for signal <n>.
-    Found 4-bit adder for signal <n[3]_GND_19_o_add_12_OUT> created at line 77.
-    Found 4-bit adder for signal <s[3]_GND_19_o_add_22_OUT> created at line 90.
-    Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_26_OUT> created at line 53.
-    Found 4-bit 4-to-1 multiplexer for signal <current_state[1]_s[3]_wide_mux_27_OUT> created at line 53.
-    Found 4-bit comparator greater for signal <n0004> created at line 60
-    Found 4-bit comparator lessequal for signal <n0009> created at line 72
-    Found 4-bit comparator greater for signal <n0019> created at line 85
+    Found 8-bit register for signal <d_out>.
+    Found 4-bit adder for signal <n[3]_GND_19_o_add_13_OUT> created at line 81.
+    Found 4-bit adder for signal <s[3]_GND_19_o_add_24_OUT> created at line 101.
+    Found 1-bit 3-to-1 multiplexer for signal <current_state[1]_rx_done_Mux_30_o> created at line 56.
+    Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_31_OUT> created at line 56.
+    Found 4-bit 4-to-1 multiplexer for signal <current_state[1]_s[3]_wide_mux_32_OUT> created at line 56.
+    Found 4-bit comparator greater for signal <n0005> created at line 64
+    Found 4-bit comparator greater for signal <n0010> created at line 74
+    Found 4-bit comparator lessequal for signal <n0012> created at line 76
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  21 D-type flip-flop(s).
 	inferred   3 Comparator(s).
-	inferred  10 Multiplexer(s).
+	inferred  18 Multiplexer(s).
 Unit <UART_rx> synthesized.
 
 Synthesizing Unit <UART_fifo_interface>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v".
-        bits_depth = 7
-    Found 128x8-bit dual-port RAM <Mram_FIFO> for signal <FIFO>.
-    Found 7-bit register for signal <read_pointer>.
-    Found 7-bit register for signal <write_pointer>.
+        bits_depth = 4
+    Found 16x8-bit dual-port RAM <Mram_FIFO> for signal <FIFO>.
+    Found 4-bit register for signal <read_pointer>.
+    Found 4-bit register for signal <write_pointer>.
     Found 8-bit register for signal <data_out>.
-    Found 8-bit register for signal <free_space>.
-    Found 7-bit adder for signal <read_pointer[6]_GND_20_o_add_3_OUT> created at line 57.
-    Found 8-bit adder for signal <free_space[7]_GND_20_o_add_4_OUT> created at line 58.
-    Found 7-bit adder for signal <write_pointer[6]_GND_20_o_add_10_OUT> created at line 63.
-    Found 8-bit subtractor for signal <GND_20_o_GND_20_o_sub_12_OUT<7:0>> created at line 65.
+    Found 5-bit register for signal <free_space>.
+    Found 4-bit adder for signal <read_pointer[3]_GND_20_o_add_3_OUT> created at line 58.
+    Found 5-bit adder for signal <free_space[4]_GND_20_o_add_4_OUT> created at line 59.
+    Found 4-bit adder for signal <write_pointer[3]_GND_20_o_add_10_OUT> created at line 64.
+    Found 5-bit subtractor for signal <GND_20_o_GND_20_o_sub_12_OUT<4:0>> created at line 66.
     Summary:
 	inferred   1 RAM(s).
 	inferred   4 Adder/Subtractor(s).
-	inferred  30 D-type flip-flop(s).
+	inferred  21 D-type flip-flop(s).
 	inferred   3 Multiplexer(s).
 Unit <UART_fifo_interface> synthesized.
 
@@ -472,29 +481,51 @@ Synthesizing Unit <UART_tx>.
     Found 8-bit register for signal <d_in>.
     Found 3-bit adder for signal <B_sent[2]_GND_23_o_add_6_OUT> created at line 88.
     Found 1-bit 8-to-1 multiplexer for signal <B_sent[2]_d_in[7]_Mux_4_o> created at line 83.
-    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_tx_Mux_12_o> created at line 64.
-    Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_14_OUT> created at line 64.
+    Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_tx_Mux_13_o> created at line 64.
+    Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_15_OUT> created at line 64.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
-	inferred  11 Multiplexer(s).
+	inferred  12 Multiplexer(s).
 Unit <UART_tx> synthesized.
+
+Synthesizing Unit <UART_fifo_interface_1>.
+    Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v".
+        bits_depth = 8
+    Found 256x8-bit dual-port RAM <Mram_FIFO> for signal <FIFO>.
+    Found 8-bit register for signal <read_pointer>.
+    Found 8-bit register for signal <data_out>.
+    Found 8-bit register for signal <write_pointer>.
+    Found 9-bit register for signal <free_space>.
+    Found 8-bit adder for signal <read_pointer[7]_GND_24_o_add_3_OUT> created at line 58.
+    Found 9-bit adder for signal <free_space[8]_GND_24_o_add_4_OUT> created at line 59.
+    Found 8-bit adder for signal <write_pointer[7]_GND_24_o_add_10_OUT> created at line 64.
+    Found 9-bit subtractor for signal <GND_24_o_GND_24_o_sub_12_OUT<8:0>> created at line 66.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <UART_fifo_interface_1> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
- 128x8-bit dual-port RAM                               : 2
+ 16x8-bit dual-port RAM                                : 1
+ 256x8-bit dual-port RAM                               : 1
 # Adders/Subtractors                                   : 18
  16-bit adder                                          : 2
  3-bit adder                                           : 1
  33-bit adder                                          : 1
  33-bit subtractor                                     : 1
- 4-bit adder                                           : 2
- 7-bit adder                                           : 4
+ 4-bit adder                                           : 4
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
  8-bit adder                                           : 5
- 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
 # Registers                                            : 68
  1-bit register                                        : 23
  1024-bit register                                     : 1
@@ -502,10 +533,10 @@ Macro Statistics
  2-bit register                                        : 8
  3-bit register                                        : 1
  32-bit register                                       : 8
- 4-bit register                                        : 5
- 5-bit register                                        : 6
- 7-bit register                                        : 4
+ 4-bit register                                        : 7
+ 5-bit register                                        : 7
  8-bit register                                        : 10
+ 9-bit register                                        : 1
 # Comparators                                          : 17
  16-bit comparator greater                             : 2
  32-bit comparator equal                               : 1
@@ -513,22 +544,24 @@ Macro Statistics
  4-bit comparator greater                              : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
-# Multiplexers                                         : 203
+# Multiplexers                                         : 211
  1-bit 12-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 35
+ 1-bit 2-to-1 multiplexer                              : 39
+ 1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
- 2-bit 2-to-1 multiplexer                              : 21
+ 2-bit 2-to-1 multiplexer                              : 19
  2-bit 4-to-1 multiplexer                              : 3
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 12-to-1 multiplexer                            : 1
  32-bit 2-to-1 multiplexer                             : 52
  32-bit 32-to-1 multiplexer                            : 2
  32-bit 4-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 9
+ 4-bit 2-to-1 multiplexer                              : 11
  4-bit 4-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 11
- 8-bit 2-to-1 multiplexer                              : 63
+ 5-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 62
+ 9-bit 2-to-1 multiplexer                              : 2
 # Logic shifters                                       : 3
  33-bit shifter arithmetic right                       : 1
  33-bit shifter logical left                           : 1
@@ -563,23 +596,40 @@ INFO:Xst:3217 - HDL ADVISOR - Register <data_out> currently described with an as
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
     |     clkA           | connected to signal <clock>         | rise     |
     |     weA            | connected to internal node          | high     |
     |     addrA          | connected to signal <write_pointer> |          |
     |     diA            | connected to signal <data_in>       |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 128-word x 8-bit                    |          |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <read_pointer>  |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <UART_fifo_interface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_fifo_interface_1>.
+The following registers are absorbed into counter <write_pointer>: 1 register on signal <write_pointer>.
+The following registers are absorbed into counter <read_pointer>: 1 register on signal <read_pointer>.
+INFO:Xst:3217 - HDL ADVISOR - Register <data_out> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_FIFO> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <write_pointer> |          |
+    |     diA            | connected to signal <data_in>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
     |     addrB          | connected to signal <read_pointer>  |          |
     |     doB            | connected to internal node          |          |
     -----------------------------------------------------------------------
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_FIFO> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-Unit <UART_fifo_interface> synthesized (advanced).
-
-Synthesizing (advanced) Unit <UART_rx>.
-The following registers are absorbed into counter <n>: 1 register on signal <n>.
-Unit <UART_rx> synthesized (advanced).
+Unit <UART_fifo_interface_1> synthesized (advanced).
 
 Synthesizing (advanced) Unit <UART_tx>.
 The following registers are absorbed into counter <B_sent>: 1 register on signal <B_sent>.
@@ -590,20 +640,24 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
- 128x8-bit dual-port distributed RAM                   : 2
-# Adders/Subtractors                                   : 10
+ 16x8-bit dual-port distributed RAM                    : 1
+ 256x8-bit dual-port distributed RAM                   : 1
+# Adders/Subtractors                                   : 11
  33-bit adder                                          : 1
  33-bit subtractor                                     : 1
- 4-bit adder                                           : 1
- 8-bit adder                                           : 5
- 8-bit subtractor                                      : 2
-# Counters                                             : 8
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
+ 9-bit adder                                           : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 7
  16-bit up counter                                     : 2
  3-bit up counter                                      : 1
- 4-bit up counter                                      : 1
- 7-bit up counter                                      : 4
-# Registers                                            : 1445
- Flip-Flops                                            : 1445
+ 4-bit up counter                                      : 2
+ 8-bit up counter                                      : 2
+# Registers                                            : 1447
+ Flip-Flops                                            : 1447
 # Comparators                                          : 17
  16-bit comparator greater                             : 2
  32-bit comparator equal                               : 1
@@ -611,21 +665,23 @@ Macro Statistics
  4-bit comparator greater                              : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
-# Multiplexers                                         : 199
+# Multiplexers                                         : 208
  1-bit 12-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 2-to-1 multiplexer                              : 37
+ 1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
- 2-bit 2-to-1 multiplexer                              : 21
+ 2-bit 2-to-1 multiplexer                              : 19
  2-bit 4-to-1 multiplexer                              : 3
  32-bit 12-to-1 multiplexer                            : 1
  32-bit 2-to-1 multiplexer                             : 52
  32-bit 32-to-1 multiplexer                            : 2
  32-bit 4-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 8
+ 4-bit 2-to-1 multiplexer                              : 11
  4-bit 4-to-1 multiplexer                              : 1
- 5-bit 2-to-1 multiplexer                              : 11
- 8-bit 2-to-1 multiplexer                              : 63
+ 5-bit 2-to-1 multiplexer                              : 13
+ 8-bit 2-to-1 multiplexer                              : 62
+ 9-bit 2-to-1 multiplexer                              : 2
 # Logic shifters                                       : 3
  33-bit shifter arithmetic right                       : 1
  33-bit shifter logical left                           : 1
@@ -666,9 +722,11 @@ Optimizing unit <DebugUnit> ...
 
 Optimizing unit <UART_uart> ...
 
-Optimizing unit <UART_fifo_interface> ...
+Optimizing unit <UART_fifo_interface_1> ...
 
 Optimizing unit <UART_rx> ...
+
+Optimizing unit <UART_fifo_interface> ...
 
 Optimizing unit <UART_tx> ...
 
@@ -698,8 +756,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1479
- Flip-Flops                                            : 1479
+# Registers                                            : 1473
+ Flip-Flops                                            : 1473
 
 =========================================================================
 
@@ -722,29 +780,31 @@ Top Level Output File Name         : Datapath1.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3403
+# BELS                             : 3408
 #      GND                         : 3
 #      INV                         : 9
-#      LUT1                        : 22
-#      LUT2                        : 120
-#      LUT3                        : 134
-#      LUT4                        : 229
-#      LUT5                        : 1316
-#      LUT6                        : 1249
-#      MUXCY                       : 119
-#      MUXF7                       : 101
+#      LUT1                        : 36
+#      LUT2                        : 118
+#      LUT3                        : 104
+#      LUT4                        : 235
+#      LUT5                        : 1308
+#      LUT6                        : 1252
+#      MUXCY                       : 133
+#      MUXF7                       : 93
 #      VCC                         : 3
-#      XORCY                       : 98
-# FlipFlops/Latches                : 1479
+#      XORCY                       : 114
+# FlipFlops/Latches                : 1473
 #      FD                          : 8
 #      FDC                         : 20
-#      FDCE                        : 1068
+#      FDCE                        : 1062
 #      FDCE_1                      : 306
-#      FDE                         : 50
+#      FDE                         : 49
 #      FDPE                        : 2
-#      FDR                         : 24
+#      FDR                         : 25
 #      FDSE                        : 1
-# RAMS                             : 18
+# RAMS                             : 21
+#      RAM16X1D                    : 2
+#      RAM32M                      : 1
 #      RAM64M                      : 8
 #      RAM64X1D                    : 8
 #      RAMB8BWER                   : 2
@@ -761,17 +821,17 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1479  out of  18224     8%  
- Number of Slice LUTs:                 3127  out of   9112    34%  
-    Number used as Logic:              3079  out of   9112    33%  
-    Number used as Memory:               48  out of   2176     2%  
-       Number used as RAM:               48
+ Number of Slice Registers:            1473  out of  18224     8%  
+ Number of Slice LUTs:                 3118  out of   9112    34%  
+    Number used as Logic:              3062  out of   9112    33%  
+    Number used as Memory:               56  out of   2176     2%  
+       Number used as RAM:               56
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4170
-   Number with an unused Flip Flop:    2691  out of   4170    64%  
-   Number with an unused LUT:          1043  out of   4170    25%  
-   Number of fully used LUT-FF pairs:   436  out of   4170    10%  
+ Number of LUT Flip Flop pairs used:   4167
+   Number with an unused Flip Flop:    2694  out of   4167    64%  
+   Number with an unused LUT:          1049  out of   4167    25%  
+   Number of fully used LUT-FF pairs:   424  out of   4167    10%  
    Number of unique control sets:        28
 
 IO Utilization: 
@@ -804,7 +864,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 1497  |
+clock                              | BUFGP                  | 1494  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -816,8 +876,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 13.912ns (Maximum Frequency: 71.880MHz)
-   Minimum input arrival time before clock: 4.945ns
-   Maximum output required time after clock: 17.977ns
+   Minimum input arrival time before clock: 4.961ns
+   Maximum output required time after clock: 17.616ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -827,7 +887,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
   Clock period: 13.912ns (frequency: 71.880MHz)
-  Total number of paths / destination ports: 441702 / 3190
+  Total number of paths / destination ports: 441583 / 3209
 -------------------------------------------------------------------------
 Delay:               6.956ns (Levels of Logic = 17)
   Source:            bank/banco_0_832 (FF)
@@ -864,54 +924,54 @@ Delay:               6.956ns (Levels of Logic = 17)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
-  Total number of paths / destination ports: 1414 / 1414
+  Total number of paths / destination ports: 1421 / 1421
 -------------------------------------------------------------------------
-Offset:              4.945ns (Levels of Logic = 2)
+Offset:              4.961ns (Levels of Logic = 2)
   Source:            resetGral (PAD)
-  Destination:       uartMod/fifo_rx/Mram_FIFO62 (RAM)
+  Destination:       uartMod/fifo_tx/Mram_FIFO121 (RAM)
   Destination Clock: clock rising
 
-  Data Path: resetGral to uartMod/fifo_rx/Mram_FIFO62
+  Data Path: resetGral to uartMod/fifo_tx/Mram_FIFO121
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1400   1.222   2.532  resetGral_IBUF (resetGral_IBUF)
-     LUT3:I0->O            4   0.205   0.683  uartMod/fifo_rx/write_ctrl (uartMod/fifo_rx/write_ctrl)
-     RAM64M:WE                 0.304          uartMod/fifo_rx/Mram_FIFO1
+     IBUF:I->O          1395   1.222   2.549  resetGral_IBUF (resetGral_IBUF)
+     LUT4:I0->O            4   0.203   0.683  uartMod/fifo_tx/write_ctrl3 (uartMod/fifo_tx/write_ctrl3)
+     RAM64M:WE                 0.304          uartMod/fifo_tx/Mram_FIFO4
     ----------------------------------------
-    Total                      4.945ns (1.731ns logic, 3.214ns route)
-                                       (35.0% logic, 65.0% route)
+    Total                      4.961ns (1.729ns logic, 3.232ns route)
+                                       (34.9% logic, 65.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
-  Total number of paths / destination ports: 243322 / 3
+  Total number of paths / destination ports: 243321 / 3
 -------------------------------------------------------------------------
-Offset:              17.977ns (Levels of Logic = 13)
-  Source:            id_ex/rsOut_0 (FF)
+Offset:              17.616ns (Levels of Logic = 13)
+  Source:            mem_wb/regWriteOut (FF)
   Destination:       ALUzero (PAD)
   Source Clock:      clock falling
 
-  Data Path: id_ex/rsOut_0 to ALUzero
+  Data Path: mem_wb/regWriteOut to ALUzero
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE_1:C->Q           3   0.447   1.015  id_ex/rsOut_0 (id_ex/rsOut_0)
-     LUT6:I0->O            1   0.203   0.580  hazards/rsEX[4]_regWriteMEM_AND_171_o_SW0 (N114)
-     LUT6:I5->O           34   0.205   1.321  hazards/rsEX[4]_regWriteMEM_AND_171_o (forwardAEX<1>)
-     LUT5:I4->O           30   0.205   1.264  hazards/Mmux_forwardAEX13 (forwardAEX<0>)
-     LUT5:I4->O           17   0.205   1.028  Mmux_aluOperand1231 (Mmux_aluOperand123)
-     LUT4:I3->O           85   0.205   2.123  Mmux_aluOperand1232 (aluOperand1<2>)
-     LUT5:I0->O            3   0.203   0.651  alu/Sh4511 (alu/Sh451)
-     LUT5:I4->O            2   0.205   0.617  alu/Sh451 (alu/Sh45)
-     LUT5:I4->O            1   0.205   0.580  alu/Mmux_result63 (alu/Mmux_result63)
+     FDCE_1:C->Q        1026   0.447   2.214  mem_wb/regWriteOut (mem_wb/regWriteOut)
+     LUT5:I4->O            2   0.205   0.617  hazards/Mmux_forwardBEX12 (hazards/Mmux_forwardBEX11)
+     LUT5:I4->O           19   0.205   1.072  hazards/Mmux_forwardBEX13_1 (hazards/Mmux_forwardBEX13)
+     LUT5:I4->O           15   0.205   0.982  srcBEX<31>1 (srcBEX<31>)
+     LUT3:I2->O           33   0.205   1.306  Mmux_aluOperand2251 (aluOperand2<31>)
+     LUT6:I5->O            7   0.205   0.774  alu/Sh1271 (alu/Sh127)
+     LUT5:I4->O            3   0.205   0.651  alu/Sh15211 (alu/Sh1521)
+     LUT6:I5->O            2   0.205   0.617  alu/Mmux_result401121 (alu/Mmux_result40112)
+     LUT6:I5->O            1   0.205   0.580  alu/Mmux_result66 (alu/Mmux_result66)
      LUT6:I5->O            2   0.205   0.981  alu/Mmux_result67 (aluOut<12>)
      LUT6:I0->O            1   0.203   0.827  alu/zero<31>1 (alu/zero<31>)
      LUT5:I1->O            1   0.203   0.944  alu/zero<31>2 (alu/zero<31>1)
      LUT6:I0->O            1   0.203   0.579  alu/zero<31>8 (ALUzero_OBUF)
      OBUF:I->O                 2.571          ALUzero_OBUF (ALUzero)
     ----------------------------------------
-    Total                     17.977ns (5.468ns logic, 12.509ns route)
-                                       (30.4% logic, 69.6% route)
+    Total                     17.616ns (5.472ns logic, 12.144ns route)
+                                       (31.1% logic, 68.9% route)
 
 =========================================================================
 
@@ -923,20 +983,20 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    7.563|    4.995|   12.561|         |
+clock          |    5.156|    5.229|   12.515|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 25.15 secs
+Total CPU time to Xst completion: 24.25 secs
  
 --> 
 
-Total memory usage is 281684 kilobytes
+Total memory usage is 281428 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   23 (   0 filtered)
-Number of infos    :   17 (   0 filtered)
+Number of warnings :   29 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
 

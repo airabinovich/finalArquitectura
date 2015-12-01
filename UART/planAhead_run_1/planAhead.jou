@@ -1,10 +1,11 @@
 #-----------------------------------------------------------
 # PlanAhead v14.7 (64-bit)
 # Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
-# Start of session at: Fri Oct 30 16:24:39 2015
-# Process ID: 4892
-# Log file: C:/Users/Ariel/Xilinx/Workspace/UART/planAhead_run_1/planAhead.log
-# Journal file: C:/Users/Ariel/Xilinx/Workspace/UART/planAhead_run_1/planAhead.jou
+# Start of session at: Mon Nov 30 17:47:04 2015
+# Process ID: 5128
+# Log file: C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/UART/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/UART/planAhead_run_1/planAhead.jou
 #-----------------------------------------------------------
 start_gui
-source C:/Users/Ariel/Xilinx/Workspace/UART/pa.fromNetlist.tcl
+source {C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/UART/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1

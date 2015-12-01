@@ -1,0 +1,8 @@
+
+# PlanAhead Generated physical constraints 
+NET "clock" LOC = V10;
+NET "uartRxPin" LOC = N17;
+NET "uartTxPin" LOC = N18;
+#Created by Constraints Editor (xc6slx16-csg324-3) - 2015/11/30
+NET "clock" TNM_NET = clock;
+TIMESPEC TS_clock = PERIOD "clock" 105 MHz HIGH 50%;
