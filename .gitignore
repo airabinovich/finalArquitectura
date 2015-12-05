@@ -105,3 +105,13 @@ impact_impact.xwbt
 
 Thumbs.db
 .DS_Store
+
+################################
+########## Java stuff ##########
+################################
+
+/DebuggerArquitecturaJava/bin
+/DebuggerArquitecturaJava/.project
+/DebuggerArquitecturaJava/.setting/
+/DebuggerArquitecturaJava/.classpath
+*.class

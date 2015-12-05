@@ -20,7 +20,7 @@ public class Controller {
 	class SendCommandButtonListener implements ActionListener{
 		
 		public SendCommandButtonListener(){
-			view.addSendCommandButtonListener(this);
+			view.addStepModeCommandButtonListener(this);
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) {

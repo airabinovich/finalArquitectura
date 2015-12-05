@@ -1,11 +1,9 @@
 package Main;
 
-
-import Controller.Controller;
 import Model.Model;
 import Model.TestConsole;
 import Model.TwoWaySerialComm;
-import View.SubjectSend;
+import View.View;
 
 public class Main {
 	
@@ -20,6 +18,7 @@ public class Main {
 		
 		a.sendCommand('c');
 		
+		View view = new View(m);
 //		a.sendCommand('s');
 //		try {
 //			Thread.sleep(1000);

@@ -1,115 +1,158 @@
 package View;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.GraphicsEnvironment;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import javax.swing.ImageIcon;
+import java.util.HashMap;
+
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 import Model.Model;
 import Model.ObserverReceive;
+import Utils.Pair;
 
 
 public class View implements SubjectSend, ObserverReceive {
 	private ArrayList<ObserverSend> observers = new ArrayList<ObserverSend>();
 	
-	private JComboBox<Integer> fromBox, toBox;
-	private JLabel fromText,toText;
+//	private JLabel fromText,toText;
 	private JFrame frame;
-	private URL uncImgURL= getClass().getResource("/resources/images/LAC.png");
+//	private URL uncImgURL= getClass().getResource("/resources/images/LAC.png");
 	private Model model;
-	private JButton sendButton;
+	private JButton continueModeButton, stepModeButton, nextStepButton;
+	private HashMap<String,ArrayList<Pair<String,JTextField>>> pipelineRegistersData;
 	
 	private final int leftBorder = 70;
 	private final int upBorder = 100;
-	RobotArmComponent brazoImg;
-	JLabel UNC;
-	Font font;
+	private JLabel UNC;
+	private Font font;
+	
+	private final int 	windowWidth = 1280,
+						windowHeight = 720;
+	
+	private final String[] datapathRegisters = {"FE","IF/ID","ID/EX","EX/MEM","MEM/WB"};
+	
 	public View(Model model){
 		this.model=model;
-		frame = new JFrame("Robot Arm Piece Picker");
+		frame = new JFrame("MIPS Pipeline Debugger");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1280,720);
+        frame.setSize(windowWidth,windowHeight);
         frame.setResizable(false);
         frame.setVisible(true);  
         
-        try {
-			font = Font.createFont(Font.TRUETYPE_FONT, getClass().getResource("/resources/fonts/OpenSans-Regular.ttf").openStream());
-	        GraphicsEnvironment genv = GraphicsEnvironment.getLocalGraphicsEnvironment();
-	        genv.registerFont(font);
-	        // makesure to derive the size
-	        font = font.deriveFont(16f);
-		} catch (FontFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}   
+//        try {
+//			font = Font.createFont(Font.TRUETYPE_FONT, getClass().getResource("/resources/fonts/OpenSans-Regular.ttf").openStream());
+//	        GraphicsEnvironment genv = GraphicsEnvironment.getLocalGraphicsEnvironment();
+//	        genv.registerFont(font);
+//	        // make sure to derive the size
+//	        font = font.deriveFont(16f);
+//		} catch (FontFormatException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+        
+        ArrayList<Pair<String,JTextField>> FEdata = new ArrayList<Pair<String,JTextField>>();
+        ArrayList<Pair<String,JTextField>> IFIDdata = new ArrayList<Pair<String,JTextField>>();
+        ArrayList<Pair<String,JTextField>> IDEXdata = new ArrayList<Pair<String,JTextField>>();
+        ArrayList<Pair<String,JTextField>> EXMEMdata = new ArrayList<Pair<String,JTextField>>();
+        ArrayList<Pair<String,JTextField>> MEMWBdata = new ArrayList<Pair<String,JTextField>>();
+        
+        FEdata.add(new Pair<String,JTextField>("pcOut", new JTextField()));
+        
+        IFIDdata.add(new Pair<String,JTextField>("instructionOut", new JTextField()));
+        IFIDdata.add(new Pair<String,JTextField>("pcNextOut", new JTextField()));
+        
+        IDEXdata.add(new Pair<String,JTextField>("aluOperationOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("sigExtOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("readData1Out", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("readData2Out", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("aluSrcOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("aluShiftImmOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("memWriteOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("memToRegOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("memReadWidthOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("rsOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("rtOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("rdOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("saOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("regDstOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("loadImmOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("regWriteOut", new JTextField()));
+        IDEXdata.add(new Pair<String,JTextField>("eopOut", new JTextField()));
+        
+        EXMEMdata.add(new Pair<String,JTextField>("writeRegisterOut", new JTextField()));
+        EXMEMdata.add(new Pair<String,JTextField>("writeDataOut", new JTextField()));
+        EXMEMdata.add(new Pair<String,JTextField>("aluOutOut", new JTextField()));
+        EXMEMdata.add(new Pair<String,JTextField>("regWriteOut", new JTextField()));
+        EXMEMdata.add(new Pair<String,JTextField>("memToRegOut", new JTextField()));
+        EXMEMdata.add(new Pair<String,JTextField>("memWriteOut", new JTextField()));
+        EXMEMdata.add(new Pair<String,JTextField>("memReadWidthOut", new JTextField()));
+        EXMEMdata.add(new Pair<String,JTextField>("eopOut", new JTextField()));
+        
+        MEMWBdata.add(new Pair<String,JTextField>("writeRegisterOut", new JTextField()));
+        MEMWBdata.add(new Pair<String,JTextField>("aluOutOut", new JTextField()));
+        MEMWBdata.add(new Pair<String,JTextField>("memoryOutOut", new JTextField()));
+        MEMWBdata.add(new Pair<String,JTextField>("regWriteOut", new JTextField()));
+        MEMWBdata.add(new Pair<String,JTextField>("memToRegOut", new JTextField()));
+        MEMWBdata.add(new Pair<String,JTextField>("eopOut", new JTextField()));
+        
+        pipelineRegistersData = new HashMap<String,ArrayList<Pair<String,JTextField>>>();
+        pipelineRegistersData.put("FE", FEdata);
+        pipelineRegistersData.put("IF/ID",IFIDdata);
+        pipelineRegistersData.put("ID/EX",IDEXdata);
+        pipelineRegistersData.put("EX/MEM",EXMEMdata);
+        pipelineRegistersData.put("MEM/WB",MEMWBdata);
 
         initView();
         
-        frame.repaint();
+//        frame.repaint();
 	}
 	
 	private void initView(){		
         
-
-		frame.getContentPane().setBackground(new Color(156,206,180));
-		fromText= new JLabel("From point:");
-		toText= new JLabel("To point:");
-		fromBox = new JComboBox<Integer>();
-		toBox = new JComboBox<Integer>();
-		fromBox.setBackground(new Color(255,238,173));
-		toBox.setBackground(new Color(255,238,173));
-		fromText.setLocation(leftBorder, upBorder);
-		fromText.setSize(100, 20);
-		fromText.setFont(font);
-		fromText.setForeground(new Color(255,238,173));
-		fromBox.setLocation(leftBorder+100, upBorder);
-		fromBox.setSize(50, 20);
-		toText.setLocation(leftBorder, upBorder+50);
-		toText.setSize(100, 20);
-		toText.setFont(font);
-		toText.setForeground(new Color(255,238,173));
-		toBox.setLocation(leftBorder+100, upBorder+50);
-		toBox.setSize(50, 20);
-		sendButton= new JButton("Send Command");
-		sendButton.setSize(150,20);
-		sendButton.setLocation(leftBorder,upBorder+100);
-		sendButton.setBackground(new Color(255,111,105));
-		
-		sendButton.setFont(font.deriveFont(0, 14f));
-		for (int i=1; i<5; i++){
-			fromBox.addItem(i);
-			toBox.addItem(i);
-		}
+		int x = 20, y = 20;
+		Container contentPane = frame.getContentPane();
+		contentPane.setBackground(new Color(133,191,250));
 		
         UNC =  new JLabel();
-        UNC.setIcon(new ImageIcon(uncImgURL));
+//        UNC.setIcon(new ImageIcon(uncImgURL));
         UNC.setLocation(70,400);
         UNC.setSize(300,200);
-        brazoImg = new RobotArmComponent();
-        brazoImg.setSize(frame.getSize());
-        frame.getContentPane().add(UNC);
-        frame.getContentPane().add(fromText);
-        frame.getContentPane().add(toText);
-        frame.getContentPane().add(fromBox);
-        frame.getContentPane().add(toBox);    
-        frame.getContentPane().add(sendButton);   
-		frame.getContentPane().add(brazoImg);	
-		
+        
+        for(String reg : datapathRegisters){
+        	for(Pair<String,JTextField> p : pipelineRegistersData.get(reg)){
+        		y += windowHeight/30;
+        		JLabel l = new JLabel(p.getFst());
+        		JTextField tf = p.getSnd();
+        		l.setBounds(x, y, 100, 20);
+        		tf.setBounds(x+l.getWidth()+10, y, 100, 20);
+        		tf.setEditable(false);
+        		l.setVisible(true);
+        		tf.setVisible(true);
+        		contentPane.add(l);
+        		contentPane.add(tf);
+        	}
+        	y = 20;
+        	x += windowWidth/5;
+        }
+        
+        contentPane.add(UNC);
+
         frame.repaint();
 	}
 
-	public void addSendCommandButtonListener(ActionListener sendCommandButtonListener) {
-		sendButton.addActionListener(sendCommandButtonListener);
+	public void addStepModeCommandButtonListener(ActionListener sendCommandButtonListener) {
+		stepModeButton.addActionListener(sendCommandButtonListener);
 	}
 
 	public void onSendButtonPressed() {
@@ -121,7 +164,6 @@ public class View implements SubjectSend, ObserverReceive {
 	@Override
 	public void registerSend(ObserverSend o) {
 		observers.add(o);
-		
 	}
 
 	@Override
@@ -138,23 +180,7 @@ public class View implements SubjectSend, ObserverReceive {
 	}
 
 	@Override
-	public void updateReceive(String rcv) {
-		if (rcv.toLowerCase().contains("closepliers")){
-			brazoImg.closePliers();
-		} 
-		else if (rcv.toLowerCase().contains("openpliers")){
-			brazoImg.openPliers();
-		} 
-		else {
-			try{
-				int ang= Integer.parseInt(rcv);
-				double radAng= -(ang-90) * (3.1415/180);
-				brazoImg.rotate(radAng);
-			}
-			catch(NumberFormatException e){
-	
-			}
-		}		
+	public void updateReceive(String rcv) {		
 		frame.repaint();
 	}
 
