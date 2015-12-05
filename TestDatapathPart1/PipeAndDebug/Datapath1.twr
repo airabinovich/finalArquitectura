@@ -29,19 +29,19 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 Timing constraint: TS_clock = PERIOD TIMEGRP "clock" 105 MHz HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 442047 paths analyzed, 8997 endpoints analyzed, 282 failing endpoints
- 282 timing errors detected. (282 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  13.377ns.
+ 442030 paths analyzed, 9002 endpoints analyzed, 363 failing endpoints
+ 363 timing errors detected. (363 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  14.079ns.
 --------------------------------------------------------------------------------
 
-Paths for end point ex_mem/aluOutOut_1 (SLICE_X35Y13.A1), 3172 paths
+Paths for end point ex_mem/aluOutOut_29 (SLICE_X10Y57.D6), 6529 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     -2.136ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mem_wb/writeRegisterOut_4 (FF)
-  Destination:          ex_mem/aluOutOut_1 (FF)
+Slack (setup path):     -2.872ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_29 (FF)
   Requirement:          9.523ns
-  Data Path Delay:      11.648ns (Levels of Logic = 10)
-  Clock Path Skew:      0.024ns (0.384 - 0.360)
+  Data Path Delay:      12.336ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.024ns (0.427 - 0.451)
   Source Clock:         clock_BUFGP falling at 4.761ns
   Destination Clock:    clock_BUFGP falling at 14.284ns
   Clock Uncertainty:    0.035ns
@@ -52,54 +52,405 @@ Slack (setup path):     -2.136ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_4 to ex_mem/aluOutOut_1
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_29
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y20.BMUX    Tshcko                0.461   mem_wb/writeRegisterOut<1>
-                                                       mem_wb/writeRegisterOut_4
-    SLICE_X27Y20.B3      net (fanout=19)       0.718   mem_wb/writeRegisterOut<4>
-    SLICE_X27Y20.B       Tilo                  0.259   srcBEX<9>
-                                                       hazards/Mmux_forwardAEX12
-    SLICE_X29Y17.B5      net (fanout=2)        1.468   hazards/Mmux_forwardAEX11
-    SLICE_X29Y17.B       Tilo                  0.259   N6
-                                                       hazards/Mmux_forwardAEX13_1
-    SLICE_X29Y17.C6      net (fanout=2)        0.290   hazards/Mmux_forwardAEX13
-    SLICE_X29Y17.C       Tilo                  0.259   N6
-                                                       Mmux_aluOperand1121
-    SLICE_X29Y17.D3      net (fanout=18)       0.519   Mmux_aluOperand112
-    SLICE_X29Y17.DMUX    Tilo                  0.313   N6
-                                                       Mmux_aluOperand1122_1
-    SLICE_X31Y21.A3      net (fanout=12)       1.346   Mmux_aluOperand1122
-    SLICE_X31Y21.A       Tilo                  0.259   N118
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X11Y46.A6      net (fanout=2)        0.943   hazards/Mmux_forwardBEX1
+    SLICE_X11Y46.A       Tilo                  0.259   srcBEX<26>
+                                                       hazards/Mmux_forwardBEX13_1
+    SLICE_X9Y47.A6       net (fanout=19)       0.378   hazards/Mmux_forwardBEX13
+    SLICE_X9Y47.A        Tilo                  0.259   forwardBEX<1>
+                                                       srcBEX<6>1
+    SLICE_X9Y47.C2       net (fanout=4)        0.439   srcBEX<6>
+    SLICE_X9Y47.CMUX     Tilo                  0.313   forwardBEX<1>
+                                                       Mmux_aluOperand2291
+    SLICE_X11Y48.A3      net (fanout=9)        1.096   aluOperand2<6>
+    SLICE_X11Y48.A       Tilo                  0.259   alu/Sh21
+                                                       alu/Sh91
+    SLICE_X5Y51.A3       net (fanout=4)        1.473   alu/Sh9
+    SLICE_X5Y51.A        Tilo                  0.259   alu/Mmux_result86
+                                                       alu/Sh461
+    SLICE_X6Y57.D2       net (fanout=2)        1.071   alu/Sh46
+    SLICE_X6Y57.CMUX     Topdc                 0.368   alu/Mmux_result14
+                                                       alu/Mmux_result426_F
+                                                       alu/Mmux_result426
+    SLICE_X6Y57.A1       net (fanout=1)        0.669   alu/Mmux_result426
+    SLICE_X6Y57.A        Tilo                  0.203   alu/Mmux_result14
+                                                       alu/Mmux_result4210
+    SLICE_X10Y57.D6      net (fanout=2)        0.579   alu/Mmux_result4210
+    SLICE_X10Y57.CLK     Tas                   0.289   ex_mem/aluOutOut<29>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT221
+                                                       ex_mem/aluOutOut_29
+    -------------------------------------------------  ---------------------------
+    Total                                     12.336ns (2.859ns logic, 9.477ns route)
+                                                       (23.2% logic, 76.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.695ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_29 (FF)
+  Requirement:          9.523ns
+  Data Path Delay:      12.159ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.024ns (0.427 - 0.451)
+  Source Clock:         clock_BUFGP falling at 4.761ns
+  Destination Clock:    clock_BUFGP falling at 14.284ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X9Y45.A6       net (fanout=2)        0.736   hazards/Mmux_forwardBEX1
+    SLICE_X9Y45.A        Tilo                  0.259   aluOperand2<3>
+                                                       hazards/Mmux_forwardBEX13
+    SLICE_X9Y45.B6       net (fanout=45)       0.183   forwardBEX<0>
+    SLICE_X9Y45.B        Tilo                  0.259   aluOperand2<3>
+                                                       srcBEX<4>1
+    SLICE_X9Y46.C1       net (fanout=3)        0.699   srcBEX<4>
+    SLICE_X9Y46.CMUX     Tilo                  0.313   alu/Sh1031
+                                                       Mmux_aluOperand2271
+    SLICE_X9Y46.A1       net (fanout=9)        1.061   aluOperand2<4>
+    SLICE_X9Y46.A        Tilo                  0.259   alu/Sh1031
+                                                       alu/Sh51
+    SLICE_X5Y51.B4       net (fanout=3)        1.009   alu/Sh5
+    SLICE_X5Y51.B        Tilo                  0.259   alu/Mmux_result86
+                                                       alu/Sh4611
+    SLICE_X5Y51.A5       net (fanout=3)        0.205   alu/Sh461
+    SLICE_X5Y51.A        Tilo                  0.259   alu/Mmux_result86
+                                                       alu/Sh461
+    SLICE_X6Y57.D2       net (fanout=2)        1.071   alu/Sh46
+    SLICE_X6Y57.CMUX     Topdc                 0.368   alu/Mmux_result14
+                                                       alu/Mmux_result426_F
+                                                       alu/Mmux_result426
+    SLICE_X6Y57.A1       net (fanout=1)        0.669   alu/Mmux_result426
+    SLICE_X6Y57.A        Tilo                  0.203   alu/Mmux_result14
+                                                       alu/Mmux_result4210
+    SLICE_X10Y57.D6      net (fanout=2)        0.579   alu/Mmux_result4210
+    SLICE_X10Y57.CLK     Tas                   0.289   ex_mem/aluOutOut<29>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT221
+                                                       ex_mem/aluOutOut_29
+    -------------------------------------------------  ---------------------------
+    Total                                     12.159ns (3.118ns logic, 9.041ns route)
+                                                       (25.6% logic, 74.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.684ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_29 (FF)
+  Requirement:          9.523ns
+  Data Path Delay:      12.148ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.024ns (0.427 - 0.451)
+  Source Clock:         clock_BUFGP falling at 4.761ns
+  Destination Clock:    clock_BUFGP falling at 14.284ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X11Y46.A6      net (fanout=2)        0.943   hazards/Mmux_forwardBEX1
+    SLICE_X11Y46.A       Tilo                  0.259   srcBEX<26>
+                                                       hazards/Mmux_forwardBEX13_1
+    SLICE_X8Y45.A2       net (fanout=19)       0.659   hazards/Mmux_forwardBEX13
+    SLICE_X8Y45.A        Tilo                  0.205   alu/Sh1651
+                                                       srcBEX<8>1
+    SLICE_X8Y45.B5       net (fanout=4)        0.370   srcBEX<8>
+    SLICE_X8Y45.B        Tilo                  0.205   alu/Sh1651
+                                                       Mmux_aluOperand2311
+    SLICE_X11Y48.A1      net (fanout=8)        0.858   aluOperand2<8>
+    SLICE_X11Y48.A       Tilo                  0.259   alu/Sh21
+                                                       alu/Sh91
+    SLICE_X5Y51.A3       net (fanout=4)        1.473   alu/Sh9
+    SLICE_X5Y51.A        Tilo                  0.259   alu/Mmux_result86
+                                                       alu/Sh461
+    SLICE_X6Y57.D2       net (fanout=2)        1.071   alu/Sh46
+    SLICE_X6Y57.CMUX     Topdc                 0.368   alu/Mmux_result14
+                                                       alu/Mmux_result426_F
+                                                       alu/Mmux_result426
+    SLICE_X6Y57.A1       net (fanout=1)        0.669   alu/Mmux_result426
+    SLICE_X6Y57.A        Tilo                  0.203   alu/Mmux_result14
+                                                       alu/Mmux_result4210
+    SLICE_X10Y57.D6      net (fanout=2)        0.579   alu/Mmux_result4210
+    SLICE_X10Y57.CLK     Tas                   0.289   ex_mem/aluOutOut<29>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT221
+                                                       ex_mem/aluOutOut_29
+    -------------------------------------------------  ---------------------------
+    Total                                     12.148ns (2.697ns logic, 9.451ns route)
+                                                       (22.2% logic, 77.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ex_mem/aluOutOut_31 (SLICE_X7Y57.A5), 10145 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.848ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_31 (FF)
+  Requirement:          9.523ns
+  Data Path Delay:      12.332ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.004ns (0.447 - 0.451)
+  Source Clock:         clock_BUFGP falling at 4.761ns
+  Destination Clock:    clock_BUFGP falling at 14.284ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X9Y45.A6       net (fanout=2)        0.736   hazards/Mmux_forwardBEX1
+    SLICE_X9Y45.A        Tilo                  0.259   aluOperand2<3>
+                                                       hazards/Mmux_forwardBEX13
+    SLICE_X8Y46.A5       net (fanout=45)       0.582   forwardBEX<0>
+    SLICE_X8Y46.A        Tilo                  0.205   alu/Sh66
+                                                       srcBEX<10>1
+    SLICE_X8Y46.C1       net (fanout=4)        0.454   srcBEX<10>
+    SLICE_X8Y46.CMUX     Tilo                  0.251   alu/Sh66
+                                                       Mmux_aluOperand221
+    SLICE_X8Y56.B6       net (fanout=11)       2.507   aluOperand2<10>
+    SLICE_X8Y56.B        Tilo                  0.205   alu/Mmux_result43
+                                                       alu/Sh111
+    SLICE_X9Y53.B2       net (fanout=4)        0.827   alu/Sh11
+    SLICE_X9Y53.B        Tilo                  0.259   alu/Mmux_result128
+                                                       alu/Sh482
+    SLICE_X8Y57.A5       net (fanout=2)        1.055   alu/Sh48
+    SLICE_X8Y57.A        Tilo                  0.205   alu/Mmux_overflow23
+                                                       alu/Mmux_result4811
+    SLICE_X8Y57.D3       net (fanout=1)        0.277   alu/Mmux_result4810
+    SLICE_X8Y57.CMUX     Topdc                 0.338   alu/Mmux_overflow23
+                                                       alu/Mmux_result4813_F
+                                                       alu/Mmux_result4813
+    SLICE_X7Y57.A5       net (fanout=2)        0.466   aluOut<31>
+    SLICE_X7Y57.CLK      Tas                   0.227   ex_mem/aluOutOut<30>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT251
+                                                       ex_mem/aluOutOut_31
+    -------------------------------------------------  ---------------------------
+    Total                                     12.332ns (2.599ns logic, 9.733ns route)
+                                                       (21.1% logic, 78.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.363ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_31 (FF)
+  Requirement:          9.523ns
+  Data Path Delay:      11.847ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.004ns (0.447 - 0.451)
+  Source Clock:         clock_BUFGP falling at 4.761ns
+  Destination Clock:    clock_BUFGP falling at 14.284ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X9Y45.A6       net (fanout=2)        0.736   hazards/Mmux_forwardBEX1
+    SLICE_X9Y45.A        Tilo                  0.259   aluOperand2<3>
+                                                       hazards/Mmux_forwardBEX13
+    SLICE_X9Y48.B1       net (fanout=45)       0.859   forwardBEX<0>
+    SLICE_X9Y48.B        Tilo                  0.259   alu/Sh581
+                                                       srcBEX<14>1
+    SLICE_X9Y48.C3       net (fanout=4)        0.644   srcBEX<14>
+    SLICE_X9Y48.C        Tilo                  0.259   alu/Sh581
+                                                       Mmux_aluOperand261
+    SLICE_X11Y51.D3      net (fanout=9)        1.448   aluOperand2<14>
+    SLICE_X11Y51.D       Tilo                  0.259   alu/Sh15
+                                                       alu/Sh151
+    SLICE_X9Y53.B1       net (fanout=4)        0.818   alu/Sh15
+    SLICE_X9Y53.B        Tilo                  0.259   alu/Mmux_result128
+                                                       alu/Sh482
+    SLICE_X8Y57.A5       net (fanout=2)        1.055   alu/Sh48
+    SLICE_X8Y57.A        Tilo                  0.205   alu/Mmux_overflow23
+                                                       alu/Mmux_result4811
+    SLICE_X8Y57.D3       net (fanout=1)        0.277   alu/Mmux_result4810
+    SLICE_X8Y57.CMUX     Topdc                 0.338   alu/Mmux_overflow23
+                                                       alu/Mmux_result4813_F
+                                                       alu/Mmux_result4813
+    SLICE_X7Y57.A5       net (fanout=2)        0.466   aluOut<31>
+    SLICE_X7Y57.CLK      Tas                   0.227   ex_mem/aluOutOut<30>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT251
+                                                       ex_mem/aluOutOut_31
+    -------------------------------------------------  ---------------------------
+    Total                                     11.847ns (2.715ns logic, 9.132ns route)
+                                                       (22.9% logic, 77.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.081ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_31 (FF)
+  Requirement:          9.523ns
+  Data Path Delay:      11.565ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.004ns (0.447 - 0.451)
+  Source Clock:         clock_BUFGP falling at 4.761ns
+  Destination Clock:    clock_BUFGP falling at 14.284ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X11Y46.A6      net (fanout=2)        0.943   hazards/Mmux_forwardBEX1
+    SLICE_X11Y46.A       Tilo                  0.259   srcBEX<26>
+                                                       hazards/Mmux_forwardBEX13_1
+    SLICE_X9Y47.B6       net (fanout=19)       0.516   hazards/Mmux_forwardBEX13
+    SLICE_X9Y47.B        Tilo                  0.259   forwardBEX<1>
+                                                       srcBEX<7>1
+    SLICE_X9Y47.C4       net (fanout=4)        0.316   srcBEX<7>
+    SLICE_X9Y47.C        Tilo                  0.259   forwardBEX<1>
+                                                       Mmux_aluOperand2301
+    SLICE_X8Y52.A1       net (fanout=9)        1.559   aluOperand2<7>
+    SLICE_X8Y52.A        Tilo                  0.205   alu/Sh7
+                                                       alu/Sh71
+    SLICE_X9Y53.A4       net (fanout=3)        0.548   alu/Sh7
+    SLICE_X9Y53.A        Tilo                  0.259   alu/Mmux_result128
+                                                       alu/Sh4811
+    SLICE_X9Y53.B6       net (fanout=3)        0.136   alu/Sh481
+    SLICE_X9Y53.B        Tilo                  0.259   alu/Mmux_result128
+                                                       alu/Sh482
+    SLICE_X8Y57.A5       net (fanout=2)        1.055   alu/Sh48
+    SLICE_X8Y57.A        Tilo                  0.205   alu/Mmux_overflow23
+                                                       alu/Mmux_result4811
+    SLICE_X8Y57.D3       net (fanout=1)        0.277   alu/Mmux_result4810
+    SLICE_X8Y57.CMUX     Topdc                 0.338   alu/Mmux_overflow23
+                                                       alu/Mmux_result4813_F
+                                                       alu/Mmux_result4813
+    SLICE_X7Y57.A5       net (fanout=2)        0.466   aluOut<31>
+    SLICE_X7Y57.CLK      Tas                   0.227   ex_mem/aluOutOut<30>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT251
+                                                       ex_mem/aluOutOut_31
+    -------------------------------------------------  ---------------------------
+    Total                                     11.565ns (2.920ns logic, 8.645ns route)
+                                                       (25.2% logic, 74.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ex_mem/aluOutOut_17 (SLICE_X9Y54.B5), 8115 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -2.837ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_17 (FF)
+  Requirement:          9.523ns
+  Data Path Delay:      12.308ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.017ns (0.434 - 0.451)
+  Source Clock:         clock_BUFGP falling at 4.761ns
+  Destination Clock:    clock_BUFGP falling at 14.284ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X11Y46.A6      net (fanout=2)        0.943   hazards/Mmux_forwardBEX1
+    SLICE_X11Y46.A       Tilo                  0.259   srcBEX<26>
+                                                       hazards/Mmux_forwardBEX13_1
+    SLICE_X11Y49.A3      net (fanout=19)       0.836   hazards/Mmux_forwardBEX13
+    SLICE_X11Y49.A       Tilo                  0.259   alu/Sh125
+                                                       srcBEX<28>1
+    SLICE_X11Y49.B6      net (fanout=3)        0.126   srcBEX<28>
+    SLICE_X11Y49.B       Tilo                  0.259   alu/Sh125
+                                                       Mmux_aluOperand2211
+    SLICE_X12Y49.A2      net (fanout=10)       0.782   aluOperand2<28>
+    SLICE_X12Y49.A       Tilo                  0.205   N126
                                                        alu/Sh1241
-    SLICE_X31Y22.C4      net (fanout=3)        0.638   alu/Sh124
-    SLICE_X31Y22.C       Tilo                  0.259   alu/Sh128
+    SLICE_X12Y52.C5      net (fanout=3)        1.062   alu/Sh124
+    SLICE_X12Y52.C       Tilo                  0.205   alu/Sh128
                                                        alu/Sh14911
-    SLICE_X31Y17.C5      net (fanout=4)        0.572   alu/Sh1491
-    SLICE_X31Y17.C       Tilo                  0.259   N144
+    SLICE_X8Y51.C6       net (fanout=4)        0.557   alu/Sh1491
+    SLICE_X8Y51.C        Tilo                  0.205   N152
                                                        alu/Sh1492
-    SLICE_X32Y10.C1      net (fanout=3)        1.693   alu/Sh149
-    SLICE_X32Y10.C       Tilo                  0.205   alu/Mmux_result222
-                                                       alu/Mmux_result226
-    SLICE_X32Y10.B4      net (fanout=1)        0.278   alu/Mmux_result226
-    SLICE_X32Y10.B       Tilo                  0.205   alu/Mmux_result222
-                                                       alu/Mmux_result227
-    SLICE_X35Y13.A1      net (fanout=2)        1.161   aluOut<1>
-    SLICE_X35Y13.CLK     Tas                   0.227   ex_mem/aluOutOut<3>
-                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT121
-                                                       ex_mem/aluOutOut_1
+    SLICE_X8Y51.D3       net (fanout=3)        0.394   alu/Sh149
+    SLICE_X8Y51.D        Tilo                  0.205   N152
+                                                       alu/Mmux_result1610_SW0
+    SLICE_X7Y54.A3       net (fanout=1)        1.133   N152
+    SLICE_X7Y54.A        Tilo                  0.259   alu/Mmux_result163
+                                                       alu/Mmux_result1610
+    SLICE_X7Y54.B6       net (fanout=1)        0.118   alu/Mmux_result1610
+    SLICE_X7Y54.B        Tilo                  0.259   alu/Mmux_result163
+                                                       alu/Mmux_result1611
+    SLICE_X9Y54.B5       net (fanout=2)        0.441   aluOut<17>
+    SLICE_X9Y54.CLK      Tas                   0.322   ex_mem/aluOutOut<18>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT91
+                                                       ex_mem/aluOutOut_17
     -------------------------------------------------  ---------------------------
-    Total                                     11.648ns (2.965ns logic, 8.683ns route)
-                                                       (25.5% logic, 74.5% route)
+    Total                                     12.308ns (3.087ns logic, 9.221ns route)
+                                                       (25.1% logic, 74.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -2.018ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mem_wb/writeRegisterOut_3 (FF)
-  Destination:          ex_mem/aluOutOut_1 (FF)
+Slack (setup path):     -2.779ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_17 (FF)
   Requirement:          9.523ns
-  Data Path Delay:      11.530ns (Levels of Logic = 10)
-  Clock Path Skew:      0.024ns (0.384 - 0.360)
+  Data Path Delay:      12.250ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.017ns (0.434 - 0.451)
   Source Clock:         clock_BUFGP falling at 4.761ns
   Destination Clock:    clock_BUFGP falling at 14.284ns
   Clock Uncertainty:    0.035ns
@@ -110,54 +461,57 @@ Slack (setup path):     -2.018ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_3 to ex_mem/aluOutOut_1
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_17
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y20.AMUX    Tshcko                0.461   mem_wb/writeRegisterOut<1>
-                                                       mem_wb/writeRegisterOut_3
-    SLICE_X27Y20.B4      net (fanout=19)       0.600   mem_wb/writeRegisterOut<3>
-    SLICE_X27Y20.B       Tilo                  0.259   srcBEX<9>
-                                                       hazards/Mmux_forwardAEX12
-    SLICE_X29Y17.B5      net (fanout=2)        1.468   hazards/Mmux_forwardAEX11
-    SLICE_X29Y17.B       Tilo                  0.259   N6
-                                                       hazards/Mmux_forwardAEX13_1
-    SLICE_X29Y17.C6      net (fanout=2)        0.290   hazards/Mmux_forwardAEX13
-    SLICE_X29Y17.C       Tilo                  0.259   N6
-                                                       Mmux_aluOperand1121
-    SLICE_X29Y17.D3      net (fanout=18)       0.519   Mmux_aluOperand112
-    SLICE_X29Y17.DMUX    Tilo                  0.313   N6
-                                                       Mmux_aluOperand1122_1
-    SLICE_X31Y21.A3      net (fanout=12)       1.346   Mmux_aluOperand1122
-    SLICE_X31Y21.A       Tilo                  0.259   N118
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X11Y46.A6      net (fanout=2)        0.943   hazards/Mmux_forwardBEX1
+    SLICE_X11Y46.A       Tilo                  0.259   srcBEX<26>
+                                                       hazards/Mmux_forwardBEX13_1
+    SLICE_X11Y46.D3      net (fanout=19)       0.363   hazards/Mmux_forwardBEX13
+    SLICE_X11Y46.D       Tilo                  0.259   srcBEX<26>
+                                                       srcBEX<26>1
+    SLICE_X12Y49.C5      net (fanout=4)        0.646   srcBEX<26>
+    SLICE_X12Y49.CMUX    Tilo                  0.251   N126
+                                                       Mmux_aluOperand2191
+    SLICE_X12Y49.A4      net (fanout=10)       0.685   aluOperand2<26>
+    SLICE_X12Y49.A       Tilo                  0.205   N126
                                                        alu/Sh1241
-    SLICE_X31Y22.C4      net (fanout=3)        0.638   alu/Sh124
-    SLICE_X31Y22.C       Tilo                  0.259   alu/Sh128
+    SLICE_X12Y52.C5      net (fanout=3)        1.062   alu/Sh124
+    SLICE_X12Y52.C       Tilo                  0.205   alu/Sh128
                                                        alu/Sh14911
-    SLICE_X31Y17.C5      net (fanout=4)        0.572   alu/Sh1491
-    SLICE_X31Y17.C       Tilo                  0.259   N144
+    SLICE_X8Y51.C6       net (fanout=4)        0.557   alu/Sh1491
+    SLICE_X8Y51.C        Tilo                  0.205   N152
                                                        alu/Sh1492
-    SLICE_X32Y10.C1      net (fanout=3)        1.693   alu/Sh149
-    SLICE_X32Y10.C       Tilo                  0.205   alu/Mmux_result222
-                                                       alu/Mmux_result226
-    SLICE_X32Y10.B4      net (fanout=1)        0.278   alu/Mmux_result226
-    SLICE_X32Y10.B       Tilo                  0.205   alu/Mmux_result222
-                                                       alu/Mmux_result227
-    SLICE_X35Y13.A1      net (fanout=2)        1.161   aluOut<1>
-    SLICE_X35Y13.CLK     Tas                   0.227   ex_mem/aluOutOut<3>
-                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT121
-                                                       ex_mem/aluOutOut_1
+    SLICE_X8Y51.D3       net (fanout=3)        0.394   alu/Sh149
+    SLICE_X8Y51.D        Tilo                  0.205   N152
+                                                       alu/Mmux_result1610_SW0
+    SLICE_X7Y54.A3       net (fanout=1)        1.133   N152
+    SLICE_X7Y54.A        Tilo                  0.259   alu/Mmux_result163
+                                                       alu/Mmux_result1610
+    SLICE_X7Y54.B6       net (fanout=1)        0.118   alu/Mmux_result1610
+    SLICE_X7Y54.B        Tilo                  0.259   alu/Mmux_result163
+                                                       alu/Mmux_result1611
+    SLICE_X9Y54.B5       net (fanout=2)        0.441   aluOut<17>
+    SLICE_X9Y54.CLK      Tas                   0.322   ex_mem/aluOutOut<18>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT91
+                                                       ex_mem/aluOutOut_17
     -------------------------------------------------  ---------------------------
-    Total                                     11.530ns (2.965ns logic, 8.565ns route)
-                                                       (25.7% logic, 74.3% route)
+    Total                                     12.250ns (3.079ns logic, 9.171ns route)
+                                                       (25.1% logic, 74.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     -2.016ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               mem_wb/memToRegOut (FF)
-  Destination:          ex_mem/aluOutOut_1 (FF)
+Slack (setup path):     -2.692ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               mem_wb/writeRegisterOut_0 (FF)
+  Destination:          ex_mem/aluOutOut_17 (FF)
   Requirement:          9.523ns
-  Data Path Delay:      11.522ns (Levels of Logic = 9)
-  Clock Path Skew:      0.018ns (0.384 - 0.366)
+  Data Path Delay:      12.163ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.017ns (0.434 - 0.451)
   Source Clock:         clock_BUFGP falling at 4.761ns
   Destination Clock:    clock_BUFGP falling at 14.284ns
   Clock Uncertainty:    0.035ns
@@ -168,415 +522,133 @@ Slack (setup path):     -2.016ns (requirement - (data path - clock path skew + u
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: mem_wb/memToRegOut to ex_mem/aluOutOut_1
+  Maximum Data Path at Slow Process Corner: mem_wb/writeRegisterOut_0 to ex_mem/aluOutOut_17
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X22Y16.AQ      Tcko                  0.447   mem_wb/memToRegOut
-                                                       mem_wb/memToRegOut
-    SLICE_X15Y26.D3      net (fanout=1026)     2.157   mem_wb/memToRegOut
-    SLICE_X15Y26.D       Tilo                  0.259   resultWB<21>
-                                                       Mmux_resultWB141
-    SLICE_X30Y21.A6      net (fanout=3)        1.371   resultWB<21>
-    SLICE_X30Y21.A       Tilo                  0.203   alu/Sh259
-                                                       srcBEX<21>1
-    SLICE_X30Y21.B6      net (fanout=3)        0.126   srcBEX<21>
-    SLICE_X30Y21.B       Tilo                  0.203   alu/Sh259
-                                                       Mmux_aluOperand2141
-    SLICE_X30Y19.A2      net (fanout=11)       1.079   aluOperand2<21>
-    SLICE_X30Y19.A       Tilo                  0.203   alu/Sh2
-                                                       alu/Sh1201
-    SLICE_X31Y18.C2      net (fanout=3)        0.600   alu/Sh120
-    SLICE_X31Y18.C       Tilo                  0.259   alu/Sh116
-                                                       alu/Sh14111
-    SLICE_X31Y17.C1      net (fanout=2)        0.587   alu/Sh1411
-    SLICE_X31Y17.C       Tilo                  0.259   N144
+    SLICE_X15Y28.AQ      Tcko                  0.391   mem_wb/writeRegisterOut<1>
+                                                       mem_wb/writeRegisterOut_0
+    SLICE_X15Y41.D2      net (fanout=19)       2.829   mem_wb/writeRegisterOut<0>
+    SLICE_X15Y41.D       Tilo                  0.259   hazards/Mmux_forwardBEX1
+                                                       hazards/Mmux_forwardBEX11
+    SLICE_X11Y46.A6      net (fanout=2)        0.943   hazards/Mmux_forwardBEX1
+    SLICE_X11Y46.A       Tilo                  0.259   srcBEX<26>
+                                                       hazards/Mmux_forwardBEX13_1
+    SLICE_X12Y49.B6      net (fanout=19)       0.568   hazards/Mmux_forwardBEX13
+    SLICE_X12Y49.B       Tilo                  0.205   N126
+                                                       srcBEX<27>1
+    SLICE_X12Y49.C3      net (fanout=4)        0.656   srcBEX<27>
+    SLICE_X12Y49.C       Tilo                  0.205   N126
+                                                       Mmux_aluOperand2201
+    SLICE_X12Y49.A1      net (fanout=10)       0.483   aluOperand2<27>
+    SLICE_X12Y49.A       Tilo                  0.205   N126
+                                                       alu/Sh1241
+    SLICE_X12Y52.C5      net (fanout=3)        1.062   alu/Sh124
+    SLICE_X12Y52.C       Tilo                  0.205   alu/Sh128
+                                                       alu/Sh14911
+    SLICE_X8Y51.C6       net (fanout=4)        0.557   alu/Sh1491
+    SLICE_X8Y51.C        Tilo                  0.205   N152
                                                        alu/Sh1492
-    SLICE_X32Y10.C1      net (fanout=3)        1.693   alu/Sh149
-    SLICE_X32Y10.C       Tilo                  0.205   alu/Mmux_result222
-                                                       alu/Mmux_result226
-    SLICE_X32Y10.B4      net (fanout=1)        0.278   alu/Mmux_result226
-    SLICE_X32Y10.B       Tilo                  0.205   alu/Mmux_result222
-                                                       alu/Mmux_result227
-    SLICE_X35Y13.A1      net (fanout=2)        1.161   aluOut<1>
-    SLICE_X35Y13.CLK     Tas                   0.227   ex_mem/aluOutOut<3>
-                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT121
-                                                       ex_mem/aluOutOut_1
+    SLICE_X8Y51.D3       net (fanout=3)        0.394   alu/Sh149
+    SLICE_X8Y51.D        Tilo                  0.205   N152
+                                                       alu/Mmux_result1610_SW0
+    SLICE_X7Y54.A3       net (fanout=1)        1.133   N152
+    SLICE_X7Y54.A        Tilo                  0.259   alu/Mmux_result163
+                                                       alu/Mmux_result1610
+    SLICE_X7Y54.B6       net (fanout=1)        0.118   alu/Mmux_result1610
+    SLICE_X7Y54.B        Tilo                  0.259   alu/Mmux_result163
+                                                       alu/Mmux_result1611
+    SLICE_X9Y54.B5       net (fanout=2)        0.441   aluOut<17>
+    SLICE_X9Y54.CLK      Tas                   0.322   ex_mem/aluOutOut<18>
+                                                       ex_mem/Mmux_aluOutOut[31]_GND_10_o_mux_7_OUT91
+                                                       ex_mem/aluOutOut_17
     -------------------------------------------------  ---------------------------
-    Total                                     11.522ns (2.470ns logic, 9.052ns route)
-                                                       (21.4% logic, 78.6% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point fetch/pcOut_7 (SLICE_X12Y24.A6), 4160 paths
---------------------------------------------------------------------------------
-Slack (setup path):     -1.927ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               bank/banco_0_185 (FF)
-  Destination:          fetch/pcOut_7 (FF)
-  Requirement:          4.761ns
-  Data Path Delay:      6.586ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.067ns (0.421 - 0.488)
-  Source Clock:         clock_BUFGP rising at 0.000ns
-  Destination Clock:    clock_BUFGP falling at 4.761ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: bank/banco_0_185 to fetch/pcOut_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X2Y36.DQ       Tcko                  0.447   bank/banco_0<185>
-                                                       bank/banco_0_185
-    SLICE_X3Y36.D2       net (fanout=3)        0.594   bank/banco_0<185>
-    SLICE_X3Y36.D        Tilo                  0.259   bank/banco_0<184>
-                                                       bank/Mmux_readData1_952
-    SLICE_X18Y36.D6      net (fanout=1)        1.197   bank/Mmux_readData1_952
-    SLICE_X18Y36.CMUX    Topdc                 0.368   bank/Mmux_readData1_717
-                                                       bank/Mmux_readData1_417
-                                                       bank/Mmux_readData1_2_f7_16
-    SLICE_X15Y35.D6      net (fanout=2)        0.751   readData1<25>
-    SLICE_X15Y35.D       Tilo                  0.259   branchSrcA<25>
-                                                       Mmux_branchSrcA181
-    SLICE_X12Y22.A3      net (fanout=1)        1.230   branchSrcA<25>
-    SLICE_X12Y22.CMUX    Topac                 0.530   if_id/instructionOut<7>
-                                                       Mcompar_n0007_lut<8>
-                                                       Mcompar_n0007_cy<10>
-    SLICE_X12Y24.A6      net (fanout=40)       0.610   n0007
-    SLICE_X12Y24.CLK     Tas                   0.341   fetch/pcOut<3>
-                                                       fetch/Mmux_pcOut[7]_GND_14_o_mux_1_OUT8
-                                                       fetch/pcOut_7
-    -------------------------------------------------  ---------------------------
-    Total                                      6.586ns (2.204ns logic, 4.382ns route)
-                                                       (33.5% logic, 66.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -1.789ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               bank/banco_0_282 (FF)
-  Destination:          fetch/pcOut_7 (FF)
-  Requirement:          4.761ns
-  Data Path Delay:      6.484ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.031ns (0.421 - 0.452)
-  Source Clock:         clock_BUFGP rising at 0.000ns
-  Destination Clock:    clock_BUFGP falling at 4.761ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: bank/banco_0_282 to fetch/pcOut_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X15Y34.AQ      Tcko                  0.391   bank/banco_0<285>
-                                                       bank/banco_0_282
-    SLICE_X17Y35.A4      net (fanout=3)        0.798   bank/banco_0<282>
-    SLICE_X17Y35.A       Tilo                  0.259   bank/Mmux_readData1_956
-                                                       bank/Mmux_readData1_956
-    SLICE_X20Y37.D3      net (fanout=1)        0.927   bank/Mmux_readData1_956
-    SLICE_X20Y37.CMUX    Topdc                 0.338   bank/Mmux_readData1_718
-                                                       bank/Mmux_readData1_418
-                                                       bank/Mmux_readData1_2_f7_17
-    SLICE_X13Y27.A6      net (fanout=2)        1.186   readData1<26>
-    SLICE_X13Y27.A       Tilo                  0.259   branchSrcA<17>
-                                                       Mmux_branchSrcA191
-    SLICE_X12Y22.A1      net (fanout=1)        0.845   branchSrcA<26>
-    SLICE_X12Y22.CMUX    Topac                 0.530   if_id/instructionOut<7>
-                                                       Mcompar_n0007_lut<8>
-                                                       Mcompar_n0007_cy<10>
-    SLICE_X12Y24.A6      net (fanout=40)       0.610   n0007
-    SLICE_X12Y24.CLK     Tas                   0.341   fetch/pcOut<3>
-                                                       fetch/Mmux_pcOut[7]_GND_14_o_mux_1_OUT8
-                                                       fetch/pcOut_7
-    -------------------------------------------------  ---------------------------
-    Total                                      6.484ns (2.118ns logic, 4.366ns route)
-                                                       (32.7% logic, 67.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -1.783ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               bank/banco_0_939 (FF)
-  Destination:          fetch/pcOut_7 (FF)
-  Requirement:          4.761ns
-  Data Path Delay:      6.496ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.013ns (0.334 - 0.347)
-  Source Clock:         clock_BUFGP rising at 0.000ns
-  Destination Clock:    clock_BUFGP falling at 4.761ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: bank/banco_0_939 to fetch/pcOut_7
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X18Y10.AMUX    Tshcko                0.488   resultWB<11>
-                                                       bank/banco_0_939
-    SLICE_X17Y6.A5       net (fanout=3)        0.839   bank/banco_0<939>
-    SLICE_X17Y6.A        Tilo                  0.259   bank/Mmux_readData1_96
-                                                       bank/Mmux_readData1_96
-    SLICE_X6Y11.C5       net (fanout=1)        1.048   bank/Mmux_readData1_96
-    SLICE_X6Y11.CMUX     Tilo                  0.361   bank/Mmux_readData1_72
-                                                       bank/Mmux_readData1_32
-                                                       bank/Mmux_readData1_2_f7_1
-    SLICE_X11Y19.C6      net (fanout=2)        1.017   readData1<11>
-    SLICE_X11Y19.C       Tilo                  0.259   branchSrcA<11>
-                                                       Mmux_branchSrcA31
-    SLICE_X12Y20.D1      net (fanout=1)        0.653   branchSrcA<11>
-    SLICE_X12Y20.COUT    Topcyd                0.260   Mcompar_n0007_cy<3>
-                                                       Mcompar_n0007_lut<3>
-                                                       Mcompar_n0007_cy<3>
-    SLICE_X12Y21.CIN     net (fanout=1)        0.003   Mcompar_n0007_cy<3>
-    SLICE_X12Y21.COUT    Tbyp                  0.076   Mcompar_n0007_cy<7>
-                                                       Mcompar_n0007_cy<7>
-    SLICE_X12Y22.CIN     net (fanout=1)        0.003   Mcompar_n0007_cy<7>
-    SLICE_X12Y22.CMUX    Tcinc                 0.279   if_id/instructionOut<7>
-                                                       Mcompar_n0007_cy<10>
-    SLICE_X12Y24.A6      net (fanout=40)       0.610   n0007
-    SLICE_X12Y24.CLK     Tas                   0.341   fetch/pcOut<3>
-                                                       fetch/Mmux_pcOut[7]_GND_14_o_mux_1_OUT8
-                                                       fetch/pcOut_7
-    -------------------------------------------------  ---------------------------
-    Total                                      6.496ns (2.323ns logic, 4.173ns route)
-                                                       (35.8% logic, 64.2% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point fetch/pcOut_2 (SLICE_X12Y24.C6), 4160 paths
---------------------------------------------------------------------------------
-Slack (setup path):     -1.922ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               bank/banco_0_185 (FF)
-  Destination:          fetch/pcOut_2 (FF)
-  Requirement:          4.761ns
-  Data Path Delay:      6.581ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.067ns (0.421 - 0.488)
-  Source Clock:         clock_BUFGP rising at 0.000ns
-  Destination Clock:    clock_BUFGP falling at 4.761ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: bank/banco_0_185 to fetch/pcOut_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X2Y36.DQ       Tcko                  0.447   bank/banco_0<185>
-                                                       bank/banco_0_185
-    SLICE_X3Y36.D2       net (fanout=3)        0.594   bank/banco_0<185>
-    SLICE_X3Y36.D        Tilo                  0.259   bank/banco_0<184>
-                                                       bank/Mmux_readData1_952
-    SLICE_X18Y36.D6      net (fanout=1)        1.197   bank/Mmux_readData1_952
-    SLICE_X18Y36.CMUX    Topdc                 0.368   bank/Mmux_readData1_717
-                                                       bank/Mmux_readData1_417
-                                                       bank/Mmux_readData1_2_f7_16
-    SLICE_X15Y35.D6      net (fanout=2)        0.751   readData1<25>
-    SLICE_X15Y35.D       Tilo                  0.259   branchSrcA<25>
-                                                       Mmux_branchSrcA181
-    SLICE_X12Y22.A3      net (fanout=1)        1.230   branchSrcA<25>
-    SLICE_X12Y22.CMUX    Topac                 0.530   if_id/instructionOut<7>
-                                                       Mcompar_n0007_lut<8>
-                                                       Mcompar_n0007_cy<10>
-    SLICE_X12Y24.C6      net (fanout=40)       0.605   n0007
-    SLICE_X12Y24.CLK     Tas                   0.341   fetch/pcOut<3>
-                                                       fetch/Mmux_pcOut[7]_GND_14_o_mux_1_OUT31
-                                                       fetch/pcOut_2
-    -------------------------------------------------  ---------------------------
-    Total                                      6.581ns (2.204ns logic, 4.377ns route)
-                                                       (33.5% logic, 66.5% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -1.784ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               bank/banco_0_282 (FF)
-  Destination:          fetch/pcOut_2 (FF)
-  Requirement:          4.761ns
-  Data Path Delay:      6.479ns (Levels of Logic = 5)
-  Clock Path Skew:      -0.031ns (0.421 - 0.452)
-  Source Clock:         clock_BUFGP rising at 0.000ns
-  Destination Clock:    clock_BUFGP falling at 4.761ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: bank/banco_0_282 to fetch/pcOut_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X15Y34.AQ      Tcko                  0.391   bank/banco_0<285>
-                                                       bank/banco_0_282
-    SLICE_X17Y35.A4      net (fanout=3)        0.798   bank/banco_0<282>
-    SLICE_X17Y35.A       Tilo                  0.259   bank/Mmux_readData1_956
-                                                       bank/Mmux_readData1_956
-    SLICE_X20Y37.D3      net (fanout=1)        0.927   bank/Mmux_readData1_956
-    SLICE_X20Y37.CMUX    Topdc                 0.338   bank/Mmux_readData1_718
-                                                       bank/Mmux_readData1_418
-                                                       bank/Mmux_readData1_2_f7_17
-    SLICE_X13Y27.A6      net (fanout=2)        1.186   readData1<26>
-    SLICE_X13Y27.A       Tilo                  0.259   branchSrcA<17>
-                                                       Mmux_branchSrcA191
-    SLICE_X12Y22.A1      net (fanout=1)        0.845   branchSrcA<26>
-    SLICE_X12Y22.CMUX    Topac                 0.530   if_id/instructionOut<7>
-                                                       Mcompar_n0007_lut<8>
-                                                       Mcompar_n0007_cy<10>
-    SLICE_X12Y24.C6      net (fanout=40)       0.605   n0007
-    SLICE_X12Y24.CLK     Tas                   0.341   fetch/pcOut<3>
-                                                       fetch/Mmux_pcOut[7]_GND_14_o_mux_1_OUT31
-                                                       fetch/pcOut_2
-    -------------------------------------------------  ---------------------------
-    Total                                      6.479ns (2.118ns logic, 4.361ns route)
-                                                       (32.7% logic, 67.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     -1.778ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               bank/banco_0_939 (FF)
-  Destination:          fetch/pcOut_2 (FF)
-  Requirement:          4.761ns
-  Data Path Delay:      6.491ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.013ns (0.334 - 0.347)
-  Source Clock:         clock_BUFGP rising at 0.000ns
-  Destination Clock:    clock_BUFGP falling at 4.761ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: bank/banco_0_939 to fetch/pcOut_2
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X18Y10.AMUX    Tshcko                0.488   resultWB<11>
-                                                       bank/banco_0_939
-    SLICE_X17Y6.A5       net (fanout=3)        0.839   bank/banco_0<939>
-    SLICE_X17Y6.A        Tilo                  0.259   bank/Mmux_readData1_96
-                                                       bank/Mmux_readData1_96
-    SLICE_X6Y11.C5       net (fanout=1)        1.048   bank/Mmux_readData1_96
-    SLICE_X6Y11.CMUX     Tilo                  0.361   bank/Mmux_readData1_72
-                                                       bank/Mmux_readData1_32
-                                                       bank/Mmux_readData1_2_f7_1
-    SLICE_X11Y19.C6      net (fanout=2)        1.017   readData1<11>
-    SLICE_X11Y19.C       Tilo                  0.259   branchSrcA<11>
-                                                       Mmux_branchSrcA31
-    SLICE_X12Y20.D1      net (fanout=1)        0.653   branchSrcA<11>
-    SLICE_X12Y20.COUT    Topcyd                0.260   Mcompar_n0007_cy<3>
-                                                       Mcompar_n0007_lut<3>
-                                                       Mcompar_n0007_cy<3>
-    SLICE_X12Y21.CIN     net (fanout=1)        0.003   Mcompar_n0007_cy<3>
-    SLICE_X12Y21.COUT    Tbyp                  0.076   Mcompar_n0007_cy<7>
-                                                       Mcompar_n0007_cy<7>
-    SLICE_X12Y22.CIN     net (fanout=1)        0.003   Mcompar_n0007_cy<7>
-    SLICE_X12Y22.CMUX    Tcinc                 0.279   if_id/instructionOut<7>
-                                                       Mcompar_n0007_cy<10>
-    SLICE_X12Y24.C6      net (fanout=40)       0.605   n0007
-    SLICE_X12Y24.CLK     Tas                   0.341   fetch/pcOut<3>
-                                                       fetch/Mmux_pcOut[7]_GND_14_o_mux_1_OUT31
-                                                       fetch/pcOut_2
-    -------------------------------------------------  ---------------------------
-    Total                                      6.491ns (2.323ns logic, 4.168ns route)
-                                                       (35.8% logic, 64.2% route)
+    Total                                     12.163ns (2.979ns logic, 9.184ns route)
+                                                       (24.5% logic, 75.5% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_clock = PERIOD TIMEGRP "clock" 105 MHz HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point uartMod/fifo_rx/Mram_FIFO21/DP (SLICE_X34Y31.D3), 1 path
+Paths for end point uartMod/fifo_tx/Mram_FIFO8_RAMA (SLICE_X22Y60.D4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.214ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               uartMod/fifo_rx/write_pointer_0 (FF)
-  Destination:          uartMod/fifo_rx/Mram_FIFO21/DP (RAM)
+Slack (hold path):      0.314ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uartMod/fifo_tx/write_pointer_3 (FF)
+  Destination:          uartMod/fifo_tx/Mram_FIFO8_RAMA (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.216ns (Levels of Logic = 0)
-  Clock Path Skew:      0.002ns (0.044 - 0.042)
+  Data Path Delay:      0.324ns (Levels of Logic = 0)
+  Clock Path Skew:      0.010ns (0.087 - 0.077)
   Source Clock:         clock_BUFGP rising at 0.000ns
   Destination Clock:    clock_BUFGP rising at 0.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: uartMod/fifo_rx/write_pointer_0 to uartMod/fifo_rx/Mram_FIFO21/DP
+  Minimum Data Path at Fast Process Corner: uartMod/fifo_tx/write_pointer_3 to uartMod/fifo_tx/Mram_FIFO8_RAMA
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X35Y31.AQ      Tcko                  0.198   uartMod/fifo_rx/write_pointer<2>
-                                                       uartMod/fifo_rx/write_pointer_0
-    SLICE_X34Y31.D3      net (fanout=6)        0.190   uartMod/fifo_rx/write_pointer<0>
-    SLICE_X34Y31.CLK     Tah         (-Th)     0.172   uartMod/fifo_rx/data_out<7>
-                                                       uartMod/fifo_rx/Mram_FIFO21/DP
+    SLICE_X20Y60.DQ      Tcko                  0.200   uartMod/fifo_tx/write_pointer<3>
+                                                       uartMod/fifo_tx/write_pointer_3
+    SLICE_X22Y60.D4      net (fanout=17)       0.252   uartMod/fifo_tx/write_pointer<3>
+    SLICE_X22Y60.CLK     Tah         (-Th)     0.128   uartMod/fifo_tx/Mram_FIFO8_RAMD_O
+                                                       uartMod/fifo_tx/Mram_FIFO8_RAMA
     -------------------------------------------------  ---------------------------
-    Total                                      0.216ns (0.026ns logic, 0.190ns route)
-                                                       (12.0% logic, 88.0% route)
+    Total                                      0.324ns (0.072ns logic, 0.252ns route)
+                                                       (22.2% logic, 77.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point uartMod/fifo_rx/Mram_FIFO22/DP (SLICE_X34Y31.D3), 1 path
+Paths for end point uartMod/fifo_tx/Mram_FIFO8_RAMB (SLICE_X22Y60.D4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.214ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               uartMod/fifo_rx/write_pointer_0 (FF)
-  Destination:          uartMod/fifo_rx/Mram_FIFO22/DP (RAM)
+Slack (hold path):      0.314ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uartMod/fifo_tx/write_pointer_3 (FF)
+  Destination:          uartMod/fifo_tx/Mram_FIFO8_RAMB (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.216ns (Levels of Logic = 0)
-  Clock Path Skew:      0.002ns (0.044 - 0.042)
+  Data Path Delay:      0.324ns (Levels of Logic = 0)
+  Clock Path Skew:      0.010ns (0.087 - 0.077)
   Source Clock:         clock_BUFGP rising at 0.000ns
   Destination Clock:    clock_BUFGP rising at 0.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: uartMod/fifo_rx/write_pointer_0 to uartMod/fifo_rx/Mram_FIFO22/DP
+  Minimum Data Path at Fast Process Corner: uartMod/fifo_tx/write_pointer_3 to uartMod/fifo_tx/Mram_FIFO8_RAMB
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X35Y31.AQ      Tcko                  0.198   uartMod/fifo_rx/write_pointer<2>
-                                                       uartMod/fifo_rx/write_pointer_0
-    SLICE_X34Y31.D3      net (fanout=6)        0.190   uartMod/fifo_rx/write_pointer<0>
-    SLICE_X34Y31.CLK     Tah         (-Th)     0.172   uartMod/fifo_rx/data_out<7>
-                                                       uartMod/fifo_rx/Mram_FIFO22/DP
+    SLICE_X20Y60.DQ      Tcko                  0.200   uartMod/fifo_tx/write_pointer<3>
+                                                       uartMod/fifo_tx/write_pointer_3
+    SLICE_X22Y60.D4      net (fanout=17)       0.252   uartMod/fifo_tx/write_pointer<3>
+    SLICE_X22Y60.CLK     Tah         (-Th)     0.128   uartMod/fifo_tx/Mram_FIFO8_RAMD_O
+                                                       uartMod/fifo_tx/Mram_FIFO8_RAMB
     -------------------------------------------------  ---------------------------
-    Total                                      0.216ns (0.026ns logic, 0.190ns route)
-                                                       (12.0% logic, 88.0% route)
+    Total                                      0.324ns (0.072ns logic, 0.252ns route)
+                                                       (22.2% logic, 77.8% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point uartMod/fifo_rx/Mram_FIFO21/SP (SLICE_X34Y31.D3), 1 path
+Paths for end point uartMod/fifo_tx/Mram_FIFO8_RAMC (SLICE_X22Y60.D4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.214ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               uartMod/fifo_rx/write_pointer_0 (FF)
-  Destination:          uartMod/fifo_rx/Mram_FIFO21/SP (RAM)
+Slack (hold path):      0.314ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uartMod/fifo_tx/write_pointer_3 (FF)
+  Destination:          uartMod/fifo_tx/Mram_FIFO8_RAMC (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.216ns (Levels of Logic = 0)
-  Clock Path Skew:      0.002ns (0.044 - 0.042)
+  Data Path Delay:      0.324ns (Levels of Logic = 0)
+  Clock Path Skew:      0.010ns (0.087 - 0.077)
   Source Clock:         clock_BUFGP rising at 0.000ns
   Destination Clock:    clock_BUFGP rising at 0.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: uartMod/fifo_rx/write_pointer_0 to uartMod/fifo_rx/Mram_FIFO21/SP
+  Minimum Data Path at Fast Process Corner: uartMod/fifo_tx/write_pointer_3 to uartMod/fifo_tx/Mram_FIFO8_RAMC
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X35Y31.AQ      Tcko                  0.198   uartMod/fifo_rx/write_pointer<2>
-                                                       uartMod/fifo_rx/write_pointer_0
-    SLICE_X34Y31.D3      net (fanout=6)        0.190   uartMod/fifo_rx/write_pointer<0>
-    SLICE_X34Y31.CLK     Tah         (-Th)     0.172   uartMod/fifo_rx/data_out<7>
-                                                       uartMod/fifo_rx/Mram_FIFO21/SP
+    SLICE_X20Y60.DQ      Tcko                  0.200   uartMod/fifo_tx/write_pointer<3>
+                                                       uartMod/fifo_tx/write_pointer_3
+    SLICE_X22Y60.D4      net (fanout=17)       0.252   uartMod/fifo_tx/write_pointer<3>
+    SLICE_X22Y60.CLK     Tah         (-Th)     0.128   uartMod/fifo_tx/Mram_FIFO8_RAMD_O
+                                                       uartMod/fifo_tx/Mram_FIFO8_RAMC
     -------------------------------------------------  ---------------------------
-    Total                                      0.216ns (0.026ns logic, 0.190ns route)
-                                                       (12.0% logic, 88.0% route)
+    Total                                      0.324ns (0.072ns logic, 0.252ns route)
+                                                       (22.2% logic, 77.8% route)
 
 --------------------------------------------------------------------------------
 
@@ -587,7 +659,7 @@ Slack: 6.399ns (period - min period limit)
   Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
   Physical resource: ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram/CLKAWRCLK
   Logical resource: ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram/CLKAWRCLK
-  Location pin: RAMB8_X1Y9.CLKAWRCLK
+  Location pin: RAMB8_X0Y19.CLKAWRCLK
   Clock network: clock_BUFGP
 --------------------------------------------------------------------------------
 Slack: 6.399ns (period - min period limit)
@@ -595,7 +667,7 @@ Slack: 6.399ns (period - min period limit)
   Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
   Physical resource: ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram/CLKBRDCLK
   Logical resource: ram/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.WIDE_PRIM9.ram/CLKBRDCLK
-  Location pin: RAMB8_X1Y9.CLKBRDCLK
+  Location pin: RAMB8_X0Y19.CLKBRDCLK
   Clock network: clock_BUFGP
 --------------------------------------------------------------------------------
 Slack: 6.399ns (period - min period limit)
@@ -603,7 +675,7 @@ Slack: 6.399ns (period - min period limit)
   Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
   Physical resource: instructionMemory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram/CLKAWRCLK
   Logical resource: instructionMemory/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram/CLKAWRCLK
-  Location pin: RAMB8_X0Y10.CLKAWRCLK
+  Location pin: RAMB8_X0Y12.CLKAWRCLK
   Clock network: clock_BUFGP
 --------------------------------------------------------------------------------
 
@@ -620,25 +692,25 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    9.476|    6.473|    6.688|   11.659|
+clock          |    7.808|    6.100|    7.039|   12.395|
 ---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 282  Score: 195660  (Setup/Max: 195660, Hold: 0)
+Timing errors: 363  Score: 243311  (Setup/Max: 243311, Hold: 0)
 
-Constraints cover 442047 paths, 0 nets, and 16905 connections
+Constraints cover 442030 paths, 0 nets, and 16887 connections
 
 Design statistics:
-   Minimum period:  13.377ns{1}   (Maximum frequency:  74.755MHz)
+   Minimum period:  14.079ns{1}   (Maximum frequency:  71.028MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Mon Nov 30 20:36:20 2015 
+Analysis completed Tue Dec 01 15:59:32 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

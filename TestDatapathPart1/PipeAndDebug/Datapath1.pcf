@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Nov 30 20:34:27 2015
+// Written by: Map P.20131013 on Tue Dec 01 15:58:24 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -45,25 +45,7 @@ TIMEGRP clock = BEL "if_id/pcNextOut_0" BEL "if_id/pcNextOut_1" BEL
         "if_id/instructionOut_25" BEL "if_id/instructionOut_26" BEL
         "if_id/instructionOut_27" BEL "if_id/instructionOut_28" BEL
         "if_id/instructionOut_29" BEL "if_id/instructionOut_30" BEL
-        "if_id/instructionOut_31" BEL "uartMod/rx_baud_rate/baud_rate" BEL
-        "uartMod/tx_baud_rate/baud_rate" BEL "uartMod/rx_baud_rate/counter_0"
-        BEL "uartMod/rx_baud_rate/counter_1" BEL
-        "uartMod/rx_baud_rate/counter_2" BEL "uartMod/rx_baud_rate/counter_3"
-        BEL "uartMod/rx_baud_rate/counter_4" BEL
-        "uartMod/rx_baud_rate/counter_5" BEL "uartMod/rx_baud_rate/counter_6"
-        BEL "uartMod/rx_baud_rate/counter_7" BEL
-        "uartMod/rx_baud_rate/counter_8" BEL "uartMod/rx_baud_rate/counter_9"
-        BEL "uartMod/tx_baud_rate/counter_0" BEL
-        "uartMod/tx_baud_rate/counter_1" BEL "uartMod/tx_baud_rate/counter_2"
-        BEL "uartMod/tx_baud_rate/counter_3" BEL
-        "uartMod/tx_baud_rate/counter_4" BEL "uartMod/tx_baud_rate/counter_5"
-        BEL "uartMod/tx_baud_rate/counter_6" BEL
-        "uartMod/tx_baud_rate/counter_7" BEL "uartMod/tx_baud_rate/counter_8"
-        BEL "uartMod/tx_baud_rate/counter_9" BEL
-        "uartMod/tx_baud_rate/counter_10" BEL
-        "uartMod/tx_baud_rate/counter_11" BEL
-        "uartMod/tx_baud_rate/counter_12" BEL
-        "uartMod/tx_baud_rate/counter_13" BEL "bank/banco_0_1023" BEL
+        "if_id/instructionOut_31" BEL "bank/banco_0_1023" BEL
         "bank/banco_0_1022" BEL "bank/banco_0_1021" BEL "bank/banco_0_1020"
         BEL "bank/banco_0_1019" BEL "bank/banco_0_1018" BEL
         "bank/banco_0_1017" BEL "bank/banco_0_1016" BEL "bank/banco_0_1015"
@@ -543,13 +525,31 @@ TIMEGRP clock = BEL "if_id/pcNextOut_0" BEL "if_id/pcNextOut_1" BEL
         "debugUnit/current_state_0" BEL "debugUnit/next_state_1" BEL
         "debugUnit/next_state_0" BEL "debugUnit/pipeReset" BEL
         "debugUnit/pipeEnable" BEL "debugUnit/writeFifoFlag" BEL
-        "uartMod/fifo_tx/read_pointer_7" BEL "uartMod/fifo_tx/read_pointer_6"
-        BEL "uartMod/fifo_tx/read_pointer_5" BEL
-        "uartMod/fifo_tx/read_pointer_4" BEL "uartMod/fifo_tx/read_pointer_3"
-        BEL "uartMod/fifo_tx/read_pointer_2" BEL
-        "uartMod/fifo_tx/read_pointer_1" BEL "uartMod/fifo_tx/read_pointer_0"
-        BEL "uartMod/fifo_tx/write_pointer_7" BEL
-        "uartMod/fifo_tx/write_pointer_6" BEL
+        "uartMod/tx_baud_rate/counter_13" BEL
+        "uartMod/tx_baud_rate/counter_12" BEL
+        "uartMod/tx_baud_rate/counter_11" BEL
+        "uartMod/tx_baud_rate/counter_10" BEL "uartMod/tx_baud_rate/counter_9"
+        BEL "uartMod/tx_baud_rate/counter_8" BEL
+        "uartMod/tx_baud_rate/counter_7" BEL "uartMod/tx_baud_rate/counter_6"
+        BEL "uartMod/tx_baud_rate/counter_5" BEL
+        "uartMod/tx_baud_rate/counter_4" BEL "uartMod/tx_baud_rate/counter_3"
+        BEL "uartMod/tx_baud_rate/counter_2" BEL
+        "uartMod/tx_baud_rate/counter_1" BEL "uartMod/tx_baud_rate/counter_0"
+        BEL "uartMod/rx_baud_rate/counter_9" BEL
+        "uartMod/rx_baud_rate/counter_8" BEL "uartMod/rx_baud_rate/counter_7"
+        BEL "uartMod/rx_baud_rate/counter_6" BEL
+        "uartMod/rx_baud_rate/counter_5" BEL "uartMod/rx_baud_rate/counter_4"
+        BEL "uartMod/rx_baud_rate/counter_3" BEL
+        "uartMod/rx_baud_rate/counter_2" BEL "uartMod/rx_baud_rate/counter_1"
+        BEL "uartMod/rx_baud_rate/counter_0" BEL
+        "uartMod/tx_baud_rate/baud_rate" BEL "uartMod/rx_baud_rate/baud_rate"
+        BEL "uartMod/fifo_tx/read_pointer_7" BEL
+        "uartMod/fifo_tx/read_pointer_6" BEL "uartMod/fifo_tx/read_pointer_5"
+        BEL "uartMod/fifo_tx/read_pointer_4" BEL
+        "uartMod/fifo_tx/read_pointer_3" BEL "uartMod/fifo_tx/read_pointer_2"
+        BEL "uartMod/fifo_tx/read_pointer_1" BEL
+        "uartMod/fifo_tx/read_pointer_0" BEL "uartMod/fifo_tx/write_pointer_7"
+        BEL "uartMod/fifo_tx/write_pointer_6" BEL
         "uartMod/fifo_tx/write_pointer_5" BEL
         "uartMod/fifo_tx/write_pointer_4" BEL
         "uartMod/fifo_tx/write_pointer_3" BEL
@@ -566,7 +566,7 @@ TIMEGRP clock = BEL "if_id/pcNextOut_0" BEL "if_id/pcNextOut_1" BEL
         "uartMod/fifo_tx/free_space_1" BEL "uartMod/fifo_tx/free_space_0" BEL
         "uartMod/receptor/s_3" BEL "uartMod/receptor/s_2" BEL
         "uartMod/receptor/s_1" BEL "uartMod/receptor/s_0" BEL
-        "uartMod/receptor/rx_done" BEL "uartMod/receptor/current_state_1" BEL
+        "uartMod/receptor/current_state_1" BEL
         "uartMod/receptor/current_state_0" BEL "uartMod/receptor/next_state_1"
         BEL "uartMod/receptor/next_state_0" BEL "uartMod/receptor/n_3" BEL
         "uartMod/receptor/n_2" BEL "uartMod/receptor/n_1" BEL
@@ -574,11 +574,11 @@ TIMEGRP clock = BEL "if_id/pcNextOut_0" BEL "if_id/pcNextOut_1" BEL
         "uartMod/receptor/d_out_6" BEL "uartMod/receptor/d_out_5" BEL
         "uartMod/receptor/d_out_4" BEL "uartMod/receptor/d_out_3" BEL
         "uartMod/receptor/d_out_2" BEL "uartMod/receptor/d_out_1" BEL
-        "uartMod/receptor/d_out_0" BEL "uartMod/fifo_rx/read_pointer_3" BEL
-        "uartMod/fifo_rx/read_pointer_2" BEL "uartMod/fifo_rx/read_pointer_1"
-        BEL "uartMod/fifo_rx/read_pointer_0" BEL
-        "uartMod/fifo_rx/write_pointer_3" BEL
-        "uartMod/fifo_rx/write_pointer_2" BEL
+        "uartMod/receptor/d_out_0" BEL "uartMod/receptor/rx_done" BEL
+        "uartMod/fifo_rx/read_pointer_3" BEL "uartMod/fifo_rx/read_pointer_2"
+        BEL "uartMod/fifo_rx/read_pointer_1" BEL
+        "uartMod/fifo_rx/read_pointer_0" BEL "uartMod/fifo_rx/write_pointer_3"
+        BEL "uartMod/fifo_rx/write_pointer_2" BEL
         "uartMod/fifo_rx/write_pointer_1" BEL
         "uartMod/fifo_rx/write_pointer_0" BEL "uartMod/fifo_rx/data_out_7" BEL
         "uartMod/fifo_rx/data_out_6" BEL "uartMod/fifo_rx/data_out_5" BEL
