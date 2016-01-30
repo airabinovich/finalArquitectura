@@ -7,6 +7,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import Utils.Pair;
 import View.ObserverSend;
 import gnu.io.CommPort;
 import gnu.io.CommPortIdentifier;
@@ -23,23 +24,24 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     public TwoWaySerialComm() {  
         OS = System.getProperty("os.name").toLowerCase();
         OS = OS.substring(0, OS.indexOf(' ') > 0 ? OS.indexOf(' ') : OS.length());
-        System.out.println("Sistema:"+OS);       
+        System.out.println("Sistema:" + OS);       
         puertos = new HashMap<String,ArrayList<String>>();    
         puertosLinux = new ArrayList<String>();
-        puertosLinux.add("/dev/ttyUSB0");
-        puertosLinux.add("/dev/ttyACM0");
-        puertos.put("linux", puertosLinux); 
         puertosWin = new ArrayList<String>();
         for(int i = 0; i < 25; i++){
-        	puertosWin.add("COM"+Integer.toString(i));
-        }        
+        	String iStr = Integer.toString(i);
+        	puertosLinux.add("/dev/ttyUSB" + iStr);
+            puertosLinux.add("/dev/ttyACM" + iStr);
+        	puertosWin.add("COM" + iStr);
+        }
+        puertos.put("linux", puertosLinux);
         puertos.put("windows", puertosWin);
     }
     
     private String getNextPort(){
     	portIndex++;
     	try{
-    		System.out.println("puerto entregado: "+puertos.get(OS).get(portIndex));
+    		System.out.println("puerto entregado: " + puertos.get(OS).get(portIndex));
     		return puertos.get(OS).get(portIndex);
     	}catch(IndexOutOfBoundsException ex){
     		return null;
@@ -59,7 +61,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         			OutputStream out = serialPort.getOutputStream();
         			sr = new SerialReader(in);
         			(new Thread(sr)).start();
-        			 sw = new SerialWriter(out);
+        			sw = new SerialWriter(out);
         		}
         	}catch(gnu.io.PortInUseException e){
         		System.out.println("Puerto Ocupado!!");
@@ -84,6 +86,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
 			}
 		} catch (NullPointerException e){
 			System.out.println("Nos quedamos sin puertos");
+			System.exit(1);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -94,10 +97,69 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     }
     
     class SerialReader implements Runnable, SubjectReceive{
-        InputStream in;       
-        private ArrayList<ObserverReceive> observers = new ArrayList<ObserverReceive>(); 
+        InputStream in;
+        private int indexDataReceived, subIndexDataReceived;
+        private ArrayList<ObserverReceive> observers = new ArrayList<ObserverReceive>();
+        
+        // contiene el nombre de los campos a recibir y la cantidad de bytes que espera
+        private ArrayList<Pair<String,Integer>> dataToReceive;
+        
+        // contiene el nombre de los campos a recibir y el último dato recibido
+        private ArrayList<Pair<String,Integer>> dataReceived;
+
+        private ArrayList<Pair<String,Integer>> fillDataToRecieve(){
+        	ArrayList<Pair<String,Integer>> ret = new ArrayList<Pair<String,Integer>>(34);
+        	ret.add(new Pair<String,Integer>("FE_pcOut", 1));
+        	ret.add(new Pair<String,Integer>("IF/ID_instructionOut", 4));
+        	ret.add(new Pair<String,Integer>("IF/ID_pcNextOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_aluOperationOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_sigExtOut", 4));
+			ret.add(new Pair<String,Integer>("ID/EX_readData1Out", 4));
+			ret.add(new Pair<String,Integer>("ID/EX_readData2Out", 4));
+			ret.add(new Pair<String,Integer>("ID/EX_aluSrcOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_aluShiftImmOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_memWriteOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_memToRegOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_memReadWidthOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_rsOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_rtOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_rdOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_saOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_regDstOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_loadImmOut", 1));
+			ret.add(new Pair<String,Integer>("ID/EX_regWriteOut", 1));
+			//ret.add(new Pair<String,Integer>("ID/EX_eopOut", 1)); //no está en la unidad de debug
+			ret.add(new Pair<String,Integer>("EX/MEM_writeRegisterOut", 1));
+			ret.add(new Pair<String,Integer>("EX/MEM_writeDataOut", 4));
+			ret.add(new Pair<String,Integer>("EX/MEM_aluOutOut", 4));
+			ret.add(new Pair<String,Integer>("EX/MEM_regWriteOut", 1));
+			//ret.add(new Pair<String,Integer>("EX/MEM_memToRegOut", 1)); //no está en la unidad de debug
+			ret.add(new Pair<String,Integer>("dataToUartOutFifo", 1));
+			ret.add(new Pair<String,Integer>("EX/MEM_memWriteOut", 1));
+			ret.add(new Pair<String,Integer>("EX/MEM_memReadWidthOut", 1));
+			//ret.add(new Pair<String,Integer>("EX/MEM_eopOut", 1)); //no está en la unidad de debug
+			ret.add(new Pair<String,Integer>("MEM/WB_writeRegisterOut", 1));
+			ret.add(new Pair<String,Integer>("MEM/WB_aluOutOut", 4));
+			ret.add(new Pair<String,Integer>("MEM/WB_memoryOutOut", 4));
+			ret.add(new Pair<String,Integer>("MEM/WB_regWriteOut", 1));
+			ret.add(new Pair<String,Integer>("MEM/WB_memToRegOut", 1));
+			//ret.add(new Pair<String,Integer>("MEM/WB_eopOut", 1)); //no está en la unidad de debug
+			ret.add(new Pair<String,Integer>("testA", 1));
+			ret.add(new Pair<String,Integer>("testB", 1));
+			ret.add(new Pair<String,Integer>("testC", 1));
+			ret.add(new Pair<String,Integer>("testD", 1));
+        	return ret;
+        }
         public SerialReader (InputStream in){
         	this.in = in;
+        	indexDataReceived = 0;
+        	subIndexDataReceived = 0;
+    		dataToReceive = fillDataToRecieve();
+    		dataReceived = new ArrayList<Pair<String,Integer>>(34);
+    		
+    		for(Pair<String,Integer> p : dataToReceive){
+    			dataReceived.add(new Pair<String,Integer>(p.getFst(), null));
+    		}
         }
         
         public void readData(){
@@ -106,18 +168,35 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
             try {
             	while (buffer.ready()){
             		//String aux = buffer.readLine();
-            		int aux =buffer.read();
-            		if(aux<=122 && aux>=65){
-            			char auxc=(char)aux;
-            			System.out.println(auxc);
-            		}else{
-            			System.out.println(aux);
-            		}
-            		try{
-                		//notifyReceive(aux);
-            		} catch(NumberFormatException e){
-            			e.printStackTrace();
-            		}
+            		int readValue = buffer.read();
+        			if(indexDataReceived >= dataToReceive.size()){
+        				indexDataReceived = 0;
+        				subIndexDataReceived = 0;
+        			}
+        			Pair<String,Integer> dato = dataReceived.get(indexDataReceived);
+        			if(subIndexDataReceived == 0){
+        				dato.setSnd(readValue);
+        				dataReceived.set(indexDataReceived, dato);
+        				if(dataToReceive.get(indexDataReceived).getSnd() > 1){
+        					//si entra acá es un dato de múltiples partes y leyó la primera
+        					subIndexDataReceived++;
+        				}else{
+        					//si entra acá es un dato de una sola parte
+        					indexDataReceived++;
+        					notifyReceive(dato);
+        				}
+        			}else{
+    					//si entra acá es porque es un dato de múltiples partes
+    					dato.setSnd((dato.getSnd() << 8) | readValue ); //desplaza 8 bits el dato anterior y le pega el nuevo
+        				dataReceived.set(indexDataReceived, dato);
+        				subIndexDataReceived++;
+        				if(subIndexDataReceived == dataToReceive.get(indexDataReceived).getSnd()){
+            				//si entra acá ya completó el dato
+            				subIndexDataReceived = 0;
+            				indexDataReceived++;
+            				notifyReceive(dato);
+            			}
+        			}
             	}
             }catch (IOException e){}            
         }
@@ -140,9 +219,9 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
 		}
 
 		@Override
-		public void notifyReceive(String rcv) {
+		public void notifyReceive(Pair<String,Integer> data) {
 			for(ObserverReceive o : observers){
-				o.updateReceive(rcv);
+				o.updateReceive(data);
 			}
 			
 		}
@@ -159,7 +238,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     class SerialWriter implements ObserverSend{
         OutputStream out;
         //double auxiliar;
-        int anguloAEnviar=0;
+        int datoAEnviar = 0;
         public SerialWriter (OutputStream out){
             this.out = out;
         }
@@ -173,7 +252,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         }
         
         public void sendMessage(char command){
-        		sendData(command);
+    		sendData(command);
         }
 
 		@Override
@@ -195,9 +274,8 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
 	}
 
 	@Override
-	public void notifyReceive(String rcv) {
-		sr.notifyReceive(rcv);
-		
+	public void notifyReceive(Pair<String,Integer> data) {
+		sr.notifyReceive(data);
 	}
 
 	@Override

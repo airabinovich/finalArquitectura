@@ -34,10 +34,18 @@ public class View implements SubjectSend, ObserverReceive {
 	private ArrayList<Pair<Integer,JTextField>> generalPurposeRegisters;
 	private ArrayList<Pair<Integer,JTextField>> memoryRegisters;
 	
+	private char command;
+	
 	private final int 	windowWidth = 1280,
 						windowHeight = 720;
 	
 	private final String[] datapathRegisters = {"FE","IF/ID","ID/EX","EX/MEM","MEM/WB"};
+	private final String[] FEFields = {"pcOut"};
+	private final String[] IFIDFields = {"instructionOut", "pcNextOut"};
+	private final String[] IDEXFields = {"aluOperationOut", "sigExtOut", "readData1Out", "readData2Out", "aluSrcOut", "aluShiftImmOut", "memWriteOut", "memToRegOut",
+										 "memReadWidthOut", "rsOut", "rtOut", "rdOut", "saOut", "regDstOut", "loadImmOut", "regWriteOut", "eopOut"};
+	private final String[] EXMEMFields = {"writeRegisterOut", "writeDataOut", "aluOutOut", "regWriteOut", "memToRegOut", "memWriteOut", "memReadWidthOut", "eopOut"};
+	private final String[] MEMWBFields = {"writeRegisterOut", "aluOutOut", "memoryOutOut", "regWriteOut", "memToRegOut", "eopOut"};
 	
 	public View(Model model){
 		this.model=model;
@@ -53,44 +61,21 @@ public class View implements SubjectSend, ObserverReceive {
         ArrayList<Pair<String,JTextField>> EXMEMdata = new ArrayList<Pair<String,JTextField>>();
         ArrayList<Pair<String,JTextField>> MEMWBdata = new ArrayList<Pair<String,JTextField>>();
         
-        FEdata.add(new Pair<String,JTextField>("pcOut", new JTextField()));
-        
-        IFIDdata.add(new Pair<String,JTextField>("instructionOut", new JTextField()));
-        IFIDdata.add(new Pair<String,JTextField>("pcNextOut", new JTextField()));
-        
-        IDEXdata.add(new Pair<String,JTextField>("aluOperationOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("sigExtOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("readData1Out", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("readData2Out", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("aluSrcOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("aluShiftImmOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("memWriteOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("memToRegOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("memReadWidthOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("rsOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("rtOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("rdOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("saOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("regDstOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("loadImmOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("regWriteOut", new JTextField()));
-        IDEXdata.add(new Pair<String,JTextField>("eopOut", new JTextField()));
-        
-        EXMEMdata.add(new Pair<String,JTextField>("writeRegisterOut", new JTextField()));
-        EXMEMdata.add(new Pair<String,JTextField>("writeDataOut", new JTextField()));
-        EXMEMdata.add(new Pair<String,JTextField>("aluOutOut", new JTextField()));
-        EXMEMdata.add(new Pair<String,JTextField>("regWriteOut", new JTextField()));
-        EXMEMdata.add(new Pair<String,JTextField>("memToRegOut", new JTextField()));
-        EXMEMdata.add(new Pair<String,JTextField>("memWriteOut", new JTextField()));
-        EXMEMdata.add(new Pair<String,JTextField>("memReadWidthOut", new JTextField()));
-        EXMEMdata.add(new Pair<String,JTextField>("eopOut", new JTextField()));
-        
-        MEMWBdata.add(new Pair<String,JTextField>("writeRegisterOut", new JTextField()));
-        MEMWBdata.add(new Pair<String,JTextField>("aluOutOut", new JTextField()));
-        MEMWBdata.add(new Pair<String,JTextField>("memoryOutOut", new JTextField()));
-        MEMWBdata.add(new Pair<String,JTextField>("regWriteOut", new JTextField()));
-        MEMWBdata.add(new Pair<String,JTextField>("memToRegOut", new JTextField()));
-        MEMWBdata.add(new Pair<String,JTextField>("eopOut", new JTextField()));
+        for( String s : FEFields){
+        	FEdata.add(new Pair<String,JTextField>(s,new JTextField()));
+        }
+		for( String s : IFIDFields){
+		    IFIDdata.add(new Pair<String,JTextField>(s,new JTextField()));
+        }
+		for( String s : IDEXFields){
+			IDEXdata.add(new Pair<String,JTextField>(s,new JTextField()));
+		}
+		for( String s : EXMEMFields){
+			EXMEMdata.add(new Pair<String,JTextField>(s,new JTextField()));
+		}
+		for( String s : MEMWBFields){
+			MEMWBdata.add(new Pair<String,JTextField>(s,new JTextField()));
+		}
         
         pipelineRegistersData = new HashMap<String,ArrayList<Pair<String,JTextField>>>();
         pipelineRegistersData.put("FE", FEdata);
@@ -184,6 +169,8 @@ public class View implements SubjectSend, ObserverReceive {
 				continueModeButton.setEnabled(false);
 				stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(false);
+				command = 'c';
+				notifySend();
 			}
         });
         
@@ -196,6 +183,8 @@ public class View implements SubjectSend, ObserverReceive {
 				continueModeButton.setEnabled(false);
 				stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(true);
+				command = 's';
+				notifySend();
 			}
         	
         });
@@ -207,6 +196,8 @@ public class View implements SubjectSend, ObserverReceive {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.out.println(e.toString());
+				command = 'n';
+				notifySend();
 			}
         });
         
@@ -223,9 +214,7 @@ public class View implements SubjectSend, ObserverReceive {
 	}
 
 	public void onSendButtonPressed() {
-		if (!model.isBusy()){
-			notifySend();
-		}
+		notifySend();
 	}
 
 	@Override
@@ -241,13 +230,40 @@ public class View implements SubjectSend, ObserverReceive {
 	@Override
 	public void notifySend() {
 		for(ObserverSend o : observers){
-			//o.updateSend((Integer)fromBox.getSelectedItem(),(Integer)toBox.getSelectedItem());
+			o.updateSend(command);
 		}
 		
 	}
 
 	@Override
-	public void updateReceive(String rcv) {		
+	public void updateReceive(Pair<String,Integer> data) {
+		try{
+			int divider = data.getFst().indexOf("_");
+			if(divider >= data.getFst().length()){
+				System.out.println("_  no se encuenta en " + data.getFst());
+				return;
+			}
+			String stage = data.getFst().substring(0, divider);
+			String field = data.getFst().substring(divider + 1);
+			int index = -1;
+			for(int i = 0; i < pipelineRegistersData.size(); i++){
+				if(pipelineRegistersData.get(stage).get(i).getFst().equals(field)){
+					index = i;
+					break;
+				}
+			}
+			if(index < 0){
+				System.out.println( field + (pipelineRegistersData.get(stage).contains(field) ? " si " :  " no ") + " pertenece a la etapa " + stage);
+				return;
+			}
+			// setea el valor recibido en el JTextField que corresponde al nombre del campo, dentro del registro que corresponde
+			pipelineRegistersData.get(stage).get(index).getSnd().setText(data.getSnd().toString());
+		}catch(IndexOutOfBoundsException e){
+			e.printStackTrace();
+		}catch(NullPointerException e){
+			System.out.println("LLegó un argumento null a updateReceive");
+			e.printStackTrace();
+		}
 		frame.repaint();
 	}
 

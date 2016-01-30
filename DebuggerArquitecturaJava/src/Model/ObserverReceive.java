@@ -1,5 +1,7 @@
 package Model;
 
+import Utils.Pair;
+
 public interface ObserverReceive {
-	public void updateReceive(String ang);
+	public void updateReceive(Pair<String,Integer> data);
 }

@@ -8,7 +8,7 @@ import View.View;
 public class Main {
 	
 	public static void main(String[] args) {
-		Model m = new Model();
+		Model m = Model.getInstance();
 		TwoWaySerialComm Com = new TwoWaySerialComm();
 		Com.connect();
 		
@@ -16,9 +16,14 @@ public class Main {
 		a.registerSend(Com);
 		
 		
-		a.sendCommand('c');
+		//a.sendCommand('c');
 		
 		View view = new View(m);
+		
+		Com.registerReceive(m);
+		Com.registerReceive(view);
+		
+		view.registerSend(Com);
 //		a.sendCommand('s');
 //		try {
 //			Thread.sleep(1000);
