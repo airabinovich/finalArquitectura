@@ -97,8 +97,6 @@ public class View implements SubjectSend, ObserverReceive {
         }
         
         initView();
-        
-//        frame.repaint();
 	}
 	
 	private void initView(){		
@@ -238,33 +236,75 @@ public class View implements SubjectSend, ObserverReceive {
 	@Override
 	public void updateReceive(Pair<String,Integer> data) {
 		try{
+			if(!updateProcessorRegisters(data)){
+				if(!updateGeneralPurposeRegisters(data)){
+					updateMemoryRegisters(data);
+				}
+			}
+  		}catch(NullPointerException e){
+			System.out.println("LLegó un argumento null a updateReceive");
+			e.printStackTrace();
+		}
+		frame.repaint();
+	}
+	
+	private boolean updateProcessorRegisters(Pair<String,Integer> data){
+		try{
 			int divider = data.getFst().indexOf("_");
 			if(divider >= data.getFst().length()){
 				System.out.println("_  no se encuenta en " + data.getFst());
-				return;
+				return false;
 			}
 			String stage = data.getFst().substring(0, divider);
 			String field = data.getFst().substring(divider + 1);
 			int index = -1;
-			for(int i = 0; i < pipelineRegistersData.size(); i++){
-				if(pipelineRegistersData.get(stage).get(i).getFst().equals(field)){
+			ArrayList<Pair<String,JTextField>> lista = pipelineRegistersData.get(stage);
+			for(int i = 0; i < lista.size(); i++){
+				if(lista.get(i).getFst().equals(field)){
 					index = i;
 					break;
 				}
 			}
 			if(index < 0){
-				System.out.println( field + (pipelineRegistersData.get(stage).contains(field) ? " si " :  " no ") + " pertenece a la etapa " + stage);
-				return;
+				System.out.println( field + " no pertenece a la etapa " + stage);
+				return false;
 			}
 			// setea el valor recibido en el JTextField que corresponde al nombre del campo, dentro del registro que corresponde
 			pipelineRegistersData.get(stage).get(index).getSnd().setText(data.getSnd().toString());
 		}catch(IndexOutOfBoundsException e){
-			e.printStackTrace();
+			return false;
 		}catch(NullPointerException e){
-			System.out.println("LLegó un argumento null a updateReceive");
-			e.printStackTrace();
+			return false;
 		}
-		frame.repaint();
+		return true;
+	}
+	
+	private boolean updateGeneralPurposeRegisters(Pair<String,Integer> data){
+		try{
+			if(!data.getFst().startsWith("REG")){
+				return false;
+			}
+			int divider = data.getFst().indexOf("_") + 1;
+			int index = Integer.parseInt(data.getFst().substring(divider)) - 1;
+			generalPurposeRegisters.get(index).getSnd().setText(data.getSnd().toString());
+			return true;
+		}catch(NumberFormatException e){
+			return false;
+		}
+	}
+	
+	private boolean updateMemoryRegisters(Pair<String,Integer> data){
+		try{
+			if(!data.getFst().startsWith("MEM")){
+				return false;
+			}
+			int divider = data.getFst().indexOf("_") + 1;
+			int index = Integer.parseInt(data.getFst().substring(divider)) - 1;
+			memoryRegisters.get(index).getSnd().setText(data.getSnd().toString());
+			return true;
+		}catch(NumberFormatException e){
+			return false;
+		}
 	}
 
 }

@@ -128,26 +128,32 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
 			ret.add(new Pair<String,Integer>("ID/EX_regDstOut", 1));
 			ret.add(new Pair<String,Integer>("ID/EX_loadImmOut", 1));
 			ret.add(new Pair<String,Integer>("ID/EX_regWriteOut", 1));
-			//ret.add(new Pair<String,Integer>("ID/EX_eopOut", 1)); //no está en la unidad de debug
+			ret.add(new Pair<String,Integer>("ID/EX_eopOut", 1)); //no está en la unidad de debug
 			ret.add(new Pair<String,Integer>("EX/MEM_writeRegisterOut", 1));
 			ret.add(new Pair<String,Integer>("EX/MEM_writeDataOut", 4));
 			ret.add(new Pair<String,Integer>("EX/MEM_aluOutOut", 4));
 			ret.add(new Pair<String,Integer>("EX/MEM_regWriteOut", 1));
-			//ret.add(new Pair<String,Integer>("EX/MEM_memToRegOut", 1)); //no está en la unidad de debug
+			ret.add(new Pair<String,Integer>("EX/MEM_memToRegOut", 1)); //no está en la unidad de debug
 			ret.add(new Pair<String,Integer>("dataToUartOutFifo", 1));
 			ret.add(new Pair<String,Integer>("EX/MEM_memWriteOut", 1));
 			ret.add(new Pair<String,Integer>("EX/MEM_memReadWidthOut", 1));
-			//ret.add(new Pair<String,Integer>("EX/MEM_eopOut", 1)); //no está en la unidad de debug
+			ret.add(new Pair<String,Integer>("EX/MEM_eopOut", 1)); //no está en la unidad de debug
 			ret.add(new Pair<String,Integer>("MEM/WB_writeRegisterOut", 1));
 			ret.add(new Pair<String,Integer>("MEM/WB_aluOutOut", 4));
 			ret.add(new Pair<String,Integer>("MEM/WB_memoryOutOut", 4));
 			ret.add(new Pair<String,Integer>("MEM/WB_regWriteOut", 1));
 			ret.add(new Pair<String,Integer>("MEM/WB_memToRegOut", 1));
-			//ret.add(new Pair<String,Integer>("MEM/WB_eopOut", 1)); //no está en la unidad de debug
-			ret.add(new Pair<String,Integer>("testA", 1));
-			ret.add(new Pair<String,Integer>("testB", 1));
-			ret.add(new Pair<String,Integer>("testC", 1));
-			ret.add(new Pair<String,Integer>("testD", 1));
+			ret.add(new Pair<String,Integer>("MEM/WB_eopOut", 1)); //no está en la unidad de debug
+			ret.add(new Pair<String,Integer>("REG_1", 4));
+			ret.add(new Pair<String,Integer>("REG_2", 4));
+			ret.add(new Pair<String,Integer>("REG_3", 4));
+			ret.add(new Pair<String,Integer>("REG_4", 4));
+			ret.add(new Pair<String,Integer>("REG_5", 4));
+			ret.add(new Pair<String,Integer>("MEM_1", 4));
+			ret.add(new Pair<String,Integer>("MEM_2", 4));
+			ret.add(new Pair<String,Integer>("MEM_3", 4));
+			ret.add(new Pair<String,Integer>("MEM_4", 4));
+			ret.add(new Pair<String,Integer>("MEM_5", 4));
         	return ret;
         }
         public SerialReader (InputStream in){
@@ -155,7 +161,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         	indexDataReceived = 0;
         	subIndexDataReceived = 0;
     		dataToReceive = fillDataToRecieve();
-    		dataReceived = new ArrayList<Pair<String,Integer>>(34);
+    		dataReceived = new ArrayList<Pair<String,Integer>>(44);
     		
     		for(Pair<String,Integer> p : dataToReceive){
     			dataReceived.add(new Pair<String,Integer>(p.getFst(), null));
