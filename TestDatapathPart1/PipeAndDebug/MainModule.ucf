@@ -1,0 +1,11 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clock" LOC = V10;
+NET "uartRxPin" LOC = N17;
+NET "uartTxPin" LOC = N18;
+NET "ledIdle" LOC = U16;
+NET "ledStep" LOC = V16;
+NET "ledCont" LOC = U15;
+NET "ledSend" LOC = V15;
+NET "resetGral" LOC = T10;

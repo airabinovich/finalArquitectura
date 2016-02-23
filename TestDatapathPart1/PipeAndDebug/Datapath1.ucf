@@ -6,6 +6,12 @@ NET "uartTxPin" LOC = N18;
 NET "clock" TNM_NET = "clock";
 TIMESPEC TS_clock = PERIOD "clock" 105 MHz HIGH 50 %;
 
-# PlanAhead Generated physical constraints 
 
 #NET "resetGral" LOC = T11;
+
+# PlanAhead Generated physical constraints 
+
+NET "ledIdle" LOC = U16;
+NET "ledStep" LOC = V16;
+NET "ledCont" LOC = U15;
+NET "ledSend" LOC = V15;

@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Feb 22 21:35:16 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "ledIdle" LOCATE = SITE "U16" LEVEL 1;
+COMP "ledCont" LOCATE = SITE "U15" LEVEL 1;
+COMP "ledSend" LOCATE = SITE "V15" LEVEL 1;
+COMP "ledStep" LOCATE = SITE "V16" LEVEL 1;
+COMP "clock" LOCATE = SITE "V10" LEVEL 1;
+COMP "resetGral" LOCATE = SITE "T10" LEVEL 1;
+COMP "uartRxPin" LOCATE = SITE "N17" LEVEL 1;
+COMP "uartTxPin" LOCATE = SITE "N18" LEVEL 1;
+SCHEMATIC END;
+

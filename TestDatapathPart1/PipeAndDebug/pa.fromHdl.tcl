@@ -1,10 +1,10 @@
 
 # PlanAhead Launch Script for Pre-Synthesis Floorplanning, created by Project Navigator
 
-create_project -name PipeAndDebug -dir "C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/TestDatapathPart1/PipeAndDebug/planAhead_run_3" -part xc6slx16csg324-3
+create_project -name PipeAndDebug -dir "C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/TestDatapathPart1/PipeAndDebug/planAhead_run_4" -part xc6slx16csg324-3
 set_param project.pinAheadLayout yes
 set srcset [get_property srcset [current_run -impl]]
-set_property target_constrs_file "Datapath1.ucf" [current_fileset -constrset]
+set_property target_constrs_file "MainModule.ucf" [current_fileset -constrset]
 add_files [list {ipcore_dir/RAM.ngc}]
 add_files [list {ipcore_dir/instructionROM.ngc}]
 set hdlfile [add_files [list {tx.v}]]
@@ -67,11 +67,17 @@ set_property library work $hdlfile
 set hdlfile [add_files [list {Adder.v}]]
 set_property file_type Verilog $hdlfile
 set_property library work $hdlfile
+set hdlfile [add_files [list {ipcore_dir/clk_wiz_v3_6.v}]]
+set_property file_type Verilog $hdlfile
+set_property library work $hdlfile
 set hdlfile [add_files [list {Datapath1.v}]]
 set_property file_type Verilog $hdlfile
 set_property library work $hdlfile
-set_property top Datapath1 $srcset
-add_files [list {Datapath1.ucf}] -fileset [get_property constrset [current_run]]
+set hdlfile [add_files [list {MainModule.v}]]
+set_property file_type Verilog $hdlfile
+set_property library work $hdlfile
+set_property top MainModule $srcset
+add_files [list {MainModule.ucf}] -fileset [get_property constrset [current_run]]
 add_files [list {ipcore_dir/instructionROM.ncf}] -fileset [get_property constrset [current_run]]
 add_files [list {ipcore_dir/RAM.ncf}] -fileset [get_property constrset [current_run]]
 open_rtl_design -part xc6slx16csg324-3

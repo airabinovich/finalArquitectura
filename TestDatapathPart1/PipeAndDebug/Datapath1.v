@@ -25,7 +25,12 @@ module Datapath1(
 		output 	uartTxPin,
 		
 		output 	ALUzero,
-		output 	ALUOverflow
+		output 	ALUOverflow,
+		
+		output ledStep,
+		output ledCont,
+		output ledIdle,
+		output ledSend
     ); 
 		assign ALUzero=aluZero;
 		assign ALUOverflow=aluOverflow;
@@ -426,7 +431,12 @@ module Datapath1(
 					.readFifoFlag(uartReadFlag),
 					.writeFifoFlag(uartWriteFlag),
 					.pipeEnable(debugEnable),
-					.pipeReset (debugReset)
+					.pipeReset (debugReset),
+					
+					.ledStep(ledStep),
+					.ledCont(ledCont),
+					.ledIdle(ledIdle),
+					.ledSend(ledSend)
 	 );
 
 		UART_uart uartMod(

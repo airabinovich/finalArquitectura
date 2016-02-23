@@ -61,87 +61,130 @@ module DebugUnit(
 		output reg			readFifoFlag,
 		output reg			writeFifoFlag,
 		output reg pipeEnable,
-		output reg pipeReset 
+		output reg pipeReset ,
+		
+		output reg ledStep,
+		output reg ledCont,
+		output reg ledIdle,
+		output reg ledSend
+		
     );
 	 
-	 reg [1:0] current_state;
-	 reg [1:0] next_state;
+	 reg [2:0] current_state;
+	 reg [2:0] next_state;
 	 reg [7:0]sendCounter;
 	 reg sentFlag;
-	 localparam [1:0]	IDLE = 0,
-							CONTINUOUS = 1,
-							STEP = 2,
-							SEND = 3;
+	 localparam [2:0]	INIT = 0,
+							IDLE = 1,
+							CONTINUOUS = 2,
+							STEP = 3,
+							SEND = 4;
+					
 	 
 	 always @(posedge clock, posedge reset) begin
 		if(reset)begin
-			current_state = IDLE ;
+			current_state <= INIT ;
 		end
 		else
-			current_state = next_state;
+			current_state <= next_state;
 	 end
-	 
+
 	 always @(posedge clock) begin
+	 	
 		case(current_state)
+			INIT:begin
+				writeFifoFlag=0;
+				readFifoFlag=0;
+				sendCounter<=0;
+				ledIdle<=0;
+				ledStep<=0;
+				ledCont<=0;
+				ledSend<=0;
+				next_state<=IDLE;
+			end
 			IDLE:begin
+				ledIdle<=1;
+				ledStep<=0;
+				ledCont<=0;
+				ledSend<=0;
 				pipeReset<=1;
 				pipeEnable<=0;
 				sentFlag<=0;
-				if(uartDataAvailable)begin
-					readFifoFlag<=1;
+				sendCounter<=0;
+				if(readFifoFlag)begin
 					if(uartFifoDataIn==99)begin //'c' en ascii
-						next_state=CONTINUOUS;
+						next_state<=CONTINUOUS;
 						pipeReset<=0;
-						readFifoFlag<=0;
+						readFifoFlag=0;
 					end
 					else if (uartFifoDataIn==115)begin //'s' en ascii
-						next_state=STEP;
-						readFifoFlag<=0;
+						next_state<=STEP;
+						readFifoFlag=0;
 						pipeReset<=0;
 					end
-					else
-						next_state=IDLE;
+//					else begin
+//						next_state<=IDLE;
+//					end
+				end
+				else if(uartDataAvailable)begin
+					readFifoFlag=1;
 			   end
 				else begin
-					readFifoFlag<=0;
-					next_state=IDLE;
+					readFifoFlag=0;
+//					next_state<=IDLE;
 				end
 			end
 			CONTINUOUS: begin
+				ledIdle<=0;
+				ledStep<=0;
+				ledCont<=1;
+				ledSend<=0;
+				
 				sentFlag<=0;	
 				sendCounter<=0;
 				pipeEnable<=1;
 				if(endOfProgram)
-					next_state=SEND;
+					next_state<=SEND;
 				else
-					next_state=CONTINUOUS;
+					next_state<=CONTINUOUS;
 			end
 			STEP: begin
+				ledIdle<=0;
+				ledStep<=1;
+				ledCont<=0;
+				ledSend<=0;
+			
 				sentFlag<=0;
 				sendCounter<=0;
-				if(uartDataAvailable)begin
-					readFifoFlag<=1;
+				if(readFifoFlag)begin
 					if(uartFifoDataIn==110)begin //'n' en ascii
-						next_state=SEND;
-						readFifoFlag<=0;
+						next_state<=SEND;
+						readFifoFlag=0;
 						pipeEnable<=1;
 					end
-					else
-						next_state=STEP;
+					readFifoFlag=0;
+				end
+				else if(uartDataAvailable)begin
+					readFifoFlag=1;
 				end
 				else begin
-					next_state=STEP;
-					readFifoFlag<=0;
+//					next_state<=STEP;
+					readFifoFlag=0;
 				end
 			end
 			SEND: begin
+				ledIdle<=0;
+				ledStep<=0;
+				ledCont<=0;
+				ledSend<=1;
+				
 				pipeEnable<=0;
 				if(sentFlag && !endOfProgram)
-					next_state=STEP;
+					next_state<=STEP;
 				else if(sentFlag && endOfProgram)
-					next_state=IDLE;
+					next_state<=IDLE;
 				else begin
-					writeFifoFlag<=1;
+					writeFifoFlag=1;
 					case(sendCounter)
 						0:		dataToUartOutFifo=			FE_pc;
 						1:		dataToUartOutFifo=  		IF_ID_instruction		[7:0];
@@ -204,7 +247,7 @@ module DebugUnit(
 						57:	dataToUartOutFifo= 78;
 						58:	dataToUartOutFifo= 69;
 						59:begin
-							writeFifoFlag<=0;
+							writeFifoFlag=0;
 							sentFlag<=1;
 						end
 					endcase
