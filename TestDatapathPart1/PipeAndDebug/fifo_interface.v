@@ -42,6 +42,7 @@ module UART_fifo_interface #(parameter bits_depth=4)(
 	
 		full_flag = (free_space==0);
 		empty_flag = (free_space==depth); 
+		data_out <= FIFO[read_pointer];
 	end
 	
 	always @(posedge clock, posedge reset)	begin
@@ -49,10 +50,8 @@ module UART_fifo_interface #(parameter bits_depth=4)(
 			write_pointer <= 0;
 			read_pointer <=  0;
 			free_space <= depth;
-			data_out <= 0;
 		end
 		else begin
-			data_out <= FIFO[read_pointer];
 			if(read_next) begin
 				if(!empty_flag) begin
 					read_pointer <= read_pointer + 'b1;

@@ -1,21 +1,13 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Feb 22 21:35:52 2016
+Tue Feb 23 22:21:01 2016
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 9 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
    datapath/uartMod/fifo_rx/Mram_FIFO1_RAMD_D1_O
-   datapath/uartMod/fifo_tx/Mram_FIFO1_RAMD_O
-   datapath/uartMod/fifo_tx/Mram_FIFO2_RAMD_O
-   datapath/uartMod/fifo_tx/Mram_FIFO3_RAMD_O
-   datapath/uartMod/fifo_tx/Mram_FIFO4_RAMD_O
-   datapath/uartMod/fifo_tx/Mram_FIFO5_RAMD_O
-   datapath/uartMod/fifo_tx/Mram_FIFO6_RAMD_O
-   datapath/uartMod/fifo_tx/Mram_FIFO7_RAMD_O
-   datapath/uartMod/fifo_tx/Mram_FIFO8_RAMD_O
 
 

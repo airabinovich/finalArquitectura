@@ -194,7 +194,7 @@ Elaborating module <FE>.
 Elaborating module <HazardsUnit>.
 
 Elaborating module <DebugUnit>.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\DebugUnit.v" Line 255: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\DebugUnit.v" Line 291: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:1016 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\UART_echo_test_module.v" Line 66: Port full_flag is not connected to this instance
 WARNING:HDLCompiler:1016 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\UART_echo_test_module.v" Line 92: Port full_flag is not connected to this instance
 
@@ -209,24 +209,24 @@ WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Tr
 WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\rx.v" Line 101: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <UART_fifo_interface>.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 51: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 58: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 59: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 64: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 66: Result of 32-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 69: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 52: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 57: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 58: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 63: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 65: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 68: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <UART_baud_rate_generator(COUNT=10416)>.
 
 Elaborating module <UART_tx>.
 
 Elaborating module <UART_fifo_interface(bits_depth=8)>.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 51: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 58: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 59: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 64: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 66: Result of 32-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 69: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 52: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 57: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 58: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 63: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 65: Result of 32-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\fifo_interface.v" Line 68: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 40: Assignment to AluZero ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 41: Assignment to ALUOverflow ignored, since the identifier is never used
 WARNING:HDLCompiler:604 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 48: Module instantiation should have an instance name
@@ -405,24 +405,53 @@ Unit <HazardsUnit> synthesized.
 
 Synthesizing Unit <DebugUnit>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\DebugUnit.v".
-    Found 3-bit register for signal <current_state>.
-    Found 1-bit register for signal <ledIdle>.
-    Found 1-bit register for signal <ledStep>.
-    Found 1-bit register for signal <ledCont>.
-    Found 1-bit register for signal <ledSend>.
-    Found 1-bit register for signal <pipeEnable>.
-    Found 3-bit register for signal <next_state>.
-    Found 1-bit register for signal <writeFifoFlag>.
-    Found 8-bit register for signal <dataToUartOutFifo>.
-    Found 1-bit register for signal <sentFlag>.
     Found 8-bit register for signal <sendCounter>.
-    Found 1-bit register for signal <readFifoFlag>.
-    Found 1-bit register for signal <pipeReset>.
-    Found 8-bit adder for signal <sendCounter[7]_GND_17_o_add_75_OUT> created at line 255.
+    Found 3-bit register for signal <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 15                                             |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | One-Hot                                        |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <sendCounter[7]_GND_17_o_add_111_OUT> created at line 291.
+WARNING:Xst:737 - Found 1-bit latch for signal <ledIdle>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ledStep>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ledCont>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ledSend>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <readFifoFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pipeEnable>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <writeFifoFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sentFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sendCounterNext<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sendCounterNext<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sendCounterNext<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sendCounterNext<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sendCounterNext<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sendCounterNext<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sendCounterNext<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sendCounterNext<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pipeReset>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  31 D-type flip-flop(s).
-	inferred  74 Multiplexer(s).
+	inferred   8 D-type flip-flop(s).
+	inferred  25 Latch(s).
+	inferred 350 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
 Unit <DebugUnit> synthesized.
 
 Synthesizing Unit <UART_uart>.
@@ -438,8 +467,8 @@ Synthesizing Unit <UART_baud_rate_generator_1>.
         COUNT = 651
     Found 1-bit register for signal <baud_rate>.
     Found 16-bit register for signal <counter>.
-    Found 16-bit adder for signal <counter[15]_GND_19_o_add_2_OUT> created at line 27.
-    Found 16-bit comparator greater for signal <counter[15]_GND_19_o_LessThan_2_o> created at line 27
+    Found 16-bit adder for signal <counter[15]_GND_44_o_add_2_OUT> created at line 27.
+    Found 16-bit comparator greater for signal <counter[15]_GND_44_o_LessThan_2_o> created at line 27
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
@@ -454,8 +483,8 @@ Synthesizing Unit <UART_rx>.
     Found 4-bit register for signal <s>.
     Found 4-bit register for signal <n>.
     Found 8-bit register for signal <d_out>.
-    Found 4-bit adder for signal <n[3]_GND_20_o_add_13_OUT> created at line 81.
-    Found 4-bit adder for signal <s[3]_GND_20_o_add_24_OUT> created at line 101.
+    Found 4-bit adder for signal <n[3]_GND_45_o_add_13_OUT> created at line 81.
+    Found 4-bit adder for signal <s[3]_GND_45_o_add_24_OUT> created at line 101.
     Found 1-bit 3-to-1 multiplexer for signal <current_state[1]_rx_done_Mux_30_o> created at line 56.
     Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_31_OUT> created at line 56.
     Found 4-bit 4-to-1 multiplexer for signal <current_state[1]_s[3]_wide_mux_32_OUT> created at line 56.
@@ -475,16 +504,15 @@ Synthesizing Unit <UART_fifo_interface>.
     Found 16x8-bit dual-port RAM <Mram_FIFO> for signal <FIFO>.
     Found 4-bit register for signal <read_pointer>.
     Found 4-bit register for signal <write_pointer>.
-    Found 8-bit register for signal <data_out>.
     Found 5-bit register for signal <free_space>.
-    Found 4-bit adder for signal <read_pointer[3]_GND_21_o_add_3_OUT> created at line 58.
-    Found 5-bit adder for signal <free_space[4]_GND_21_o_add_4_OUT> created at line 59.
-    Found 4-bit adder for signal <write_pointer[3]_GND_21_o_add_10_OUT> created at line 64.
-    Found 5-bit subtractor for signal <GND_21_o_GND_21_o_sub_12_OUT<4:0>> created at line 66.
+    Found 4-bit adder for signal <read_pointer[3]_GND_46_o_add_3_OUT> created at line 57.
+    Found 5-bit adder for signal <free_space[4]_GND_46_o_add_4_OUT> created at line 58.
+    Found 4-bit adder for signal <write_pointer[3]_GND_46_o_add_10_OUT> created at line 63.
+    Found 5-bit subtractor for signal <GND_46_o_GND_46_o_sub_12_OUT<4:0>> created at line 65.
     Summary:
 	inferred   1 RAM(s).
 	inferred   4 Adder/Subtractor(s).
-	inferred  21 D-type flip-flop(s).
+	inferred  13 D-type flip-flop(s).
 	inferred   3 Multiplexer(s).
 Unit <UART_fifo_interface> synthesized.
 
@@ -493,8 +521,8 @@ Synthesizing Unit <UART_baud_rate_generator_2>.
         COUNT = 10416
     Found 1-bit register for signal <baud_rate>.
     Found 16-bit register for signal <counter>.
-    Found 16-bit adder for signal <counter[15]_GND_23_o_add_2_OUT> created at line 27.
-    Found 16-bit comparator greater for signal <counter[15]_GND_23_o_LessThan_2_o> created at line 27
+    Found 16-bit adder for signal <counter[15]_GND_48_o_add_2_OUT> created at line 27.
+    Found 16-bit comparator greater for signal <counter[15]_GND_48_o_LessThan_2_o> created at line 27
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
@@ -509,7 +537,7 @@ Synthesizing Unit <UART_tx>.
     Found 2-bit register for signal <next_state>.
     Found 3-bit register for signal <B_sent>.
     Found 8-bit register for signal <d_in>.
-    Found 3-bit adder for signal <B_sent[2]_GND_24_o_add_6_OUT> created at line 88.
+    Found 3-bit adder for signal <B_sent[2]_GND_49_o_add_6_OUT> created at line 88.
     Found 1-bit 8-to-1 multiplexer for signal <B_sent[2]_d_in[7]_Mux_4_o> created at line 83.
     Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_tx_Mux_13_o> created at line 64.
     Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_15_OUT> created at line 64.
@@ -524,17 +552,16 @@ Synthesizing Unit <UART_fifo_interface_1>.
         bits_depth = 8
     Found 256x8-bit dual-port RAM <Mram_FIFO> for signal <FIFO>.
     Found 8-bit register for signal <read_pointer>.
-    Found 8-bit register for signal <data_out>.
     Found 8-bit register for signal <write_pointer>.
     Found 9-bit register for signal <free_space>.
-    Found 8-bit adder for signal <read_pointer[7]_GND_25_o_add_3_OUT> created at line 58.
-    Found 9-bit adder for signal <free_space[8]_GND_25_o_add_4_OUT> created at line 59.
-    Found 8-bit adder for signal <write_pointer[7]_GND_25_o_add_10_OUT> created at line 64.
-    Found 9-bit subtractor for signal <GND_25_o_GND_25_o_sub_12_OUT<8:0>> created at line 66.
+    Found 8-bit adder for signal <read_pointer[7]_GND_50_o_add_3_OUT> created at line 57.
+    Found 9-bit adder for signal <free_space[8]_GND_50_o_add_4_OUT> created at line 58.
+    Found 8-bit adder for signal <write_pointer[7]_GND_50_o_add_10_OUT> created at line 63.
+    Found 9-bit subtractor for signal <GND_50_o_GND_50_o_sub_12_OUT<8:0>> created at line 65.
     Summary:
 	inferred   1 RAM(s).
 	inferred   4 Adder/Subtractor(s).
-	inferred  33 D-type flip-flop(s).
+	inferred  25 D-type flip-flop(s).
 	inferred   3 Multiplexer(s).
 Unit <UART_fifo_interface_1> synthesized.
 
@@ -562,17 +589,19 @@ Macro Statistics
  8-bit adder                                           : 5
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Registers                                            : 72
- 1-bit register                                        : 27
+# Registers                                            : 58
+ 1-bit register                                        : 18
  1024-bit register                                     : 1
  16-bit register                                       : 2
  2-bit register                                        : 6
- 3-bit register                                        : 3
+ 3-bit register                                        : 1
  32-bit register                                       : 8
  4-bit register                                        : 7
  5-bit register                                        : 7
- 8-bit register                                        : 10
+ 8-bit register                                        : 7
  9-bit register                                        : 1
+# Latches                                              : 25
+ 1-bit latch                                           : 25
 # Comparators                                          : 17
  16-bit comparator greater                             : 2
  32-bit comparator equal                               : 1
@@ -580,15 +609,15 @@ Macro Statistics
  4-bit comparator greater                              : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
-# Multiplexers                                         : 214
+# Multiplexers                                         : 490
  1-bit 12-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 45
+ 1-bit 2-to-1 multiplexer                              : 382
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
  2-bit 2-to-1 multiplexer                              : 14
  2-bit 4-to-1 multiplexer                              : 2
- 3-bit 2-to-1 multiplexer                              : 5
+ 3-bit 2-to-1 multiplexer                              : 1
  32-bit 12-to-1 multiplexer                            : 1
  32-bit 2-to-1 multiplexer                             : 52
  32-bit 32-to-1 multiplexer                            : 2
@@ -596,12 +625,13 @@ Macro Statistics
  4-bit 2-to-1 multiplexer                              : 11
  4-bit 4-to-1 multiplexer                              : 1
  5-bit 2-to-1 multiplexer                              : 13
- 8-bit 2-to-1 multiplexer                              : 61
+ 8-bit 2-to-1 multiplexer                              : 4
  9-bit 2-to-1 multiplexer                              : 2
 # Logic shifters                                       : 3
  33-bit shifter arithmetic right                       : 1
  33-bit shifter logical left                           : 1
  33-bit shifter logical right                          : 1
+# FSMs                                                 : 1
 # Xors                                                 : 1
  33-bit xor2                                           : 1
 
@@ -616,10 +646,6 @@ Reading core <ipcore_dir/instructionROM.ngc>.
 Loading core <RAM> for timing and area information for instance <ram>.
 Loading core <instructionROM> for timing and area information for instance <instructionMemory>.
 
-Synthesizing (advanced) Unit <DebugUnit>.
-The following registers are absorbed into counter <sendCounter>: 1 register on signal <sendCounter>.
-Unit <DebugUnit> synthesized (advanced).
-
 Synthesizing (advanced) Unit <UART_baud_rate_generator_1>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
 Unit <UART_baud_rate_generator_1> synthesized (advanced).
@@ -629,9 +655,9 @@ The following registers are absorbed into counter <counter>: 1 register on signa
 Unit <UART_baud_rate_generator_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <UART_fifo_interface>.
-The following registers are absorbed into counter <write_pointer>: 1 register on signal <write_pointer>.
 The following registers are absorbed into counter <read_pointer>: 1 register on signal <read_pointer>.
-INFO:Xst:3217 - HDL ADVISOR - Register <data_out> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_FIFO> for implementation on block RAM resources if you made this reset synchronous instead.
+The following registers are absorbed into counter <write_pointer>: 1 register on signal <write_pointer>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_FIFO> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -650,30 +676,40 @@ INFO:Xst:3217 - HDL ADVISOR - Register <data_out> currently described with an as
 Unit <UART_fifo_interface> synthesized (advanced).
 
 Synthesizing (advanced) Unit <UART_fifo_interface_1>.
-The following registers are absorbed into counter <write_pointer>: 1 register on signal <write_pointer>.
 The following registers are absorbed into counter <read_pointer>: 1 register on signal <read_pointer>.
-INFO:Xst:3217 - HDL ADVISOR - Register <data_out> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_FIFO> for implementation on block RAM resources if you made this reset synchronous instead.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 256-word x 8-bit                    |          |
-    |     clkA           | connected to signal <clock>         | rise     |
-    |     weA            | connected to internal node          | high     |
-    |     addrA          | connected to signal <write_pointer> |          |
-    |     diA            | connected to signal <data_in>       |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 256-word x 8-bit                    |          |
-    |     addrB          | connected to signal <read_pointer>  |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_FIFO> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+The following registers are absorbed into counter <write_pointer>: 1 register on signal <write_pointer>.
 Unit <UART_fifo_interface_1> synthesized (advanced).
 
 Synthesizing (advanced) Unit <UART_tx>.
 The following registers are absorbed into counter <B_sent>: 1 register on signal <B_sent>.
 Unit <UART_tx> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_uart>.
+INFO:Xst:3226 - The RAM <fifo_tx/Mram_FIFO> will be implemented as a BLOCK RAM, absorbing the following register(s): <transmisor/d_in>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <fifo_tx/write_pointer> |          |
+    |     diA            | connected to signal <dataToSend>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clock>         | rise     |
+    |     enB            | connected to internal node          | high     |
+    |     addrB          | connected to signal <fifo_tx/read_pointer> |          |
+    |     doB            | connected to signal <transmisor/d_in> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <UART_uart> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -681,23 +717,23 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 2
  16x8-bit dual-port distributed RAM                    : 1
- 256x8-bit dual-port distributed RAM                   : 1
-# Adders/Subtractors                                   : 10
+ 256x8-bit dual-port block RAM                         : 1
+# Adders/Subtractors                                   : 11
  33-bit adder                                          : 1
  33-bit subtractor                                     : 1
  4-bit adder                                           : 2
  5-bit adder                                           : 1
  5-bit subtractor                                      : 1
- 8-bit adder                                           : 2
+ 8-bit adder                                           : 3
  9-bit adder                                           : 1
  9-bit subtractor                                      : 1
-# Counters                                             : 8
+# Counters                                             : 7
  16-bit up counter                                     : 2
  3-bit up counter                                      : 1
  4-bit up counter                                      : 2
- 8-bit up counter                                      : 3
-# Registers                                            : 1445
- Flip-Flops                                            : 1445
+ 8-bit up counter                                      : 2
+# Registers                                            : 1406
+ Flip-Flops                                            : 1406
 # Comparators                                          : 17
  16-bit comparator greater                             : 2
  32-bit comparator equal                               : 1
@@ -705,15 +741,14 @@ Macro Statistics
  4-bit comparator greater                              : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
-# Multiplexers                                         : 210
+# Multiplexers                                         : 487
  1-bit 12-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 43
+ 1-bit 2-to-1 multiplexer                              : 380
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
  2-bit 2-to-1 multiplexer                              : 14
  2-bit 4-to-1 multiplexer                              : 2
- 3-bit 2-to-1 multiplexer                              : 4
  32-bit 12-to-1 multiplexer                            : 1
  32-bit 2-to-1 multiplexer                             : 52
  32-bit 32-to-1 multiplexer                            : 2
@@ -721,12 +756,13 @@ Macro Statistics
  4-bit 2-to-1 multiplexer                              : 11
  4-bit 4-to-1 multiplexer                              : 1
  5-bit 2-to-1 multiplexer                              : 13
- 8-bit 2-to-1 multiplexer                              : 60
+ 8-bit 2-to-1 multiplexer                              : 4
  9-bit 2-to-1 multiplexer                              : 2
 # Logic shifters                                       : 3
  33-bit shifter arithmetic right                       : 1
  33-bit shifter logical left                           : 1
  33-bit shifter logical right                          : 1
+# FSMs                                                 : 1
 # Xors                                                 : 1
  33-bit xor2                                           : 1
 
@@ -735,6 +771,21 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+Optimizing FSM <datapath/debugUnit/FSM_0> on signal <current_state[1:5]> with One-Hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00001
+ 001   | 00010
+ 011   | 00100
+ 010   | 01000
+ 100   | 10000
+-------------------
+WARNING:Xst:1294 - Latch <ledStep> is equivalent to a wire in block <DebugUnit>.
+WARNING:Xst:1294 - Latch <ledIdle> is equivalent to a wire in block <DebugUnit>.
+WARNING:Xst:1294 - Latch <ledCont> is equivalent to a wire in block <DebugUnit>.
+WARNING:Xst:1294 - Latch <ledSend> is equivalent to a wire in block <DebugUnit>.
+WARNING:Xst:1294 - Latch <readFifoFlag> is equivalent to a wire in block <DebugUnit>.
 INFO:Xst:2261 - The FF/Latch <sigExtOut_6> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <saOut_0> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_11> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_0> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_7> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <saOut_1> 
@@ -765,13 +816,9 @@ Optimizing unit <DebugUnit> ...
 
 Optimizing unit <UART_uart> ...
 
-Optimizing unit <UART_fifo_interface_1> ...
-
 Optimizing unit <UART_rx> ...
 
 Optimizing unit <UART_fifo_interface> ...
-
-Optimizing unit <UART_tx> ...
 
 Optimizing unit <HazardsUnit> ...
 
@@ -789,7 +836,7 @@ INFO:Xst:2261 - The FF/Latch <datapath/id_ex/memWriteOut_3> in Unit <MainModule>
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block MainModule, actual ratio is 44.
+Found area constraint ratio of 100 (+ 5) on block MainModule, actual ratio is 45.
 FlipFlop datapath/ex_mem/regWriteOut has been replicated 1 time(s)
 FlipFlop datapath/mem_wb/regWriteOut has been replicated 1 time(s)
 
@@ -799,8 +846,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1479
- Flip-Flops                                            : 1479
+# Registers                                            : 1437
+ Flip-Flops                                            : 1437
 
 =========================================================================
 
@@ -823,33 +870,33 @@ Top Level Output File Name         : MainModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3348
+# BELS                             : 3401
 #      GND                         : 3
 #      INV                         : 8
 #      LUT1                        : 36
-#      LUT2                        : 94
-#      LUT3                        : 112
-#      LUT4                        : 183
-#      LUT5                        : 1298
-#      LUT6                        : 1249
-#      MUXCY                       : 139
-#      MUXF7                       : 103
+#      LUT2                        : 88
+#      LUT3                        : 144
+#      LUT4                        : 185
+#      LUT5                        : 1341
+#      LUT6                        : 1253
+#      MUXCY                       : 132
+#      MUXF7                       : 96
 #      VCC                         : 3
-#      XORCY                       : 120
-# FlipFlops/Latches                : 1479
+#      XORCY                       : 112
+# FlipFlops/Latches                : 1457
 #      FD                          : 5
-#      FDC                         : 21
+#      FDC                         : 14
 #      FDCE                        : 1062
 #      FDCE_1                      : 306
-#      FDE                         : 58
+#      FDE                         : 23
+#      FDP                         : 1
 #      FDPE                        : 2
-#      FDR                         : 25
-# RAMS                             : 21
+#      FDR                         : 24
+#      LD                          : 20
+# RAMS                             : 6
 #      RAM16X1D                    : 2
 #      RAM32M                      : 1
-#      RAM64M                      : 8
-#      RAM64X1D                    : 8
-#      RAMB8BWER                   : 2
+#      RAMB8BWER                   : 3
 # Clock Buffers                    : 2
 #      BUFG                        : 2
 # IO Buffers                       : 8
@@ -866,26 +913,26 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1479  out of  18224     8%  
- Number of Slice LUTs:                 3036  out of   9112    33%  
-    Number used as Logic:              2980  out of   9112    32%  
-    Number used as Memory:               56  out of   2176     2%  
-       Number used as RAM:               56
+ Number of Slice Registers:            1457  out of  18224     7%  
+ Number of Slice LUTs:                 3063  out of   9112    33%  
+    Number used as Logic:              3055  out of   9112    33%  
+    Number used as Memory:                8  out of   2176     0%  
+       Number used as RAM:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3062
-   Number with an unused Flip Flop:    1583  out of   3062    51%  
-   Number with an unused LUT:            26  out of   3062     0%  
-   Number of fully used LUT-FF pairs:  1453  out of   3062    47%  
-   Number of unique control sets:        31
+ Number of LUT Flip Flop pairs used:   3080
+   Number with an unused Flip Flop:    1623  out of   3080    52%  
+   Number with an unused LUT:            17  out of   3080     0%  
+   Number of fully used LUT-FF pairs:  1440  out of   3080    46%  
+   Number of unique control sets:        27
 
 IO Utilization: 
  Number of IOs:                           8
  Number of bonded IOBs:                   8  out of    232     3%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                1  out of     32     3%  
-    Number using Block RAM only:          1
+ Number of Block RAM/FIFO:                2  out of     32     6%  
+    Number using Block RAM only:          2
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
@@ -906,11 +953,21 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clock                              | DCM_SP:CLKFX           | 1500  |
------------------------------------+------------------------+-------+
+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+Clock Signal                                                                                                                   | Clock buffer(FF name)                          | Load  |
+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+clock                                                                                                                          | DCM_SP:CLKFX                                   | 1443  |
+datapath/debugUnit/current_state[2]_GND_25_o_Mux_142_o(datapath/debugUnit/current_state_current_state[2]_GND_25_o_Mux_142_o:O) | NONE(*)(datapath/debugUnit/dataToUartOutFifo_0)| 8     |
+datapath/debugUnit/current_state[2]_GND_34_o_Mux_172_o(datapath/debugUnit/current_state_current_state[2]_GND_34_o_Mux_172_o1:O)| NONE(*)(datapath/debugUnit/sendCounterNext_0)  | 8     |
+datapath/debugUnit/current_state[2]_GND_24_o_Mux_138_o(datapath/debugUnit/current_state_current_state[2]_GND_24_o_Mux_138_o1:O)| NONE(*)(datapath/debugUnit/writeFifoFlag)      | 1     |
+datapath/debugUnit/current_state[2]_GND_23_o_Mux_136_o(datapath/debugUnit/current_state_current_state[2]_GND_23_o_Mux_136_o1:O)| NONE(*)(datapath/debugUnit/pipeEnable)         | 1     |
+datapath/debugUnit/current_state_FSM_FFd4                                                                                      | NONE(datapath/debugUnit/pipeReset)             | 1     |
+datapath/debugUnit/current_state[2]_GND_33_o_Mux_171_o(datapath/debugUnit/current_state_current_state[2]_GND_33_o_Mux_171_o:O) | NONE(*)(datapath/debugUnit/sentFlag)           | 1     |
+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -921,8 +978,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.462ns (Maximum Frequency: 288.847MHz)
-   Minimum input arrival time before clock: 4.716ns
-   Maximum output required time after clock: 3.634ns
+   Minimum input arrival time before clock: 4.784ns
+   Maximum output required time after clock: 4.089ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -932,7 +989,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
   Clock period: 3.462ns (frequency: 288.847MHz)
-  Total number of paths / destination ports: 454751 / 3222
+  Total number of paths / destination ports: 448421 / 2801
 -------------------------------------------------------------------------
 Delay:               6.924ns (Levels of Logic = 17)
   Source:            datapath/bank/banco_0_832 (FF)
@@ -969,42 +1026,42 @@ Delay:               6.924ns (Levels of Logic = 17)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
-  Total number of paths / destination ports: 1423 / 1422
+  Total number of paths / destination ports: 1403 / 1402
 -------------------------------------------------------------------------
-Offset:              4.716ns (Levels of Logic = 2)
+Offset:              4.784ns (Levels of Logic = 2)
   Source:            resetGral (PAD)
-  Destination:       datapath/uartMod/fifo_tx/Mram_FIFO121 (RAM)
+  Destination:       datapath/uartMod/fifo_rx/Mram_FIFO22 (RAM)
   Destination Clock: clock rising 0.3X
 
-  Data Path: resetGral to datapath/uartMod/fifo_tx/Mram_FIFO121
+  Data Path: resetGral to datapath/uartMod/fifo_rx/Mram_FIFO22
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1396   1.222   2.303  resetGral_IBUF (resetGral_IBUF)
-     LUT4:I3->O            4   0.205   0.683  datapath/uartMod/fifo_tx/write_ctrl3 (datapath/uartMod/fifo_tx/write_ctrl3)
-     RAM64M:WE                 0.304          datapath/uartMod/fifo_tx/Mram_FIFO4
+     IBUF:I->O          1387   1.222   2.405  resetGral_IBUF (resetGral_IBUF)
+     LUT2:I0->O            3   0.203   0.650  datapath/uartMod/fifo_rx/Mmux_BUS_000311 (datapath/uartMod/fifo_rx/BUS_0003)
+     RAM32M:WE                 0.304          datapath/uartMod/fifo_rx/Mram_FIFO1
     ----------------------------------------
-    Total                      4.716ns (1.731ns logic, 2.985ns route)
-                                       (36.7% logic, 63.3% route)
+    Total                      4.784ns (1.729ns logic, 3.055ns route)
+                                       (36.1% logic, 63.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
   Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
-Offset:              3.634ns (Levels of Logic = 1)
-  Source:            datapath/uartMod/transmisor/tx (FF)
-  Destination:       uartTxPin (PAD)
+Offset:              4.089ns (Levels of Logic = 1)
+  Source:            datapath/debugUnit/current_state_FSM_FFd1 (FF)
+  Destination:       ledSend (PAD)
   Source Clock:      clock rising 0.3X
 
-  Data Path: datapath/uartMod/transmisor/tx to uartTxPin
+  Data Path: datapath/debugUnit/current_state_FSM_FFd1 to ledSend
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.616  datapath/uartMod/transmisor/tx (datapath/uartMod/transmisor/tx)
-     OBUF:I->O                 2.571          uartTxPin_OBUF (uartTxPin)
+     FDC:C->Q             19   0.447   1.071  datapath/debugUnit/current_state_FSM_FFd1 (datapath/debugUnit/current_state_FSM_FFd1)
+     OBUF:I->O                 2.571          ledSend_OBUF (ledSend)
     ----------------------------------------
-    Total                      3.634ns (3.018ns logic, 0.616ns route)
-                                       (83.0% logic, 17.0% route)
+    Total                      4.089ns (3.018ns logic, 1.071ns route)
+                                       (73.8% logic, 26.2% route)
 
 =========================================================================
 
@@ -1012,24 +1069,78 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clock
+------------------------------------------------------+---------+---------+---------+---------+
+                                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------------+---------+---------+---------+---------+
+clock                                                 |    4.968|    4.270|   12.335|         |
+datapath/debugUnit/current_state[2]_GND_23_o_Mux_136_o|         |         |    3.685|         |
+datapath/debugUnit/current_state[2]_GND_24_o_Mux_138_o|         |    2.926|         |         |
+datapath/debugUnit/current_state[2]_GND_25_o_Mux_142_o|         |    1.377|         |         |
+datapath/debugUnit/current_state[2]_GND_33_o_Mux_171_o|         |    1.807|         |         |
+datapath/debugUnit/current_state[2]_GND_34_o_Mux_172_o|         |    1.179|         |         |
+datapath/debugUnit/current_state_FSM_FFd4             |         |         |    5.237|         |
+------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_23_o_Mux_136_o
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    5.144|    5.229|   12.678|         |
+clock          |         |         |    1.621|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_24_o_Mux_138_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    3.811|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_25_o_Mux_142_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    9.782|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_33_o_Mux_171_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    1.555|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_34_o_Mux_172_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    3.668|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock datapath/debugUnit/current_state_FSM_FFd4
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |         |    3.655|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 26.18 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.88 secs
  
 --> 
 
-Total memory usage is 281560 kilobytes
+Total memory usage is 282264 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   34 (   0 filtered)
+Number of warnings :   64 (   0 filtered)
 Number of infos    :   20 (   0 filtered)
 
