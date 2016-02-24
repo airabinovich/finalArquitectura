@@ -193,7 +193,6 @@ public class View implements SubjectSend, ObserverReceive {
         nextStepButton.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println(e.toString());
 				command = 'n';
 				notifySend();
 			}

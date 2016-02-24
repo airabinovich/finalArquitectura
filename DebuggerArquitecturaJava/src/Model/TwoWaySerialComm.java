@@ -15,6 +15,7 @@ import gnu.io.SerialPort;
 public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     private SerialWriter sw;
     private SerialReader sr;
+    private static final int baudRate = 9600 / 4;
 	private static int portIndex = -1;
     private static ArrayList<String> puertosLinux;
     private static ArrayList<String> puertosWin;
@@ -24,7 +25,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     public TwoWaySerialComm() {  
         OS = System.getProperty("os.name").toLowerCase();
         OS = OS.substring(0, OS.indexOf(' ') > 0 ? OS.indexOf(' ') : OS.length());
-        System.out.println("Sistema:" + OS);       
+        System.out.println("Sistema: " + OS);       
         puertos = new HashMap<String,ArrayList<String>>();    
         puertosLinux = new ArrayList<String>();
         puertosWin = new ArrayList<String>();
@@ -56,7 +57,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         		CommPort commPort = portIdentifier.open(this.getClass().getName(),2000);
         		if ( commPort instanceof SerialPort ){
         			SerialPort serialPort = (SerialPort) commPort;
-        			serialPort.setSerialPortParams(9600,SerialPort.DATABITS_8,SerialPort.STOPBITS_1,SerialPort.PARITY_NONE);          
+        			serialPort.setSerialPortParams(baudRate, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);          
         			InputStream in = serialPort.getInputStream();
         			OutputStream out = serialPort.getOutputStream();
         			sr = new SerialReader(in);
@@ -128,22 +129,22 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
 			ret.add(new Pair<String,Integer>("ID/EX_regDstOut", 1));
 			ret.add(new Pair<String,Integer>("ID/EX_loadImmOut", 1));
 			ret.add(new Pair<String,Integer>("ID/EX_regWriteOut", 1));
-			ret.add(new Pair<String,Integer>("ID/EX_eopOut", 1)); //no está en la unidad de debug
+//			ret.add(new Pair<String,Integer>("ID/EX_eopOut", 1)); //no está en la unidad de debug
 			ret.add(new Pair<String,Integer>("EX/MEM_writeRegisterOut", 1));
 			ret.add(new Pair<String,Integer>("EX/MEM_writeDataOut", 4));
 			ret.add(new Pair<String,Integer>("EX/MEM_aluOutOut", 4));
 			ret.add(new Pair<String,Integer>("EX/MEM_regWriteOut", 1));
-			ret.add(new Pair<String,Integer>("EX/MEM_memToRegOut", 1)); //no está en la unidad de debug
+//			ret.add(new Pair<String,Integer>("EX/MEM_memToRegOut", 1)); //no está en la unidad de debug
 			ret.add(new Pair<String,Integer>("dataToUartOutFifo", 1));
 			ret.add(new Pair<String,Integer>("EX/MEM_memWriteOut", 1));
 			ret.add(new Pair<String,Integer>("EX/MEM_memReadWidthOut", 1));
-			ret.add(new Pair<String,Integer>("EX/MEM_eopOut", 1)); //no está en la unidad de debug
+//			ret.add(new Pair<String,Integer>("EX/MEM_eopOut", 1)); //no está en la unidad de debug
 			ret.add(new Pair<String,Integer>("MEM/WB_writeRegisterOut", 1));
 			ret.add(new Pair<String,Integer>("MEM/WB_aluOutOut", 4));
 			ret.add(new Pair<String,Integer>("MEM/WB_memoryOutOut", 4));
 			ret.add(new Pair<String,Integer>("MEM/WB_regWriteOut", 1));
 			ret.add(new Pair<String,Integer>("MEM/WB_memToRegOut", 1));
-			ret.add(new Pair<String,Integer>("MEM/WB_eopOut", 1)); //no está en la unidad de debug
+//			ret.add(new Pair<String,Integer>("MEM/WB_eopOut", 1)); //no está en la unidad de debug
 			ret.add(new Pair<String,Integer>("REG_1", 4));
 			ret.add(new Pair<String,Integer>("REG_2", 4));
 			ret.add(new Pair<String,Integer>("REG_3", 4));
