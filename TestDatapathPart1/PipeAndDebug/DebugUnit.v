@@ -78,7 +78,7 @@ module DebugUnit(
 	 reg [2:0] next_state;
 //	 reg [7:0]sendCounter;
 //	 reg [7:0]sendCounterNext;
-
+	 reg restartCounter;
 //	 reg sentFlag;
 	 localparam [2:0]	INIT = 0,
 							IDLE = 1,
@@ -95,12 +95,16 @@ module DebugUnit(
 		end
 		else begin
 			current_state = next_state;
-			if(uartDataSent)begin
+			if(uartDataSent || sendCounter==cantDatos)begin
 				sendCounter=sendCounter+1;
 			end
-			if(sendCounter>cantDatos) begin
+			if(current_state!=SEND) begin
 				sendCounter=0;
+//				notStartUartTrans=1;
 			end
+//			else begin
+//				notStartUartTrans=0;
+//			end
 		end
 	 end
 
@@ -114,6 +118,7 @@ module DebugUnit(
 				ledStep=0;
 				ledCont=0;
 				ledSend=0;
+				restartCounter=0;
 				notStartUartTrans=1;
 				next_state=IDLE;
 			end
@@ -165,7 +170,8 @@ module DebugUnit(
 				ledStep=1;
 				ledCont=0;
 				ledSend=0;
-				
+				restartCounter=0;
+				notStartUartTrans=1;
 				sentFlag=0;
 				if(uartDataAvailable)begin
 					if(uartFifoDataIn==110)begin //'n' en ascii
@@ -198,9 +204,12 @@ module DebugUnit(
 				else begin
 				   next_state=SEND;
 					writeFifoFlag=1;
-					notStartUartTrans=0;
+//					notStartUartTrans=0;
 					case(sendCounter)
-						0: dataToUartOutFifo= 1;
+						0: begin 
+								notStartUartTrans=0;
+								dataToUartOutFifo= 1;
+							end
 						1: dataToUartOutFifo= 0;
 						2: dataToUartOutFifo= 0;
 						3: dataToUartOutFifo= 0;
@@ -391,17 +400,17 @@ module DebugUnit(
 //						92:	dataToUartOutFifo= 8;
 //						93:	dataToUartOutFifo= 9;
 //						94:	dataToUartOutFifo= 10;
-						95:begin							
-						   notStartUartTrans=1;
-							writeFifoFlag=0;
-							sentFlag=1;
-						end
-						default: begin
-						   notStartUartTrans=1;
-							//writeFifoFlag=0;
-							//sentFlag=1;
-							//dataToUartOutFifo=5;
-						end
+						
+						95: notStartUartTrans=1;
+						96: sentFlag=1;
+//						96:begin
+////						   notStartUartTrans=1;
+//							writeFifoFlag=0;
+//							sentFlag=1;
+//							restartCounter=1;
+//						end
+						
+						
 					endcase
 				end
 			end
