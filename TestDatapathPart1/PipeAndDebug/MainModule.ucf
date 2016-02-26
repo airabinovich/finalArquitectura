@@ -1,11 +1,24 @@
 
-# PlanAhead Generated physical constraints 
 
 NET "clock" LOC = V10;
 NET "uartRxPin" LOC = N17;
 NET "uartTxPin" LOC = N18;
-NET "ledIdle" LOC = U16;
-NET "ledStep" LOC = V16;
-NET "ledCont" LOC = U15;
-NET "ledSend" LOC = V15;
+NET "ledIdle" LOC = T17;
+NET "ledStep" LOC = T18;
+NET "ledCont" LOC = U17;
+NET "ledSend" LOC = U18;
 NET "resetGral" LOC = T10;
+
+
+NET "sendCounter[0]" LOC = U16;
+NET "sendCounter[1]" LOC = V16;
+NET "sendCounter[2]" LOC = U15;
+NET "sendCounter[3]" LOC = V15;
+NET "sendCounter[4]" LOC = M11;
+NET "sendCounter[5]" LOC = N11;
+NET "sendCounter[6]" LOC = R11;
+NET "sendCounter[7]" LOC = T11;
+
+# PlanAhead Generated physical constraints 
+
+NET "notStartUartTx" LOC = G11;

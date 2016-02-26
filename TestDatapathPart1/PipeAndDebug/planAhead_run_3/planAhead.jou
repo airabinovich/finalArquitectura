@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Feb 26 12:05:08 2016
+# Process ID: 4732
+# Log file: C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/TestDatapathPart1/PipeAndDebug/planAhead_run_3/planAhead.log
+# Journal file: C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/TestDatapathPart1/PipeAndDebug/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {C:/Users/Juanjo/Documents/Juanjo/Facu/Arquitectura/Trabajo Final/finalArquitectura/TestDatapathPart1/PipeAndDebug/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin T17 [get_ports ledIdle]
+endgroup
+startgroup
+set_property package_pin T18 [get_ports ledStep]
+endgroup
+startgroup
+set_property package_pin U17 [get_ports ledCont]
+endgroup
+startgroup
+set_property package_pin T18 [get_ports ledStep]
+endgroup
+startgroup
+set_property package_pin U18 [get_ports ledSend]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {sendCounter[0]}]
+endgroup
+startgroup
+set_property package_pin V16 [get_ports {sendCounter[1]}]
+endgroup
+startgroup
+set_property package_pin U15 [get_ports {sendCounter[2]}]
+endgroup
+startgroup
+set_property package_pin V15 [get_ports {sendCounter[3]}]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports {sendCounter[4]}]
+endgroup
+startgroup
+set_property package_pin N11 [get_ports {sendCounter[5]}]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports {sendCounter[6]}]
+endgroup
+save_constraints
+startgroup
+set_property package_pin T11 [get_ports {sendCounter[7]}]
+endgroup
+save_constraints

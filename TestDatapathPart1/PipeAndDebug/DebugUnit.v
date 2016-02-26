@@ -68,23 +68,25 @@ module DebugUnit(
 		output reg ledCont,
 		output reg ledIdle,
 		output reg ledSend,
-		output reg notStartUartTrans
-		
+		output reg notStartUartTrans,
+		output reg [7:0]sendCounter,
+		output reg sentFlag
 		
     );
 	 
 	 reg [2:0] current_state;
 	 reg [2:0] next_state;
-	 reg [7:0]sendCounter;
-	 reg [7:0]sendCounterNext;
+//	 reg [7:0]sendCounter;
+//	 reg [7:0]sendCounterNext;
 
-	 reg sentFlag;
+//	 reg sentFlag;
 	 localparam [2:0]	INIT = 0,
 							IDLE = 1,
 							CONTINUOUS = 2,
 							STEP = 3,
 							SEND = 4;
-					
+							
+	 localparam [7:0]cantDatos=8'd95;
 	 
 	 always @(posedge clock, posedge reset) begin
 		if(reset)begin
@@ -93,7 +95,12 @@ module DebugUnit(
 		end
 		else begin
 			current_state = next_state;
-			sendCounter=sendCounterNext;
+			if(uartDataSent)begin
+				sendCounter=sendCounter+1;
+			end
+			if(sendCounter>cantDatos) begin
+				sendCounter=0;
+			end
 		end
 	 end
 
@@ -102,7 +109,7 @@ module DebugUnit(
 			INIT:begin
 				writeFifoFlag=0;
 				readFifoFlag=0;
-				sendCounterNext=0;
+//				sendCounterNext=0;
 				ledIdle=0;
 				ledStep=0;
 				ledCont=0;
@@ -118,7 +125,8 @@ module DebugUnit(
 				pipeReset=1;
 				pipeEnable=0;
 				sentFlag=0;
-				sendCounterNext=0;
+				notStartUartTrans=1;
+//				sendCounterNext=0;
 				if(uartDataAvailable)begin
 					if(uartFifoDataIn==99)begin //'c' en ascii
 						next_state=CONTINUOUS;
@@ -135,7 +143,7 @@ module DebugUnit(
 			   end
 				else begin
 					readFifoFlag=0;
-					next_state=IDLE;
+//					next_state=IDLE;
 				end
 			end
 			CONTINUOUS: begin
@@ -145,7 +153,7 @@ module DebugUnit(
 				ledSend=0;
 				readFifoFlag=0;
 				sentFlag=0;	
-				sendCounterNext=0;
+//				sendCounterNext=0;
 				pipeEnable=1;
 				if(endOfProgram)
 					next_state=SEND;
@@ -181,25 +189,112 @@ module DebugUnit(
 				ledSend=1;
 				readFifoFlag=0;
 				pipeEnable=0;
-				if(sentFlag && !endOfProgram)
+				if(sentFlag && !endOfProgram)begin
 					next_state=STEP;
-				else if(sentFlag && endOfProgram)
+				end
+				else if(sentFlag && endOfProgram)begin
 					next_state=IDLE;
+				end
 				else begin
 				   next_state=SEND;
 					writeFifoFlag=1;
 					notStartUartTrans=0;
 					case(sendCounter)
-						0: 	dataToUartOutFifo= "0";
-						1:		dataToUartOutFifo= "1";
-						2: 	dataToUartOutFifo= "2";
-						3:		dataToUartOutFifo= "3";
-						4: 	dataToUartOutFifo= "4";
-						5:		dataToUartOutFifo= "5";
-						6: 	dataToUartOutFifo= "6";
-						7:		dataToUartOutFifo= "7";
-						
-						
+						0: dataToUartOutFifo= 1;
+						1: dataToUartOutFifo= 0;
+						2: dataToUartOutFifo= 0;
+						3: dataToUartOutFifo= 0;
+						4: dataToUartOutFifo= 2;
+						5: dataToUartOutFifo= 3;
+						6: dataToUartOutFifo= 4;
+						7: dataToUartOutFifo= 0;
+						8: dataToUartOutFifo= 0;
+						9: dataToUartOutFifo= 0;
+						10: dataToUartOutFifo= 5;
+						11: dataToUartOutFifo= 0;
+						12: dataToUartOutFifo= 0;
+						13: dataToUartOutFifo= 0;
+						14: dataToUartOutFifo= 6;
+						15: dataToUartOutFifo= 0;
+						16: dataToUartOutFifo= 0;
+						17: dataToUartOutFifo= 0;
+						18: dataToUartOutFifo= 7;
+						19: dataToUartOutFifo= 8;
+						20: dataToUartOutFifo= 9;
+						21: dataToUartOutFifo= 10;
+						22: dataToUartOutFifo= 11;
+						23: dataToUartOutFifo= 12;
+						24: dataToUartOutFifo= 13;
+						25: dataToUartOutFifo= 14;
+						26: dataToUartOutFifo= 15;
+						27: dataToUartOutFifo= 16;
+						28: dataToUartOutFifo= 17;
+						29: dataToUartOutFifo= 18;
+						30: dataToUartOutFifo= 19;
+						31: dataToUartOutFifo= 20;
+						32: dataToUartOutFifo= 0;
+						33: dataToUartOutFifo= 0;
+						34: dataToUartOutFifo= 0;
+						35: dataToUartOutFifo= 21;
+						36: dataToUartOutFifo= 0;
+						37: dataToUartOutFifo= 0;
+						38: dataToUartOutFifo= 0;
+						39: dataToUartOutFifo= 22;
+						40: dataToUartOutFifo= 23;
+						41: dataToUartOutFifo= 24;
+						42: dataToUartOutFifo= 25;
+						43: dataToUartOutFifo= 26;
+						44: dataToUartOutFifo= 27;
+						45: dataToUartOutFifo= 0;
+						46: dataToUartOutFifo= 0;
+						47: dataToUartOutFifo= 0;
+						48: dataToUartOutFifo= 28;
+						49: dataToUartOutFifo= 0;
+						50: dataToUartOutFifo= 0;
+						51: dataToUartOutFifo= 0;
+						52: dataToUartOutFifo= 29;
+						53: dataToUartOutFifo= 30;
+						54: dataToUartOutFifo= 31;
+						55: dataToUartOutFifo= 0;
+						56: dataToUartOutFifo= 0;
+						57: dataToUartOutFifo= 0;
+						58: dataToUartOutFifo= 32;
+						59: dataToUartOutFifo= 0;
+						60: dataToUartOutFifo= 0;
+						61: dataToUartOutFifo= 0;
+						62: dataToUartOutFifo= 33;
+						63: dataToUartOutFifo= 0;
+						64: dataToUartOutFifo= 0;
+						65: dataToUartOutFifo= 0;
+						66: dataToUartOutFifo= 34;
+						67: dataToUartOutFifo= 0;
+						68: dataToUartOutFifo= 0;
+						69: dataToUartOutFifo= 0;
+						70: dataToUartOutFifo= 35;
+						71: dataToUartOutFifo= 0;
+						72: dataToUartOutFifo= 0;
+						73: dataToUartOutFifo= 0;
+						74: dataToUartOutFifo= 36;
+						75: dataToUartOutFifo= 0;
+						76: dataToUartOutFifo= 0;
+						77: dataToUartOutFifo= 0;
+						78: dataToUartOutFifo= 37;
+						79: dataToUartOutFifo= 0;
+						80: dataToUartOutFifo= 0;
+						81: dataToUartOutFifo= 0;
+						82: dataToUartOutFifo= 38;
+						83: dataToUartOutFifo= 0;
+						84: dataToUartOutFifo= 0;
+						85: dataToUartOutFifo= 0;
+						86: dataToUartOutFifo= 39;
+						87: dataToUartOutFifo= 0;
+						88: dataToUartOutFifo= 0;
+						89: dataToUartOutFifo= 0;
+						90: dataToUartOutFifo= 40;
+						91: dataToUartOutFifo= 0;
+						92: dataToUartOutFifo= 0;
+						93: dataToUartOutFifo= 0;
+						94: dataToUartOutFifo= 41;	
 //						0:		dataToUartOutFifo=			FE_pc;
 //						1:		dataToUartOutFifo=  			IF_ID_instruction		[7:0];
 //						2:		dataToUartOutFifo=  			IF_ID_instruction		[15:8];
@@ -296,19 +391,18 @@ module DebugUnit(
 //						92:	dataToUartOutFifo= 8;
 //						93:	dataToUartOutFifo= 9;
 //						94:	dataToUartOutFifo= 10;
-						95:begin
+						95:begin							
+						   notStartUartTrans=1;
 							writeFifoFlag=0;
-							//sentFlag=1;
-						end
-						default: dataToUartOutFifo=5;
-					endcase
-					if(uartDataSent) begin
-						sendCounterNext=sendCounter+1;
-						if(sendCounter==8)begin
-							notStartUartTrans=1;
 							sentFlag=1;
 						end
-					end
+						default: begin
+						   notStartUartTrans=1;
+							//writeFifoFlag=0;
+							//sentFlag=1;
+							//dataToUartOutFifo=5;
+						end
+					endcase
 				end
 			end
 			default:begin 	 	

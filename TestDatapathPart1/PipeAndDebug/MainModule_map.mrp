@@ -10,23 +10,23 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Feb 25 22:04:48 2016
+Mapped Date    : Fri Feb 26 15:21:34 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    7
+Number of warnings:    9
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,432 out of  18,224    7%
-    Number used as Flip Flops:               1,416
-    Number used as Latches:                     16
+  Number of Slice Registers:                 1,429 out of  18,224    7%
+    Number used as Flip Flops:               1,415
+    Number used as Latches:                     14
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,657 out of   9,112   29%
-    Number used as logic:                    2,643 out of   9,112   29%
-      Number using O6 output only:           2,453
+  Number of Slice LUTs:                      2,654 out of   9,112   29%
+    Number used as logic:                    2,644 out of   9,112   29%
+      Number using O6 output only:           2,458
       Number using O5 output only:              20
-      Number using O5 and O6:                  170
+      Number using O5 and O6:                  166
       Number used as ROM:                        0
     Number used as Memory:                       8 out of   2,176    1%
       Number used as Dual Port RAM:              8
@@ -35,21 +35,21 @@ Slice Logic Utilization:
         Number using O5 and O6:                  4
       Number used as Single Port RAM:            0
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:      6
-      Number with same-slice register load:      4
+    Number used exclusively as route-thrus:      2
+      Number with same-slice register load:      0
       Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,015 out of   2,278   44%
+  Number of occupied Slices:                   786 out of   2,278   34%
   Number of MUXCYs used:                       128 out of   4,556    2%
-  Number of LUT Flip Flop pairs used:        2,678
-    Number with an unused Flip Flop:         1,295 out of   2,678   48%
-    Number with an unused LUT:                  21 out of   2,678    1%
-    Number of fully used LUT-FF pairs:       1,362 out of   2,678   50%
-    Number of unique control sets:              24
+  Number of LUT Flip Flop pairs used:        2,668
+    Number with an unused Flip Flop:         1,286 out of   2,668   48%
+    Number with an unused LUT:                  14 out of   2,668    1%
+    Number of fully used LUT-FF pairs:       1,368 out of   2,668   51%
+    Number of unique control sets:              25
     Number of slice register sites lost
-      to control set restrictions:              84 out of  18,224    1%
+      to control set restrictions:              95 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -58,8 +58,9 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         8 out of     232    3%
-    Number of LOCed IOBs:                        8 out of       8  100%
+  Number of bonded IOBs:                        18 out of     232    7%
+    Number of LOCed IOBs:                       17 out of      18   94%
+    IOB Latches:                                 6
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -78,7 +79,9 @@ Specific Feature Utilization:
     Number used as DCM_CLKGENs:                  0
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   6 out of     248    2%
+    Number used as OLOGIC2s:                     6
+    Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -92,11 +95,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                6.08
+Average Fanout of Non-Clock Nets:                6.09
 
-Peak Memory Usage:  446 MB
-Total REAL time to MAP completion:  46 secs 
-Total CPU time to MAP completion:   46 secs 
+Peak Memory Usage:  445 MB
+Total REAL time to MAP completion:  47 secs 
+Total CPU time to MAP completion:   47 secs 
 
 Table of Contents
 -----------------
@@ -120,25 +123,33 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_34_o_Mux_94_o is sourced by a
+   datapath/debugUnit/current_state[2]_PWR_20_o_Mux_133_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_26_o_Mux_64_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_37_o_Mux_187_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_42_o_Mux_110_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_26_o_Mux_149_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_23_o_Mux_56_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_28_o_Mux_153_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_24_o_Mux_58_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_29_o_Mux_157_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   datapath/debugUnit/Mram__n14803 is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   datapath/debugUnit/Mram__n1480 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
 WARNING:PhysDesignRules:367 - The signal
    <datapath/uartMod/fifo_rx/Mram_FIFO1_RAMD_D1_O> is incomplete. The signal
    does not drive any load pins in the design.
@@ -165,10 +176,10 @@ INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
    1.260 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 18 IOs, 17 are locked
+   and 1 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
-INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
-   with the CLKFX and CLKFX180 outputs of the DCM comp _i000001/dcm_sp_inst,
-   consult the device Data Sheet.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
@@ -197,11 +208,21 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | clock                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| ledCont                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| ledIdle                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| ledSend                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| ledStep                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| ledCont                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| ledIdle                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| ledSend                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| ledStep                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| notStartUartTx                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | resetGral                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sendCounter<0>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sendCounter<1>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sendCounter<2>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sendCounter<3>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sendCounter<4>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sendCounter<5>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sendCounter<6>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sendCounter<7>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| sentFlag                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | uartRxPin                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | uartTxPin                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+

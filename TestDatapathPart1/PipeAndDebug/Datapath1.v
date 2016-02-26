@@ -30,7 +30,10 @@ module Datapath1(
 		output ledStep,
 		output ledCont,
 		output ledIdle,
-		output ledSend
+		output ledSend,
+		output [7:0]sendCounter,
+		output sentFlag,
+		output notStartUartTx
     ); 
 		assign ALUzero=aluZero;
 		assign ALUOverflow=aluOverflow;
@@ -148,7 +151,7 @@ module Datapath1(
 //		 wire [31:0]sigExtShifted; //No se usa el shifted porque se accede con valores absolutos a la memoria de instr
 		 wire [31:0] resultWB;
 		 wire branchTaken;
-				
+		 assign notStartUartTx = notStartUartTrans;
 		 //Asignacion		
 		 assign writeRegister = (regDstEX)? rdEX : rtEX;
 		 assign aluOperand1 = (loadImmEX)? 'd16 : ((aluShiftImmEX)? saEX: srcAEX);
@@ -440,7 +443,9 @@ module Datapath1(
 					.ledCont(ledCont),
 					.ledIdle(ledIdle),
 					.ledSend(ledSend),
-					.notStartUartTrans(notStartUartTrans)
+					.notStartUartTrans(notStartUartTrans),
+					.sendCounter(sendCounter),
+					.sentFlag(sentFlag)
 	 );
 
 		UART_uart uartMod(

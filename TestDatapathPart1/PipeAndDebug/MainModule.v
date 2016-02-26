@@ -26,7 +26,10 @@ module MainModule(
 	 output ledIdle,
 	 output ledStep,
 	 output ledSend,
-	 output ledCont
+	 output ledCont,
+	 output [7:0]sendCounter,
+	 output sentFlag,
+	 output notStartUartTx
     );
 	 
 	 wire AluZero, ALUOverflow;
@@ -42,7 +45,10 @@ module MainModule(
 		.ledIdle(ledIdle),
 		.ledStep(ledStep),
 		.ledSend(ledSend),
-		.ledCont(ledCont)
+		.ledCont(ledCont),
+		.sendCounter(sendCounter),
+		.sentFlag(sentFlag),
+		.notStartUartTx(notStartUartTx)
 	 );
 	 
 	 clk_wiz_v3_6(

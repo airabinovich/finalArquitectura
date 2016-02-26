@@ -37,40 +37,43 @@ Setup/Hold to clock clock
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-resetGral   |   12.080(R)|      SLOW  |   -1.240(R)|      FAST  |dcmOut            |   0.000|
-            |    9.841(F)|      SLOW  |   -2.353(F)|      FAST  |dcmOut            |   0.000|
-uartRxPin   |    4.586(R)|      SLOW  |   -1.610(R)|      FAST  |dcmOut            |   0.000|
+resetGral   |    7.726(R)|      SLOW  |   -1.323(R)|      FAST  |dcmOut            |   0.000|
+            |    6.677(F)|      SLOW  |   -1.643(F)|      FAST  |dcmOut            |   0.000|
+uartRxPin   |    4.222(R)|      SLOW  |   -1.496(R)|      FAST  |dcmOut            |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clock to Pad
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-ledCont     |         5.717(R)|      SLOW  |         3.552(R)|      FAST  |dcmOut            |   0.000|
-ledIdle     |         5.858(R)|      SLOW  |         3.632(R)|      FAST  |dcmOut            |   0.000|
-ledSend     |         5.870(R)|      SLOW  |         3.612(R)|      FAST  |dcmOut            |   0.000|
-ledStep     |         5.738(R)|      SLOW  |         3.551(R)|      FAST  |dcmOut            |   0.000|
-uartTxPin   |         5.585(R)|      SLOW  |         3.351(R)|      FAST  |dcmOut            |   0.000|
-------------+-----------------+------------+-----------------+------------+------------------+--------+
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
+              |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
+sendCounter<0>|         6.869(R)|      SLOW  |         4.229(R)|      FAST  |dcmOut            |   0.000|
+sendCounter<1>|         7.679(R)|      SLOW  |         4.747(R)|      FAST  |dcmOut            |   0.000|
+sendCounter<2>|         7.289(R)|      SLOW  |         4.496(R)|      FAST  |dcmOut            |   0.000|
+sendCounter<3>|         7.027(R)|      SLOW  |         4.335(R)|      FAST  |dcmOut            |   0.000|
+sendCounter<4>|         6.856(R)|      SLOW  |         4.201(R)|      FAST  |dcmOut            |   0.000|
+sendCounter<5>|         7.244(R)|      SLOW  |         4.396(R)|      FAST  |dcmOut            |   0.000|
+sendCounter<6>|         6.763(R)|      SLOW  |         4.148(R)|      FAST  |dcmOut            |   0.000|
+uartTxPin     |         5.105(R)|      SLOW  |         3.090(R)|      FAST  |dcmOut            |   0.000|
+--------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clock
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    4.619|    7.790|    8.457|   16.200|
+clock          |    3.671|    8.334|    6.618|   12.982|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Feb 25 22:06:18 2016 
+Analysis completed Fri Feb 26 15:23:09 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 272 MB
+Peak Memory Usage: 271 MB
 
 
 

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="sendCounter">
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="clock" Dir="IN"/>
+		<Port Id="resetGral" Dir="IN"/>
+		<Port Id="uartRxPin" Dir="IN"/>
+		<Port Id="uartTxPin" Dir="OUT"/>
+		<Port Id="ledIdle" Dir="OUT"/>
+		<Port Id="ledStep" Dir="OUT"/>
+		<Port Id="ledSend" Dir="OUT"/>
+		<Port Id="ledCont" Dir="OUT"/>
+		<Port Id="sentFlag" Dir="OUT"/>
+		<Port Id="notStartUartTx" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

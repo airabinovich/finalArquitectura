@@ -1,15 +1,24 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Feb 25 22:05:34 2016
+// Written by: Map P.20131013 on Fri Feb 26 15:22:20 2016
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "ledIdle" LOCATE = SITE "U16" LEVEL 1;
-COMP "ledCont" LOCATE = SITE "U15" LEVEL 1;
-COMP "ledSend" LOCATE = SITE "V15" LEVEL 1;
-COMP "ledStep" LOCATE = SITE "V16" LEVEL 1;
+COMP "ledIdle" LOCATE = SITE "T17" LEVEL 1;
+COMP "ledCont" LOCATE = SITE "U17" LEVEL 1;
+COMP "ledSend" LOCATE = SITE "U18" LEVEL 1;
+COMP "ledStep" LOCATE = SITE "T18" LEVEL 1;
 COMP "clock" LOCATE = SITE "V10" LEVEL 1;
+COMP "sendCounter<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "sendCounter<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "sendCounter<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "sendCounter<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "sendCounter<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "sendCounter<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "sendCounter<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "sendCounter<7>" LOCATE = SITE "T11" LEVEL 1;
 COMP "resetGral" LOCATE = SITE "T10" LEVEL 1;
 COMP "uartRxPin" LOCATE = SITE "N17" LEVEL 1;
 COMP "uartTxPin" LOCATE = SITE "N18" LEVEL 1;
+COMP "notStartUartTx" LOCATE = SITE "G11" LEVEL 1;
 SCHEMATIC END;
 

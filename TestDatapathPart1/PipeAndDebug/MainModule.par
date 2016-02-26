@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-JUANJO-PC::  Thu Feb 25 22:05:37 2016
+JUANJO-PC::  Fri Feb 26 15:22:24 2016
 
 par -w -intstyle ise -ol high -mt off MainModule_map.ncd MainModule.ncd
 MainModule.pcf 
@@ -27,16 +27,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,432 out of  18,224    7%
-    Number used as Flip Flops:               1,416
-    Number used as Latches:                     16
+  Number of Slice Registers:                 1,429 out of  18,224    7%
+    Number used as Flip Flops:               1,415
+    Number used as Latches:                     14
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,657 out of   9,112   29%
-    Number used as logic:                    2,643 out of   9,112   29%
-      Number using O6 output only:           2,453
+  Number of Slice LUTs:                      2,654 out of   9,112   29%
+    Number used as logic:                    2,644 out of   9,112   29%
+      Number using O6 output only:           2,458
       Number using O5 output only:              20
-      Number using O5 and O6:                  170
+      Number using O5 and O6:                  166
       Number used as ROM:                        0
     Number used as Memory:                       8 out of   2,176    1%
       Number used as Dual Port RAM:              8
@@ -45,18 +45,18 @@ Slice Logic Utilization:
         Number using O5 and O6:                  4
       Number used as Single Port RAM:            0
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:      6
-      Number with same-slice register load:      4
+    Number used exclusively as route-thrus:      2
+      Number with same-slice register load:      0
       Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,015 out of   2,278   44%
+  Number of occupied Slices:                   786 out of   2,278   34%
   Number of MUXCYs used:                       128 out of   4,556    2%
-  Number of LUT Flip Flop pairs used:        2,678
-    Number with an unused Flip Flop:         1,295 out of   2,678   48%
-    Number with an unused LUT:                  21 out of   2,678    1%
-    Number of fully used LUT-FF pairs:       1,362 out of   2,678   50%
+  Number of LUT Flip Flop pairs used:        2,668
+    Number with an unused Flip Flop:         1,286 out of   2,668   48%
+    Number with an unused LUT:                  14 out of   2,668    1%
+    Number of fully used LUT-FF pairs:       1,368 out of   2,668   51%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -67,8 +67,9 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         8 out of     232    3%
-    Number of LOCed IOBs:                        8 out of       8  100%
+  Number of bonded IOBs:                        18 out of     232    7%
+    Number of LOCed IOBs:                       17 out of      18   94%
+    IOB Latches:                                 6
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -87,7 +88,9 @@ Specific Feature Utilization:
     Number used as DCM_CLKGENs:                  0
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   6 out of     248    2%
+    Number used as OLOGIC2s:                     6
+    Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -112,34 +115,29 @@ WARNING:Par:288 - The signal datapath/uartMod/fifo_rx/Mram_FIFO1_RAMD_D1_O has n
 Starting Router
 
 
-Phase  1  : 16623 unrouted;      REAL time: 5 secs 
+Phase  1  : 16204 unrouted;      REAL time: 6 secs 
 
-Phase  2  : 15645 unrouted;      REAL time: 6 secs 
+Phase  2  : 15365 unrouted;      REAL time: 6 secs 
 
-Phase  3  : 5743 unrouted;      REAL time: 12 secs 
+Phase  3  : 6187 unrouted;      REAL time: 11 secs 
 
-Phase  4  : 5969 unrouted; (Par is working to improve performance)     REAL time: 14 secs 
+Phase  4  : 6622 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
 Updating file: MainModule.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 33 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 33 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 33 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 33 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 34 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
-WARNING:Route:452 - 
-    Not all timing constraints have been achieved.  Please consult the `Post-Place & Route Static Timing Report' to determine the actual
-   timing results.  For suggestions on how to work around this problem go to http://support.xilinx.com and `Search Answers Database' using
-   the text of this message.
-
-Total REAL time to Router completion: 31 secs 
-Total CPU time to Router completion: 32 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 35 secs 
+Total REAL time to Router completion: 35 secs 
+Total CPU time to Router completion: 36 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -150,7 +148,7 @@ Partition Implementation Status
 
 Generating "PAR" statistics.
 INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
-Timing Score: 204093 (Setup: 204093, Hold: 0)
+Timing Score: 16706312 (Setup: 16706312, Hold: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -159,8 +157,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net dcm | SETUP       |         N/A|    19.090ns|     N/A|      204093
-  Out                                       | HOLD        |     0.203ns|            |       0|           0
+  Autotimespec constraint for clock net dcm | SETUP       |         N/A|  1350.010ns|     N/A|    16706312
+  Out                                       | HOLD        |     0.261ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -178,16 +176,16 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 32 secs 
-Total CPU time to PAR completion: 33 secs 
+Total REAL time to PAR completion: 36 secs 
+Total CPU time to PAR completion: 37 secs 
 
-Peak Memory Usage:  427 MB
+Peak Memory Usage:  425 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 4
+Number of warning messages: 3
 Number of info messages: 2
 
 Writing design to file MainModule.ncd
