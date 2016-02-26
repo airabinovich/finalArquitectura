@@ -164,7 +164,7 @@ public class View implements SubjectSend, ObserverReceive {
         continueModeButton.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				continueModeButton.setEnabled(false);
+				//continueModeButton.setEnabled(false);
 				stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(false);
 				command = 'c';
@@ -179,7 +179,7 @@ public class View implements SubjectSend, ObserverReceive {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				continueModeButton.setEnabled(false);
-				stepModeButton.setEnabled(false);
+				//stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(true);
 				command = 's';
 				notifySend();

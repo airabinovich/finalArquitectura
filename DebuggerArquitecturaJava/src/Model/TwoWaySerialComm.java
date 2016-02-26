@@ -15,7 +15,7 @@ import gnu.io.SerialPort;
 public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     private SerialWriter sw;
     private SerialReader sr;
-    private static final int baudRate = 9600 / 4;
+    private static final int baudRate = 300;//9600 / 4;
 	private static int portIndex = -1;
     private static ArrayList<String> puertosLinux;
     private static ArrayList<String> puertosWin;

@@ -34,7 +34,7 @@ module UART_uart(
 				baud_rate_tx,
 				uart_rx_done,
 				uart_tx_done,
-				uart_tx_start,
+				uart_start_tx,
 				send_next_tx,
 				uart_empty_flag_rx,
 				uart_not_empty_flag_rx,
