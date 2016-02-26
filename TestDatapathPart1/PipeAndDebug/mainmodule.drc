@@ -1,28 +1,28 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Feb 23 22:21:17 2016
+Thu Feb 25 22:06:24 2016
 
 drc -z MainModule.ncd MainModule.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_25_o_Mux_142_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_34_o_Mux_94_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_24_o_Mux_138_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_26_o_Mux_64_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_34_o_Mux_172_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_42_o_Mux_110_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_23_o_Mux_136_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_23_o_Mux_56_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_33_o_Mux_171_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_24_o_Mux_58_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal

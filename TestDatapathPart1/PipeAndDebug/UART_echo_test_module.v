@@ -25,16 +25,16 @@ module UART_uart(
 	input readFlag,
 	input writeFlag,
 	input [7:0]dataToSend,
+	input uart_tx_start,
 	output [7:0]receivedData,
 	output dataAvailable,
-	output uart_tx
+	output uart_tx,
+	output uart_tx_done
     );
 
 	wire 		baud_rate_rx,
 				baud_rate_tx,
 				uart_rx_done,
-				uart_tx_done,
-				uart_start_tx,
 				send_next_tx,
 				uart_empty_flag_rx,
 				uart_not_empty_flag_rx,
@@ -83,24 +83,21 @@ module UART_uart(
 		.clock(clock),
 		.reset(uart_reset),
 		.s_tick(baud_rate_tx),		
-		.tx_start(uart_start_tx),
-		.data_in(uart_data_tx),
+		.tx_start(uart_tx_start),
+		.data_in(dataToSend),
 		.tx(uart_tx),
 		.tx_done(uart_tx_done)
 	);
 	
-	UART_fifo_interface #(.bits_depth(8))fifo_tx(
-		.clock(clock),
-		.reset(uart_reset),
-		.write_flag(writeFlag),
-		.read_next(send_next_tx),
-		.data_in(dataToSend),
-		.data_out(uart_data_tx),
-		.empty_flag(uart_empty_flag_tx)
-//		.full_flag(uart_full_flag_tx)
-	);
-	assign send_next_tx = uart_not_empty_flag_tx && uart_tx_done;
-	assign uart_start_tx = uart_empty_flag_tx;
-	assign uart_not_empty_flag_tx = ~uart_empty_flag_tx;
+//	UART_fifo_interface #(.bits_depth(8))fifo_tx(
+//		.clock(clock),
+//		.reset(uart_reset),
+//		.write_flag(writeFlag),
+//		.read_next(send_next_tx),
+//		.data_in(dataToSend),
+//		.data_out(uart_data_tx),
+//		.empty_flag(uart_empty_flag_tx)
+////		.full_flag(uart_full_flag_tx)
+//	);
 	assign dataAvailable = ~uart_empty_flag_rx;
 endmodule

@@ -174,6 +174,8 @@ module Datapath1(
 		 assign branchSrcA= (forwardAID)? aluOutMEM: readData1;
 		 assign branchSrcB= (forwardBID)? aluOutMEM: readData2;
 		 
+		 wire uartDataSent;
+		 wire notStartUartTrans;
 	  ControlUnit control(
 	 	.Special(instructionID[31:26]),
 		.instructionCode(instructionID[5:0]),
@@ -394,6 +396,7 @@ module Datapath1(
 			
 					.uartFifoDataIn(uartFifoDataIn),
 					.uartDataAvailable(uartDataAvailable),
+					.uartDataSent(uartDataSent),
 			
 					.FE_pc(pcFE),	
 					.IF_ID_instruction(instructionID),
@@ -436,7 +439,8 @@ module Datapath1(
 					.ledStep(ledStep),
 					.ledCont(ledCont),
 					.ledIdle(ledIdle),
-					.ledSend(ledSend)
+					.ledSend(ledSend),
+					.notStartUartTrans(notStartUartTrans)
 	 );
 
 		UART_uart uartMod(
@@ -446,9 +450,11 @@ module Datapath1(
 			.readFlag(uartReadFlag),
 			.writeFlag(uartWriteFlag),
 			.dataToSend(dataToUartOutFifo),
+			.uart_tx_start(notStartUartTrans),
 			.receivedData(uartFifoDataIn),
 			.dataAvailable(uartDataAvailable),
-			.uart_tx(uartTxPin)
+			.uart_tx(uartTxPin),
+			.uart_tx_done(uartDataSent)
 		);
 
 endmodule

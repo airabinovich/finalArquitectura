@@ -37,9 +37,9 @@ Setup/Hold to clock clock
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-resetGral   |   11.073(R)|      SLOW  |   -1.468(R)|      FAST  |dcmOut            |   0.000|
-            |    9.119(F)|      SLOW  |   -2.610(F)|      FAST  |dcmOut            |   0.000|
-uartRxPin   |    4.674(R)|      SLOW  |   -2.126(R)|      FAST  |dcmOut            |   0.000|
+resetGral   |   12.080(R)|      SLOW  |   -1.240(R)|      FAST  |dcmOut            |   0.000|
+            |    9.841(F)|      SLOW  |   -2.353(F)|      FAST  |dcmOut            |   0.000|
+uartRxPin   |    4.586(R)|      SLOW  |   -1.610(R)|      FAST  |dcmOut            |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clock to Pad
@@ -47,11 +47,11 @@ Clock clock to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-ledCont     |         6.615(R)|      SLOW  |         4.049(R)|      FAST  |dcmOut            |   0.000|
-ledIdle     |         7.180(R)|      SLOW  |         4.549(R)|      FAST  |dcmOut            |   0.000|
-ledSend     |         6.467(R)|      SLOW  |         3.960(R)|      FAST  |dcmOut            |   0.000|
-ledStep     |         7.130(R)|      SLOW  |         4.525(R)|      FAST  |dcmOut            |   0.000|
-uartTxPin   |         5.556(R)|      SLOW  |         3.353(R)|      FAST  |dcmOut            |   0.000|
+ledCont     |         5.717(R)|      SLOW  |         3.552(R)|      FAST  |dcmOut            |   0.000|
+ledIdle     |         5.858(R)|      SLOW  |         3.632(R)|      FAST  |dcmOut            |   0.000|
+ledSend     |         5.870(R)|      SLOW  |         3.612(R)|      FAST  |dcmOut            |   0.000|
+ledStep     |         5.738(R)|      SLOW  |         3.551(R)|      FAST  |dcmOut            |   0.000|
+uartTxPin   |         5.585(R)|      SLOW  |         3.351(R)|      FAST  |dcmOut            |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clock
@@ -59,18 +59,18 @@ Clock to Setup on destination clock clock
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    7.078|    7.947|    7.841|   13.821|
+clock          |    4.619|    7.790|    8.457|   16.200|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Feb 23 22:21:10 2016 
+Analysis completed Thu Feb 25 22:06:18 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 275 MB
+Peak Memory Usage: 272 MB
 
 
 

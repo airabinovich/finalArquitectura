@@ -10,23 +10,23 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue Feb 23 22:19:37 2016
+Mapped Date    : Thu Feb 25 22:04:48 2016
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    7
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,457 out of  18,224    7%
-    Number used as Flip Flops:               1,437
-    Number used as Latches:                     20
+  Number of Slice Registers:                 1,432 out of  18,224    7%
+    Number used as Flip Flops:               1,416
+    Number used as Latches:                     16
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,873 out of   9,112   31%
-    Number used as logic:                    2,857 out of   9,112   31%
-      Number using O6 output only:           2,617
-      Number using O5 output only:              32
-      Number using O5 and O6:                  208
+  Number of Slice LUTs:                      2,657 out of   9,112   29%
+    Number used as logic:                    2,643 out of   9,112   29%
+      Number using O6 output only:           2,453
+      Number using O5 output only:              20
+      Number using O5 and O6:                  170
       Number used as ROM:                        0
     Number used as Memory:                       8 out of   2,176    1%
       Number used as Dual Port RAM:              8
@@ -35,21 +35,21 @@ Slice Logic Utilization:
         Number using O5 and O6:                  4
       Number used as Single Port RAM:            0
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:      8
+    Number used exclusively as route-thrus:      6
       Number with same-slice register load:      4
-      Number with same-slice carry load:         4
+      Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,046 out of   2,278   45%
-  Number of MUXCYs used:                       144 out of   4,556    3%
-  Number of LUT Flip Flop pairs used:        2,888
-    Number with an unused Flip Flop:         1,478 out of   2,888   51%
-    Number with an unused LUT:                  15 out of   2,888    1%
-    Number of fully used LUT-FF pairs:       1,395 out of   2,888   48%
-    Number of unique control sets:              28
+  Number of occupied Slices:                 1,015 out of   2,278   44%
+  Number of MUXCYs used:                       128 out of   4,556    2%
+  Number of LUT Flip Flop pairs used:        2,678
+    Number with an unused Flip Flop:         1,295 out of   2,678   48%
+    Number with an unused LUT:                  21 out of   2,678    1%
+    Number of fully used LUT-FF pairs:       1,362 out of   2,678   50%
+    Number of unique control sets:              24
     Number of slice register sites lost
-      to control set restrictions:              99 out of  18,224    1%
+      to control set restrictions:              84 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -63,7 +63,7 @@ IO Utilization:
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
-  Number of RAMB8BWERs:                          3 out of      64    4%
+  Number of RAMB8BWERs:                          2 out of      64    3%
   Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
     Number used as BUFIO2s:                      1
     Number used as BUFIO2_2CLKs:                 0
@@ -92,11 +92,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                5.96
+Average Fanout of Non-Clock Nets:                6.08
 
-Peak Memory Usage:  448 MB
-Total REAL time to MAP completion:  49 secs 
-Total CPU time to MAP completion:   48 secs 
+Peak Memory Usage:  446 MB
+Total REAL time to MAP completion:  46 secs 
+Total CPU time to MAP completion:   46 secs 
 
 Table of Contents
 -----------------
@@ -120,23 +120,23 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_25_o_Mux_142_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_34_o_Mux_94_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_24_o_Mux_138_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_26_o_Mux_64_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_34_o_Mux_172_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_42_o_Mux_110_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_23_o_Mux_136_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_23_o_Mux_56_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_33_o_Mux_171_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_24_o_Mux_58_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal
