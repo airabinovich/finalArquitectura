@@ -164,7 +164,7 @@ public class View implements SubjectSend, ObserverReceive {
         continueModeButton.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				continueModeButton.setEnabled(false);
+				//continueModeButton.setEnabled(false);
 				stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(false);
 				command = 'c';
@@ -179,7 +179,7 @@ public class View implements SubjectSend, ObserverReceive {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				continueModeButton.setEnabled(false);
-				stepModeButton.setEnabled(false);
+				//stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(true);
 				command = 's';
 				notifySend();
@@ -193,7 +193,6 @@ public class View implements SubjectSend, ObserverReceive {
         nextStepButton.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println(e.toString());
 				command = 'n';
 				notifySend();
 			}
@@ -269,8 +268,12 @@ public class View implements SubjectSend, ObserverReceive {
 				System.out.println( field + " no pertenece a la etapa " + stage);
 				return false;
 			}
-			// setea el valor recibido en el JTextField que corresponde al nombre del campo, dentro del registro que corresponde
-			pipelineRegistersData.get(stage).get(index).getSnd().setText(data.getSnd().toString());
+			if(data.getFst().contains("instructionOut")){
+				pipelineRegistersData.get(stage).get(index).getSnd().setText("0x"+Integer.toHexString(data.getSnd()).toUpperCase());
+			}else{
+				// setea el valor recibido en el JTextField que corresponde al nombre del campo, dentro del registro que corresponde
+				pipelineRegistersData.get(stage).get(index).getSnd().setText(Integer.toUnsignedString(data.getSnd()));
+			}
 		}catch(IndexOutOfBoundsException e){
 			return false;
 		}catch(NullPointerException e){
