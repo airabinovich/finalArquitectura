@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: MainModule.prj
 
@@ -403,10 +403,10 @@ Synthesizing Unit <DebugUnit>.
 WARNING:Xst:647 - Input <MEM_WB_memToReg> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit register for signal <sendCounter>.
     Found 3-bit register for signal <current_state>.
-    Found 8-bit adder for signal <sendCounter[7]_GND_17_o_add_14_OUT> created at line 114.
-    Found 8x7-bit Read Only RAM for signal <_n2975>
-    Found 128x3-bit Read Only RAM for signal <_n3105>
-    Found 1-bit 7-to-1 multiplexer for signal <current_state[2]_GND_17_o_Mux_171_o> created at line 127.
+    Found 8-bit adder for signal <sendCounter[7]_GND_17_o_add_15_OUT> created at line 114.
+    Found 128x3-bit Read Only RAM for signal <_n3096>
+    Found 8x7-bit Read Only RAM for signal <_n3105>
+    Found 1-bit 7-to-1 multiplexer for signal <current_state[2]_GND_17_o_Mux_174_o> created at line 127.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -437,7 +437,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <sentFlag>. Latches may be genera
 	inferred   1 Adder/Subtractor(s).
 	inferred  11 D-type flip-flop(s).
 	inferred  25 Latch(s).
-	inferred 402 Multiplexer(s).
+	inferred 401 Multiplexer(s).
 Unit <DebugUnit> synthesized.
 
 Synthesizing Unit <UART_uart>.
@@ -575,7 +575,7 @@ Macro Statistics
  4-bit comparator greater                              : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
-# Multiplexers                                         : 540
+# Multiplexers                                         : 539
  1-bit 12-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 432
  1-bit 3-to-1 multiplexer                              : 1
@@ -592,7 +592,7 @@ Macro Statistics
  4-bit 2-to-1 multiplexer                              : 11
  4-bit 4-to-1 multiplexer                              : 1
  5-bit 2-to-1 multiplexer                              : 13
- 8-bit 2-to-1 multiplexer                              : 4
+ 8-bit 2-to-1 multiplexer                              : 3
 # Logic shifters                                       : 3
  33-bit shifter arithmetic right                       : 1
  33-bit shifter logical left                           : 1
@@ -614,7 +614,7 @@ WARNING:Xst:1710 - FF/Latch <readAddrFromBank_4> (without init value) has a cons
 
 Synthesizing (advanced) Unit <DebugUnit>.
 The following registers are absorbed into counter <sendCounter>: 1 register on signal <sendCounter>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2975> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3231 - The small RAM <Mram__n3105> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -625,7 +625,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2975> will be implemented on LUTs 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n3105> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n3096> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -809,27 +809,28 @@ Top Level Output File Name         : MainModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3540
+# BELS                             : 3559
 #      GND                         : 3
-#      INV                         : 5
-#      LUT1                        : 30
-#      LUT2                        : 89
+#      INV                         : 6
+#      LUT1                        : 37
+#      LUT2                        : 91
 #      LUT3                        : 137
-#      LUT4                        : 245
-#      LUT5                        : 1344
-#      LUT6                        : 1329
+#      LUT4                        : 240
+#      LUT5                        : 1357
+#      LUT6                        : 1334
 #      MUXCY                       : 132
-#      MUXF7                       : 111
+#      MUXF7                       : 107
 #      VCC                         : 3
 #      XORCY                       : 112
 # FlipFlops/Latches                : 1450
 #      FD                          : 5
-#      FDC                         : 5
-#      FDCE                        : 1046
+#      FDC                         : 2
+#      FDCE                        : 1038
 #      FDCE_1                      : 305
 #      FDE                         : 31
 #      FDPE                        : 1
-#      FDR                         : 32
+#      FDR                         : 35
+#      FDRE                        : 8
 #      LD                          : 25
 # RAMS                             : 5
 #      RAM16X1D                    : 2
@@ -852,17 +853,17 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1444  out of  18224     7%  
- Number of Slice LUTs:                 3187  out of   9112    34%  
-    Number used as Logic:              3179  out of   9112    34%  
+ Number of Slice LUTs:                 3210  out of   9112    35%  
+    Number used as Logic:              3202  out of   9112    35%  
     Number used as Memory:                8  out of   2176     0%  
        Number used as RAM:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4160
-   Number with an unused Flip Flop:    2716  out of   4160    65%  
-   Number with an unused LUT:           973  out of   4160    23%  
-   Number of fully used LUT-FF pairs:   471  out of   4160    11%  
-   Number of unique control sets:        26
+ Number of LUT Flip Flop pairs used:   4171
+   Number with an unused Flip Flop:    2727  out of   4171    65%  
+   Number with an unused LUT:           961  out of   4171    23%  
+   Number of fully used LUT-FF pairs:   483  out of   4171    11%  
+   Number of unique control sets:        27
 
 IO Utilization: 
  Number of IOs:                          19
@@ -898,12 +899,12 @@ Clock Signal                                                                    
 -----------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
 _i000001/pll_base_inst/CLKOUT1                                                                                         | BUFG                                           | 99    |
 _i000001/pll_base_inst/CLKOUT0                                                                                         | BUFG                                           | 1331  |
-datapath/debugUnit/current_state[2]_GND_30_o_Mux_198_o(datapath/debugUnit/Mmux_current_state[2]_GND_30_o_Mux_198_o16:O)| NONE(*)(datapath/debugUnit/dataToUartOutFifo_0)| 8     |
-datapath/debugUnit/current_state[2]_GND_43_o_Mux_248_o(datapath/debugUnit/Mmux_current_state[2]_GND_43_o_Mux_248_o1:O) | NONE(*)(datapath/debugUnit/sentFlag)           | 2     |
-datapath/debugUnit/Mram__n29752(datapath/debugUnit/Mram__n297521:O)                                                    | NONE(*)(datapath/debugUnit/pipeReset)          | 7     |
-datapath/debugUnit/current_state[2]_GND_29_o_Mux_194_o(datapath/debugUnit/Mmux_current_state[2]_GND_29_o_Mux_194_o14:O)| NONE(*)(datapath/debugUnit/notStartUartTrans)  | 2     |
-datapath/debugUnit/current_state[2]_PWR_20_o_Mux_170_o(datapath/debugUnit/Mmux_current_state[2]_PWR_20_o_Mux_170_o11:O)| NONE(*)(datapath/debugUnit/next_state_2)       | 3     |
-datapath/debugUnit/current_state[2]_GND_38_o_Mux_230_o(datapath/debugUnit/Mmux_current_state[2]_GND_38_o_Mux_230_o11:O)| NONE(*)(datapath/debugUnit/readAddrFromBank_0) | 3     |
+datapath/debugUnit/current_state[2]_GND_30_o_Mux_201_o(datapath/debugUnit/Mmux_current_state[2]_GND_30_o_Mux_201_o15:O)| NONE(*)(datapath/debugUnit/dataToUartOutFifo_0)| 8     |
+datapath/debugUnit/current_state[2]_GND_43_o_Mux_251_o(datapath/debugUnit/Mmux_current_state[2]_GND_43_o_Mux_251_o1:O) | NONE(*)(datapath/debugUnit/sentFlag)           | 2     |
+datapath/debugUnit/Mram__n31052(datapath/debugUnit/Mram__n310521:O)                                                    | NONE(*)(datapath/debugUnit/pipeEnable)         | 7     |
+datapath/debugUnit/current_state[2]_GND_29_o_Mux_197_o(datapath/debugUnit/Mmux_current_state[2]_GND_29_o_Mux_197_o14:O)| NONE(*)(datapath/debugUnit/notStartUartTrans)  | 2     |
+datapath/debugUnit/current_state[2]_PWR_20_o_Mux_173_o(datapath/debugUnit/Mmux_current_state[2]_PWR_20_o_Mux_173_o11:O)| NONE(*)(datapath/debugUnit/next_state_2)       | 3     |
+datapath/debugUnit/current_state[2]_GND_38_o_Mux_233_o(datapath/debugUnit/Mmux_current_state[2]_GND_38_o_Mux_233_o11:O)| NONE(*)(datapath/debugUnit/readAddrFromBank_0) | 3     |
 -----------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
 (*) These 6 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -919,8 +920,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 13.912ns (Maximum Frequency: 71.880MHz)
-   Minimum input arrival time before clock: 4.777ns
-   Maximum output required time after clock: 7.139ns
+   Minimum input arrival time before clock: 5.195ns
+   Maximum output required time after clock: 7.859ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -929,26 +930,28 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock '_i000001/pll_base_inst/CLKOUT1'
-  Clock period: 4.983ns (frequency: 200.693MHz)
-  Total number of paths / destination ports: 1405 / 201
+  Clock period: 6.871ns (frequency: 145.550MHz)
+  Total number of paths / destination ports: 1493 / 201
 -------------------------------------------------------------------------
-Delay:               4.983ns (Levels of Logic = 2)
-  Source:            datapath/debugUnit/sendCounter_4 (FF)
-  Destination:       datapath/debugUnit/sendCounter_7 (FF)
+Delay:               6.871ns (Levels of Logic = 4)
+  Source:            datapath/debugUnit/sendCounter_1 (FF)
+  Destination:       datapath/debugUnit/sendCounter_6 (FF)
   Source Clock:      _i000001/pll_base_inst/CLKOUT1 rising
   Destination Clock: _i000001/pll_base_inst/CLKOUT1 rising
 
-  Data Path: datapath/debugUnit/sendCounter_4 to datapath/debugUnit/sendCounter_7
+  Data Path: datapath/debugUnit/sendCounter_1 to datapath/debugUnit/sendCounter_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            65   0.447   2.011  datapath/debugUnit/sendCounter_4 (datapath/debugUnit/sendCounter_4)
-     LUT6:I0->O            3   0.203   0.995  datapath/debugUnit/_n2966_inv21 (datapath/debugUnit/_n2966_inv2)
-     LUT6:I1->O            8   0.203   0.802  datapath/debugUnit/_n2966_inv1 (datapath/debugUnit/_n2966_inv)
-     FDCE:CE                   0.322          datapath/debugUnit/sendCounter_0
+     FDRE:C->Q            73   0.447   1.928  datapath/debugUnit/sendCounter_1 (datapath/debugUnit/sendCounter_1)
+     LUT3:I0->O            8   0.205   1.167  datapath/debugUnit/Mmux__n06761312111 (datapath/debugUnit/Mmux__n0676131211)
+     LUT6:I0->O            1   0.203   0.580  datapath/debugUnit/next_state[2]_uartDataSent_AND_175_o1 (datapath/debugUnit/next_state[2]_uartDataSent_AND_175_o1)
+     LUT6:I5->O            1   0.205   0.808  datapath/debugUnit/next_state[2]_uartDataSent_AND_175_o2 (datapath/debugUnit/next_state[2]_uartDataSent_AND_175_o3)
+     LUT6:I3->O            8   0.205   0.802  datapath/debugUnit/next_state[2]_uartDataSent_AND_175_o3 (datapath/debugUnit/next_state[2]_uartDataSent_AND_175_o)
+     FDRE:CE                   0.322          datapath/debugUnit/sendCounter_1
     ----------------------------------------
-    Total                      4.983ns (1.175ns logic, 3.808ns route)
-                                       (23.6% logic, 76.4% route)
+    Total                      6.871ns (1.587ns logic, 5.284ns route)
+                                       (23.1% logic, 76.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock '_i000001/pll_base_inst/CLKOUT0'
@@ -992,7 +995,7 @@ Delay:               6.956ns (Levels of Logic = 17)
 Timing constraint: Default OFFSET IN BEFORE for Clock '_i000001/pll_base_inst/CLKOUT0'
   Total number of paths / destination ports: 1329 / 1329
 -------------------------------------------------------------------------
-Offset:              3.945ns (Levels of Logic = 1)
+Offset:              3.943ns (Levels of Logic = 1)
   Source:            resetGral (PAD)
   Destination:       datapath/if_id/instructionOut_31 (FF)
   Destination Clock: _i000001/pll_base_inst/CLKOUT0 falling
@@ -1001,61 +1004,62 @@ Offset:              3.945ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1358   1.222   2.293  resetGral_IBUF (resetGral_IBUF)
+     IBUF:I->O          1351   1.222   2.291  resetGral_IBUF (resetGral_IBUF)
      FDCE_1:CLR                0.430          datapath/if_id/pcNextOut_0
     ----------------------------------------
-    Total                      3.945ns (1.652ns logic, 2.293ns route)
+    Total                      3.943ns (1.652ns logic, 2.291ns route)
                                        (41.9% logic, 58.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock '_i000001/pll_base_inst/CLKOUT1'
   Total number of paths / destination ports: 43 / 43
 -------------------------------------------------------------------------
-Offset:              4.777ns (Levels of Logic = 2)
+Offset:              5.195ns (Levels of Logic = 2)
   Source:            resetGral (PAD)
-  Destination:       datapath/uartMod/fifo_rx/Mram_FIFO22 (RAM)
+  Destination:       datapath/debugUnit/sendCounter_6 (FF)
   Destination Clock: _i000001/pll_base_inst/CLKOUT1 rising
 
-  Data Path: resetGral to datapath/uartMod/fifo_rx/Mram_FIFO22
+  Data Path: resetGral to datapath/debugUnit/sendCounter_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1358   1.222   2.398  resetGral_IBUF (resetGral_IBUF)
-     LUT2:I0->O            3   0.203   0.650  datapath/uartMod/fifo_rx/Mmux_BUS_000311 (datapath/uartMod/fifo_rx/BUS_0003)
-     RAM32M:WE                 0.304          datapath/uartMod/fifo_rx/Mram_FIFO1
+     IBUF:I->O          1351   1.222   2.539  resetGral_IBUF (resetGral_IBUF)
+     LUT4:I0->O            8   0.203   0.802  datapath/debugUnit/Mcount_sendCounter_val1 (datapath/debugUnit/Mcount_sendCounter_val)
+     FDRE:R                    0.430          datapath/debugUnit/sendCounter_0
     ----------------------------------------
-    Total                      4.777ns (1.729ns logic, 3.048ns route)
-                                       (36.2% logic, 63.8% route)
+    Total                      5.195ns (1.855ns logic, 3.340ns route)
+                                       (35.7% logic, 64.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock '_i000001/pll_base_inst/CLKOUT1'
-  Total number of paths / destination ports: 29 / 10
+  Total number of paths / destination ports: 38 / 10
 -------------------------------------------------------------------------
-Offset:              7.139ns (Levels of Logic = 3)
-  Source:            datapath/debugUnit/sendCounter_3 (FF)
+Offset:              7.859ns (Levels of Logic = 4)
+  Source:            datapath/debugUnit/sendCounter_4 (FF)
   Destination:       waitingForReg (PAD)
   Source Clock:      _i000001/pll_base_inst/CLKOUT1 rising
 
-  Data Path: datapath/debugUnit/sendCounter_3 to waitingForReg
+  Data Path: datapath/debugUnit/sendCounter_4 to waitingForReg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            63   0.447   1.998  datapath/debugUnit/sendCounter_3 (datapath/debugUnit/sendCounter_3)
-     LUT6:I0->O           12   0.203   1.137  datapath/debugUnit/_n3484<6>11 (datapath/debugUnit/_n3484<6>1)
-     LUT5:I2->O            1   0.205   0.579  datapath/debugUnit/waitingForReg (waitingForReg_OBUF)
+     FDRE:C->Q            64   0.447   1.984  datapath/debugUnit/sendCounter_4 (datapath/debugUnit/sendCounter_4)
+     LUT5:I0->O           10   0.203   1.085  datapath/debugUnit/waitingForReg121 (datapath/debugUnit/waitingForReg12)
+     LUT6:I3->O            1   0.205   0.580  datapath/debugUnit/waitingForReg2 (datapath/debugUnit/waitingForReg1)
+     LUT6:I5->O            1   0.205   0.579  datapath/debugUnit/waitingForReg3 (waitingForReg_OBUF)
      OBUF:I->O                 2.571          waitingForReg_OBUF (waitingForReg)
     ----------------------------------------
-    Total                      7.139ns (3.426ns logic, 3.713ns route)
-                                       (48.0% logic, 52.0% route)
+    Total                      7.859ns (3.631ns logic, 4.228ns route)
+                                       (46.2% logic, 53.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/Mram__n29752'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/Mram__n31052'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            datapath/debugUnit/ledIdle (LATCH)
   Destination:       ledIdle (PAD)
-  Source Clock:      datapath/debugUnit/Mram__n29752 falling
+  Source Clock:      datapath/debugUnit/Mram__n31052 falling
 
   Data Path: datapath/debugUnit/ledIdle to ledIdle
                                 Gate     Net
@@ -1068,13 +1072,13 @@ Offset:              3.648ns (Levels of Logic = 1)
                                        (84.1% logic, 15.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_43_o_Mux_248_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_43_o_Mux_251_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            datapath/debugUnit/sentFlag_1 (LATCH)
   Destination:       sentFlag (PAD)
-  Source Clock:      datapath/debugUnit/current_state[2]_GND_43_o_Mux_248_o falling
+  Source Clock:      datapath/debugUnit/current_state[2]_GND_43_o_Mux_251_o falling
 
   Data Path: datapath/debugUnit/sentFlag_1 to sentFlag
                                 Gate     Net
@@ -1087,13 +1091,13 @@ Offset:              3.648ns (Levels of Logic = 1)
                                        (84.1% logic, 15.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_29_o_Mux_194_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_29_o_Mux_197_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            datapath/debugUnit/notStartUartTrans_1 (LATCH)
   Destination:       notStartUartTx (PAD)
-  Source Clock:      datapath/debugUnit/current_state[2]_GND_29_o_Mux_194_o falling
+  Source Clock:      datapath/debugUnit/current_state[2]_GND_29_o_Mux_197_o falling
 
   Data Path: datapath/debugUnit/notStartUartTrans_1 to notStartUartTx
                                 Gate     Net
@@ -1116,7 +1120,7 @@ Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT0
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
 _i000001/pll_base_inst/CLKOUT0 |    1.438|    4.270|   12.807|         |
-datapath/debugUnit/Mram__n29752|         |         |    5.237|         |
+datapath/debugUnit/Mram__n31052|         |         |    5.237|         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT1
@@ -1124,14 +1128,14 @@ Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT1
                                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------+---------+---------+---------+---------+
-_i000001/pll_base_inst/CLKOUT1                        |    4.983|         |         |         |
-datapath/debugUnit/Mram__n29752                       |         |    2.584|         |         |
-datapath/debugUnit/current_state[2]_GND_29_o_Mux_194_o|         |    1.385|         |         |
-datapath/debugUnit/current_state[2]_GND_30_o_Mux_198_o|         |    1.179|         |         |
-datapath/debugUnit/current_state[2]_PWR_20_o_Mux_170_o|         |    3.825|         |         |
+_i000001/pll_base_inst/CLKOUT1                        |    6.871|         |         |         |
+datapath/debugUnit/Mram__n31052                       |         |    2.584|         |         |
+datapath/debugUnit/current_state[2]_GND_29_o_Mux_197_o|         |    1.385|         |         |
+datapath/debugUnit/current_state[2]_GND_30_o_Mux_201_o|         |    1.179|         |         |
+datapath/debugUnit/current_state[2]_PWR_20_o_Mux_173_o|         |    2.840|         |         |
 ------------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/Mram__n29752
+Clock to Setup on destination clock datapath/debugUnit/Mram__n31052
 ------------------------------+---------+---------+---------+---------+
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -1139,59 +1143,59 @@ Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 _i000001/pll_base_inst/CLKOUT1|         |         |    4.425|         |
 ------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_29_o_Mux_194_o
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_29_o_Mux_197_o
 ------------------------------+---------+---------+---------+---------+
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-_i000001/pll_base_inst/CLKOUT1|         |         |    3.739|         |
+_i000001/pll_base_inst/CLKOUT1|         |         |    4.996|         |
 ------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_30_o_Mux_198_o
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_30_o_Mux_201_o
 ------------------------------------------------------+---------+---------+---------+---------+
                                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------+---------+---------+---------+---------+
-_i000001/pll_base_inst/CLKOUT0                        |         |         |   10.522|         |
-_i000001/pll_base_inst/CLKOUT1                        |         |         |   12.111|         |
-datapath/debugUnit/current_state[2]_GND_38_o_Mux_230_o|         |         |    6.062|         |
+_i000001/pll_base_inst/CLKOUT0                        |         |         |    9.955|         |
+_i000001/pll_base_inst/CLKOUT1                        |         |         |   11.507|         |
+datapath/debugUnit/current_state[2]_GND_38_o_Mux_233_o|         |         |    6.880|         |
 ------------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_38_o_Mux_230_o
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_38_o_Mux_233_o
 ------------------------------+---------+---------+---------+---------+
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-_i000001/pll_base_inst/CLKOUT1|         |         |    2.555|         |
+_i000001/pll_base_inst/CLKOUT1|         |         |    2.601|         |
 ------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_43_o_Mux_248_o
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_43_o_Mux_251_o
 ------------------------------+---------+---------+---------+---------+
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-_i000001/pll_base_inst/CLKOUT1|         |         |    1.899|         |
+_i000001/pll_base_inst/CLKOUT1|         |         |    1.945|         |
 ------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_PWR_20_o_Mux_170_o
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_PWR_20_o_Mux_173_o
 ------------------------------------------------------+---------+---------+---------+---------+
                                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------+---------+---------+---------+---------+
 _i000001/pll_base_inst/CLKOUT0                        |         |         |    1.648|         |
 _i000001/pll_base_inst/CLKOUT1                        |         |         |    4.880|         |
-datapath/debugUnit/current_state[2]_GND_43_o_Mux_248_o|         |         |    1.526|         |
+datapath/debugUnit/current_state[2]_GND_43_o_Mux_251_o|         |         |    1.587|         |
 ------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 30.00 secs
-Total CPU time to Xst completion: 30.48 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 29.19 secs
  
 --> 
 
-Total memory usage is 316312 kilobytes
+Total memory usage is 284440 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   52 (   0 filtered)
