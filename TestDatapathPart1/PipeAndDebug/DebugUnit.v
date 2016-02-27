@@ -57,20 +57,23 @@ module DebugUnit(
 		input [31:0] 	MEM_WB_memoryOut,
 		input 			MEM_WB_regWrite,
 		input 			MEM_WB_memToReg,
+		input [31:0]	readDataFromRegs,
+		
 		
 		output reg [7:0] 	dataToUartOutFifo,
 		output reg			readFifoFlag,
 		output reg			writeFifoFlag,
 		output reg pipeEnable,
 		output reg pipeReset ,
-		
+		output reg [4:0] readAddrFromBank,
 		output reg ledStep,
 		output reg ledCont,
 		output reg ledIdle,
 		output reg ledSend,
 		output reg notStartUartTrans,
 		output reg [7:0]sendCounter,
-		output reg sentFlag
+		output reg sentFlag,
+		output waitingForReg
 		
     );
 	 
@@ -79,6 +82,7 @@ module DebugUnit(
 //	 reg [7:0]sendCounter;
 //	 reg [7:0]sendCounterNext;
 	 reg restartCounter;
+	 //wire waitingForReg;
 //	 reg sentFlag;
 	 localparam [2:0]	INIT = 0,
 							IDLE = 1,
@@ -86,7 +90,18 @@ module DebugUnit(
 							STEP = 3,
 							SEND = 4;
 							
-	 localparam [7:0]cantDatos=8'd95;
+	 localparam [7:0]cantDatos=8'd111;
+	 
+	 assign waitingForReg= 
+	 (sendCounter==55)|(sendCounter==56)|
+	 (sendCounter==61)|(sendCounter==62)|
+	 (sendCounter==67)|(sendCounter==68)|
+	 (sendCounter==73)|(sendCounter==74)|
+	 (sendCounter==79)|(sendCounter==80)|
+	 (sendCounter==85)|(sendCounter==86);
+//	 (sendCounter==91)|(sendCounter==92)|
+//	 (sendCounter==97)|(sendCounter==98)|
+//	 (sendCounter==103)|(sendCounter==104);
 	 
 	 always @(posedge clock, posedge reset) begin
 		if(reset)begin
@@ -95,7 +110,7 @@ module DebugUnit(
 		end
 		else begin
 			current_state = next_state;
-			if(uartDataSent || sendCounter==cantDatos)begin
+			if(current_state==SEND && (uartDataSent || sendCounter==cantDatos || waitingForReg))begin
 				sendCounter=sendCounter+1;
 			end
 			if(current_state!=SEND) begin
@@ -120,6 +135,7 @@ module DebugUnit(
 				ledSend=0;
 				pipeReset=1;
 				pipeEnable=0;
+//				waitingForReg=0;
 				restartCounter=0;
 				notStartUartTrans=1;
 				next_state=IDLE;
@@ -132,6 +148,7 @@ module DebugUnit(
 				pipeReset=1;
 				pipeEnable=0;
 				sentFlag=0;
+//				waitingForReg=0;
 				notStartUartTrans=1;
 //				sendCounterNext=0;
 				if(uartDataAvailable)begin
@@ -159,6 +176,7 @@ module DebugUnit(
 				ledCont=1;
 				ledSend=0;
 				pipeReset=0;
+//				waitingForReg=0;
 				readFifoFlag=0;
 				sentFlag=0;	
 //				sendCounterNext=0;
@@ -173,6 +191,7 @@ module DebugUnit(
 				ledStep=1;
 				ledCont=0;
 				ledSend=0;
+//				waitingForReg=0;
 				pipeEnable=0;
 				pipeReset=0;
 				restartCounter=0;
@@ -369,51 +388,143 @@ module DebugUnit(
 						51:	dataToUartOutFifo= 			MEM_WB_memoryOut		[23:16];
 						52:	dataToUartOutFifo= 			MEM_WB_memoryOut		[31:24];
 						53:	dataToUartOutFifo=	{7'b0,MEM_WB_regWrite};
-						54:	dataToUartOutFifo=	{7'b0,MEM_WB_memToReg};
+//						54:	dataToUartOutFifo=	{7'b0,MEM_WB_memToReg};
+						54:	dataToUartOutFifo=	99;
 						
-						55:	dataToUartOutFifo= 1;
-						56:	dataToUartOutFifo= 2;
-						57:	dataToUartOutFifo= 3;
-						58:	dataToUartOutFifo= 4;
-						59:	dataToUartOutFifo= 5;
-						60:	dataToUartOutFifo= 6;
-						61:	dataToUartOutFifo= 7;
-						62:	dataToUartOutFifo= 8;
-						63:	dataToUartOutFifo= 9;
-						64:	dataToUartOutFifo= 10;
-						65:	dataToUartOutFifo= 1;
-						66:	dataToUartOutFifo= 2;
-						67:	dataToUartOutFifo= 3;
-						68:	dataToUartOutFifo= 4;
-						69:	dataToUartOutFifo= 5;
-						70:	dataToUartOutFifo= 6;
-						71:	dataToUartOutFifo= 7;
-						72:	dataToUartOutFifo= 8;
-						73:	dataToUartOutFifo= 9;
-						74:	dataToUartOutFifo= 10;
-						75:	dataToUartOutFifo= 1;
-						76:	dataToUartOutFifo= 2;
-						77:	dataToUartOutFifo= 3;
-						78:	dataToUartOutFifo= 4;
-						79:	dataToUartOutFifo= 5;
-						80:	dataToUartOutFifo= 6;
-						81:	dataToUartOutFifo= 7;
-						82:	dataToUartOutFifo= 8;
-						83:	dataToUartOutFifo= 9;
-						84:	dataToUartOutFifo= 10;
-						85:	dataToUartOutFifo= 1;
-						86:	dataToUartOutFifo= 2;
-						87:	dataToUartOutFifo= 3;
-						88:	dataToUartOutFifo= 4;
-						89:	dataToUartOutFifo= 5;
-						90:	dataToUartOutFifo= 6;
-						91:	dataToUartOutFifo= 7;
-						92:	dataToUartOutFifo= 8;
-						93:	dataToUartOutFifo= 9;
-						94:	dataToUartOutFifo= 10;
 						
-						95: notStartUartTrans=1;
-						96: sentFlag=1;
+//						55:   notStartUartTrans=1;
+//						56:   readAddrFromBank=0;
+//						57:	begin
+//									notStartUartTrans=0;
+//									dataToUartOutFifo= readDataFromRegs[31:24];
+//								end
+//						58:	dataToUartOutFifo= readDataFromRegs[23:16];
+//						59: 	dataToUartOutFifo= readDataFromRegs[15:8];
+//						60: 	dataToUartOutFifo= readDataFromRegs[7:0];
+						55: begin 
+								//waitingForReg=1;
+								notStartUartTrans=1;
+							end
+						56:begin 
+								readAddrFromBank=0;
+								//waitingForReg=1;
+							end
+						57: begin
+//								waitingForReg=0;
+								notStartUartTrans=0;
+								dataToUartOutFifo= readDataFromRegs[31:24];
+							end
+						58:dataToUartOutFifo= readDataFromRegs[23:16];
+						59:dataToUartOutFifo= readDataFromRegs[15:8];
+						60:dataToUartOutFifo= readDataFromRegs[7:0];
+						61: begin 
+//								waitingForReg=1;
+								notStartUartTrans=1;
+							end
+						62:begin 
+								readAddrFromBank=1;
+								//waitingForReg=1;
+							end
+						63: begin
+//								waitingForReg=0;
+								notStartUartTrans=0;
+								dataToUartOutFifo= readDataFromRegs[31:24];
+							end
+						64:dataToUartOutFifo= readDataFromRegs[23:16];
+						65:dataToUartOutFifo= readDataFromRegs[15:8];
+						66:dataToUartOutFifo= readDataFromRegs[7:0];
+						67: begin 
+//								waitingForReg=1;
+								notStartUartTrans=1;
+							end
+						68:begin 
+								readAddrFromBank=2;
+//								waitingForReg=1;
+							end
+						69: begin
+//								waitingForReg=0;
+								notStartUartTrans=0;
+								dataToUartOutFifo= readDataFromRegs[31:24];
+							end
+						70:dataToUartOutFifo= readDataFromRegs[23:16];
+						71:dataToUartOutFifo= readDataFromRegs[15:8];
+						72:dataToUartOutFifo= readDataFromRegs[7:0];
+						73: begin 
+//								waitingForReg=1;
+								notStartUartTrans=1;
+							end
+						74:begin 
+								readAddrFromBank=3;
+//								waitingForReg=1;
+							end
+						75: begin
+//								waitingForReg=0;
+								notStartUartTrans=0;
+								dataToUartOutFifo= readDataFromRegs[31:24];
+							end
+						76:dataToUartOutFifo= readDataFromRegs[23:16];
+						77:dataToUartOutFifo= readDataFromRegs[15:8];
+						78:dataToUartOutFifo= readDataFromRegs[7:0];
+						79: begin 
+//								waitingForReg=1;
+								notStartUartTrans=1;
+							end
+						80:begin 
+								readAddrFromBank=4;
+//								waitingForReg=1;
+							end
+						81: begin
+//								waitingForReg=0;
+								notStartUartTrans=0;
+								dataToUartOutFifo= readDataFromRegs[31:24];
+							end
+						82:dataToUartOutFifo= readDataFromRegs[23:16];
+						83:dataToUartOutFifo= readDataFromRegs[15:8];
+						84:dataToUartOutFifo= readDataFromRegs[7:0];
+						85: begin 
+//								waitingForReg=1;
+								notStartUartTrans=1;
+							end
+						86:begin 
+								readAddrFromBank=5;
+//								waitingForReg=1;
+							end
+						87: begin
+							notStartUartTrans = 0;
+							dataToUartOutFifo= 0;
+						end
+						88: dataToUartOutFifo= 0;
+						89: dataToUartOutFifo= 0;
+						90: dataToUartOutFifo= 5;
+						91: dataToUartOutFifo= 0;
+						92: dataToUartOutFifo= 0;
+						93: dataToUartOutFifo= 0;
+						94: dataToUartOutFifo= 5;
+						95: dataToUartOutFifo= 0;
+						96: dataToUartOutFifo= 0;
+						97: dataToUartOutFifo= 0;
+						98: dataToUartOutFifo= 5;
+						99: dataToUartOutFifo= 0;
+						100: dataToUartOutFifo= 0;
+						101: dataToUartOutFifo= 0;
+						102: dataToUartOutFifo= 5;
+						103: dataToUartOutFifo= 0;
+						104: dataToUartOutFifo= 0;
+						105: dataToUartOutFifo= 0;
+						106: dataToUartOutFifo= 5;
+						107: dataToUartOutFifo= 0;
+						108: dataToUartOutFifo= 0;
+						109: dataToUartOutFifo= 0;
+						110: dataToUartOutFifo= 5;		
+						
+						111: notStartUartTrans=1;
+						112: sentFlag=1;
+
+						
+						
+//						95: notStartUartTrans=1;
+//						96: sentFlag=1;
+						
 //						96:begin
 ////						   notStartUartTrans=1;
 //							writeFifoFlag=0;

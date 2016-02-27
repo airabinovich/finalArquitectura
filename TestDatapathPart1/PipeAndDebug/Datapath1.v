@@ -34,7 +34,8 @@ module Datapath1(
 		output ledSend,
 		output [7:0]sendCounter,
 		output sentFlag,
-		output notStartUartTx
+		output notStartUartTx,
+		output waitingForReg
     ); 
 		assign ALUzero=aluZero;
 		assign ALUOverflow=aluOverflow;
@@ -180,6 +181,9 @@ module Datapath1(
 		 
 		 wire uartDataSent;
 		 wire notStartUartTrans;
+		 wire [31:0]readDataFromBankToDebug;
+		 wire [4:0]readAddrFromDebugToBank;
+		 
 	  ControlUnit control(
 	 	.Special(instructionID[31:26]),
 		.instructionCode(instructionID[5:0]),
@@ -219,10 +223,12 @@ module Datapath1(
 		.readReg1(instructionID[25:21]),
 		.readReg2(instructionID[20:16]),
 		.writeReg(writeRegisterWB),
+		.readRegFromDebug(readAddrFromDebugToBank),
 		.reset(resetGral),
 		.writeData(resultWB),
 		.readData1(readData1),
-		.readData2(readData2)
+		.readData2(readData2),
+		.readDataToDebug(readDataFromBankToDebug)
 	 );
 	 
 	 ALU alu(
@@ -266,72 +272,72 @@ module Datapath1(
 	);
 			
 			
-		  EX_MEM ex_mem(
-				.clock(clock),
-				.reset(resetGral),
-				.debugEnable(debugEnable),
-				.debugReset(debugReset),
-				.writeRegister(writeRegister),
-				.writeData(writeDataEX),
-				.aluOut(aluOut),
-				.regWrite(regWriteEX),
-				.memToReg(memToRegEX),
-				.memWrite(memWriteEX),
-				.memReadWidth(memReadWidthEX),
-				.eop(eopFlagEX),
-				
-				.writeRegisterOut(writeRegisterMEM),
-				.writeDataOut(writeDataMEM),
-				.aluOutOut(aluOutMEM),
-				.regWriteOut(regWriteMEM),
-				.memToRegOut(memToRegMEM),
-				.memWriteOut(memWriteMEM),
-				.memReadWidthOut(memReadWidthMEM),
-				.eopOut(eopFlagMEM)
-    );
+  EX_MEM ex_mem(
+		.clock(clock),
+		.reset(resetGral),
+		.debugEnable(debugEnable),
+		.debugReset(debugReset),
+		.writeRegister(writeRegister),
+		.writeData(writeDataEX),
+		.aluOut(aluOut),
+		.regWrite(regWriteEX),
+		.memToReg(memToRegEX),
+		.memWrite(memWriteEX),
+		.memReadWidth(memReadWidthEX),
+		.eop(eopFlagEX),
+		
+		.writeRegisterOut(writeRegisterMEM),
+		.writeDataOut(writeDataMEM),
+		.aluOutOut(aluOutMEM),
+		.regWriteOut(regWriteMEM),
+		.memToRegOut(memToRegMEM),
+		.memWriteOut(memWriteMEM),
+		.memReadWidthOut(memReadWidthMEM),
+		.eopOut(eopFlagMEM)
+);
 			
-		 ID_EX id_ex(
-			.clock(clock),
-			.reset(resetGral),
-			.debugEnable(debugEnable),
-			.debugReset(debugReset),
-			.syncClr(flushEX),
-			.rs(instructionID[25:21]),
-			.rt(instructionID[20:16]),
-			.rd(instructionID[15:11]),
-			.sa(instructionID[10:6]),
-			.aluOperation(aluControl),
-			.sigExt(sigExtOut),
-			.readData1(readData1),
-			.readData2(readData2),
-			.aluSrc(aluSrc),
-			.aluShiftImm(aluShiftImm),
-			.regDst(regDst),
-			.loadImm(loadImm),
-			.memWrite(memWrite),
-			.memToReg(memToReg),
-			.memReadWidth(memReadWidth),
-			.regWrite(regWrite),
-			.eop(eopFlag),
+	 ID_EX id_ex(
+		.clock(clock),
+		.reset(resetGral),
+		.debugEnable(debugEnable),
+		.debugReset(debugReset),
+		.syncClr(flushEX),
+		.rs(instructionID[25:21]),
+		.rt(instructionID[20:16]),
+		.rd(instructionID[15:11]),
+		.sa(instructionID[10:6]),
+		.aluOperation(aluControl),
+		.sigExt(sigExtOut),
+		.readData1(readData1),
+		.readData2(readData2),
+		.aluSrc(aluSrc),
+		.aluShiftImm(aluShiftImm),
+		.regDst(regDst),
+		.loadImm(loadImm),
+		.memWrite(memWrite),
+		.memToReg(memToReg),
+		.memReadWidth(memReadWidth),
+		.regWrite(regWrite),
+		.eop(eopFlag),
 
-			
-			.aluOperationOut(aluControlEX),
-			.sigExtOut(sigExtEX),
-			.readData1Out(readData1EX),
-			.readData2Out(readData2EX),
-			.aluSrcOut(aluSrcEX),
-			.aluShiftImmOut(aluShiftImmEX),
-			.memWriteOut(memWriteEX),
-			.memToRegOut(memToRegEX),
-			.memReadWidthOut(memReadWidthEX),
-			.rsOut(rsEX),
-			.rtOut(rtEX),
-			.rdOut(rdEX),
-			.saOut(saEX),
-			.regDstOut(regDstEX),
-			.loadImmOut(loadImmEX),
-			.regWriteOut(regWriteEX),
-			.eopOut(eopFlagEX)			
+		
+		.aluOperationOut(aluControlEX),
+		.sigExtOut(sigExtEX),
+		.readData1Out(readData1EX),
+		.readData2Out(readData2EX),
+		.aluSrcOut(aluSrcEX),
+		.aluShiftImmOut(aluShiftImmEX),
+		.memWriteOut(memWriteEX),
+		.memToRegOut(memToRegEX),
+		.memReadWidthOut(memReadWidthEX),
+		.rsOut(rsEX),
+		.rtOut(rtEX),
+		.rdOut(rdEX),
+		.saOut(saEX),
+		.regDstOut(regDstEX),
+		.loadImmOut(loadImmEX),
+		.regWriteOut(regWriteEX),
+		.eopOut(eopFlagEX)			
     );			
 	 
 	 MemoryLoadMask mask (
@@ -394,73 +400,76 @@ module Datapath1(
 	 );
 	 
 	 DebugUnit debugUnit(
-					.clock(clock70),
-					.reset(resetGral),
-					.endOfProgram(eopFlagWB),
-			
-					.uartFifoDataIn(uartFifoDataIn),
-					.uartDataAvailable(uartDataAvailable),
-					.uartDataSent(uartDataSent),
-			
-					.FE_pc(pcFE),	
-					.IF_ID_instruction(instructionID),
-					.IF_ID_pcNext(pcNextID),		
-					.ID_EX_aluOperation(aluControlEX),
-					.ID_EX_sigExt(sigExtEX),
-					.ID_EX_readData1(readData1EX),
-					.ID_EX_readData2(readData2EX),
-					.ID_EX_aluSrc(aluSrcEX),
-					.ID_EX_aluShiftImm(aluShiftImmEX),
-					.ID_EX_memWrite(memWriteEX),
-					.ID_EX_memToReg(memToRegEX),
-					.ID_EX_memReadWidth(memReadWidthEX),
-					.ID_EX_rs(rsEX),
-					.ID_EX_rt(rtEX),
-					.ID_EX_rd(rdEX),
-					.ID_EX_sa(saEX),
-					.ID_EX_regDst(regDstEX),
-					.ID_EX_loadImm(loadImmEX),
-					.ID_EX_regWrite(regWriteEX),
-					.EX_MEM_writeRegister(writeRegisterMEM),
-					.EX_MEM_writeData(writeDataMEM),
-					.EX_MEM_aluOut(aluOutMEM),
-					.EX_MEM_regWrite(regWriteMEM),
-					.EX_MEM_memToReg(memToRegMEM),
-					.EX_MEM_memWrite(memWriteMEM),
-					.EX_MEM_memReadWidth(memReadWidthMEM),
-					.MEM_WB_writeRegister(writeRegisterWB),
-					.MEM_WB_aluOut(aluOutWB),
-					.MEM_WB_memoryOut(memoryOutWB),
-					.MEM_WB_regWrite(regWriteWB),
-					.MEM_WB_memToReg(memToRegWB),
-			
-					.dataToUartOutFifo(dataToUartOutFifo),
-					.readFifoFlag(uartReadFlag),
-					.writeFifoFlag(uartWriteFlag),
-					.pipeEnable(debugEnable),
-					.pipeReset (debugReset),
-					
-					.ledStep(ledStep),
-					.ledCont(ledCont),
-					.ledIdle(ledIdle),
-					.ledSend(ledSend),
-					.notStartUartTrans(notStartUartTrans),
-					.sendCounter(sendCounter),
-					.sentFlag(sentFlag)
+		.clock(clock70),
+		.reset(resetGral),
+		.endOfProgram(eopFlagWB),
+
+		.uartFifoDataIn(uartFifoDataIn),
+		.uartDataAvailable(uartDataAvailable),
+		.uartDataSent(uartDataSent),
+
+		.FE_pc(pcFE),	
+		.IF_ID_instruction(instructionID),
+		.IF_ID_pcNext(pcNextID),		
+		.ID_EX_aluOperation(aluControlEX),
+		.ID_EX_sigExt(sigExtEX),
+		.ID_EX_readData1(readData1EX),
+		.ID_EX_readData2(readData2EX),
+		.ID_EX_aluSrc(aluSrcEX),
+		.ID_EX_aluShiftImm(aluShiftImmEX),
+		.ID_EX_memWrite(memWriteEX),
+		.ID_EX_memToReg(memToRegEX),
+		.ID_EX_memReadWidth(memReadWidthEX),
+		.ID_EX_rs(rsEX),
+		.ID_EX_rt(rtEX),
+		.ID_EX_rd(rdEX),
+		.ID_EX_sa(saEX),
+		.ID_EX_regDst(regDstEX),
+		.ID_EX_loadImm(loadImmEX),
+		.ID_EX_regWrite(regWriteEX),
+		.EX_MEM_writeRegister(writeRegisterMEM),
+		.EX_MEM_writeData(writeDataMEM),
+		.EX_MEM_aluOut(aluOutMEM),
+		.EX_MEM_regWrite(regWriteMEM),
+		.EX_MEM_memToReg(memToRegMEM),
+		.EX_MEM_memWrite(memWriteMEM),
+		.EX_MEM_memReadWidth(memReadWidthMEM),
+		.MEM_WB_writeRegister(writeRegisterWB),
+		.MEM_WB_aluOut(aluOutWB),
+		.MEM_WB_memoryOut(memoryOutWB),
+		.MEM_WB_regWrite(regWriteWB),
+		.MEM_WB_memToReg(memToRegWB),
+		.readDataFromRegs(readDataFromBankToDebug),
+
+		.dataToUartOutFifo(dataToUartOutFifo),
+		.readFifoFlag(uartReadFlag),
+		.writeFifoFlag(uartWriteFlag),
+		.pipeEnable(debugEnable),
+		.pipeReset (debugReset),
+		.readAddrFromBank(readAddrFromDebugToBank),
+		
+		.ledStep(ledStep),
+		.ledCont(ledCont),
+		.ledIdle(ledIdle),
+		.ledSend(ledSend),
+		.notStartUartTrans(notStartUartTrans),
+		.sendCounter(sendCounter),
+		.sentFlag(sentFlag),
+		.waitingForReg(waitingForReg)
 	 );
 
-		UART_uart uartMod(
-			.clock(clock70),
-			.uart_rx(uartRxPin),
-			.uart_reset(resetGral),
-			.readFlag(uartReadFlag),
-			.writeFlag(uartWriteFlag),
-			.dataToSend(dataToUartOutFifo),
-			.uart_tx_start(notStartUartTrans),
-			.receivedData(uartFifoDataIn),
-			.dataAvailable(uartDataAvailable),
-			.uart_tx(uartTxPin),
-			.uart_tx_done(uartDataSent)
-		);
+	UART_uart uartMod(
+		.clock(clock70),
+		.uart_rx(uartRxPin),
+		.uart_reset(resetGral),
+		.readFlag(uartReadFlag),
+		.writeFlag(uartWriteFlag),
+		.dataToSend(dataToUartOutFifo),
+		.uart_tx_start(notStartUartTrans),
+		.receivedData(uartFifoDataIn),
+		.dataAvailable(uartDataAvailable),
+		.uart_tx(uartTxPin),
+		.uart_tx_done(uartDataSent)
+	);
 
 endmodule

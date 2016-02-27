@@ -24,10 +24,12 @@ module REGBANK_banco #(parameter addr_bits=5, word_wide=32)(
 	input [addr_bits-1:0] readReg1,
 	input [addr_bits-1:0] readReg2,
 	input [addr_bits-1:0] writeReg,
+	input [addr_bits-1:0] readRegFromDebug,
 	input reset,
 	input [word_wide-1:0] writeData,
 	output [word_wide-1:0] readData1,
-	output [word_wide-1:0] readData2
+	output [word_wide-1:0] readData2,
+	output  [word_wide-1:0] readDataToDebug
 );
 	/* bank_depth = 2^(addr_bits)
 		el banco tiene la profundidad máxima que se puede direccionar
@@ -38,7 +40,7 @@ module REGBANK_banco #(parameter addr_bits=5, word_wide=32)(
 	
 	assign readData1 = banco[readReg1];
 	assign readData2 = banco[readReg2];
-	
+	assign readDataToDebug = banco[readRegFromDebug];
 	always@(posedge clock,posedge reset) begin
 		if(reset)begin
 			banco[0]=0;banco[1]=0;banco[2]=0;banco[3]=0;

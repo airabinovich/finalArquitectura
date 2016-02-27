@@ -21,6 +21,7 @@
 		<Port Id="ledCont" Dir="OUT"/>
 		<Port Id="sentFlag" Dir="OUT"/>
 		<Port Id="notStartUartTx" Dir="OUT"/>
+		<Port Id="waitingForReg" Dir="OUT"/>
 	</Ifc>
 </Interface>
 
