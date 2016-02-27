@@ -34,8 +34,10 @@ module MainModule(
 	 
 	 wire AluZero, ALUOverflow;
 	 wire dcmOut;
+	 wire dcmOut70;
 	 Datapath1 datapath( 		
 	   .clock(dcmOut),
+		.clock70(dcmOut70),
 		.resetGral(resetGral),
 		.uartRxPin(uartRxPin),
 		.uartTxPin(uartTxPin),
@@ -53,7 +55,8 @@ module MainModule(
 	 
 	 clk_wiz_v3_6(
 		.CLK_IN1(clock),
-		.CLK_OUT1(dcmOut)
+		.CLK_OUT1(dcmOut),
+		.CLK_OUT2(dcmOut70)
 	 );
 
 

@@ -234,13 +234,13 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SECONDARY_IN_JITTER">0.010</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKIN1_JITTER_PS">100.0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKIN2_JITTER_PS">100.0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT2_USED">false</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT2_USED">true</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_USED">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT4_USED">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT5_USED">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT6_USED">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT7_USED">false</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.NUM_OUT_CLKS">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.NUM_OUT_CLKS">2</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLK_OUT1_USE_FINE_PS_GUI">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLK_OUT2_USE_FINE_PS_GUI">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLK_OUT3_USE_FINE_PS_GUI">false</spirit:configurableElementValue>
@@ -270,8 +270,8 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT1_REQUESTED_OUT_FREQ">3.125</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT1_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT1_REQUESTED_DUTY_CYCLE">50.000</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT2_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT2_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT2_REQUESTED_OUT_FREQ">3.125</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT2_REQUESTED_PHASE">70.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT2_REQUESTED_DUTY_CYCLE">50.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.CLKOUT3_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
@@ -384,7 +384,7 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DCM_CLK_FEEDBACK">1X</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DCM_STARTUP_WAIT">false</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DCM_CLK_OUT1_PORT">CLKDV</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DCM_CLK_OUT2_PORT">CLK0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DCM_CLK_OUT2_PORT">CLKDV</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DCM_CLK_OUT3_PORT">CLK0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DCM_CLK_OUT4_PORT">CLK0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.DCM_CLK_OUT5_PORT">CLK0</spirit:configurableElementValue>
@@ -414,9 +414,9 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT0_DIVIDE">128</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT0_DUTY_CYCLE">0.500</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT0_PHASE">0.000</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT1_DIVIDE">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT1_DIVIDE">128</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT1_DUTY_CYCLE">0.500</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT1_PHASE">0.000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT1_PHASE">69.961</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT2_DIVIDE">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT2_DUTY_CYCLE">0.500</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PLL_CLKOUT2_PHASE">0.000</spirit:configurableElementValue>
@@ -435,7 +435,7 @@
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.PRIMITIVE">MMCM</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SS_MODE">CENTER_HIGH</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SS_MOD_FREQ">250</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_USED">0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_USED">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_USED">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT4_USED">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT5_USED">0</spirit:configurableElementValue>
@@ -456,7 +456,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_USE_DYN_RECONFIG">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_USE_SPREAD_SPECTRUM">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_USE_SPREAD_SPECTRUM_1">0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIMTYPE_SEL">DCM_SP</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIMTYPE_SEL">PLL_BASE</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_USE_CLK_VALID">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PRIM_IN_FREQ">100.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_IN_FREQ_UNITS">Units_MHz</spirit:configurableElementValue>
@@ -472,7 +472,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_USE_POWER_DOWN">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_USE_STATUS">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_USE_FREEZE">0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_NUM_OUT_CLKS">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_NUM_OUT_CLKS">2</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT1_DRIVES">BUFG</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_DRIVES">BUFG</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_DRIVES">BUFG</spirit:configurableElementValue>
@@ -482,22 +482,22 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT7_DRIVES">BUFG</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INCLK_SUM_ROW1">__primary_________100.000____________0.010</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_INCLK_SUM_ROW2">no_secondary_input_clock </spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW1">CLK_OUT1_____3.125______0.000______50.0______300.000____150.000</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW2">no_CLK_OUT2_output</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW1">CLK_OUT1_____3.125______0.000______50.0______346.711____235.738</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW2">CLK_OUT2_____3.125_____69.961______50.0______346.711____235.738</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW3">no_CLK_OUT3_output </spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW4">no_CLK_OUT4_output</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW5">no_CLK_OUT5_output</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW6">no_CLK_OUT6_output</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OUTCLK_SUM_ROW7">no_CLK_OUT7_output </spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT1_REQUESTED_OUT_FREQ">3.125</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_REQUESTED_OUT_FREQ">3.125</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT4_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT5_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT6_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT7_REQUESTED_OUT_FREQ">100.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT1_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_REQUESTED_PHASE">70.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT4_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT5_REQUESTED_PHASE">0.000</spirit:configurableElementValue>
@@ -511,21 +511,21 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT6_REQUESTED_DUTY_CYCLE">50.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT7_REQUESTED_DUTY_CYCLE">50.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT1_OUT_FREQ">3.125</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_OUT_FREQ">N/A</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_OUT_FREQ">3.125</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_OUT_FREQ">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT4_OUT_FREQ">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT5_OUT_FREQ">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT6_OUT_FREQ">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT7_OUT_FREQ">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT1_PHASE">0.000</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_PHASE">N/A</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_PHASE">69.961</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_PHASE">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT4_PHASE">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT5_PHASE">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT6_PHASE">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT7_PHASE">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT1_DUTY_CYCLE">50.0</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_DUTY_CYCLE">N/A</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT2_DUTY_CYCLE">50.0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT3_DUTY_CYCLE">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT4_DUTY_CYCLE">N/A</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLKOUT5_DUTY_CYCLE">N/A</spirit:configurableElementValue>
@@ -582,7 +582,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_DIVCLK_DIVIDE">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_REF_JITTER">0.010</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT0_DIVIDE">128</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT1_DIVIDE">1</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT1_DIVIDE">128</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT2_DIVIDE">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT3_DIVIDE">1</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT4_DIVIDE">1</spirit:configurableElementValue>
@@ -595,7 +595,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT5_DUTY_CYCLE">0.500</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKFBOUT_PHASE">0.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT0_PHASE">0.000</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT1_PHASE">0.000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT1_PHASE">69.961</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT2_PHASE">0.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT3_PHASE">0.000</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_PLL_CLKOUT4_PHASE">0.000</spirit:configurableElementValue>
@@ -613,7 +613,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_PHASE_SHIFT">0</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_STARTUP_WAIT">FALSE</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLK_OUT1_PORT">CLKDV</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLK_OUT2_PORT">NONE</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLK_OUT2_PORT">CLKDV</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLK_OUT3_PORT">NONE</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLK_OUT4_PORT">NONE</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLK_OUT5_PORT">NONE</spirit:configurableElementValue>
@@ -627,7 +627,7 @@
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLKGEN_SPREAD_SPECTRUM">NONE</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLKGEN_STARTUP_WAIT">FALSE</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLKGEN_CLK_OUT1_PORT">CLKFX</spirit:configurableElementValue>
-            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLKGEN_CLK_OUT2_PORT">NONE</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLKGEN_CLK_OUT2_PORT">CLKFX</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_DCM_CLKGEN_CLK_OUT3_PORT">NONE</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_CLOCK_MGR_TYPE">AUTO</spirit:configurableElementValue>
             <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C_OVERRIDE_MMCM">0</spirit:configurableElementValue>
@@ -724,8 +724,8 @@
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.xco</xilinx:name>
                      <xilinx:userFileType>xco</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:48 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x7AFBA42B</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:08 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x9A3A2570</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -735,7 +735,7 @@
                      <xilinx:name>./clk_wiz_v3_6/example_design/clk_wiz_v3_6_exdes.ucf</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>ucf</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:54 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xFFC09E4D</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -743,15 +743,15 @@
                      <xilinx:name>./clk_wiz_v3_6/example_design/clk_wiz_v3_6_exdes.v</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>verilog</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:49 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0xAC64F57E</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:09 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5A40057B</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/example_design/clk_wiz_v3_6_exdes.xdc</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xdc</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:54 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:14 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x9ABA5B41</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -759,7 +759,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/implement.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x4ED49AF9</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -767,7 +767,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/implement.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xEFECD5E5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -775,7 +775,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_ise.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x6966A508</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -783,7 +783,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_ise.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x7F8B5943</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -791,7 +791,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_ise.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xFBB3180E</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -799,7 +799,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_rdn.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xB9373CFA</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -807,7 +807,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_rdn.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xDCE9D96C</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -815,7 +815,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_rdn.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x66DD4C89</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -823,7 +823,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/xst.prj</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:54 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:14 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x49D219A7</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -831,7 +831,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/xst.scr</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:54 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:14 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xB3D5FF09</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -839,15 +839,15 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/clk_wiz_v3_6_tb.v</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>verilog</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:49 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0xAB9C673F</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:09 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0xEC3944E1</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simcmds.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x18DD8E59</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -855,7 +855,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_isim.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:51 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x2B81F5D5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -863,7 +863,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_isim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x7BFCBBEE</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -871,7 +871,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_mti.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:50 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:10 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xFD2E9ECE</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -879,7 +879,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:50 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:10 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xA4A47524</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -887,7 +887,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_mti.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:50 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:10 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xC9A4E9E6</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -895,7 +895,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_ncsim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:51 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x2901E532</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -903,7 +903,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_vcs.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x52343BF0</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -911,7 +911,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/ucli_commands.key</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x8C15B41F</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -919,7 +919,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/vcs_session.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xDBAB8E4B</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -927,31 +927,31 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/wave.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:51 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x87ADB985</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5F2F16A5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/wave.sv</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:51 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x71E0D404</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x364C0221</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/clk_wiz_v3_6_tb.v</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>verilog</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:49 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0xFBB2AE98</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:09 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x964B9A59</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/sdf_cmd_file</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:51 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x3E480C11</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -959,7 +959,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simcmds.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x84642126</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -967,7 +967,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_isim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xF857D9E0</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -975,7 +975,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_mti.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:50 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:10 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x559888D5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -983,7 +983,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:51 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:10 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xA99E36D0</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -991,7 +991,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_mti.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:50 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:10 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x94E2B7E1</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -999,7 +999,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_ncsim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:51 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x400C9C0D</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1007,7 +1007,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_vcs.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x5F8F9F1C</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1015,7 +1015,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/ucli_commands.key</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:52 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x9DC0E037</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1023,7 +1023,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/vcs_session.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:53 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:12 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x28340249</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1031,43 +1031,43 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/wave.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:51 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:11 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xEDE0E39F</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.ucf</xilinx:name>
                      <xilinx:userFileType>ucf</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:54 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xFC45C8BC</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.v</xilinx:name>
                      <xilinx:userFileType>verilog</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:49 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x63EAA2EB</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:09 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0xE4946F6D</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.veo</xilinx:name>
                      <xilinx:userFileType>veo</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:49 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x5070FDD4</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:09 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x12857230</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.xdc</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xdc</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:54 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:13 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x7939AAAD</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6_xmdf.tcl</xilinx:name>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:50 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:10 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xF1D6EDD0</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1089,7 +1089,7 @@
                      <xilinx:name>./clk_wiz_v3_6/example_design/clk_wiz_v3_6_exdes.ucf</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>ucf</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xFFC09E4D</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1097,15 +1097,15 @@
                      <xilinx:name>./clk_wiz_v3_6/example_design/clk_wiz_v3_6_exdes.v</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>verilog</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0xAC64F57E</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5A40057B</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/example_design/clk_wiz_v3_6_exdes.xdc</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xdc</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x9ABA5B41</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1113,7 +1113,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/implement.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x4ED49AF9</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1121,7 +1121,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/implement.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xEFECD5E5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1129,7 +1129,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_ise.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x6966A508</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1137,7 +1137,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_ise.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x7F8B5943</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1145,7 +1145,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_ise.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xFBB3180E</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1153,7 +1153,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_rdn.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xB9373CFA</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1161,7 +1161,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_rdn.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xDCE9D96C</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1169,7 +1169,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/planAhead_rdn.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x66DD4C89</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1177,7 +1177,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/xst.prj</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x49D219A7</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1185,7 +1185,7 @@
                      <xilinx:name>./clk_wiz_v3_6/implement/xst.scr</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xB3D5FF09</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1193,15 +1193,15 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/clk_wiz_v3_6_tb.v</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>verilog</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0xAB9C673F</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0xEC3944E1</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simcmds.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x18DD8E59</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1209,7 +1209,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_isim.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x2B81F5D5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1217,7 +1217,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_isim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x7BFCBBEE</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1225,7 +1225,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_mti.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xFD2E9ECE</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1233,7 +1233,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xA4A47524</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1241,7 +1241,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_mti.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xC9A4E9E6</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1249,7 +1249,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_ncsim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x2901E532</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1257,7 +1257,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/simulate_vcs.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x52343BF0</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1265,7 +1265,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/ucli_commands.key</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x8C15B41F</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1273,7 +1273,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/vcs_session.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xDBAB8E4B</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1281,31 +1281,31 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/wave.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x87ADB985</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x5F2F16A5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/simulation/functional/wave.sv</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x71E0D404</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x364C0221</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/clk_wiz_v3_6_tb.v</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>verilog</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0xFBB2AE98</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x964B9A59</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/sdf_cmd_file</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x3E480C11</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1313,7 +1313,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simcmds.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x84642126</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1321,7 +1321,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_isim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xF857D9E0</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1329,7 +1329,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_mti.bat</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x559888D5</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1337,7 +1337,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_mti.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xA99E36D0</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1345,7 +1345,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_mti.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x94E2B7E1</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1353,7 +1353,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_ncsim.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x400C9C0D</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1361,7 +1361,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/simulate_vcs.sh</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x5F8F9F1C</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1369,7 +1369,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/ucli_commands.key</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x9DC0E037</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1377,7 +1377,7 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/vcs_session.tcl</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x28340249</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1385,43 +1385,43 @@
                      <xilinx:name>./clk_wiz_v3_6/simulation/timing/wave.do</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xEDE0E39F</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.ucf</xilinx:name>
                      <xilinx:userFileType>ucf</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xFC45C8BC</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.v</xilinx:name>
                      <xilinx:userFileType>verilog</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:55 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x63EAA2EB</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0xE4946F6D</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.veo</xilinx:name>
                      <xilinx:userFileType>veo</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x5070FDD4</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x12857230</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.xdc</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xdc</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x7939AAAD</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6_xmdf.tcl</xilinx:name>
                      <xilinx:userFileType>tcl</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:54:56 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:15 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xF1D6EDD0</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1432,7 +1432,7 @@
                      <xilinx:name>./clk_wiz_v3_6/doc/clk_wiz_v3_6_readme.txt</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:00 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:20 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x5B63DA78</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1440,7 +1440,7 @@
                      <xilinx:name>./clk_wiz_v3_6/doc/clk_wiz_v3_6_vinfo.html</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:00 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:20 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xF2E77607</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1448,29 +1448,21 @@
                      <xilinx:name>./clk_wiz_v3_6/doc/pg065_clk_wiz.pdf</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>pdf</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:00 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:20 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0x2F883891</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
                   <xilinx:name>readme_documents_generator</xilinx:name>
-                  <xilinx:file>
-                     <xilinx:name>./clk_wiz_v3_6/doc/clk_wiz_v3_6_readme.txt</xilinx:name>
-                     <xilinx:userFileType>ignore</xilinx:userFileType>
-                     <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:01 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0x5B63DA78</xilinx:checkSum>
-                     <xilinx:generationId>generationID_1879581046</xilinx:generationId>
-                  </xilinx:file>
                </xilinx:fileSet>
                <xilinx:fileSet>
                   <xilinx:name>asy_generator</xilinx:name>
                   <xilinx:file>
                      <xilinx:name>./clk_wiz_v3_6.asy</xilinx:name>
                      <xilinx:userFileType>asy</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:06 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0xB3495C04</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:25 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x96ADB228</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -1480,7 +1472,7 @@
                      <xilinx:name>./_xmsgs/pn_parser.xmsgs</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>unknown</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:08 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:28 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xD93BFE22</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1488,7 +1480,7 @@
                      <xilinx:name>./clk_wiz_v3_6.gise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>gise</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:09 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:29 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xDC71B9A6</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
@@ -1496,8 +1488,8 @@
                      <xilinx:name>./clk_wiz_v3_6.xise</xilinx:name>
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>xise</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:09 GMT 2016</xilinx:timeStamp>
-                     <xilinx:checkSum>0xBDE28BAA</xilinx:checkSum>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:29 GMT 2016</xilinx:timeStamp>
+                     <xilinx:checkSum>0x33041D6B</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>
                </xilinx:fileSet>
@@ -1511,7 +1503,7 @@
                      <xilinx:userFileType>ignore</xilinx:userFileType>
                      <xilinx:userFileType>txtFlist</xilinx:userFileType>
                      <xilinx:userFileType>txt</xilinx:userFileType>
-                     <xilinx:timeStamp>Fri Feb 26 14:55:09 GMT 2016</xilinx:timeStamp>
+                     <xilinx:timeStamp>Sat Feb 27 14:16:29 GMT 2016</xilinx:timeStamp>
                      <xilinx:checkSum>0xE72A9832</xilinx:checkSum>
                      <xilinx:generationId>generationID_1879581046</xilinx:generationId>
                   </xilinx:file>

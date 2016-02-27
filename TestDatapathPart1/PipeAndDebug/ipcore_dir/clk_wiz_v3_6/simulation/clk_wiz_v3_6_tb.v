@@ -57,7 +57,7 @@
 
 `timescale 1ps/1ps
 
-`define wait_lock @(posedge dut.clknetwork.dcm_sp_inst.LOCKED)
+`define wait_lock @(posedge dut.clknetwork.pll_base_inst.LOCKED)
 
 module clk_wiz_v3_6_tb ();
 
@@ -78,10 +78,10 @@ module clk_wiz_v3_6_tb ();
   // Declare the input clock signals
   reg         CLK_IN1     = 1;
 
-  // The high bit of the sampling counter
-  wire        COUNT;
+  // The high bits of the sampling counters
+  wire [2:1]  COUNT;
   reg         COUNTER_RESET = 0;
-wire [1:1] CLK_OUT;
+wire [2:1] CLK_OUT;
 //Freq Check using the M & D values setting and actual Frequency generated
 
 

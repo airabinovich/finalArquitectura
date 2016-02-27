@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Datapath1(
 		input 	clock,
+		input    clock70,
 		input 	resetGral,
 		input 	uartRxPin,
 		output 	uartTxPin,
@@ -251,18 +252,18 @@ module Datapath1(
 	 );
 
 								
-			IF_ID if_id(
-					.clock(clock),
-					.reset(resetGral),
-					.debugEnable(debugEnable),
-					.debugReset(debugReset),
-					.notEnable(stallID),
-					.instruction(instruction),
-					.pcNext(pcNext),
-					.instructionOut(instructionID),
-					.pcNextOut(pcNextID),
-					.clear(pcSrc)
-			);
+	IF_ID if_id(
+		.clock(clock),
+		.reset(resetGral),
+		.debugEnable(debugEnable),
+		.debugReset(debugReset),
+		.notEnable(stallID),
+		.instruction(instruction),
+		.pcNext(pcNext),
+		.instructionOut(instructionID),
+		.pcNextOut(pcNextID),
+		.clear(pcSrc)
+	);
 			
 			
 		  EX_MEM ex_mem(
@@ -393,7 +394,7 @@ module Datapath1(
 	 );
 	 
 	 DebugUnit debugUnit(
-					.clock(clock),
+					.clock(clock70),
 					.reset(resetGral),
 					.endOfProgram(eopFlagWB),
 			
@@ -449,7 +450,7 @@ module Datapath1(
 	 );
 
 		UART_uart uartMod(
-			.clock(clock),
+			.clock(clock70),
 			.uart_rx(uartRxPin),
 			.uart_reset(resetGral),
 			.readFlag(uartReadFlag),

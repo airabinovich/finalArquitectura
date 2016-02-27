@@ -118,6 +118,8 @@ module DebugUnit(
 				ledStep=0;
 				ledCont=0;
 				ledSend=0;
+				pipeReset=1;
+				pipeEnable=0;
 				restartCounter=0;
 				notStartUartTrans=1;
 				next_state=IDLE;
@@ -156,6 +158,7 @@ module DebugUnit(
 				ledStep=0;
 				ledCont=1;
 				ledSend=0;
+				pipeReset=0;
 				readFifoFlag=0;
 				sentFlag=0;	
 //				sendCounterNext=0;
@@ -170,6 +173,8 @@ module DebugUnit(
 				ledStep=1;
 				ledCont=0;
 				ledSend=0;
+				pipeEnable=0;
+				pipeReset=0;
 				restartCounter=0;
 				notStartUartTrans=1;
 				sentFlag=0;
@@ -180,6 +185,7 @@ module DebugUnit(
 					end
 					else begin
 						next_state=STEP;
+						pipeEnable=0;
 					end
 					readFifoFlag=1;
 				end
@@ -193,6 +199,7 @@ module DebugUnit(
 				ledStep=0;
 				ledCont=0;
 				ledSend=1;
+				pipeReset=0;
 				readFifoFlag=0;
 				pipeEnable=0;
 				if(sentFlag && !endOfProgram)begin

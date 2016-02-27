@@ -218,17 +218,20 @@ WARNING:HDLCompiler:413 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Tr
 Elaborating module <UART_baud_rate_generator(COUNT=10416)>.
 
 Elaborating module <UART_tx>.
-WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 43: Assignment to AluZero ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 44: Assignment to ALUOverflow ignored, since the identifier is never used
-WARNING:HDLCompiler:604 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 54: Module instantiation should have an instance name
+WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 45: Assignment to AluZero ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 46: Assignment to ALUOverflow ignored, since the identifier is never used
+WARNING:HDLCompiler:604 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" Line 56: Module instantiation should have an instance name
 
 Elaborating module <clk_wiz_v3_6>.
 
 Elaborating module <IBUFG>.
 
-Elaborating module <DCM_SP(CLKDV_DIVIDE=16.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="TRUE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 126: Assignment to locked_int ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 127: Assignment to status_int ignored, since the identifier is never used
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=4,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=128,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=128,CLKOUT1_PHASE=69.961,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=10.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 119: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 120: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 121: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 122: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 123: Assignment to locked_unused ignored, since the identifier is never used
 
 Elaborating module <BUFG>.
 
@@ -238,15 +241,15 @@ Elaborating module <BUFG>.
 
 Synthesizing Unit <MainModule>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v".
-INFO:Xst:3210 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" line 37: Output port <ALUzero> of the instance <datapath> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" line 37: Output port <ALUOverflow> of the instance <datapath> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" line 38: Output port <ALUzero> of the instance <datapath> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\MainModule.v" line 38: Output port <ALUOverflow> of the instance <datapath> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <MainModule> synthesized.
 
 Synthesizing Unit <Datapath1>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\Datapath1.v".
-    Found 32-bit comparator equal for signal <n0008> created at line 161
+    Found 32-bit comparator equal for signal <n0008> created at line 162
     Summary:
 	inferred   1 Comparator(s).
 	inferred  11 Multiplexer(s).
@@ -399,7 +402,7 @@ Synthesizing Unit <DebugUnit>.
     Found 8-bit register for signal <sendCounter>.
     Found 3-bit register for signal <current_state>.
     Found 8-bit adder for signal <sendCounter[7]_GND_17_o_add_1_OUT> created at line 99.
-    Found 8x9-bit Read Only RAM for signal <_n1899>
+    Found 8x7-bit Read Only RAM for signal <_n2562>
     Found 1-bit 7-to-1 multiplexer for signal <current_state[2]_GND_17_o_Mux_136_o> created at line 112.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -408,6 +411,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <ledIdle>. Latches may be generat
 WARNING:Xst:737 - Found 1-bit latch for signal <ledStep>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ledCont>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <ledSend>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pipeReset>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <readFifoFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <pipeEnable>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <writeFifoFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -421,13 +425,12 @@ WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<2>>. Latches m
 WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <dataToUartOutFifo<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <sentFlag>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <pipeReset>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 RAM(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred  11 D-type flip-flop(s).
 	inferred  21 Latch(s).
-	inferred 366 Multiplexer(s).
+	inferred 369 Multiplexer(s).
 Unit <DebugUnit> synthesized.
 
 Synthesizing Unit <UART_uart>.
@@ -535,7 +538,7 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 2
  16x8-bit dual-port RAM                                : 1
- 8x9-bit single-port Read Only RAM                     : 1
+ 8x7-bit single-port Read Only RAM                     : 1
 # Adders/Subtractors                                   : 14
  16-bit adder                                          : 2
  3-bit adder                                           : 1
@@ -564,9 +567,9 @@ Macro Statistics
  4-bit comparator greater                              : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
-# Multiplexers                                         : 503
+# Multiplexers                                         : 506
  1-bit 12-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 396
+ 1-bit 2-to-1 multiplexer                              : 399
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 7-to-1 multiplexer                              : 1
@@ -602,12 +605,12 @@ Loading core <instructionROM> for timing and area information for instance <inst
 
 Synthesizing (advanced) Unit <DebugUnit>.
 The following registers are absorbed into counter <sendCounter>: 1 register on signal <sendCounter>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1899> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2562> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 8-word x 9-bit                      |          |
+    |     aspect ratio   | 8-word x 7-bit                      |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <current_state> |          |
     |     diA            | connected to signal <GND>           |          |
@@ -654,7 +657,7 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 2
  16x8-bit dual-port distributed RAM                    : 1
- 8x9-bit single-port distributed Read Only RAM         : 1
+ 8x7-bit single-port distributed Read Only RAM         : 1
 # Adders/Subtractors                                   : 8
  33-bit adder                                          : 1
  33-bit subtractor                                     : 1
@@ -676,9 +679,9 @@ Macro Statistics
  4-bit comparator greater                              : 2
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
-# Multiplexers                                         : 499
+# Multiplexers                                         : 502
  1-bit 12-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 394
+ 1-bit 2-to-1 multiplexer                              : 397
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 7-to-1 multiplexer                              : 1
@@ -705,6 +708,7 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:1901 - Instance _i000001/pll_base_inst in unit _i000001/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
 INFO:Xst:2261 - The FF/Latch <sigExtOut_6> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <saOut_0> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_11> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <rdOut_0> 
 INFO:Xst:2261 - The FF/Latch <sigExtOut_7> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <saOut_1> 
@@ -743,22 +747,13 @@ Optimizing unit <HazardsUnit> ...
 
 Optimizing unit <ALU> ...
 WARNING:Xst:2677 - Node <datapath/debugUnit/writeFifoFlag> of sequential type is unconnected in block <MainModule>.
-WARNING:Xst:1293 - FF/Latch <datapath/uartMod/tx_baud_rate/counter_15> has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <datapath/uartMod/tx_baud_rate/counter_14> has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <datapath/uartMod/rx_baud_rate/counter_15> has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <datapath/uartMod/rx_baud_rate/counter_14> has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <datapath/uartMod/rx_baud_rate/counter_13> has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <datapath/uartMod/rx_baud_rate/counter_12> has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <datapath/uartMod/rx_baud_rate/counter_11> has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <datapath/uartMod/rx_baud_rate/counter_10> has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <datapath/ex_mem/memWriteOut_3> in Unit <MainModule> is equivalent to the following FF/Latch, which will be removed : <datapath/ex_mem/memWriteOut_2> 
-INFO:Xst:2261 - The FF/Latch <datapath/id_ex/memWriteOut_3> in Unit <MainModule> is equivalent to the following FF/Latch, which will be removed : <datapath/id_ex/memWriteOut_2> 
+INFO:Xst:2261 - The FF/Latch <datapath/id_ex/memWriteOut_2> in Unit <MainModule> is equivalent to the following FF/Latch, which will be removed : <datapath/id_ex/memWriteOut_3> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block MainModule, actual ratio is 44.
+Found area constraint ratio of 100 (+ 5) on block MainModule, actual ratio is 45.
 FlipFlop datapath/ex_mem/regWriteOut has been replicated 1 time(s)
-FlipFlop datapath/mem_wb/regWriteOut has been replicated 1 time(s)
 Latch datapath/debugUnit/sentFlag has been replicated 1 time(s) to handle iob=true attribute.
 Latch datapath/debugUnit/notStartUartTrans has been replicated 1 time(s) to handle iob=true attribute.
 
@@ -768,8 +763,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1418
- Flip-Flops                                            : 1418
+# Registers                                            : 1425
+ Flip-Flops                                            : 1425
 
 =========================================================================
 
@@ -792,40 +787,40 @@ Top Level Output File Name         : MainModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3343
+# BELS                             : 3415
 #      GND                         : 3
 #      INV                         : 5
-#      LUT1                        : 22
+#      LUT1                        : 30
 #      LUT2                        : 87
-#      LUT3                        : 155
-#      LUT4                        : 178
-#      LUT5                        : 1326
-#      LUT6                        : 1242
-#      MUXCY                       : 125
-#      MUXF7                       : 93
+#      LUT3                        : 144
+#      LUT4                        : 242
+#      LUT5                        : 1325
+#      LUT6                        : 1232
+#      MUXCY                       : 132
+#      MUXF7                       : 100
 #      VCC                         : 3
-#      XORCY                       : 104
-# FlipFlops/Latches                : 1440
+#      XORCY                       : 112
+# FlipFlops/Latches                : 1447
 #      FD                          : 5
 #      FDC                         : 5
 #      FDCE                        : 1046
-#      FDCE_1                      : 306
+#      FDCE_1                      : 305
 #      FDE                         : 31
 #      FDPE                        : 1
-#      FDR                         : 24
+#      FDR                         : 32
 #      LD                          : 22
 # RAMS                             : 5
 #      RAM16X1D                    : 2
 #      RAM32M                      : 1
 #      RAMB8BWER                   : 2
-# Clock Buffers                    : 2
-#      BUFG                        : 2
+# Clock Buffers                    : 3
+#      BUFG                        : 3
 # IO Buffers                       : 18
 #      IBUF                        : 2
 #      IBUFG                       : 1
 #      OBUF                        : 15
-# DCMs                             : 1
-#      DCM_SP                      : 1
+# Others                           : 1
+#      PLL_ADV                     : 1
 
 Device utilization summary:
 ---------------------------
@@ -834,18 +829,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1434  out of  18224     7%  
- Number of Slice LUTs:                 3023  out of   9112    33%  
-    Number used as Logic:              3015  out of   9112    33%  
+ Number of Slice Registers:            1441  out of  18224     7%  
+ Number of Slice LUTs:                 3073  out of   9112    33%  
+    Number used as Logic:              3065  out of   9112    33%  
     Number used as Memory:                8  out of   2176     0%  
        Number used as RAM:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3041
-   Number with an unused Flip Flop:    1607  out of   3041    52%  
-   Number with an unused LUT:            18  out of   3041     0%  
-   Number of fully used LUT-FF pairs:  1416  out of   3041    46%  
-   Number of unique control sets:        27
+ Number of LUT Flip Flop pairs used:   4114
+   Number with an unused Flip Flop:    2673  out of   4114    64%  
+   Number with an unused LUT:          1041  out of   4114    25%  
+   Number of fully used LUT-FF pairs:   400  out of   4114     9%  
+   Number of unique control sets:        25
 
 IO Utilization: 
  Number of IOs:                          18
@@ -855,7 +850,8 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
     Number using Block RAM only:          1
- Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
 
 ---------------------------
 Partition Resource Summary:
@@ -875,19 +871,18 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
-Clock Signal                                                                                                                   | Clock buffer(FF name)                          | Load  |
--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
-clock                                                                                                                          | DCM_SP:CLKDV                                   | 1423  |
-datapath/debugUnit/current_state[2]_GND_29_o_Mux_161_o(datapath/debugUnit/Mmux_current_state[2]_GND_29_o_Mux_161_o11:O)        | NONE(*)(datapath/debugUnit/dataToUartOutFifo_0)| 8     |
-datapath/debugUnit/current_state[2]_GND_37_o_Mux_191_o(datapath/debugUnit/Mmux_current_state[2]_GND_37_o_Mux_191_o1:O)         | NONE(*)(datapath/debugUnit/sentFlag)           | 2     |
-datapath/debugUnit/current_state[2]_GND_26_o_Mux_151_o(datapath/debugUnit/Mmux_current_state[2]_GND_26_o_Mux_151_o12:O)        | NONE(*)(datapath/debugUnit/pipeEnable)         | 1     |
-datapath/debugUnit/current_state[2]_GND_28_o_Mux_157_o(datapath/debugUnit/Mmux_current_state[2]_GND_28_o_Mux_157_o13:O)        | NONE(*)(datapath/debugUnit/notStartUartTrans)  | 2     |
-datapath/debugUnit/Mram__n18994(datapath/debugUnit/Mram__n189941:O)                                                            | NONE(*)(datapath/debugUnit/ledSend)            | 5     |
-datapath/debugUnit/Mmux_current_state[2]_GND_26_o_Mux_151_o11(datapath/debugUnit/Mmux_current_state[2]_GND_26_o_Mux_151_o111:O)| NONE(*)(datapath/debugUnit/pipeReset)          | 1     |
-datapath/debugUnit/current_state[2]_PWR_20_o_Mux_135_o(datapath/debugUnit/Mmux_current_state[2]_PWR_20_o_Mux_135_o11:O)        | NONE(*)(datapath/debugUnit/next_state_2)       | 3     |
--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
-(*) These 7 clock signal(s) are generated by combinatorial logic,
+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+Clock Signal                                                                                                           | Clock buffer(FF name)                          | Load  |
+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+_i000001/pll_base_inst/CLKOUT1                                                                                         | BUFG                                           | 99    |
+_i000001/pll_base_inst/CLKOUT0                                                                                         | BUFG                                           | 1331  |
+datapath/debugUnit/current_state[2]_GND_30_o_Mux_163_o(datapath/debugUnit/Mmux_current_state[2]_GND_30_o_Mux_163_o11:O)| NONE(*)(datapath/debugUnit/dataToUartOutFifo_0)| 8     |
+datapath/debugUnit/current_state[2]_GND_38_o_Mux_193_o(datapath/debugUnit/Mmux_current_state[2]_GND_38_o_Mux_193_o1:O) | NONE(*)(datapath/debugUnit/sentFlag)           | 2     |
+datapath/debugUnit/Mram__n25622(datapath/debugUnit/Mram__n256221:O)                                                    | NONE(*)(datapath/debugUnit/pipeEnable)         | 7     |
+datapath/debugUnit/current_state[2]_GND_29_o_Mux_159_o(datapath/debugUnit/Mmux_current_state[2]_GND_29_o_Mux_159_o13:O)| NONE(*)(datapath/debugUnit/notStartUartTrans)  | 2     |
+datapath/debugUnit/current_state[2]_PWR_20_o_Mux_135_o(datapath/debugUnit/Mmux_current_state[2]_PWR_20_o_Mux_135_o11:O)| NONE(*)(datapath/debugUnit/next_state_2)       | 3     |
+-----------------------------------------------------------------------------------------------------------------------+------------------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -900,9 +895,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 0.942ns (Maximum Frequency: 1061.944MHz)
+   Minimum period: 13.912ns (Maximum Frequency: 71.880MHz)
    Minimum input arrival time before clock: 4.777ns
-   Maximum output required time after clock: 4.723ns
+   Maximum output required time after clock: 4.717ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -910,52 +905,99 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clock'
-  Clock period: 0.942ns (frequency: 1061.944MHz)
-  Total number of paths / destination ports: 445334 / 2762
+Timing constraint: Default period analysis for Clock '_i000001/pll_base_inst/CLKOUT1'
+  Clock period: 4.691ns (frequency: 213.170MHz)
+  Total number of paths / destination ports: 1357 / 201
 -------------------------------------------------------------------------
-Delay:               15.067ns (Levels of Logic = 12)
-  Source:            datapath/ex_mem/writeRegisterOut_2 (FF)
-  Destination:       datapath/ex_mem/aluOutOut_19 (FF)
-  Source Clock:      clock falling 0.1X
-  Destination Clock: clock falling 0.1X
+Delay:               4.691ns (Levels of Logic = 2)
+  Source:            datapath/debugUnit/sendCounter_0 (FF)
+  Destination:       datapath/debugUnit/sendCounter_7 (FF)
+  Source Clock:      _i000001/pll_base_inst/CLKOUT1 rising
+  Destination Clock: _i000001/pll_base_inst/CLKOUT1 rising
 
-  Data Path: datapath/ex_mem/writeRegisterOut_2 to datapath/ex_mem/aluOutOut_19
+  Data Path: datapath/debugUnit/sendCounter_0 to datapath/debugUnit/sendCounter_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE_1:C->Q           6   0.447   1.109  datapath/ex_mem/writeRegisterOut_2 (datapath/ex_mem/writeRegisterOut_2)
-     LUT6:I0->O            1   0.203   0.580  datapath/hazards/rsEX[4]_regWriteMEM_AND_171_o_SW0 (N94)
-     LUT6:I5->O           33   0.205   1.306  datapath/hazards/rsEX[4]_regWriteMEM_AND_171_o (datapath/forwardAEX<1>)
-     LUT5:I4->O           32   0.205   1.539  datapath/hazards/Mmux_forwardAEX13 (datapath/forwardAEX<0>)
-     LUT5:I1->O           17   0.203   1.132  datapath/Mmux_aluOperand1121 (datapath/Mmux_aluOperand112)
-     LUT4:I2->O           67   0.203   1.660  datapath/Mmux_aluOperand1122 (datapath/aluOperand1<1>)
-     LUT6:I5->O            3   0.205   1.015  datapath/alu/Sh1181 (datapath/alu/Sh118)
-     LUT6:I0->O            4   0.203   0.684  datapath/alu/Sh14311 (datapath/alu/Sh1431)
-     LUT5:I4->O            2   0.205   0.845  datapath/alu/Sh2501 (datapath/alu/Sh250)
-     LUT5:I2->O            1   0.205   0.808  datapath/ex_mem/Mmux_aluOutOut[31]_GND_11_o_mux_7_OUT113 (datapath/ex_mem/Mmux_aluOutOut[31]_GND_11_o_mux_7_OUT112)
-     LUT6:I3->O            1   0.205   0.580  datapath/ex_mem/Mmux_aluOutOut[31]_GND_11_o_mux_7_OUT116 (datapath/ex_mem/Mmux_aluOutOut[31]_GND_11_o_mux_7_OUT115)
-     LUT6:I5->O            1   0.205   0.808  datapath/ex_mem/Mmux_aluOutOut[31]_GND_11_o_mux_7_OUT117 (datapath/ex_mem/Mmux_aluOutOut[31]_GND_11_o_mux_7_OUT116)
-     LUT4:I1->O            1   0.205   0.000  datapath/ex_mem/Mmux_aluOutOut[31]_GND_11_o_mux_7_OUT118 (datapath/ex_mem/aluOutOut[31]_GND_11_o_mux_7_OUT<19>)
-     FDCE_1:D                  0.102          datapath/ex_mem/aluOutOut_19
+     FDCE:C->Q            66   0.447   1.998  datapath/debugUnit/sendCounter_0 (datapath/debugUnit/sendCounter_0)
+     LUT5:I0->O            5   0.203   0.715  datapath/debugUnit/Mmux__n10901551 (datapath/debugUnit/Mmux__n1090155)
+     LUT6:I5->O            8   0.205   0.802  datapath/debugUnit/_n1884_inv1 (datapath/debugUnit/_n1884_inv)
+     FDCE:CE                   0.322          datapath/debugUnit/sendCounter_0
     ----------------------------------------
-    Total                     15.067ns (3.001ns logic, 12.066ns route)
-                                       (19.9% logic, 80.1% route)
+    Total                      4.691ns (1.177ns logic, 3.514ns route)
+                                       (25.1% logic, 74.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
-  Total number of paths / destination ports: 1373 / 1373
+Timing constraint: Default period analysis for Clock '_i000001/pll_base_inst/CLKOUT0'
+  Clock period: 13.912ns (frequency: 71.880MHz)
+  Total number of paths / destination ports: 465641 / 2576
+-------------------------------------------------------------------------
+Delay:               6.956ns (Levels of Logic = 17)
+  Source:            datapath/bank/banco_0_832 (FF)
+  Destination:       datapath/if_id/instructionOut_31 (FF)
+  Source Clock:      _i000001/pll_base_inst/CLKOUT0 rising
+  Destination Clock: _i000001/pll_base_inst/CLKOUT0 falling
+
+  Data Path: datapath/bank/banco_0_832 to datapath/if_id/instructionOut_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.898  datapath/bank/banco_0_832 (datapath/bank/banco_0_832)
+     LUT6:I2->O            1   0.203   0.827  datapath/bank/Mmux_readData1_81 (datapath/bank/Mmux_readData1_81)
+     LUT6:I2->O            1   0.203   0.000  datapath/bank/Mmux_readData1_3 (datapath/bank/Mmux_readData1_3)
+     MUXF7:I1->O           2   0.140   0.617  datapath/bank/Mmux_readData1_2_f7 (datapath/readData1<0>)
+     LUT4:I3->O            1   0.205   0.944  datapath/Mmux_branchSrcA110 (datapath/branchSrcA<0>)
+     LUT6:I0->O            1   0.203   0.000  datapath/Mcompar_n0008_lut<0> (datapath/Mcompar_n0008_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  datapath/Mcompar_n0008_cy<0> (datapath/Mcompar_n0008_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<1> (datapath/Mcompar_n0008_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<2> (datapath/Mcompar_n0008_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<3> (datapath/Mcompar_n0008_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<4> (datapath/Mcompar_n0008_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<5> (datapath/Mcompar_n0008_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<6> (datapath/Mcompar_n0008_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<7> (datapath/Mcompar_n0008_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<8> (datapath/Mcompar_n0008_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0008_cy<9> (datapath/Mcompar_n0008_cy<9>)
+     MUXCY:CI->O          40   0.213   1.406  datapath/Mcompar_n0008_cy<10> (datapath/n0008)
+     LUT5:I4->O            1   0.205   0.000  datapath/if_id/Mmux_instructionOut[31]_GND_10_o_mux_3_OUT110 (datapath/if_id/instructionOut[31]_GND_10_o_mux_3_OUT<0>)
+     FDCE_1:D                  0.102          datapath/if_id/instructionOut_0
+    ----------------------------------------
+    Total                      6.956ns (2.264ns logic, 4.692ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_i000001/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 1329 / 1329
+-------------------------------------------------------------------------
+Offset:              3.945ns (Levels of Logic = 1)
+  Source:            resetGral (PAD)
+  Destination:       datapath/if_id/instructionOut_31 (FF)
+  Destination Clock: _i000001/pll_base_inst/CLKOUT0 falling
+
+  Data Path: resetGral to datapath/if_id/instructionOut_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1358   1.222   2.293  resetGral_IBUF (resetGral_IBUF)
+     FDCE_1:CLR                0.430          datapath/if_id/pcNextOut_0
+    ----------------------------------------
+    Total                      3.945ns (1.652ns logic, 2.293ns route)
+                                       (41.9% logic, 58.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock '_i000001/pll_base_inst/CLKOUT1'
+  Total number of paths / destination ports: 43 / 43
 -------------------------------------------------------------------------
 Offset:              4.777ns (Levels of Logic = 2)
   Source:            resetGral (PAD)
   Destination:       datapath/uartMod/fifo_rx/Mram_FIFO22 (RAM)
-  Destination Clock: clock rising 0.1X
+  Destination Clock: _i000001/pll_base_inst/CLKOUT1 rising
 
   Data Path: resetGral to datapath/uartMod/fifo_rx/Mram_FIFO22
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O          1359   1.222   2.398  resetGral_IBUF (resetGral_IBUF)
+     IBUF:I->O          1358   1.222   2.398  resetGral_IBUF (resetGral_IBUF)
      LUT2:I0->O            3   0.203   0.650  datapath/uartMod/fifo_rx/Mmux_BUS_000311 (datapath/uartMod/fifo_rx/BUS_0003)
      RAM32M:WE                 0.304          datapath/uartMod/fifo_rx/Mram_FIFO1
     ----------------------------------------
@@ -963,32 +1005,32 @@ Offset:              4.777ns (Levels of Logic = 2)
                                        (36.2% logic, 63.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+Timing constraint: Default OFFSET OUT AFTER for Clock '_i000001/pll_base_inst/CLKOUT1'
   Total number of paths / destination ports: 9 / 9
 -------------------------------------------------------------------------
-Offset:              4.723ns (Levels of Logic = 1)
-  Source:            datapath/debugUnit/sendCounter_1 (FF)
-  Destination:       sendCounter<1> (PAD)
-  Source Clock:      clock rising 0.1X
+Offset:              4.717ns (Levels of Logic = 1)
+  Source:            datapath/debugUnit/sendCounter_3 (FF)
+  Destination:       sendCounter<3> (PAD)
+  Source Clock:      _i000001/pll_base_inst/CLKOUT1 rising
 
-  Data Path: datapath/debugUnit/sendCounter_1 to sendCounter<1>
+  Data Path: datapath/debugUnit/sendCounter_3 to sendCounter<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            74   0.447   1.705  datapath/debugUnit/sendCounter_1 (datapath/debugUnit/sendCounter_1)
-     OBUF:I->O                 2.571          sendCounter_1_OBUF (sendCounter<1>)
+     FDCE:C->Q            73   0.447   1.699  datapath/debugUnit/sendCounter_3 (datapath/debugUnit/sendCounter_3)
+     OBUF:I->O                 2.571          sendCounter_3_OBUF (sendCounter<3>)
     ----------------------------------------
-    Total                      4.723ns (3.018ns logic, 1.705ns route)
-                                       (63.9% logic, 36.1% route)
+    Total                      4.717ns (3.018ns logic, 1.699ns route)
+                                       (64.0% logic, 36.0% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/Mram__n18994'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/Mram__n25622'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            datapath/debugUnit/ledIdle (LATCH)
   Destination:       ledIdle (PAD)
-  Source Clock:      datapath/debugUnit/Mram__n18994 falling
+  Source Clock:      datapath/debugUnit/Mram__n25622 falling
 
   Data Path: datapath/debugUnit/ledIdle to ledIdle
                                 Gate     Net
@@ -1001,13 +1043,13 @@ Offset:              3.648ns (Levels of Logic = 1)
                                        (84.1% logic, 15.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_37_o_Mux_191_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_38_o_Mux_193_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            datapath/debugUnit/sentFlag_1 (LATCH)
   Destination:       sentFlag (PAD)
-  Source Clock:      datapath/debugUnit/current_state[2]_GND_37_o_Mux_191_o falling
+  Source Clock:      datapath/debugUnit/current_state[2]_GND_38_o_Mux_193_o falling
 
   Data Path: datapath/debugUnit/sentFlag_1 to sentFlag
                                 Gate     Net
@@ -1020,13 +1062,13 @@ Offset:              3.648ns (Levels of Logic = 1)
                                        (84.1% logic, 15.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_28_o_Mux_157_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_29_o_Mux_159_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            datapath/debugUnit/notStartUartTrans_1 (LATCH)
   Destination:       notStartUartTx (PAD)
-  Source Clock:      datapath/debugUnit/current_state[2]_GND_28_o_Mux_157_o falling
+  Source Clock:      datapath/debugUnit/current_state[2]_GND_29_o_Mux_159_o falling
 
   Data Path: datapath/debugUnit/notStartUartTrans_1 to notStartUartTx
                                 Gate     Net
@@ -1043,88 +1085,81 @@ Offset:              3.648ns (Levels of Logic = 1)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock clock
--------------------------------------------------------------+---------+---------+---------+---------+
-                                                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                                                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------------------------------------------+---------+---------+---------+---------+
-clock                                                        |    4.698|    4.270|   15.067|         |
-datapath/debugUnit/Mmux_current_state[2]_GND_26_o_Mux_151_o11|         |         |    5.237|         |
-datapath/debugUnit/Mram__n18994                              |         |    2.584|         |         |
-datapath/debugUnit/current_state[2]_GND_26_o_Mux_151_o       |         |         |    3.685|         |
-datapath/debugUnit/current_state[2]_GND_28_o_Mux_157_o       |         |    1.385|         |         |
-datapath/debugUnit/current_state[2]_GND_29_o_Mux_161_o       |         |    1.179|         |         |
-datapath/debugUnit/current_state[2]_PWR_20_o_Mux_135_o       |         |    4.085|         |         |
--------------------------------------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT0
+-------------------------------+---------+---------+---------+---------+
+                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------+---------+---------+---------+---------+
+_i000001/pll_base_inst/CLKOUT0 |    1.405|    4.270|   12.933|         |
+datapath/debugUnit/Mram__n25622|         |         |    5.237|         |
+-------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/Mmux_current_state[2]_GND_26_o_Mux_151_o11
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clock          |         |         |    3.664|         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT1
+------------------------------------------------------+---------+---------+---------+---------+
+                                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------------------------------+---------+---------+---------+---------+
+_i000001/pll_base_inst/CLKOUT1                        |    4.691|         |         |         |
+datapath/debugUnit/Mram__n25622                       |         |    2.584|         |         |
+datapath/debugUnit/current_state[2]_GND_29_o_Mux_159_o|         |    1.385|         |         |
+datapath/debugUnit/current_state[2]_GND_30_o_Mux_163_o|         |    1.179|         |         |
+datapath/debugUnit/current_state[2]_PWR_20_o_Mux_135_o|         |    4.085|         |         |
+------------------------------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/Mram__n18994
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clock          |         |         |    2.754|         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock datapath/debugUnit/Mram__n25622
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+_i000001/pll_base_inst/CLKOUT1|         |         |    4.425|         |
+------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_26_o_Mux_151_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clock          |         |         |    1.796|         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_29_o_Mux_159_o
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+_i000001/pll_base_inst/CLKOUT1|         |         |    3.833|         |
+------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_28_o_Mux_157_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clock          |         |         |    3.839|         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_30_o_Mux_163_o
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+_i000001/pll_base_inst/CLKOUT0|         |         |    9.136|         |
+_i000001/pll_base_inst/CLKOUT1|         |         |    9.741|         |
+------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_29_o_Mux_161_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clock          |         |         |    9.717|         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_37_o_Mux_191_o
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clock          |         |         |    1.875|         |
----------------+---------+---------+---------+---------+
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_38_o_Mux_193_o
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+_i000001/pll_base_inst/CLKOUT1|         |         |    1.989|         |
+------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock datapath/debugUnit/current_state[2]_PWR_20_o_Mux_135_o
 ------------------------------------------------------+---------+---------+---------+---------+
                                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------+---------+---------+---------+---------+
-clock                                                 |         |         |    4.852|         |
-datapath/debugUnit/current_state[2]_GND_37_o_Mux_191_o|         |         |    1.587|         |
+_i000001/pll_base_inst/CLKOUT0                        |         |         |    1.648|         |
+_i000001/pll_base_inst/CLKOUT1                        |         |         |    4.880|         |
+datapath/debugUnit/current_state[2]_GND_38_o_Mux_193_o|         |         |    1.713|         |
 ------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 28.00 secs
-Total CPU time to Xst completion: 27.96 secs
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 26.25 secs
  
 --> 
 
-Total memory usage is 282008 kilobytes
+Total memory usage is 282648 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   50 (   0 filtered)
-Number of infos    :   19 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
 
