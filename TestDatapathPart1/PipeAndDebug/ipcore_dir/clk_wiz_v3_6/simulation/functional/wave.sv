@@ -89,16 +89,16 @@ group set -comment {}
 group clear 0 end
 
 group insert \
-    {clk_wiz_v3_6_tb.dut.clk} \
-
+    {clk_wiz_v3_6_tb.dut.clk[1]} \
+    {clk_wiz_v3_6_tb.dut.clk[2]} 
 group using {Counters}
 group set -overlay 0
 group set -comment {}
 group clear 0 end
 
 group insert \
-    {clk_wiz_v3_6_tb.dut.counter} \
-
+    {clk_wiz_v3_6_tb.dut.counter[1]} \
+    {clk_wiz_v3_6_tb.dut.counter[2]} 
 
 set id [waveform add -signals [list {nc::clk_wiz_v3_6_tb.COUNT} ]]
 

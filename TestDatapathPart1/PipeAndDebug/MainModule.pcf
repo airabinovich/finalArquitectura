@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Feb 26 15:22:20 2016
+// Written by: Map P.20131013 on Sat Feb 27 18:19:09 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -16,6 +16,7 @@ COMP "sendCounter<4>" LOCATE = SITE "M11" LEVEL 1;
 COMP "sendCounter<5>" LOCATE = SITE "N11" LEVEL 1;
 COMP "sendCounter<6>" LOCATE = SITE "R11" LEVEL 1;
 COMP "sendCounter<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "waitingForReg" LOCATE = SITE "F11" LEVEL 1;
 COMP "resetGral" LOCATE = SITE "T10" LEVEL 1;
 COMP "uartRxPin" LOCATE = SITE "N17" LEVEL 1;
 COMP "uartTxPin" LOCATE = SITE "N18" LEVEL 1;

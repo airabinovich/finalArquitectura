@@ -19,6 +19,9 @@ NET "sendCounter[5]" LOC = N11;
 NET "sendCounter[6]" LOC = R11;
 NET "sendCounter[7]" LOC = T11;
 
-# PlanAhead Generated physical constraints 
 
 NET "notStartUartTx" LOC = G11;
+
+# PlanAhead Generated physical constraints 
+
+NET "waitingForReg" LOC = F11;

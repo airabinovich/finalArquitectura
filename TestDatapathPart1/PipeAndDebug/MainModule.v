@@ -29,13 +29,16 @@ module MainModule(
 	 output ledCont,
 	 output [7:0]sendCounter,
 	 output sentFlag,
-	 output notStartUartTx
+	 output notStartUartTx,
+	 output waitingForReg
     );
 	 
 	 wire AluZero, ALUOverflow;
 	 wire dcmOut;
+	 wire dcmOut70;
 	 Datapath1 datapath( 		
 	   .clock(dcmOut),
+		.clock70(dcmOut70),
 		.resetGral(resetGral),
 		.uartRxPin(uartRxPin),
 		.uartTxPin(uartTxPin),
@@ -48,12 +51,14 @@ module MainModule(
 		.ledCont(ledCont),
 		.sendCounter(sendCounter),
 		.sentFlag(sentFlag),
-		.notStartUartTx(notStartUartTx)
+		.notStartUartTx(notStartUartTx),
+		.waitingForReg(waitingForReg)
 	 );
 	 
 	 clk_wiz_v3_6(
 		.CLK_IN1(clock),
-		.CLK_OUT1(dcmOut)
+		.CLK_OUT1(dcmOut),
+		.CLK_OUT2(dcmOut70)
 	 );
 
 
