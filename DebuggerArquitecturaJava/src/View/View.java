@@ -91,7 +91,7 @@ public class View implements SubjectSend, ObserverReceive {
         generalPurposeRegisters = new ArrayList<Pair<Integer,JTextField>>();
         memoryRegisters = new ArrayList<Pair<Integer,JTextField>>();
         
-        for(int i = 1; i <= 5; i++){
+        for(int i = 0; i < 5; i++){
         	generalPurposeRegisters.add(new Pair<Integer,JTextField>(i,new JTextField()));
         	memoryRegisters.add(new Pair<Integer,JTextField>(i,new JTextField()));
         }
@@ -165,7 +165,7 @@ public class View implements SubjectSend, ObserverReceive {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				//continueModeButton.setEnabled(false);
-				stepModeButton.setEnabled(false);
+//				stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(false);
 				command = 'c';
 				notifySend();
@@ -178,7 +178,7 @@ public class View implements SubjectSend, ObserverReceive {
         stepModeButton.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				continueModeButton.setEnabled(false);
+//				continueModeButton.setEnabled(false);
 				//stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(true);
 				command = 's';
@@ -240,11 +240,11 @@ public class View implements SubjectSend, ObserverReceive {
 					updateMemoryRegisters(data);
 				}
 			}
+			frame.repaint();
   		}catch(NullPointerException e){
 			System.out.println("LLegó un argumento null a updateReceive");
 			e.printStackTrace();
 		}
-		frame.repaint();
 	}
 	
 	private boolean updateProcessorRegisters(Pair<String,Integer> data){

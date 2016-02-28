@@ -101,6 +101,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         InputStream in;
         private int indexDataReceived, subIndexDataReceived;
         private ArrayList<ObserverReceive> observers = new ArrayList<ObserverReceive>();
+        private BufferedReader buffer;
         
         // contiene el nombre de los campos a recibir y la cantidad de bytes que espera
         private ArrayList<Pair<String,Integer>> dataToReceive;
@@ -164,6 +165,13 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         	subIndexDataReceived = 0;
     		dataToReceive = fillDataToRecieve();
     		dataReceived = new ArrayList<Pair<String,Integer>>(44);
+    		buffer = new BufferedReader(new InputStreamReader(this.in));
+    		try {
+				buffer.mark(0);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
     		
     		for(Pair<String,Integer> p : dataToReceive){
     			dataReceived.add(new Pair<String,Integer>(p.getFst(), null));
@@ -171,13 +179,37 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         }
         
         public void readData(){
-
-        	BufferedReader buffer= new BufferedReader(new InputStreamReader(in));
+        	boolean timeout=false;
+        	long startTime= System.currentTimeMillis();
+        	boolean alreadyReseted = false;
+        	//BufferedReader buffer= new BufferedReader(new InputStreamReader(in));
+        	try {
+				while(!buffer.ready()){
+					Thread.sleep(200);
+					
+            		long currentTime= System.currentTimeMillis();
+            		timeout= Math.abs(currentTime-startTime)>2000;
+            		if(timeout && !alreadyReseted){
+            			alreadyReseted = true;
+            			System.out.println("--------------------------------");
+        				indexDataReceived = 0;
+        				subIndexDataReceived = 0;
+        			}
+				}
+//				buffer.reset();
+			} catch (IOException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			} catch(InterruptedException e){
+				e.printStackTrace();
+			}
             try {
             	while (buffer.ready()){
-            		//String aux = buffer.readLine();
+            		alreadyReseted = false;
             		int readValue = buffer.read();
+            		System.out.println("Dato recibido: " + Integer.toHexString(readValue).toUpperCase()); 
         			if(indexDataReceived >= dataToReceive.size()){
+        				System.out.println("--------------------------------");
         				indexDataReceived = 0;
         				subIndexDataReceived = 0;
         			}
