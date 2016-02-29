@@ -10,23 +10,23 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sat Feb 27 18:18:23 2016
+Mapped Date    : Sun Feb 28 23:55:38 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    8
+Number of warnings:    6
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,444 out of  18,224    7%
+  Number of Slice Registers:                 1,433 out of  18,224    7%
     Number used as Flip Flops:               1,425
-    Number used as Latches:                     19
+    Number used as Latches:                      8
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,973 out of   9,112   32%
-    Number used as logic:                    2,958 out of   9,112   32%
-      Number using O6 output only:           2,700
+  Number of Slice LUTs:                      1,892 out of   9,112   20%
+    Number used as logic:                    1,872 out of   9,112   20%
+      Number using O6 output only:           1,646
       Number using O5 output only:              34
-      Number using O5 and O6:                  224
+      Number using O5 and O6:                  192
       Number used as ROM:                        0
     Number used as Memory:                       8 out of   2,176    1%
       Number used as Dual Port RAM:              8
@@ -35,21 +35,21 @@ Slice Logic Utilization:
         Number using O5 and O6:                  4
       Number used as Single Port RAM:            0
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:      7
-      Number with same-slice register load:      4
+    Number used exclusively as route-thrus:     12
+      Number with same-slice register load:      9
       Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,121 out of   2,278   49%
+  Number of occupied Slices:                 1,334 out of   2,278   58%
   Number of MUXCYs used:                       140 out of   4,556    3%
-  Number of LUT Flip Flop pairs used:        2,991
-    Number with an unused Flip Flop:         1,581 out of   2,991   52%
-    Number with an unused LUT:                  18 out of   2,991    1%
-    Number of fully used LUT-FF pairs:       1,392 out of   2,991   46%
-    Number of unique control sets:              27
+  Number of LUT Flip Flop pairs used:        2,654
+    Number with an unused Flip Flop:         1,260 out of   2,654   47%
+    Number with an unused LUT:                 762 out of   2,654   28%
+    Number of fully used LUT-FF pairs:         632 out of   2,654   23%
+    Number of unique control sets:              54
     Number of slice register sites lost
-      to control set restrictions:              88 out of  18,224    1%
+      to control set restrictions:              67 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -93,11 +93,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                5.92
+Average Fanout of Non-Clock Nets:                4.42
 
-Peak Memory Usage:  450 MB
-Total REAL time to MAP completion:  48 secs 
-Total CPU time to MAP completion:   47 secs 
+Peak Memory Usage:  440 MB
+Total REAL time to MAP completion:  49 secs 
+Total CPU time to MAP completion:   45 secs 
 
 Table of Contents
 -----------------
@@ -121,27 +121,19 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_43_o_Mux_251_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/Mram__n31052 is sourced by a combinatorial pin. This is
+   datapath/debugUnit/Mram__n03231 is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_PWR_20_o_Mux_173_o is sourced by a
+   datapath/debugUnit/current_state[2]_PWR_20_o_Mux_131_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_29_o_Mux_197_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_30_o_Mux_153_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_30_o_Mux_201_o is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   datapath/debugUnit/current_state[2]_GND_38_o_Mux_233_o is sourced by a
+   datapath/debugUnit/current_state[2]_GND_31_o_Mux_155_o is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal
@@ -154,10 +146,10 @@ WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network datapath/uartMod/fifo_rx/Mram_FIFO22/SPO has no
-   load.
-INFO:LIT:395 - The above info message is repeated 1 more times for the following
+INFO:LIT:243 - Logical network waitingForReg has no load.
+INFO:LIT:395 - The above info message is repeated 2 more times for the following
    (max. 5 shown):
+   datapath/uartMod/fifo_rx/Mram_FIFO22/SPO,
    datapath/uartMod/fifo_rx/Mram_FIFO21/SPO
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
@@ -177,78 +169,10 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  20 block(s) removed
    6 block(s) optimized away
-  20 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
-
-The trimmed logic reported below is either:
-   1. part of a cycle
-   2. part of disabled logic
-   3. a side-effect of other trimmed logic
-
-The signal "datapath/bank/Mmux_readDataToDebug_98" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_98" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_102" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_102" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_932" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_932" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1010" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1010" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_941" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_941" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1013" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1013" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_944" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_944" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1014" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1014" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_953" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_953" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1017" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1017" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_956" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_956" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1018" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1018" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_974" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_974" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1024" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1024" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_977" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_977" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1025" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1025" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_992" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_992" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1030" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1030" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_995" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_995" (ROM) removed.
-The signal "datapath/bank/Mmux_readDataToDebug_1031" is unused and has been
-removed.
- Unused block "datapath/bank/Mmux_readDataToDebug_1031" (ROM) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -271,6 +195,7 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | clock                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | ledCont                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
+| ledDataAvailable                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | ledIdle                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | ledSend                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | ledStep                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
@@ -287,7 +212,6 @@ Section 6 - IOB Properties
 | sentFlag                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OLATCH       |          |          |
 | uartRxPin                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | uartTxPin                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| waitingForReg                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

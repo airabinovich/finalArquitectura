@@ -1,5 +1,5 @@
 XOR 0,0,0
-ORI 0,0,16
+ORI 0,0,3
 XOR 1,1,1
 ADDI 1,1,1
 BNE 1,0,65534 ;-1 en complemento a 2. El ensamblador no tolera numeros negativos

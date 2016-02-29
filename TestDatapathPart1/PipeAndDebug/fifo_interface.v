@@ -28,7 +28,6 @@ module UART_fifo_interface #(parameter bits_depth=4)(
 			output reg [7:0] data_out,
 			output reg empty_flag,
 			output reg full_flag
-		
     );
 
 	localparam depth= 1<<(bits_depth);
@@ -37,7 +36,7 @@ module UART_fifo_interface #(parameter bits_depth=4)(
 									write_pointer;
 	
 	reg [(bits_depth):0]		free_space;
-	
+	assign emptyLed = empty_flag;
 	always @* begin
 	
 		full_flag = (free_space==0);

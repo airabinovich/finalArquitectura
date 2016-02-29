@@ -30,7 +30,8 @@ module MainModule(
 	 output [7:0]sendCounter,
 	 output sentFlag,
 	 output notStartUartTx,
-	 output waitingForReg
+	 output waitingForReg,
+	 output ledDataAvailable
     );
 	 
 	 wire AluZero, ALUOverflow;
@@ -52,7 +53,8 @@ module MainModule(
 		.sendCounter(sendCounter),
 		.sentFlag(sentFlag),
 		.notStartUartTx(notStartUartTx),
-		.waitingForReg(waitingForReg)
+		.waitingForReg(waitingForReg),
+		.ledDataAvailable(ledDataAvailable)
 	 );
 	 
 	 clk_wiz_v3_6(

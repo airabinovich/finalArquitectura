@@ -28,7 +28,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         puertos = new HashMap<String,ArrayList<String>>();    
         puertosLinux = new ArrayList<String>();
         puertosWin = new ArrayList<String>();
-        for(int i = 0; i < 25; i++){
+        for(int i = 10; i < 25; i++){
         	String iStr = Integer.toString(i);
         	puertosLinux.add("/dev/ttyUSB" + iStr);
             puertosLinux.add("/dev/ttyACM" + iStr);

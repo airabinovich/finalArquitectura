@@ -35,11 +35,12 @@ module Datapath1(
 		output [7:0]sendCounter,
 		output sentFlag,
 		output notStartUartTx,
-		output waitingForReg
+		output waitingForReg,
+		output ledDataAvailable
     ); 
 		assign ALUzero=aluZero;
 		assign ALUOverflow=aluOverflow;
-	 
+	   assign ledDataAvailable=uartDataAvailable;
 	 
 	 
 	 wire [31:0]instruction;
@@ -181,8 +182,11 @@ module Datapath1(
 		 
 		 wire uartDataSent;
 		 wire notStartUartTrans;
-		 wire [31:0]readDataFromBankToDebug;
-		 wire [4:0]readAddrFromDebugToBank;
+		 wire [31:0]readDataFromRegsToDebug0;
+		 wire [31:0]readDataFromRegsToDebug1;
+		 wire [31:0]readDataFromRegsToDebug2;
+		 wire [31:0]readDataFromRegsToDebug3;
+		 wire [31:0]readDataFromRegsToDebug4;
 		 
 	  ControlUnit control(
 	 	.Special(instructionID[31:26]),
@@ -223,12 +227,15 @@ module Datapath1(
 		.readReg1(instructionID[25:21]),
 		.readReg2(instructionID[20:16]),
 		.writeReg(writeRegisterWB),
-		.readRegFromDebug(readAddrFromDebugToBank),
 		.reset(resetGral),
 		.writeData(resultWB),
 		.readData1(readData1),
 		.readData2(readData2),
-		.readDataToDebug(readDataFromBankToDebug)
+		.readDataToDebug0(readDataFromRegsToDebug0),
+		.readDataToDebug1(readDataFromRegsToDebug1),
+		.readDataToDebug2(readDataFromRegsToDebug2),
+		.readDataToDebug3(readDataFromRegsToDebug3),
+		.readDataToDebug4(readDataFromRegsToDebug4)
 	 );
 	 
 	 ALU alu(
@@ -439,14 +446,16 @@ module Datapath1(
 		.MEM_WB_memoryOut(memoryOutWB),
 		.MEM_WB_regWrite(regWriteWB),
 		.MEM_WB_memToReg(memToRegWB),
-		.readDataFromRegs(readDataFromBankToDebug),
-
+		.readDataFromRegs0(readDataFromRegsToDebug0),
+		.readDataFromRegs1(readDataFromRegsToDebug1),
+		.readDataFromRegs2(readDataFromRegsToDebug2),
+		.readDataFromRegs3(readDataFromRegsToDebug3),
+		.readDataFromRegs4(readDataFromRegsToDebug4),
 		.dataToUartOutFifo(dataToUartOutFifo),
 		.readFifoFlag(uartReadFlag),
 		.writeFifoFlag(uartWriteFlag),
 		.pipeEnable(debugEnable),
 		.pipeReset (debugReset),
-		.readAddrFromBank(readAddrFromDebugToBank),
 		
 		.ledStep(ledStep),
 		.ledCont(ledCont),

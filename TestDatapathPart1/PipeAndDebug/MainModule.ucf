@@ -22,6 +22,8 @@ NET "sendCounter[7]" LOC = T11;
 
 NET "notStartUartTx" LOC = G11;
 
+
+
 # PlanAhead Generated physical constraints 
 
-NET "waitingForReg" LOC = F11;
+NET "ledDataAvailable" LOC = F11;

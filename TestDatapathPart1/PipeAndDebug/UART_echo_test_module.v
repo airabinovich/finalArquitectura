@@ -30,7 +30,7 @@ module UART_uart(
 	output dataAvailable,
 	output uart_tx,
 	output uart_tx_done
-    );
+   );
 
 	wire 		baud_rate_rx,
 				baud_rate_tx,

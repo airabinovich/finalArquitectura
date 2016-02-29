@@ -37,46 +37,46 @@ Setup/Hold to clock clock
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-resetGral   |   10.377(R)|      SLOW  |   -1.320(R)|      FAST  |dcmOut            |   0.000|
-            |    8.407(F)|      SLOW  |   -1.935(F)|      FAST  |dcmOut            |   0.000|
-            |    8.250(R)|      SLOW  |   -4.063(R)|      FAST  |dcmOut70          |   0.000|
-uartRxPin   |    5.532(R)|      SLOW  |   -2.674(R)|      FAST  |dcmOut70          |   0.000|
+resetGral   |   12.935(R)|      SLOW  |   -1.755(R)|      FAST  |dcmOut            |   0.000|
+            |    9.992(F)|      SLOW  |   -2.101(F)|      FAST  |dcmOut            |   0.000|
+            |    9.497(R)|      SLOW  |   -3.072(R)|      FAST  |dcmOut70          |   0.000|
+uartRxPin   |    5.360(R)|      SLOW  |   -1.894(R)|      FAST  |dcmOut70          |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clock to Pad
---------------+-----------------+------------+-----------------+------------+------------------+--------+
-              |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination   |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
---------------+-----------------+------------+-----------------+------------+------------------+--------+
-sendCounter<0>|         8.133(R)|      SLOW  |         4.883(R)|      FAST  |dcmOut70          |   0.000|
-sendCounter<1>|         8.471(R)|      SLOW  |         5.083(R)|      FAST  |dcmOut70          |   0.000|
-sendCounter<2>|         7.983(R)|      SLOW  |         4.750(R)|      FAST  |dcmOut70          |   0.000|
-sendCounter<3>|         7.919(R)|      SLOW  |         4.696(R)|      FAST  |dcmOut70          |   0.000|
-sendCounter<4>|         7.845(R)|      SLOW  |         4.586(R)|      FAST  |dcmOut70          |   0.000|
-sendCounter<5>|         7.197(R)|      SLOW  |         4.185(R)|      FAST  |dcmOut70          |   0.000|
-sendCounter<6>|         7.078(R)|      SLOW  |         4.143(R)|      FAST  |dcmOut70          |   0.000|
-sendCounter<7>|         7.260(R)|      SLOW  |         4.210(R)|      FAST  |dcmOut70          |   0.000|
-uartTxPin     |         6.838(R)|      SLOW  |         4.000(R)|      FAST  |dcmOut70          |   0.000|
-waitingForReg |        12.670(R)|      SLOW  |         4.136(R)|      FAST  |dcmOut70          |   0.000|
---------------+-----------------+------------+-----------------+------------+------------------+--------+
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+                |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination     |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
+ledDataAvailable|         7.129(R)|      SLOW  |         4.223(R)|      FAST  |dcmOut70          |   0.000|
+sendCounter<0>  |         6.606(R)|      SLOW  |         4.142(R)|      FAST  |dcmOut70          |   0.000|
+sendCounter<1>  |         6.406(R)|      SLOW  |         3.975(R)|      FAST  |dcmOut70          |   0.000|
+sendCounter<2>  |         6.291(R)|      SLOW  |         3.922(R)|      FAST  |dcmOut70          |   0.000|
+sendCounter<3>  |         6.194(R)|      SLOW  |         3.873(R)|      FAST  |dcmOut70          |   0.000|
+sendCounter<4>  |         6.243(R)|      SLOW  |         3.847(R)|      FAST  |dcmOut70          |   0.000|
+sendCounter<5>  |         6.649(R)|      SLOW  |         4.124(R)|      FAST  |dcmOut70          |   0.000|
+sendCounter<6>  |         5.833(R)|      SLOW  |         3.609(R)|      FAST  |dcmOut70          |   0.000|
+sendCounter<7>  |         5.363(R)|      SLOW  |         3.284(R)|      FAST  |dcmOut70          |   0.000|
+uartTxPin       |         4.992(R)|      SLOW  |         3.091(R)|      FAST  |dcmOut70          |   0.000|
+----------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clock
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clock          |    3.892|    7.067|    7.955|   15.000|
+clock          |    6.906|    7.311|    8.847|   15.765|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat Feb 27 18:19:56 2016 
+Analysis completed Sun Feb 28 23:57:35 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 278 MB
+Peak Memory Usage: 265 MB
 
 
 

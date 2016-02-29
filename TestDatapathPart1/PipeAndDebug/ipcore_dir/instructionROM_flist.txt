@@ -1,5 +1,4 @@
 # Output products list for <instructionROM>
-_xmsgs\pn_parser.xmsgs
 instructionROM.asy
 instructionROM.gise
 instructionROM.mif

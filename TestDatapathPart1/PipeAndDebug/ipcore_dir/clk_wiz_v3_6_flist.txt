@@ -1,5 +1,4 @@
 # Output products list for <clk_wiz_v3_6>
-_xmsgs\pn_parser.xmsgs
 clk_wiz_v3_6.asy
 clk_wiz_v3_6.gise
 clk_wiz_v3_6.ucf
