@@ -65,8 +65,8 @@ module DebugUnit(
 		
 		
 		output [7:0] 	dataToUartOutFifo,
-		output reg			readFifoFlag,
-		output reg			writeFifoFlag,
+		output reg	readFifoFlag,
+		output reg	writeFifoFlag,
 		output reg pipeEnable,
 		output reg pipeReset ,
 		output reg ledStep,
@@ -83,7 +83,7 @@ module DebugUnit(
 	 
 	reg [31:0] mock= 32'd5;
 	wire [7:0] data [94:0];
-    assign data[0]=         FE_pc;
+    assign data[0]=             FE_pc;
     assign data[1]=             IF_ID_instruction       [31:24];
     assign data[2]=             IF_ID_instruction       [23:16];
     assign data[3]=             IF_ID_instruction   [15:8];

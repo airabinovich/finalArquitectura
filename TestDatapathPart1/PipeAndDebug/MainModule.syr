@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.09 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: MainModule.prj
 
@@ -228,7 +228,7 @@ Elaborating module <clk_wiz_v3_6>.
 
 Elaborating module <IBUFG>.
 
-Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=4,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=128,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=128,CLKOUT1_PHASE=45.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=10.0,REF_JITTER=0.01)>.
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=2,CLKFBOUT_MULT=9,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=36,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=36,CLKOUT1_PHASE=70.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=10.0,REF_JITTER=0.01)>.
 WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 119: Assignment to clkout2_unused ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 120: Assignment to clkout3_unused ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\ipcore_dir\clk_wiz_v3_6.v" Line 121: Assignment to clkout4_unused ignored, since the identifier is never used
@@ -267,1035 +267,12 @@ Synthesizing Unit <REGBANK_banco>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\REGBANK_banco.v".
         addr_bits = 5
         word_wide = 32
-    Found 1-bit register for signal <banco<4><6>>.
-    Found 1-bit register for signal <banco<4><4>>.
-    Found 1-bit register for signal <banco<4><3>>.
-    Found 1-bit register for signal <banco<4><2>>.
-    Found 1-bit register for signal <banco<4><1>>.
-    Found 1-bit register for signal <banco<3><6>>.
-    Found 1-bit register for signal <banco<3><4>>.
-    Found 1-bit register for signal <banco<3><3>>.
-    Found 1-bit register for signal <banco<3><2>>.
-    Found 1-bit register for signal <banco<3><0>>.
-    Found 1-bit register for signal <banco<2><6>>.
-    Found 1-bit register for signal <banco<2><4>>.
-    Found 1-bit register for signal <banco<2><3>>.
-    Found 1-bit register for signal <banco<2><2>>.
-    Found 1-bit register for signal <banco<1><6>>.
-    Found 1-bit register for signal <banco<1><4>>.
-    Found 1-bit register for signal <banco<1><3>>.
-    Found 1-bit register for signal <banco<1><1>>.
-    Found 1-bit register for signal <banco<1><0>>.
-    Found 1-bit register for signal <banco<0><6>>.
-    Found 1-bit register for signal <banco<0><4>>.
-    Found 1-bit register for signal <banco<0><3>>.
-    Found 1-bit register for signal <banco<0><1>>.
-    Found 1-bit register for signal <banco<4><31>>.
-    Found 1-bit register for signal <banco<4><30>>.
-    Found 1-bit register for signal <banco<4><29>>.
-    Found 1-bit register for signal <banco<4><28>>.
-    Found 1-bit register for signal <banco<4><27>>.
-    Found 1-bit register for signal <banco<4><26>>.
-    Found 1-bit register for signal <banco<4><25>>.
-    Found 1-bit register for signal <banco<4><24>>.
-    Found 1-bit register for signal <banco<4><23>>.
-    Found 1-bit register for signal <banco<4><22>>.
-    Found 1-bit register for signal <banco<4><21>>.
-    Found 1-bit register for signal <banco<4><20>>.
-    Found 1-bit register for signal <banco<4><19>>.
-    Found 1-bit register for signal <banco<4><18>>.
-    Found 1-bit register for signal <banco<4><17>>.
-    Found 1-bit register for signal <banco<4><16>>.
-    Found 1-bit register for signal <banco<4><15>>.
-    Found 1-bit register for signal <banco<4><14>>.
-    Found 1-bit register for signal <banco<4><13>>.
-    Found 1-bit register for signal <banco<4><12>>.
-    Found 1-bit register for signal <banco<4><11>>.
-    Found 1-bit register for signal <banco<4><10>>.
-    Found 1-bit register for signal <banco<4><9>>.
-    Found 1-bit register for signal <banco<4><8>>.
-    Found 1-bit register for signal <banco<4><7>>.
-    Found 1-bit register for signal <banco<4><5>>.
-    Found 1-bit register for signal <banco<4><0>>.
-    Found 1-bit register for signal <banco<3><31>>.
-    Found 1-bit register for signal <banco<3><30>>.
-    Found 1-bit register for signal <banco<3><29>>.
-    Found 1-bit register for signal <banco<3><28>>.
-    Found 1-bit register for signal <banco<3><27>>.
-    Found 1-bit register for signal <banco<3><26>>.
-    Found 1-bit register for signal <banco<3><25>>.
-    Found 1-bit register for signal <banco<3><24>>.
-    Found 1-bit register for signal <banco<3><23>>.
-    Found 1-bit register for signal <banco<3><22>>.
-    Found 1-bit register for signal <banco<3><21>>.
-    Found 1-bit register for signal <banco<3><20>>.
-    Found 1-bit register for signal <banco<3><19>>.
-    Found 1-bit register for signal <banco<3><18>>.
-    Found 1-bit register for signal <banco<3><17>>.
-    Found 1-bit register for signal <banco<3><16>>.
-    Found 1-bit register for signal <banco<3><15>>.
-    Found 1-bit register for signal <banco<3><14>>.
-    Found 1-bit register for signal <banco<3><13>>.
-    Found 1-bit register for signal <banco<3><12>>.
-    Found 1-bit register for signal <banco<3><11>>.
-    Found 1-bit register for signal <banco<3><10>>.
-    Found 1-bit register for signal <banco<3><9>>.
-    Found 1-bit register for signal <banco<3><8>>.
-    Found 1-bit register for signal <banco<3><7>>.
-    Found 1-bit register for signal <banco<3><5>>.
-    Found 1-bit register for signal <banco<3><1>>.
-    Found 1-bit register for signal <banco<2><31>>.
-    Found 1-bit register for signal <banco<2><30>>.
-    Found 1-bit register for signal <banco<2><29>>.
-    Found 1-bit register for signal <banco<2><28>>.
-    Found 1-bit register for signal <banco<2><27>>.
-    Found 1-bit register for signal <banco<2><26>>.
-    Found 1-bit register for signal <banco<2><25>>.
-    Found 1-bit register for signal <banco<2><24>>.
-    Found 1-bit register for signal <banco<2><23>>.
-    Found 1-bit register for signal <banco<2><22>>.
-    Found 1-bit register for signal <banco<2><21>>.
-    Found 1-bit register for signal <banco<2><20>>.
-    Found 1-bit register for signal <banco<2><19>>.
-    Found 1-bit register for signal <banco<2><18>>.
-    Found 1-bit register for signal <banco<2><17>>.
-    Found 1-bit register for signal <banco<2><16>>.
-    Found 1-bit register for signal <banco<2><15>>.
-    Found 1-bit register for signal <banco<2><14>>.
-    Found 1-bit register for signal <banco<2><13>>.
-    Found 1-bit register for signal <banco<2><12>>.
-    Found 1-bit register for signal <banco<2><11>>.
-    Found 1-bit register for signal <banco<2><10>>.
-    Found 1-bit register for signal <banco<2><9>>.
-    Found 1-bit register for signal <banco<2><8>>.
-    Found 1-bit register for signal <banco<2><7>>.
-    Found 1-bit register for signal <banco<2><5>>.
-    Found 1-bit register for signal <banco<2><1>>.
-    Found 1-bit register for signal <banco<2><0>>.
-    Found 1-bit register for signal <banco<1><31>>.
-    Found 1-bit register for signal <banco<1><30>>.
-    Found 1-bit register for signal <banco<1><29>>.
-    Found 1-bit register for signal <banco<1><28>>.
-    Found 1-bit register for signal <banco<1><27>>.
-    Found 1-bit register for signal <banco<1><26>>.
-    Found 1-bit register for signal <banco<1><25>>.
-    Found 1-bit register for signal <banco<1><24>>.
-    Found 1-bit register for signal <banco<1><23>>.
-    Found 1-bit register for signal <banco<1><22>>.
-    Found 1-bit register for signal <banco<1><21>>.
-    Found 1-bit register for signal <banco<1><20>>.
-    Found 1-bit register for signal <banco<1><19>>.
-    Found 1-bit register for signal <banco<1><18>>.
-    Found 1-bit register for signal <banco<1><17>>.
-    Found 1-bit register for signal <banco<1><16>>.
-    Found 1-bit register for signal <banco<1><15>>.
-    Found 1-bit register for signal <banco<1><14>>.
-    Found 1-bit register for signal <banco<1><13>>.
-    Found 1-bit register for signal <banco<1><12>>.
-    Found 1-bit register for signal <banco<1><11>>.
-    Found 1-bit register for signal <banco<1><10>>.
-    Found 1-bit register for signal <banco<1><9>>.
-    Found 1-bit register for signal <banco<1><8>>.
-    Found 1-bit register for signal <banco<1><7>>.
-    Found 1-bit register for signal <banco<1><5>>.
-    Found 1-bit register for signal <banco<1><2>>.
-    Found 1-bit register for signal <banco<0><31>>.
-    Found 1-bit register for signal <banco<0><30>>.
-    Found 1-bit register for signal <banco<0><29>>.
-    Found 1-bit register for signal <banco<0><28>>.
-    Found 1-bit register for signal <banco<0><27>>.
-    Found 1-bit register for signal <banco<0><26>>.
-    Found 1-bit register for signal <banco<0><25>>.
-    Found 1-bit register for signal <banco<0><24>>.
-    Found 1-bit register for signal <banco<0><23>>.
-    Found 1-bit register for signal <banco<0><22>>.
-    Found 1-bit register for signal <banco<0><21>>.
-    Found 1-bit register for signal <banco<0><20>>.
-    Found 1-bit register for signal <banco<0><19>>.
-    Found 1-bit register for signal <banco<0><18>>.
-    Found 1-bit register for signal <banco<0><17>>.
-    Found 1-bit register for signal <banco<0><16>>.
-    Found 1-bit register for signal <banco<0><15>>.
-    Found 1-bit register for signal <banco<0><14>>.
-    Found 1-bit register for signal <banco<0><13>>.
-    Found 1-bit register for signal <banco<0><12>>.
-    Found 1-bit register for signal <banco<0><11>>.
-    Found 1-bit register for signal <banco<0><10>>.
-    Found 1-bit register for signal <banco<0><9>>.
-    Found 1-bit register for signal <banco<0><8>>.
-    Found 1-bit register for signal <banco<0><7>>.
-    Found 1-bit register for signal <banco<0><5>>.
-    Found 1-bit register for signal <banco<0><2>>.
-    Found 1-bit register for signal <banco<0><0>>.
-    Found 1-bit register for signal <banco<31><31>>.
-    Found 1-bit register for signal <banco<31><30>>.
-    Found 1-bit register for signal <banco<31><29>>.
-    Found 1-bit register for signal <banco<31><28>>.
-    Found 1-bit register for signal <banco<31><27>>.
-    Found 1-bit register for signal <banco<31><26>>.
-    Found 1-bit register for signal <banco<31><25>>.
-    Found 1-bit register for signal <banco<31><24>>.
-    Found 1-bit register for signal <banco<31><23>>.
-    Found 1-bit register for signal <banco<31><22>>.
-    Found 1-bit register for signal <banco<31><21>>.
-    Found 1-bit register for signal <banco<31><20>>.
-    Found 1-bit register for signal <banco<31><19>>.
-    Found 1-bit register for signal <banco<31><18>>.
-    Found 1-bit register for signal <banco<31><17>>.
-    Found 1-bit register for signal <banco<31><16>>.
-    Found 1-bit register for signal <banco<31><15>>.
-    Found 1-bit register for signal <banco<31><14>>.
-    Found 1-bit register for signal <banco<31><13>>.
-    Found 1-bit register for signal <banco<31><12>>.
-    Found 1-bit register for signal <banco<31><11>>.
-    Found 1-bit register for signal <banco<31><10>>.
-    Found 1-bit register for signal <banco<31><9>>.
-    Found 1-bit register for signal <banco<31><8>>.
-    Found 1-bit register for signal <banco<31><7>>.
-    Found 1-bit register for signal <banco<31><6>>.
-    Found 1-bit register for signal <banco<31><5>>.
-    Found 1-bit register for signal <banco<31><4>>.
-    Found 1-bit register for signal <banco<31><3>>.
-    Found 1-bit register for signal <banco<31><2>>.
-    Found 1-bit register for signal <banco<31><1>>.
-    Found 1-bit register for signal <banco<31><0>>.
-    Found 1-bit register for signal <banco<30><31>>.
-    Found 1-bit register for signal <banco<30><30>>.
-    Found 1-bit register for signal <banco<30><29>>.
-    Found 1-bit register for signal <banco<30><28>>.
-    Found 1-bit register for signal <banco<30><27>>.
-    Found 1-bit register for signal <banco<30><26>>.
-    Found 1-bit register for signal <banco<30><25>>.
-    Found 1-bit register for signal <banco<30><24>>.
-    Found 1-bit register for signal <banco<30><23>>.
-    Found 1-bit register for signal <banco<30><22>>.
-    Found 1-bit register for signal <banco<30><21>>.
-    Found 1-bit register for signal <banco<30><20>>.
-    Found 1-bit register for signal <banco<30><19>>.
-    Found 1-bit register for signal <banco<30><18>>.
-    Found 1-bit register for signal <banco<30><17>>.
-    Found 1-bit register for signal <banco<30><16>>.
-    Found 1-bit register for signal <banco<30><15>>.
-    Found 1-bit register for signal <banco<30><14>>.
-    Found 1-bit register for signal <banco<30><13>>.
-    Found 1-bit register for signal <banco<30><12>>.
-    Found 1-bit register for signal <banco<30><11>>.
-    Found 1-bit register for signal <banco<30><10>>.
-    Found 1-bit register for signal <banco<30><9>>.
-    Found 1-bit register for signal <banco<30><8>>.
-    Found 1-bit register for signal <banco<30><7>>.
-    Found 1-bit register for signal <banco<30><6>>.
-    Found 1-bit register for signal <banco<30><5>>.
-    Found 1-bit register for signal <banco<30><4>>.
-    Found 1-bit register for signal <banco<30><3>>.
-    Found 1-bit register for signal <banco<30><2>>.
-    Found 1-bit register for signal <banco<30><1>>.
-    Found 1-bit register for signal <banco<30><0>>.
-    Found 1-bit register for signal <banco<29><31>>.
-    Found 1-bit register for signal <banco<29><30>>.
-    Found 1-bit register for signal <banco<29><29>>.
-    Found 1-bit register for signal <banco<29><28>>.
-    Found 1-bit register for signal <banco<29><27>>.
-    Found 1-bit register for signal <banco<29><26>>.
-    Found 1-bit register for signal <banco<29><25>>.
-    Found 1-bit register for signal <banco<29><24>>.
-    Found 1-bit register for signal <banco<29><23>>.
-    Found 1-bit register for signal <banco<29><22>>.
-    Found 1-bit register for signal <banco<29><21>>.
-    Found 1-bit register for signal <banco<29><20>>.
-    Found 1-bit register for signal <banco<29><19>>.
-    Found 1-bit register for signal <banco<29><18>>.
-    Found 1-bit register for signal <banco<29><17>>.
-    Found 1-bit register for signal <banco<29><16>>.
-    Found 1-bit register for signal <banco<29><15>>.
-    Found 1-bit register for signal <banco<29><14>>.
-    Found 1-bit register for signal <banco<29><13>>.
-    Found 1-bit register for signal <banco<29><12>>.
-    Found 1-bit register for signal <banco<29><11>>.
-    Found 1-bit register for signal <banco<29><10>>.
-    Found 1-bit register for signal <banco<29><9>>.
-    Found 1-bit register for signal <banco<29><8>>.
-    Found 1-bit register for signal <banco<29><7>>.
-    Found 1-bit register for signal <banco<29><6>>.
-    Found 1-bit register for signal <banco<29><5>>.
-    Found 1-bit register for signal <banco<29><4>>.
-    Found 1-bit register for signal <banco<29><3>>.
-    Found 1-bit register for signal <banco<29><2>>.
-    Found 1-bit register for signal <banco<29><1>>.
-    Found 1-bit register for signal <banco<29><0>>.
-    Found 1-bit register for signal <banco<28><31>>.
-    Found 1-bit register for signal <banco<28><30>>.
-    Found 1-bit register for signal <banco<28><29>>.
-    Found 1-bit register for signal <banco<28><28>>.
-    Found 1-bit register for signal <banco<28><27>>.
-    Found 1-bit register for signal <banco<28><26>>.
-    Found 1-bit register for signal <banco<28><25>>.
-    Found 1-bit register for signal <banco<28><24>>.
-    Found 1-bit register for signal <banco<28><23>>.
-    Found 1-bit register for signal <banco<28><22>>.
-    Found 1-bit register for signal <banco<28><21>>.
-    Found 1-bit register for signal <banco<28><20>>.
-    Found 1-bit register for signal <banco<28><19>>.
-    Found 1-bit register for signal <banco<28><18>>.
-    Found 1-bit register for signal <banco<28><17>>.
-    Found 1-bit register for signal <banco<28><16>>.
-    Found 1-bit register for signal <banco<28><15>>.
-    Found 1-bit register for signal <banco<28><14>>.
-    Found 1-bit register for signal <banco<28><13>>.
-    Found 1-bit register for signal <banco<28><12>>.
-    Found 1-bit register for signal <banco<28><11>>.
-    Found 1-bit register for signal <banco<28><10>>.
-    Found 1-bit register for signal <banco<28><9>>.
-    Found 1-bit register for signal <banco<28><8>>.
-    Found 1-bit register for signal <banco<28><7>>.
-    Found 1-bit register for signal <banco<28><6>>.
-    Found 1-bit register for signal <banco<28><5>>.
-    Found 1-bit register for signal <banco<28><4>>.
-    Found 1-bit register for signal <banco<28><3>>.
-    Found 1-bit register for signal <banco<28><2>>.
-    Found 1-bit register for signal <banco<28><1>>.
-    Found 1-bit register for signal <banco<28><0>>.
-    Found 1-bit register for signal <banco<27><31>>.
-    Found 1-bit register for signal <banco<27><30>>.
-    Found 1-bit register for signal <banco<27><29>>.
-    Found 1-bit register for signal <banco<27><28>>.
-    Found 1-bit register for signal <banco<27><27>>.
-    Found 1-bit register for signal <banco<27><26>>.
-    Found 1-bit register for signal <banco<27><25>>.
-    Found 1-bit register for signal <banco<27><24>>.
-    Found 1-bit register for signal <banco<27><23>>.
-    Found 1-bit register for signal <banco<27><22>>.
-    Found 1-bit register for signal <banco<27><21>>.
-    Found 1-bit register for signal <banco<27><20>>.
-    Found 1-bit register for signal <banco<27><19>>.
-    Found 1-bit register for signal <banco<27><18>>.
-    Found 1-bit register for signal <banco<27><17>>.
-    Found 1-bit register for signal <banco<27><16>>.
-    Found 1-bit register for signal <banco<27><15>>.
-    Found 1-bit register for signal <banco<27><14>>.
-    Found 1-bit register for signal <banco<27><13>>.
-    Found 1-bit register for signal <banco<27><12>>.
-    Found 1-bit register for signal <banco<27><11>>.
-    Found 1-bit register for signal <banco<27><10>>.
-    Found 1-bit register for signal <banco<27><9>>.
-    Found 1-bit register for signal <banco<27><8>>.
-    Found 1-bit register for signal <banco<27><7>>.
-    Found 1-bit register for signal <banco<27><6>>.
-    Found 1-bit register for signal <banco<27><5>>.
-    Found 1-bit register for signal <banco<27><4>>.
-    Found 1-bit register for signal <banco<27><3>>.
-    Found 1-bit register for signal <banco<27><2>>.
-    Found 1-bit register for signal <banco<27><1>>.
-    Found 1-bit register for signal <banco<27><0>>.
-    Found 1-bit register for signal <banco<26><31>>.
-    Found 1-bit register for signal <banco<26><30>>.
-    Found 1-bit register for signal <banco<26><29>>.
-    Found 1-bit register for signal <banco<26><28>>.
-    Found 1-bit register for signal <banco<26><27>>.
-    Found 1-bit register for signal <banco<26><26>>.
-    Found 1-bit register for signal <banco<26><25>>.
-    Found 1-bit register for signal <banco<26><24>>.
-    Found 1-bit register for signal <banco<26><23>>.
-    Found 1-bit register for signal <banco<26><22>>.
-    Found 1-bit register for signal <banco<26><21>>.
-    Found 1-bit register for signal <banco<26><20>>.
-    Found 1-bit register for signal <banco<26><19>>.
-    Found 1-bit register for signal <banco<26><18>>.
-    Found 1-bit register for signal <banco<26><17>>.
-    Found 1-bit register for signal <banco<26><16>>.
-    Found 1-bit register for signal <banco<26><15>>.
-    Found 1-bit register for signal <banco<26><14>>.
-    Found 1-bit register for signal <banco<26><13>>.
-    Found 1-bit register for signal <banco<26><12>>.
-    Found 1-bit register for signal <banco<26><11>>.
-    Found 1-bit register for signal <banco<26><10>>.
-    Found 1-bit register for signal <banco<26><9>>.
-    Found 1-bit register for signal <banco<26><8>>.
-    Found 1-bit register for signal <banco<26><7>>.
-    Found 1-bit register for signal <banco<26><6>>.
-    Found 1-bit register for signal <banco<26><5>>.
-    Found 1-bit register for signal <banco<26><4>>.
-    Found 1-bit register for signal <banco<26><3>>.
-    Found 1-bit register for signal <banco<26><2>>.
-    Found 1-bit register for signal <banco<26><1>>.
-    Found 1-bit register for signal <banco<26><0>>.
-    Found 1-bit register for signal <banco<25><31>>.
-    Found 1-bit register for signal <banco<25><30>>.
-    Found 1-bit register for signal <banco<25><29>>.
-    Found 1-bit register for signal <banco<25><28>>.
-    Found 1-bit register for signal <banco<25><27>>.
-    Found 1-bit register for signal <banco<25><26>>.
-    Found 1-bit register for signal <banco<25><25>>.
-    Found 1-bit register for signal <banco<25><24>>.
-    Found 1-bit register for signal <banco<25><23>>.
-    Found 1-bit register for signal <banco<25><22>>.
-    Found 1-bit register for signal <banco<25><21>>.
-    Found 1-bit register for signal <banco<25><20>>.
-    Found 1-bit register for signal <banco<25><19>>.
-    Found 1-bit register for signal <banco<25><18>>.
-    Found 1-bit register for signal <banco<25><17>>.
-    Found 1-bit register for signal <banco<25><16>>.
-    Found 1-bit register for signal <banco<25><15>>.
-    Found 1-bit register for signal <banco<25><14>>.
-    Found 1-bit register for signal <banco<25><13>>.
-    Found 1-bit register for signal <banco<25><12>>.
-    Found 1-bit register for signal <banco<25><11>>.
-    Found 1-bit register for signal <banco<25><10>>.
-    Found 1-bit register for signal <banco<25><9>>.
-    Found 1-bit register for signal <banco<25><8>>.
-    Found 1-bit register for signal <banco<25><7>>.
-    Found 1-bit register for signal <banco<25><6>>.
-    Found 1-bit register for signal <banco<25><5>>.
-    Found 1-bit register for signal <banco<25><4>>.
-    Found 1-bit register for signal <banco<25><3>>.
-    Found 1-bit register for signal <banco<25><2>>.
-    Found 1-bit register for signal <banco<25><1>>.
-    Found 1-bit register for signal <banco<25><0>>.
-    Found 1-bit register for signal <banco<24><31>>.
-    Found 1-bit register for signal <banco<24><30>>.
-    Found 1-bit register for signal <banco<24><29>>.
-    Found 1-bit register for signal <banco<24><28>>.
-    Found 1-bit register for signal <banco<24><27>>.
-    Found 1-bit register for signal <banco<24><26>>.
-    Found 1-bit register for signal <banco<24><25>>.
-    Found 1-bit register for signal <banco<24><24>>.
-    Found 1-bit register for signal <banco<24><23>>.
-    Found 1-bit register for signal <banco<24><22>>.
-    Found 1-bit register for signal <banco<24><21>>.
-    Found 1-bit register for signal <banco<24><20>>.
-    Found 1-bit register for signal <banco<24><19>>.
-    Found 1-bit register for signal <banco<24><18>>.
-    Found 1-bit register for signal <banco<24><17>>.
-    Found 1-bit register for signal <banco<24><16>>.
-    Found 1-bit register for signal <banco<24><15>>.
-    Found 1-bit register for signal <banco<24><14>>.
-    Found 1-bit register for signal <banco<24><13>>.
-    Found 1-bit register for signal <banco<24><12>>.
-    Found 1-bit register for signal <banco<24><11>>.
-    Found 1-bit register for signal <banco<24><10>>.
-    Found 1-bit register for signal <banco<24><9>>.
-    Found 1-bit register for signal <banco<24><8>>.
-    Found 1-bit register for signal <banco<24><7>>.
-    Found 1-bit register for signal <banco<24><6>>.
-    Found 1-bit register for signal <banco<24><5>>.
-    Found 1-bit register for signal <banco<24><4>>.
-    Found 1-bit register for signal <banco<24><3>>.
-    Found 1-bit register for signal <banco<24><2>>.
-    Found 1-bit register for signal <banco<24><1>>.
-    Found 1-bit register for signal <banco<24><0>>.
-    Found 1-bit register for signal <banco<23><31>>.
-    Found 1-bit register for signal <banco<23><30>>.
-    Found 1-bit register for signal <banco<23><29>>.
-    Found 1-bit register for signal <banco<23><28>>.
-    Found 1-bit register for signal <banco<23><27>>.
-    Found 1-bit register for signal <banco<23><26>>.
-    Found 1-bit register for signal <banco<23><25>>.
-    Found 1-bit register for signal <banco<23><24>>.
-    Found 1-bit register for signal <banco<23><23>>.
-    Found 1-bit register for signal <banco<23><22>>.
-    Found 1-bit register for signal <banco<23><21>>.
-    Found 1-bit register for signal <banco<23><20>>.
-    Found 1-bit register for signal <banco<23><19>>.
-    Found 1-bit register for signal <banco<23><18>>.
-    Found 1-bit register for signal <banco<23><17>>.
-    Found 1-bit register for signal <banco<23><16>>.
-    Found 1-bit register for signal <banco<23><15>>.
-    Found 1-bit register for signal <banco<23><14>>.
-    Found 1-bit register for signal <banco<23><13>>.
-    Found 1-bit register for signal <banco<23><12>>.
-    Found 1-bit register for signal <banco<23><11>>.
-    Found 1-bit register for signal <banco<23><10>>.
-    Found 1-bit register for signal <banco<23><9>>.
-    Found 1-bit register for signal <banco<23><8>>.
-    Found 1-bit register for signal <banco<23><7>>.
-    Found 1-bit register for signal <banco<23><6>>.
-    Found 1-bit register for signal <banco<23><5>>.
-    Found 1-bit register for signal <banco<23><4>>.
-    Found 1-bit register for signal <banco<23><3>>.
-    Found 1-bit register for signal <banco<23><2>>.
-    Found 1-bit register for signal <banco<23><1>>.
-    Found 1-bit register for signal <banco<23><0>>.
-    Found 1-bit register for signal <banco<22><31>>.
-    Found 1-bit register for signal <banco<22><30>>.
-    Found 1-bit register for signal <banco<22><29>>.
-    Found 1-bit register for signal <banco<22><28>>.
-    Found 1-bit register for signal <banco<22><27>>.
-    Found 1-bit register for signal <banco<22><26>>.
-    Found 1-bit register for signal <banco<22><25>>.
-    Found 1-bit register for signal <banco<22><24>>.
-    Found 1-bit register for signal <banco<22><23>>.
-    Found 1-bit register for signal <banco<22><22>>.
-    Found 1-bit register for signal <banco<22><21>>.
-    Found 1-bit register for signal <banco<22><20>>.
-    Found 1-bit register for signal <banco<22><19>>.
-    Found 1-bit register for signal <banco<22><18>>.
-    Found 1-bit register for signal <banco<22><17>>.
-    Found 1-bit register for signal <banco<22><16>>.
-    Found 1-bit register for signal <banco<22><15>>.
-    Found 1-bit register for signal <banco<22><14>>.
-    Found 1-bit register for signal <banco<22><13>>.
-    Found 1-bit register for signal <banco<22><12>>.
-    Found 1-bit register for signal <banco<22><11>>.
-    Found 1-bit register for signal <banco<22><10>>.
-    Found 1-bit register for signal <banco<22><9>>.
-    Found 1-bit register for signal <banco<22><8>>.
-    Found 1-bit register for signal <banco<22><7>>.
-    Found 1-bit register for signal <banco<22><6>>.
-    Found 1-bit register for signal <banco<22><5>>.
-    Found 1-bit register for signal <banco<22><4>>.
-    Found 1-bit register for signal <banco<22><3>>.
-    Found 1-bit register for signal <banco<22><2>>.
-    Found 1-bit register for signal <banco<22><1>>.
-    Found 1-bit register for signal <banco<22><0>>.
-    Found 1-bit register for signal <banco<21><31>>.
-    Found 1-bit register for signal <banco<21><30>>.
-    Found 1-bit register for signal <banco<21><29>>.
-    Found 1-bit register for signal <banco<21><28>>.
-    Found 1-bit register for signal <banco<21><27>>.
-    Found 1-bit register for signal <banco<21><26>>.
-    Found 1-bit register for signal <banco<21><25>>.
-    Found 1-bit register for signal <banco<21><24>>.
-    Found 1-bit register for signal <banco<21><23>>.
-    Found 1-bit register for signal <banco<21><22>>.
-    Found 1-bit register for signal <banco<21><21>>.
-    Found 1-bit register for signal <banco<21><20>>.
-    Found 1-bit register for signal <banco<21><19>>.
-    Found 1-bit register for signal <banco<21><18>>.
-    Found 1-bit register for signal <banco<21><17>>.
-    Found 1-bit register for signal <banco<21><16>>.
-    Found 1-bit register for signal <banco<21><15>>.
-    Found 1-bit register for signal <banco<21><14>>.
-    Found 1-bit register for signal <banco<21><13>>.
-    Found 1-bit register for signal <banco<21><12>>.
-    Found 1-bit register for signal <banco<21><11>>.
-    Found 1-bit register for signal <banco<21><10>>.
-    Found 1-bit register for signal <banco<21><9>>.
-    Found 1-bit register for signal <banco<21><8>>.
-    Found 1-bit register for signal <banco<21><7>>.
-    Found 1-bit register for signal <banco<21><6>>.
-    Found 1-bit register for signal <banco<21><5>>.
-    Found 1-bit register for signal <banco<21><4>>.
-    Found 1-bit register for signal <banco<21><3>>.
-    Found 1-bit register for signal <banco<21><2>>.
-    Found 1-bit register for signal <banco<21><1>>.
-    Found 1-bit register for signal <banco<21><0>>.
-    Found 1-bit register for signal <banco<20><31>>.
-    Found 1-bit register for signal <banco<20><30>>.
-    Found 1-bit register for signal <banco<20><29>>.
-    Found 1-bit register for signal <banco<20><28>>.
-    Found 1-bit register for signal <banco<20><27>>.
-    Found 1-bit register for signal <banco<20><26>>.
-    Found 1-bit register for signal <banco<20><25>>.
-    Found 1-bit register for signal <banco<20><24>>.
-    Found 1-bit register for signal <banco<20><23>>.
-    Found 1-bit register for signal <banco<20><22>>.
-    Found 1-bit register for signal <banco<20><21>>.
-    Found 1-bit register for signal <banco<20><20>>.
-    Found 1-bit register for signal <banco<20><19>>.
-    Found 1-bit register for signal <banco<20><18>>.
-    Found 1-bit register for signal <banco<20><17>>.
-    Found 1-bit register for signal <banco<20><16>>.
-    Found 1-bit register for signal <banco<20><15>>.
-    Found 1-bit register for signal <banco<20><14>>.
-    Found 1-bit register for signal <banco<20><13>>.
-    Found 1-bit register for signal <banco<20><12>>.
-    Found 1-bit register for signal <banco<20><11>>.
-    Found 1-bit register for signal <banco<20><10>>.
-    Found 1-bit register for signal <banco<20><9>>.
-    Found 1-bit register for signal <banco<20><8>>.
-    Found 1-bit register for signal <banco<20><7>>.
-    Found 1-bit register for signal <banco<20><6>>.
-    Found 1-bit register for signal <banco<20><5>>.
-    Found 1-bit register for signal <banco<20><4>>.
-    Found 1-bit register for signal <banco<20><3>>.
-    Found 1-bit register for signal <banco<20><2>>.
-    Found 1-bit register for signal <banco<20><1>>.
-    Found 1-bit register for signal <banco<20><0>>.
-    Found 1-bit register for signal <banco<19><31>>.
-    Found 1-bit register for signal <banco<19><30>>.
-    Found 1-bit register for signal <banco<19><29>>.
-    Found 1-bit register for signal <banco<19><28>>.
-    Found 1-bit register for signal <banco<19><27>>.
-    Found 1-bit register for signal <banco<19><26>>.
-    Found 1-bit register for signal <banco<19><25>>.
-    Found 1-bit register for signal <banco<19><24>>.
-    Found 1-bit register for signal <banco<19><23>>.
-    Found 1-bit register for signal <banco<19><22>>.
-    Found 1-bit register for signal <banco<19><21>>.
-    Found 1-bit register for signal <banco<19><20>>.
-    Found 1-bit register for signal <banco<19><19>>.
-    Found 1-bit register for signal <banco<19><18>>.
-    Found 1-bit register for signal <banco<19><17>>.
-    Found 1-bit register for signal <banco<19><16>>.
-    Found 1-bit register for signal <banco<19><15>>.
-    Found 1-bit register for signal <banco<19><14>>.
-    Found 1-bit register for signal <banco<19><13>>.
-    Found 1-bit register for signal <banco<19><12>>.
-    Found 1-bit register for signal <banco<19><11>>.
-    Found 1-bit register for signal <banco<19><10>>.
-    Found 1-bit register for signal <banco<19><9>>.
-    Found 1-bit register for signal <banco<19><8>>.
-    Found 1-bit register for signal <banco<19><7>>.
-    Found 1-bit register for signal <banco<19><6>>.
-    Found 1-bit register for signal <banco<19><5>>.
-    Found 1-bit register for signal <banco<19><4>>.
-    Found 1-bit register for signal <banco<19><3>>.
-    Found 1-bit register for signal <banco<19><2>>.
-    Found 1-bit register for signal <banco<19><1>>.
-    Found 1-bit register for signal <banco<19><0>>.
-    Found 1-bit register for signal <banco<18><31>>.
-    Found 1-bit register for signal <banco<18><30>>.
-    Found 1-bit register for signal <banco<18><29>>.
-    Found 1-bit register for signal <banco<18><28>>.
-    Found 1-bit register for signal <banco<18><27>>.
-    Found 1-bit register for signal <banco<18><26>>.
-    Found 1-bit register for signal <banco<18><25>>.
-    Found 1-bit register for signal <banco<18><24>>.
-    Found 1-bit register for signal <banco<18><23>>.
-    Found 1-bit register for signal <banco<18><22>>.
-    Found 1-bit register for signal <banco<18><21>>.
-    Found 1-bit register for signal <banco<18><20>>.
-    Found 1-bit register for signal <banco<18><19>>.
-    Found 1-bit register for signal <banco<18><18>>.
-    Found 1-bit register for signal <banco<18><17>>.
-    Found 1-bit register for signal <banco<18><16>>.
-    Found 1-bit register for signal <banco<18><15>>.
-    Found 1-bit register for signal <banco<18><14>>.
-    Found 1-bit register for signal <banco<18><13>>.
-    Found 1-bit register for signal <banco<18><12>>.
-    Found 1-bit register for signal <banco<18><11>>.
-    Found 1-bit register for signal <banco<18><10>>.
-    Found 1-bit register for signal <banco<18><9>>.
-    Found 1-bit register for signal <banco<18><8>>.
-    Found 1-bit register for signal <banco<18><7>>.
-    Found 1-bit register for signal <banco<18><6>>.
-    Found 1-bit register for signal <banco<18><5>>.
-    Found 1-bit register for signal <banco<18><4>>.
-    Found 1-bit register for signal <banco<18><3>>.
-    Found 1-bit register for signal <banco<18><2>>.
-    Found 1-bit register for signal <banco<18><1>>.
-    Found 1-bit register for signal <banco<18><0>>.
-    Found 1-bit register for signal <banco<17><31>>.
-    Found 1-bit register for signal <banco<17><30>>.
-    Found 1-bit register for signal <banco<17><29>>.
-    Found 1-bit register for signal <banco<17><28>>.
-    Found 1-bit register for signal <banco<17><27>>.
-    Found 1-bit register for signal <banco<17><26>>.
-    Found 1-bit register for signal <banco<17><25>>.
-    Found 1-bit register for signal <banco<17><24>>.
-    Found 1-bit register for signal <banco<17><23>>.
-    Found 1-bit register for signal <banco<17><22>>.
-    Found 1-bit register for signal <banco<17><21>>.
-    Found 1-bit register for signal <banco<17><20>>.
-    Found 1-bit register for signal <banco<17><19>>.
-    Found 1-bit register for signal <banco<17><18>>.
-    Found 1-bit register for signal <banco<17><17>>.
-    Found 1-bit register for signal <banco<17><16>>.
-    Found 1-bit register for signal <banco<17><15>>.
-    Found 1-bit register for signal <banco<17><14>>.
-    Found 1-bit register for signal <banco<17><13>>.
-    Found 1-bit register for signal <banco<17><12>>.
-    Found 1-bit register for signal <banco<17><11>>.
-    Found 1-bit register for signal <banco<17><10>>.
-    Found 1-bit register for signal <banco<17><9>>.
-    Found 1-bit register for signal <banco<17><8>>.
-    Found 1-bit register for signal <banco<17><7>>.
-    Found 1-bit register for signal <banco<17><6>>.
-    Found 1-bit register for signal <banco<17><5>>.
-    Found 1-bit register for signal <banco<17><4>>.
-    Found 1-bit register for signal <banco<17><3>>.
-    Found 1-bit register for signal <banco<17><2>>.
-    Found 1-bit register for signal <banco<17><1>>.
-    Found 1-bit register for signal <banco<17><0>>.
-    Found 1-bit register for signal <banco<16><31>>.
-    Found 1-bit register for signal <banco<16><30>>.
-    Found 1-bit register for signal <banco<16><29>>.
-    Found 1-bit register for signal <banco<16><28>>.
-    Found 1-bit register for signal <banco<16><27>>.
-    Found 1-bit register for signal <banco<16><26>>.
-    Found 1-bit register for signal <banco<16><25>>.
-    Found 1-bit register for signal <banco<16><24>>.
-    Found 1-bit register for signal <banco<16><23>>.
-    Found 1-bit register for signal <banco<16><22>>.
-    Found 1-bit register for signal <banco<16><21>>.
-    Found 1-bit register for signal <banco<16><20>>.
-    Found 1-bit register for signal <banco<16><19>>.
-    Found 1-bit register for signal <banco<16><18>>.
-    Found 1-bit register for signal <banco<16><17>>.
-    Found 1-bit register for signal <banco<16><16>>.
-    Found 1-bit register for signal <banco<16><15>>.
-    Found 1-bit register for signal <banco<16><14>>.
-    Found 1-bit register for signal <banco<16><13>>.
-    Found 1-bit register for signal <banco<16><12>>.
-    Found 1-bit register for signal <banco<16><11>>.
-    Found 1-bit register for signal <banco<16><10>>.
-    Found 1-bit register for signal <banco<16><9>>.
-    Found 1-bit register for signal <banco<16><8>>.
-    Found 1-bit register for signal <banco<16><7>>.
-    Found 1-bit register for signal <banco<16><6>>.
-    Found 1-bit register for signal <banco<16><5>>.
-    Found 1-bit register for signal <banco<16><4>>.
-    Found 1-bit register for signal <banco<16><3>>.
-    Found 1-bit register for signal <banco<16><2>>.
-    Found 1-bit register for signal <banco<16><1>>.
-    Found 1-bit register for signal <banco<16><0>>.
-    Found 1-bit register for signal <banco<15><31>>.
-    Found 1-bit register for signal <banco<15><30>>.
-    Found 1-bit register for signal <banco<15><29>>.
-    Found 1-bit register for signal <banco<15><28>>.
-    Found 1-bit register for signal <banco<15><27>>.
-    Found 1-bit register for signal <banco<15><26>>.
-    Found 1-bit register for signal <banco<15><25>>.
-    Found 1-bit register for signal <banco<15><24>>.
-    Found 1-bit register for signal <banco<15><23>>.
-    Found 1-bit register for signal <banco<15><22>>.
-    Found 1-bit register for signal <banco<15><21>>.
-    Found 1-bit register for signal <banco<15><20>>.
-    Found 1-bit register for signal <banco<15><19>>.
-    Found 1-bit register for signal <banco<15><18>>.
-    Found 1-bit register for signal <banco<15><17>>.
-    Found 1-bit register for signal <banco<15><16>>.
-    Found 1-bit register for signal <banco<15><15>>.
-    Found 1-bit register for signal <banco<15><14>>.
-    Found 1-bit register for signal <banco<15><13>>.
-    Found 1-bit register for signal <banco<15><12>>.
-    Found 1-bit register for signal <banco<15><11>>.
-    Found 1-bit register for signal <banco<15><10>>.
-    Found 1-bit register for signal <banco<15><9>>.
-    Found 1-bit register for signal <banco<15><8>>.
-    Found 1-bit register for signal <banco<15><7>>.
-    Found 1-bit register for signal <banco<15><6>>.
-    Found 1-bit register for signal <banco<15><5>>.
-    Found 1-bit register for signal <banco<15><4>>.
-    Found 1-bit register for signal <banco<15><3>>.
-    Found 1-bit register for signal <banco<15><2>>.
-    Found 1-bit register for signal <banco<15><1>>.
-    Found 1-bit register for signal <banco<15><0>>.
-    Found 1-bit register for signal <banco<14><31>>.
-    Found 1-bit register for signal <banco<14><30>>.
-    Found 1-bit register for signal <banco<14><29>>.
-    Found 1-bit register for signal <banco<14><28>>.
-    Found 1-bit register for signal <banco<14><27>>.
-    Found 1-bit register for signal <banco<14><26>>.
-    Found 1-bit register for signal <banco<14><25>>.
-    Found 1-bit register for signal <banco<14><24>>.
-    Found 1-bit register for signal <banco<14><23>>.
-    Found 1-bit register for signal <banco<14><22>>.
-    Found 1-bit register for signal <banco<14><21>>.
-    Found 1-bit register for signal <banco<14><20>>.
-    Found 1-bit register for signal <banco<14><19>>.
-    Found 1-bit register for signal <banco<14><18>>.
-    Found 1-bit register for signal <banco<14><17>>.
-    Found 1-bit register for signal <banco<14><16>>.
-    Found 1-bit register for signal <banco<14><15>>.
-    Found 1-bit register for signal <banco<14><14>>.
-    Found 1-bit register for signal <banco<14><13>>.
-    Found 1-bit register for signal <banco<14><12>>.
-    Found 1-bit register for signal <banco<14><11>>.
-    Found 1-bit register for signal <banco<14><10>>.
-    Found 1-bit register for signal <banco<14><9>>.
-    Found 1-bit register for signal <banco<14><8>>.
-    Found 1-bit register for signal <banco<14><7>>.
-    Found 1-bit register for signal <banco<14><6>>.
-    Found 1-bit register for signal <banco<14><5>>.
-    Found 1-bit register for signal <banco<14><4>>.
-    Found 1-bit register for signal <banco<14><3>>.
-    Found 1-bit register for signal <banco<14><2>>.
-    Found 1-bit register for signal <banco<14><1>>.
-    Found 1-bit register for signal <banco<14><0>>.
-    Found 1-bit register for signal <banco<13><31>>.
-    Found 1-bit register for signal <banco<13><30>>.
-    Found 1-bit register for signal <banco<13><29>>.
-    Found 1-bit register for signal <banco<13><28>>.
-    Found 1-bit register for signal <banco<13><27>>.
-    Found 1-bit register for signal <banco<13><26>>.
-    Found 1-bit register for signal <banco<13><25>>.
-    Found 1-bit register for signal <banco<13><24>>.
-    Found 1-bit register for signal <banco<13><23>>.
-    Found 1-bit register for signal <banco<13><22>>.
-    Found 1-bit register for signal <banco<13><21>>.
-    Found 1-bit register for signal <banco<13><20>>.
-    Found 1-bit register for signal <banco<13><19>>.
-    Found 1-bit register for signal <banco<13><18>>.
-    Found 1-bit register for signal <banco<13><17>>.
-    Found 1-bit register for signal <banco<13><16>>.
-    Found 1-bit register for signal <banco<13><15>>.
-    Found 1-bit register for signal <banco<13><14>>.
-    Found 1-bit register for signal <banco<13><13>>.
-    Found 1-bit register for signal <banco<13><12>>.
-    Found 1-bit register for signal <banco<13><11>>.
-    Found 1-bit register for signal <banco<13><10>>.
-    Found 1-bit register for signal <banco<13><9>>.
-    Found 1-bit register for signal <banco<13><8>>.
-    Found 1-bit register for signal <banco<13><7>>.
-    Found 1-bit register for signal <banco<13><6>>.
-    Found 1-bit register for signal <banco<13><5>>.
-    Found 1-bit register for signal <banco<13><4>>.
-    Found 1-bit register for signal <banco<13><3>>.
-    Found 1-bit register for signal <banco<13><2>>.
-    Found 1-bit register for signal <banco<13><1>>.
-    Found 1-bit register for signal <banco<13><0>>.
-    Found 1-bit register for signal <banco<12><31>>.
-    Found 1-bit register for signal <banco<12><30>>.
-    Found 1-bit register for signal <banco<12><29>>.
-    Found 1-bit register for signal <banco<12><28>>.
-    Found 1-bit register for signal <banco<12><27>>.
-    Found 1-bit register for signal <banco<12><26>>.
-    Found 1-bit register for signal <banco<12><25>>.
-    Found 1-bit register for signal <banco<12><24>>.
-    Found 1-bit register for signal <banco<12><23>>.
-    Found 1-bit register for signal <banco<12><22>>.
-    Found 1-bit register for signal <banco<12><21>>.
-    Found 1-bit register for signal <banco<12><20>>.
-    Found 1-bit register for signal <banco<12><19>>.
-    Found 1-bit register for signal <banco<12><18>>.
-    Found 1-bit register for signal <banco<12><17>>.
-    Found 1-bit register for signal <banco<12><16>>.
-    Found 1-bit register for signal <banco<12><15>>.
-    Found 1-bit register for signal <banco<12><14>>.
-    Found 1-bit register for signal <banco<12><13>>.
-    Found 1-bit register for signal <banco<12><12>>.
-    Found 1-bit register for signal <banco<12><11>>.
-    Found 1-bit register for signal <banco<12><10>>.
-    Found 1-bit register for signal <banco<12><9>>.
-    Found 1-bit register for signal <banco<12><8>>.
-    Found 1-bit register for signal <banco<12><7>>.
-    Found 1-bit register for signal <banco<12><6>>.
-    Found 1-bit register for signal <banco<12><5>>.
-    Found 1-bit register for signal <banco<12><4>>.
-    Found 1-bit register for signal <banco<12><3>>.
-    Found 1-bit register for signal <banco<12><2>>.
-    Found 1-bit register for signal <banco<12><1>>.
-    Found 1-bit register for signal <banco<12><0>>.
-    Found 1-bit register for signal <banco<11><31>>.
-    Found 1-bit register for signal <banco<11><30>>.
-    Found 1-bit register for signal <banco<11><29>>.
-    Found 1-bit register for signal <banco<11><28>>.
-    Found 1-bit register for signal <banco<11><27>>.
-    Found 1-bit register for signal <banco<11><26>>.
-    Found 1-bit register for signal <banco<11><25>>.
-    Found 1-bit register for signal <banco<11><24>>.
-    Found 1-bit register for signal <banco<11><23>>.
-    Found 1-bit register for signal <banco<11><22>>.
-    Found 1-bit register for signal <banco<11><21>>.
-    Found 1-bit register for signal <banco<11><20>>.
-    Found 1-bit register for signal <banco<11><19>>.
-    Found 1-bit register for signal <banco<11><18>>.
-    Found 1-bit register for signal <banco<11><17>>.
-    Found 1-bit register for signal <banco<11><16>>.
-    Found 1-bit register for signal <banco<11><15>>.
-    Found 1-bit register for signal <banco<11><14>>.
-    Found 1-bit register for signal <banco<11><13>>.
-    Found 1-bit register for signal <banco<11><12>>.
-    Found 1-bit register for signal <banco<11><11>>.
-    Found 1-bit register for signal <banco<11><10>>.
-    Found 1-bit register for signal <banco<11><9>>.
-    Found 1-bit register for signal <banco<11><8>>.
-    Found 1-bit register for signal <banco<11><7>>.
-    Found 1-bit register for signal <banco<11><6>>.
-    Found 1-bit register for signal <banco<11><5>>.
-    Found 1-bit register for signal <banco<11><4>>.
-    Found 1-bit register for signal <banco<11><3>>.
-    Found 1-bit register for signal <banco<11><2>>.
-    Found 1-bit register for signal <banco<11><1>>.
-    Found 1-bit register for signal <banco<11><0>>.
-    Found 1-bit register for signal <banco<10><31>>.
-    Found 1-bit register for signal <banco<10><30>>.
-    Found 1-bit register for signal <banco<10><29>>.
-    Found 1-bit register for signal <banco<10><28>>.
-    Found 1-bit register for signal <banco<10><27>>.
-    Found 1-bit register for signal <banco<10><26>>.
-    Found 1-bit register for signal <banco<10><25>>.
-    Found 1-bit register for signal <banco<10><24>>.
-    Found 1-bit register for signal <banco<10><23>>.
-    Found 1-bit register for signal <banco<10><22>>.
-    Found 1-bit register for signal <banco<10><21>>.
-    Found 1-bit register for signal <banco<10><20>>.
-    Found 1-bit register for signal <banco<10><19>>.
-    Found 1-bit register for signal <banco<10><18>>.
-    Found 1-bit register for signal <banco<10><17>>.
-    Found 1-bit register for signal <banco<10><16>>.
-    Found 1-bit register for signal <banco<10><15>>.
-    Found 1-bit register for signal <banco<10><14>>.
-    Found 1-bit register for signal <banco<10><13>>.
-    Found 1-bit register for signal <banco<10><12>>.
-    Found 1-bit register for signal <banco<10><11>>.
-    Found 1-bit register for signal <banco<10><10>>.
-    Found 1-bit register for signal <banco<10><9>>.
-    Found 1-bit register for signal <banco<10><8>>.
-    Found 1-bit register for signal <banco<10><7>>.
-    Found 1-bit register for signal <banco<10><6>>.
-    Found 1-bit register for signal <banco<10><5>>.
-    Found 1-bit register for signal <banco<10><4>>.
-    Found 1-bit register for signal <banco<10><3>>.
-    Found 1-bit register for signal <banco<10><2>>.
-    Found 1-bit register for signal <banco<10><1>>.
-    Found 1-bit register for signal <banco<10><0>>.
-    Found 1-bit register for signal <banco<9><31>>.
-    Found 1-bit register for signal <banco<9><30>>.
-    Found 1-bit register for signal <banco<9><29>>.
-    Found 1-bit register for signal <banco<9><28>>.
-    Found 1-bit register for signal <banco<9><27>>.
-    Found 1-bit register for signal <banco<9><26>>.
-    Found 1-bit register for signal <banco<9><25>>.
-    Found 1-bit register for signal <banco<9><24>>.
-    Found 1-bit register for signal <banco<9><23>>.
-    Found 1-bit register for signal <banco<9><22>>.
-    Found 1-bit register for signal <banco<9><21>>.
-    Found 1-bit register for signal <banco<9><20>>.
-    Found 1-bit register for signal <banco<9><19>>.
-    Found 1-bit register for signal <banco<9><18>>.
-    Found 1-bit register for signal <banco<9><17>>.
-    Found 1-bit register for signal <banco<9><16>>.
-    Found 1-bit register for signal <banco<9><15>>.
-    Found 1-bit register for signal <banco<9><14>>.
-    Found 1-bit register for signal <banco<9><13>>.
-    Found 1-bit register for signal <banco<9><12>>.
-    Found 1-bit register for signal <banco<9><11>>.
-    Found 1-bit register for signal <banco<9><10>>.
-    Found 1-bit register for signal <banco<9><9>>.
-    Found 1-bit register for signal <banco<9><8>>.
-    Found 1-bit register for signal <banco<9><7>>.
-    Found 1-bit register for signal <banco<9><6>>.
-    Found 1-bit register for signal <banco<9><5>>.
-    Found 1-bit register for signal <banco<9><4>>.
-    Found 1-bit register for signal <banco<9><3>>.
-    Found 1-bit register for signal <banco<9><2>>.
-    Found 1-bit register for signal <banco<9><1>>.
-    Found 1-bit register for signal <banco<9><0>>.
-    Found 1-bit register for signal <banco<8><31>>.
-    Found 1-bit register for signal <banco<8><30>>.
-    Found 1-bit register for signal <banco<8><29>>.
-    Found 1-bit register for signal <banco<8><28>>.
-    Found 1-bit register for signal <banco<8><27>>.
-    Found 1-bit register for signal <banco<8><26>>.
-    Found 1-bit register for signal <banco<8><25>>.
-    Found 1-bit register for signal <banco<8><24>>.
-    Found 1-bit register for signal <banco<8><23>>.
-    Found 1-bit register for signal <banco<8><22>>.
-    Found 1-bit register for signal <banco<8><21>>.
-    Found 1-bit register for signal <banco<8><20>>.
-    Found 1-bit register for signal <banco<8><19>>.
-    Found 1-bit register for signal <banco<8><18>>.
-    Found 1-bit register for signal <banco<8><17>>.
-    Found 1-bit register for signal <banco<8><16>>.
-    Found 1-bit register for signal <banco<8><15>>.
-    Found 1-bit register for signal <banco<8><14>>.
-    Found 1-bit register for signal <banco<8><13>>.
-    Found 1-bit register for signal <banco<8><12>>.
-    Found 1-bit register for signal <banco<8><11>>.
-    Found 1-bit register for signal <banco<8><10>>.
-    Found 1-bit register for signal <banco<8><9>>.
-    Found 1-bit register for signal <banco<8><8>>.
-    Found 1-bit register for signal <banco<8><7>>.
-    Found 1-bit register for signal <banco<8><6>>.
-    Found 1-bit register for signal <banco<8><5>>.
-    Found 1-bit register for signal <banco<8><4>>.
-    Found 1-bit register for signal <banco<8><3>>.
-    Found 1-bit register for signal <banco<8><2>>.
-    Found 1-bit register for signal <banco<8><1>>.
-    Found 1-bit register for signal <banco<8><0>>.
-    Found 1-bit register for signal <banco<7><31>>.
-    Found 1-bit register for signal <banco<7><30>>.
-    Found 1-bit register for signal <banco<7><29>>.
-    Found 1-bit register for signal <banco<7><28>>.
-    Found 1-bit register for signal <banco<7><27>>.
-    Found 1-bit register for signal <banco<7><26>>.
-    Found 1-bit register for signal <banco<7><25>>.
-    Found 1-bit register for signal <banco<7><24>>.
-    Found 1-bit register for signal <banco<7><23>>.
-    Found 1-bit register for signal <banco<7><22>>.
-    Found 1-bit register for signal <banco<7><21>>.
-    Found 1-bit register for signal <banco<7><20>>.
-    Found 1-bit register for signal <banco<7><19>>.
-    Found 1-bit register for signal <banco<7><18>>.
-    Found 1-bit register for signal <banco<7><17>>.
-    Found 1-bit register for signal <banco<7><16>>.
-    Found 1-bit register for signal <banco<7><15>>.
-    Found 1-bit register for signal <banco<7><14>>.
-    Found 1-bit register for signal <banco<7><13>>.
-    Found 1-bit register for signal <banco<7><12>>.
-    Found 1-bit register for signal <banco<7><11>>.
-    Found 1-bit register for signal <banco<7><10>>.
-    Found 1-bit register for signal <banco<7><9>>.
-    Found 1-bit register for signal <banco<7><8>>.
-    Found 1-bit register for signal <banco<7><7>>.
-    Found 1-bit register for signal <banco<7><6>>.
-    Found 1-bit register for signal <banco<7><5>>.
-    Found 1-bit register for signal <banco<7><4>>.
-    Found 1-bit register for signal <banco<7><3>>.
-    Found 1-bit register for signal <banco<7><2>>.
-    Found 1-bit register for signal <banco<7><1>>.
-    Found 1-bit register for signal <banco<7><0>>.
-    Found 1-bit register for signal <banco<6><31>>.
-    Found 1-bit register for signal <banco<6><30>>.
-    Found 1-bit register for signal <banco<6><29>>.
-    Found 1-bit register for signal <banco<6><28>>.
-    Found 1-bit register for signal <banco<6><27>>.
-    Found 1-bit register for signal <banco<6><26>>.
-    Found 1-bit register for signal <banco<6><25>>.
-    Found 1-bit register for signal <banco<6><24>>.
-    Found 1-bit register for signal <banco<6><23>>.
-    Found 1-bit register for signal <banco<6><22>>.
-    Found 1-bit register for signal <banco<6><21>>.
-    Found 1-bit register for signal <banco<6><20>>.
-    Found 1-bit register for signal <banco<6><19>>.
-    Found 1-bit register for signal <banco<6><18>>.
-    Found 1-bit register for signal <banco<6><17>>.
-    Found 1-bit register for signal <banco<6><16>>.
-    Found 1-bit register for signal <banco<6><15>>.
-    Found 1-bit register for signal <banco<6><14>>.
-    Found 1-bit register for signal <banco<6><13>>.
-    Found 1-bit register for signal <banco<6><12>>.
-    Found 1-bit register for signal <banco<6><11>>.
-    Found 1-bit register for signal <banco<6><10>>.
-    Found 1-bit register for signal <banco<6><9>>.
-    Found 1-bit register for signal <banco<6><8>>.
-    Found 1-bit register for signal <banco<6><7>>.
-    Found 1-bit register for signal <banco<6><6>>.
-    Found 1-bit register for signal <banco<6><5>>.
-    Found 1-bit register for signal <banco<6><4>>.
-    Found 1-bit register for signal <banco<6><3>>.
-    Found 1-bit register for signal <banco<6><2>>.
-    Found 1-bit register for signal <banco<6><1>>.
-    Found 1-bit register for signal <banco<6><0>>.
-    Found 1-bit register for signal <banco<5><31>>.
-    Found 1-bit register for signal <banco<5><30>>.
-    Found 1-bit register for signal <banco<5><29>>.
-    Found 1-bit register for signal <banco<5><28>>.
-    Found 1-bit register for signal <banco<5><27>>.
-    Found 1-bit register for signal <banco<5><26>>.
-    Found 1-bit register for signal <banco<5><25>>.
-    Found 1-bit register for signal <banco<5><24>>.
-    Found 1-bit register for signal <banco<5><23>>.
-    Found 1-bit register for signal <banco<5><22>>.
-    Found 1-bit register for signal <banco<5><21>>.
-    Found 1-bit register for signal <banco<5><20>>.
-    Found 1-bit register for signal <banco<5><19>>.
-    Found 1-bit register for signal <banco<5><18>>.
-    Found 1-bit register for signal <banco<5><17>>.
-    Found 1-bit register for signal <banco<5><16>>.
-    Found 1-bit register for signal <banco<5><15>>.
-    Found 1-bit register for signal <banco<5><14>>.
-    Found 1-bit register for signal <banco<5><13>>.
-    Found 1-bit register for signal <banco<5><12>>.
-    Found 1-bit register for signal <banco<5><11>>.
-    Found 1-bit register for signal <banco<5><10>>.
-    Found 1-bit register for signal <banco<5><9>>.
-    Found 1-bit register for signal <banco<5><8>>.
-    Found 1-bit register for signal <banco<5><7>>.
-    Found 1-bit register for signal <banco<5><6>>.
-    Found 1-bit register for signal <banco<5><5>>.
-    Found 1-bit register for signal <banco<5><4>>.
-    Found 1-bit register for signal <banco<5><3>>.
-    Found 1-bit register for signal <banco<5><2>>.
-    Found 1-bit register for signal <banco<5><1>>.
-    Found 1-bit register for signal <banco<5><0>>.
+    Found 1024-bit register for signal <n0053[1023:0]>.
     Found 32-bit 32-to-1 multiplexer for signal <readData1> created at line 45.
     Found 32-bit 32-to-1 multiplexer for signal <readData2> created at line 46.
     Summary:
 	inferred 1024 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred  34 Multiplexer(s).
 Unit <REGBANK_banco> synthesized.
 
 Synthesizing Unit <ALU>.
@@ -1426,10 +403,10 @@ Synthesizing Unit <DebugUnit>.
     Related source file is "C:\Users\Juanjo\Documents\Juanjo\Facu\Arquitectura\Trabajo Final\finalArquitectura\TestDatapathPart1\PipeAndDebug\DebugUnit.v".
     Found 8-bit register for signal <sendCounter>.
     Found 3-bit register for signal <current_state>.
-    Found 8-bit adder for signal <sendCounter[7]_GND_18_o_add_99_OUT> created at line 205.
+    Found 8-bit adder for signal <sendCounter[7]_GND_17_o_add_99_OUT> created at line 205.
     Found 8x6-bit Read Only RAM for signal <_n0323>
     Found 8-bit 87-to-1 multiplexer for signal <dataToUartOutFifo> created at line 181.
-    Found 1-bit 7-to-1 multiplexer for signal <current_state[2]_GND_18_o_Mux_132_o> created at line 215.
+    Found 1-bit 7-to-1 multiplexer for signal <current_state[2]_GND_17_o_Mux_132_o> created at line 215.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -1466,8 +443,8 @@ Synthesizing Unit <UART_baud_rate_generator_1>.
         COUNT = 651
     Found 1-bit register for signal <baud_rate>.
     Found 16-bit register for signal <counter>.
-    Found 16-bit adder for signal <counter[15]_GND_33_o_add_2_OUT> created at line 27.
-    Found 16-bit comparator greater for signal <counter[15]_GND_33_o_LessThan_2_o> created at line 27
+    Found 16-bit adder for signal <counter[15]_GND_32_o_add_2_OUT> created at line 27.
+    Found 16-bit comparator greater for signal <counter[15]_GND_32_o_LessThan_2_o> created at line 27
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
@@ -1482,8 +459,8 @@ Synthesizing Unit <UART_rx>.
     Found 4-bit register for signal <s>.
     Found 4-bit register for signal <n>.
     Found 8-bit register for signal <d_out>.
-    Found 4-bit adder for signal <n[3]_GND_34_o_add_13_OUT> created at line 81.
-    Found 4-bit adder for signal <s[3]_GND_34_o_add_24_OUT> created at line 101.
+    Found 4-bit adder for signal <n[3]_GND_33_o_add_13_OUT> created at line 81.
+    Found 4-bit adder for signal <s[3]_GND_33_o_add_24_OUT> created at line 101.
     Found 1-bit 3-to-1 multiplexer for signal <current_state[1]_rx_done_Mux_30_o> created at line 56.
     Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_31_OUT> created at line 56.
     Found 4-bit 4-to-1 multiplexer for signal <current_state[1]_s[3]_wide_mux_32_OUT> created at line 56.
@@ -1504,10 +481,10 @@ Synthesizing Unit <UART_fifo_interface>.
     Found 4-bit register for signal <read_pointer>.
     Found 4-bit register for signal <write_pointer>.
     Found 5-bit register for signal <free_space>.
-    Found 4-bit adder for signal <read_pointer[3]_GND_35_o_add_3_OUT> created at line 56.
-    Found 5-bit adder for signal <free_space[4]_GND_35_o_add_4_OUT> created at line 57.
-    Found 4-bit adder for signal <write_pointer[3]_GND_35_o_add_10_OUT> created at line 62.
-    Found 5-bit subtractor for signal <GND_35_o_GND_35_o_sub_12_OUT<4:0>> created at line 64.
+    Found 4-bit adder for signal <read_pointer[3]_GND_34_o_add_3_OUT> created at line 56.
+    Found 5-bit adder for signal <free_space[4]_GND_34_o_add_4_OUT> created at line 57.
+    Found 4-bit adder for signal <write_pointer[3]_GND_34_o_add_10_OUT> created at line 62.
+    Found 5-bit subtractor for signal <GND_34_o_GND_34_o_sub_12_OUT<4:0>> created at line 64.
     Summary:
 	inferred   1 RAM(s).
 	inferred   4 Adder/Subtractor(s).
@@ -1520,8 +497,8 @@ Synthesizing Unit <UART_baud_rate_generator_2>.
         COUNT = 10416
     Found 1-bit register for signal <baud_rate>.
     Found 16-bit register for signal <counter>.
-    Found 16-bit adder for signal <counter[15]_GND_37_o_add_2_OUT> created at line 27.
-    Found 16-bit comparator greater for signal <counter[15]_GND_37_o_LessThan_2_o> created at line 27
+    Found 16-bit adder for signal <counter[15]_GND_36_o_add_2_OUT> created at line 27.
+    Found 16-bit comparator greater for signal <counter[15]_GND_36_o_LessThan_2_o> created at line 27
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  17 D-type flip-flop(s).
@@ -1536,7 +513,7 @@ Synthesizing Unit <UART_tx>.
     Found 2-bit register for signal <next_state>.
     Found 3-bit register for signal <B_sent>.
     Found 8-bit register for signal <d_in>.
-    Found 3-bit adder for signal <B_sent[2]_GND_38_o_add_6_OUT> created at line 88.
+    Found 3-bit adder for signal <B_sent[2]_GND_37_o_add_6_OUT> created at line 88.
     Found 1-bit 8-to-1 multiplexer for signal <B_sent[2]_d_in[7]_Mux_4_o> created at line 83.
     Found 1-bit 4-to-1 multiplexer for signal <current_state[1]_tx_Mux_13_o> created at line 64.
     Found 2-bit 4-to-1 multiplexer for signal <current_state[1]_next_state[1]_wide_mux_15_OUT> created at line 64.
@@ -1568,12 +545,13 @@ Macro Statistics
  5-bit adder                                           : 1
  5-bit subtractor                                      : 1
  8-bit adder                                           : 3
-# Registers                                            : 242
- 1-bit register                                        : 178
+# Registers                                            : 56
+ 1-bit register                                        : 18
+ 1024-bit register                                     : 1
  16-bit register                                       : 2
  2-bit register                                        : 6
  3-bit register                                        : 2
- 32-bit register                                       : 35
+ 32-bit register                                       : 8
  4-bit register                                        : 7
  5-bit register                                        : 7
  8-bit register                                        : 5
@@ -1587,7 +565,7 @@ Macro Statistics
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
  8-bit comparator lessequal                            : 1
-# Multiplexers                                         : 142
+# Multiplexers                                         : 174
  1-bit 12-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 67
  1-bit 3-to-1 multiplexer                              : 1
@@ -1598,7 +576,7 @@ Macro Statistics
  2-bit 4-to-1 multiplexer                              : 2
  3-bit 2-to-1 multiplexer                              : 1
  32-bit 12-to-1 multiplexer                            : 1
- 32-bit 2-to-1 multiplexer                             : 20
+ 32-bit 2-to-1 multiplexer                             : 52
  32-bit 32-to-1 multiplexer                            : 2
  32-bit 4-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 11
@@ -1701,18 +679,18 @@ Macro Statistics
  4-bit comparator lessequal                            : 1
  5-bit comparator equal                                : 10
  8-bit comparator lessequal                            : 1
-# Multiplexers                                         : 201
+# Multiplexers                                         : 171
  1-bit 12-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 65
  1-bit 3-to-1 multiplexer                              : 1
- 1-bit 32-to-1 multiplexer                             : 64
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 7-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 1
  2-bit 2-to-1 multiplexer                              : 14
  2-bit 4-to-1 multiplexer                              : 2
  32-bit 12-to-1 multiplexer                            : 1
- 32-bit 2-to-1 multiplexer                             : 20
+ 32-bit 2-to-1 multiplexer                             : 52
+ 32-bit 32-to-1 multiplexer                            : 2
  32-bit 4-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 11
  4-bit 4-to-1 multiplexer                              : 1
@@ -1775,7 +753,7 @@ INFO:Xst:2261 - The FF/Latch <datapath/id_ex/memWriteOut_3> in Unit <MainModule>
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block MainModule, actual ratio is 33.
+Found area constraint ratio of 100 (+ 5) on block MainModule, actual ratio is 44.
 FlipFlop datapath/ex_mem/regWriteOut has been replicated 1 time(s)
 Latch datapath/debugUnit/sentFlag has been replicated 1 time(s) to handle iob=true attribute.
 Latch datapath/debugUnit/notStartUartTrans has been replicated 1 time(s) to handle iob=true attribute.
@@ -1810,26 +788,26 @@ Top Level Output File Name         : MainModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2433
+# BELS                             : 3456
 #      GND                         : 3
 #      INV                         : 6
 #      LUT1                        : 37
-#      LUT2                        : 82
-#      LUT3                        : 125
-#      LUT4                        : 245
-#      LUT5                        : 284
-#      LUT6                        : 1285
+#      LUT2                        : 84
+#      LUT3                        : 121
+#      LUT4                        : 327
+#      LUT5                        : 1324
+#      LUT6                        : 1188
 #      MUXCY                       : 132
 #      MUXF7                       : 119
 #      VCC                         : 3
 #      XORCY                       : 112
 # FlipFlops/Latches                : 1439
-#      FD                          : 7
+#      FD                          : 5
 #      FDC                         : 2
-#      FDCE                        : 151
+#      FDCE                        : 1038
 #      FDCE_1                      : 305
-#      FDE                         : 893
-#      FDPE                        : 24
+#      FDE                         : 31
+#      FDPE                        : 1
 #      FDR                         : 35
 #      FDRE                        : 8
 #      LD                          : 14
@@ -1854,17 +832,17 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1433  out of  18224     7%  
- Number of Slice LUTs:                 2072  out of   9112    22%  
-    Number used as Logic:              2064  out of   9112    22%  
+ Number of Slice LUTs:                 3095  out of   9112    33%  
+    Number used as Logic:              3087  out of   9112    33%  
     Number used as Memory:                8  out of   2176     0%  
        Number used as RAM:                8
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3093
-   Number with an unused Flip Flop:    1660  out of   3093    53%  
-   Number with an unused LUT:          1021  out of   3093    33%  
-   Number of fully used LUT-FF pairs:   412  out of   3093    13%  
-   Number of unique control sets:        54
+ Number of LUT Flip Flop pairs used:   4133
+   Number with an unused Flip Flop:    2700  out of   4133    65%  
+   Number with an unused LUT:          1038  out of   4133    25%  
+   Number of fully used LUT-FF pairs:   395  out of   4133     9%  
+   Number of unique control sets:        24
 
 IO Utilization: 
  Number of IOs:                          20
@@ -1900,9 +878,9 @@ Clock Signal                                                                    
 -----------------------------------------------------------------------------------------------------------------------+----------------------------------------------+-------+
 _i000001/pll_base_inst/CLKOUT1                                                                                         | BUFG                                         | 99    |
 _i000001/pll_base_inst/CLKOUT0                                                                                         | BUFG                                         | 1331  |
-datapath/debugUnit/current_state[2]_GND_31_o_Mux_155_o(datapath/debugUnit/Mmux_current_state[2]_GND_31_o_Mux_155_o11:O)| NONE(*)(datapath/debugUnit/notStartUartTrans)| 2     |
-datapath/debugUnit/Mram__n03231(datapath/debugUnit/Mram__n0323111:O)                                                   | NONE(*)(datapath/debugUnit/pipeReset)        | 7     |
-datapath/debugUnit/current_state[2]_GND_30_o_Mux_153_o(datapath/debugUnit/Mmux_current_state[2]_GND_30_o_Mux_153_o11:O)| NONE(*)(datapath/debugUnit/sentFlag)         | 2     |
+datapath/debugUnit/current_state[2]_GND_29_o_Mux_153_o(datapath/debugUnit/Mmux_current_state[2]_GND_29_o_Mux_153_o11:O)| NONE(*)(datapath/debugUnit/sentFlag)         | 2     |
+datapath/debugUnit/Mram__n03231(datapath/debugUnit/Mram__n0323111:O)                                                   | NONE(*)(datapath/debugUnit/pipeEnable)       | 7     |
+datapath/debugUnit/current_state[2]_GND_30_o_Mux_155_o(datapath/debugUnit/Mmux_current_state[2]_GND_30_o_Mux_155_o11:O)| NONE(*)(datapath/debugUnit/notStartUartTrans)| 2     |
 datapath/debugUnit/current_state[2]_PWR_20_o_Mux_131_o(datapath/debugUnit/Mmux_current_state[2]_PWR_20_o_Mux_131_o11:O)| NONE(*)(datapath/debugUnit/next_state_2)     | 3     |
 -----------------------------------------------------------------------------------------------------------------------+----------------------------------------------+-------+
 (*) These 4 clock signal(s) are generated by combinatorial logic,
@@ -1918,8 +896,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 13.844ns (Maximum Frequency: 72.233MHz)
-   Minimum input arrival time before clock: 6.907ns
+   Minimum period: 13.912ns (Maximum Frequency: 71.880MHz)
+   Minimum input arrival time before clock: 5.195ns
    Maximum output required time after clock: 5.192ns
    Maximum combinational path delay: No path found
 
@@ -1930,7 +908,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock '_i000001/pll_base_inst/CLKOUT1'
   Clock period: 7.815ns (frequency: 127.957MHz)
-  Total number of paths / destination ports: 2185 / 207
+  Total number of paths / destination ports: 2189 / 209
 -------------------------------------------------------------------------
 Delay:               7.815ns (Levels of Logic = 7)
   Source:            datapath/debugUnit/sendCounter_5 (FF)
@@ -1944,7 +922,7 @@ Delay:               7.815ns (Levels of Logic = 7)
     ----------------------------------------  ------------
      FDRE:C->Q            57   0.447   1.822  datapath/debugUnit/sendCounter_5 (datapath/debugUnit/sendCounter_5)
      LUT3:I0->O            4   0.205   0.788  datapath/debugUnit/Mmux_dataToUartOutFifo2151 (datapath/debugUnit/Mmux_dataToUartOutFifo215)
-     LUT6:I4->O            1   0.203   0.000  datapath/debugUnit/Mmux_dataToUartOutFifo482_G (N229)
+     LUT6:I4->O            1   0.203   0.000  datapath/debugUnit/Mmux_dataToUartOutFifo482_G (N239)
      MUXF7:I1->O           1   0.140   0.944  datapath/debugUnit/Mmux_dataToUartOutFifo482 (datapath/debugUnit/Mmux_dataToUartOutFifo481)
      LUT6:I0->O            1   0.203   0.944  datapath/debugUnit/Mmux_dataToUartOutFifo484 (datapath/debugUnit/Mmux_dataToUartOutFifo483)
      LUT6:I0->O            1   0.203   0.827  datapath/debugUnit/Mmux_dataToUartOutFifo486 (datapath/debugUnit/Mmux_dataToUartOutFifo485)
@@ -1957,23 +935,23 @@ Delay:               7.815ns (Levels of Logic = 7)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock '_i000001/pll_base_inst/CLKOUT0'
-  Clock period: 13.844ns (frequency: 72.233MHz)
-  Total number of paths / destination ports: 464617 / 2576
+  Clock period: 13.912ns (frequency: 71.880MHz)
+  Total number of paths / destination ports: 456225 / 2469
 -------------------------------------------------------------------------
-Delay:               6.922ns (Levels of Logic = 17)
-  Source:            datapath/bank/banco_03 (FF)
+Delay:               6.956ns (Levels of Logic = 17)
+  Source:            datapath/bank/banco_0_832 (FF)
   Destination:       datapath/if_id/instructionOut_31 (FF)
   Source Clock:      _i000001/pll_base_inst/CLKOUT0 rising
   Destination Clock: _i000001/pll_base_inst/CLKOUT0 falling
 
-  Data Path: datapath/bank/banco_03 to datapath/if_id/instructionOut_31
+  Data Path: datapath/bank/banco_0_832 to datapath/if_id/instructionOut_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              2   0.447   0.864  datapath/bank/banco_03 (datapath/bank/banco_03)
-     LUT6:I2->O            1   0.203   0.827  datapath/bank/mux_81 (datapath/bank/mux_81)
-     LUT6:I2->O            1   0.203   0.000  datapath/bank/mux_3 (datapath/bank/mux_3)
-     MUXF7:I1->O           2   0.140   0.617  datapath/bank/mux_2_f7 (datapath/readData1<0>)
+     FDCE:C->Q             3   0.447   0.898  datapath/bank/banco_0_832 (datapath/bank/banco_0_832)
+     LUT6:I2->O            1   0.203   0.827  datapath/bank/Mmux_readData1_81 (datapath/bank/Mmux_readData1_81)
+     LUT6:I2->O            1   0.203   0.000  datapath/bank/Mmux_readData1_3 (datapath/bank/Mmux_readData1_3)
+     MUXF7:I1->O           2   0.140   0.617  datapath/bank/Mmux_readData1_2_f7 (datapath/readData1<0>)
      LUT4:I3->O            1   0.205   0.944  datapath/Mmux_branchSrcA110 (datapath/branchSrcA<0>)
      LUT6:I0->O            1   0.203   0.000  datapath/Mcompar_n0009_lut<0> (datapath/Mcompar_n0009_lut<0>)
      MUXCY:S->O            1   0.172   0.000  datapath/Mcompar_n0009_cy<0> (datapath/Mcompar_n0009_cy<0>)
@@ -1987,38 +965,36 @@ Delay:               6.922ns (Levels of Logic = 17)
      MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0009_cy<8> (datapath/Mcompar_n0009_cy<8>)
      MUXCY:CI->O           1   0.019   0.000  datapath/Mcompar_n0009_cy<9> (datapath/Mcompar_n0009_cy<9>)
      MUXCY:CI->O          40   0.213   1.406  datapath/Mcompar_n0009_cy<10> (datapath/n0009)
-     LUT5:I4->O            1   0.205   0.000  datapath/if_id/Mmux_instructionOut[31]_GND_11_o_mux_3_OUT110 (datapath/if_id/instructionOut[31]_GND_11_o_mux_3_OUT<0>)
+     LUT5:I4->O            1   0.205   0.000  datapath/if_id/Mmux_instructionOut[31]_GND_10_o_mux_3_OUT110 (datapath/if_id/instructionOut[31]_GND_10_o_mux_3_OUT<0>)
      FDCE_1:D                  0.102          datapath/if_id/instructionOut_0
     ----------------------------------------
-    Total                      6.922ns (2.264ns logic, 4.658ns route)
-                                       (32.7% logic, 67.3% route)
+    Total                      6.956ns (2.264ns logic, 4.692ns route)
+                                       (32.5% logic, 67.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock '_i000001/pll_base_inst/CLKOUT0'
   Total number of paths / destination ports: 1329 / 1329
 -------------------------------------------------------------------------
-Offset:              6.907ns (Levels of Logic = 3)
+Offset:              3.943ns (Levels of Logic = 1)
   Source:            resetGral (PAD)
-  Destination:       datapath/bank/banco_3114 (FF)
-  Destination Clock: _i000001/pll_base_inst/CLKOUT0 rising
+  Destination:       datapath/if_id/instructionOut_31 (FF)
+  Destination Clock: _i000001/pll_base_inst/CLKOUT0 falling
 
-  Data Path: resetGral to datapath/bank/banco_3114
+  Data Path: resetGral to datapath/if_id/instructionOut_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           492   1.222   2.315  resetGral_IBUF (resetGral_IBUF)
-     LUT3:I0->O           16   0.205   1.349  datapath/bank/_n4771_inv11 (datapath/bank/_n4771_inv1)
-     LUT5:I0->O           32   0.203   1.291  datapath/bank/_n6339_inv1 (datapath/bank/_n6339_inv)
-     FDE:CE                    0.322          datapath/bank/banco_08
+     IBUF:I->O          1351   1.222   2.291  resetGral_IBUF (resetGral_IBUF)
+     FDCE_1:CLR                0.430          datapath/if_id/pcNextOut_0
     ----------------------------------------
-    Total                      6.907ns (1.952ns logic, 4.955ns route)
-                                       (28.3% logic, 71.7% route)
+    Total                      3.943ns (1.652ns logic, 2.291ns route)
+                                       (41.9% logic, 58.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock '_i000001/pll_base_inst/CLKOUT1'
   Total number of paths / destination ports: 43 / 43
 -------------------------------------------------------------------------
-Offset:              4.991ns (Levels of Logic = 2)
+Offset:              5.195ns (Levels of Logic = 2)
   Source:            resetGral (PAD)
   Destination:       datapath/debugUnit/sendCounter_6 (FF)
   Destination Clock: _i000001/pll_base_inst/CLKOUT1 rising
@@ -2027,12 +1003,12 @@ Offset:              4.991ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           492   1.222   2.334  resetGral_IBUF (resetGral_IBUF)
+     IBUF:I->O          1351   1.222   2.539  resetGral_IBUF (resetGral_IBUF)
      LUT4:I0->O            8   0.203   0.802  datapath/debugUnit/Mcount_sendCounter_val1 (datapath/debugUnit/Mcount_sendCounter_val)
      FDRE:R                    0.430          datapath/debugUnit/sendCounter_0
     ----------------------------------------
-    Total                      4.991ns (1.855ns logic, 3.136ns route)
-                                       (37.2% logic, 62.8% route)
+    Total                      5.195ns (1.855ns logic, 3.340ns route)
+                                       (35.7% logic, 64.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock '_i000001/pll_base_inst/CLKOUT1'
@@ -2074,13 +1050,13 @@ Offset:              3.648ns (Levels of Logic = 1)
                                        (84.1% logic, 15.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_30_o_Mux_153_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_29_o_Mux_153_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            datapath/debugUnit/sentFlag_1 (LATCH)
   Destination:       sentFlag (PAD)
-  Source Clock:      datapath/debugUnit/current_state[2]_GND_30_o_Mux_153_o falling
+  Source Clock:      datapath/debugUnit/current_state[2]_GND_29_o_Mux_153_o falling
 
   Data Path: datapath/debugUnit/sentFlag_1 to sentFlag
                                 Gate     Net
@@ -2093,13 +1069,13 @@ Offset:              3.648ns (Levels of Logic = 1)
                                        (84.1% logic, 15.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_31_o_Mux_155_o'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'datapath/debugUnit/current_state[2]_GND_30_o_Mux_155_o'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              3.648ns (Levels of Logic = 1)
   Source:            datapath/debugUnit/notStartUartTrans_1 (LATCH)
   Destination:       notStartUartTx (PAD)
-  Source Clock:      datapath/debugUnit/current_state[2]_GND_31_o_Mux_155_o falling
+  Source Clock:      datapath/debugUnit/current_state[2]_GND_30_o_Mux_155_o falling
 
   Data Path: datapath/debugUnit/notStartUartTrans_1 to notStartUartTx
                                 Gate     Net
@@ -2121,8 +1097,8 @@ Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT0
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-_i000001/pll_base_inst/CLKOUT0 |         |    4.970|   12.933|         |
-datapath/debugUnit/Mram__n03231|         |         |    5.354|         |
+_i000001/pll_base_inst/CLKOUT0 |    1.469|    4.270|   12.933|         |
+datapath/debugUnit/Mram__n03231|         |         |    5.265|         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT1
@@ -2130,10 +1106,10 @@ Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT1
                                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------+---------+---------+---------+---------+
-_i000001/pll_base_inst/CLKOUT0                        |    5.103|    6.381|         |         |
+_i000001/pll_base_inst/CLKOUT0                        |    5.136|    6.490|         |         |
 _i000001/pll_base_inst/CLKOUT1                        |    7.815|         |         |         |
 datapath/debugUnit/Mram__n03231                       |         |    2.584|         |         |
-datapath/debugUnit/current_state[2]_GND_31_o_Mux_155_o|         |    1.385|         |         |
+datapath/debugUnit/current_state[2]_GND_30_o_Mux_155_o|         |    1.385|         |         |
 datapath/debugUnit/current_state[2]_PWR_20_o_Mux_131_o|         |    3.853|         |         |
 ------------------------------------------------------+---------+---------+---------+---------+
 
@@ -2142,10 +1118,10 @@ Clock to Setup on destination clock datapath/debugUnit/Mram__n03231
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-_i000001/pll_base_inst/CLKOUT1|         |         |    4.590|         |
+_i000001/pll_base_inst/CLKOUT1|         |         |    4.607|         |
 ------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_30_o_Mux_153_o
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_29_o_Mux_153_o
 ------------------------------+---------+---------+---------+---------+
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2153,7 +1129,7 @@ Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 _i000001/pll_base_inst/CLKOUT1|         |         |    4.061|         |
 ------------------------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_31_o_Mux_155_o
+Clock to Setup on destination clock datapath/debugUnit/current_state[2]_GND_30_o_Mux_155_o
 ------------------------------+---------+---------+---------+---------+
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
@@ -2167,19 +1143,19 @@ Clock to Setup on destination clock datapath/debugUnit/current_state[2]_PWR_20_o
 Source Clock                                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------------------------------+---------+---------+---------+---------+
 _i000001/pll_base_inst/CLKOUT0                        |         |         |    1.648|         |
-_i000001/pll_base_inst/CLKOUT1                        |         |         |    5.586|         |
-datapath/debugUnit/current_state[2]_GND_30_o_Mux_153_o|         |         |    1.700|         |
+_i000001/pll_base_inst/CLKOUT1                        |         |         |    5.518|         |
+datapath/debugUnit/current_state[2]_GND_29_o_Mux_153_o|         |         |    1.700|         |
 ------------------------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 26.42 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 28.06 secs
  
 --> 
 
-Total memory usage is 312152 kilobytes
+Total memory usage is 307544 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   39 (   0 filtered)

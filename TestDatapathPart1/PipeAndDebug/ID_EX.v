@@ -101,7 +101,7 @@ module ID_EX(
 			 loadImmOut<=0;
 			 eopOut<=0;
 		end
-		else if(syncClr)begin
+		else if(syncClr && debugEnable)begin
 			 aluOperationOut<=0;
 			 sigExtOut<=0;
 			 readData1Out<=0;

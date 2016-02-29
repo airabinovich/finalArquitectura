@@ -50,9 +50,9 @@ module REGBANK_banco #(parameter addr_bits=5, word_wide=32)(
 	assign readDataToDebug3 = banco[3];
 	assign readDataToDebug4 = banco[4];
 	always@(posedge clock,posedge reset) begin
-		if(reset)begin
-			banco[0]=90;banco[1]=91;banco[2]=92;banco[3]=93;
-			banco[4]=94;
+//		if(reset)begin
+//			banco[0]=90;banco[1]=91;banco[2]=92;banco[3]=93;
+//			banco[4]=94;
 //			banco[5]=99;banco[6]=99;banco[7]=99;
 //			banco[8]=99;banco[9]=99;banco[10]=99;banco[11]=99;
 //			banco[12]=99;banco[13]=99;banco[14]=99;banco[15]=99;
@@ -60,17 +60,17 @@ module REGBANK_banco #(parameter addr_bits=5, word_wide=32)(
 //			banco[20]=99;banco[21]=99;banco[22]=99;banco[23]=99;
 //			banco[24]=99;banco[25]=99;banco[26]=99;banco[27]=99;
 //			banco[28]=99;banco[29]=99;banco[30]=99;banco[31]=99;
-		end
-//		if(reset)begin
-//			banco[0]=0;banco[1]=0;banco[2]=0;banco[3]=0;
-//			banco[4]=0;banco[5]=0;banco[6]=0;banco[7]=0;
-//			banco[8]=0;banco[9]=0;banco[10]=0;banco[11]=0;
-//			banco[12]=0;banco[13]=0;banco[14]=0;banco[15]=0;
-//			banco[16]=0;banco[17]=0;banco[18]=0;banco[19]=0;
-//			banco[20]=0;banco[21]=0;banco[22]=0;banco[23]=0;
-//			banco[24]=0;banco[25]=0;banco[26]=0;banco[27]=0;
-//			banco[28]=0;banco[29]=0;banco[30]=0;banco[31]=0;
 //		end
+		if(reset)begin
+			banco[0]=0;banco[1]=0;banco[2]=0;banco[3]=0;
+			banco[4]=0;banco[5]=0;banco[6]=0;banco[7]=0;
+			banco[8]=0;banco[9]=0;banco[10]=0;banco[11]=0;
+			banco[12]=0;banco[13]=0;banco[14]=0;banco[15]=0;
+			banco[16]=0;banco[17]=0;banco[18]=0;banco[19]=0;
+			banco[20]=0;banco[21]=0;banco[22]=0;banco[23]=0;
+			banco[24]=0;banco[25]=0;banco[26]=0;banco[27]=0;
+			banco[28]=0;banco[29]=0;banco[30]=0;banco[31]=0;
+		end
 		else if (regWrite) begin
 			banco[writeReg] = writeData;
 		end
