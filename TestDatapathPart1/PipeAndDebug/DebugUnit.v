@@ -62,6 +62,7 @@ module DebugUnit(
 		input [31:0]	readDataFromRegs2,
 		input [31:0]	readDataFromRegs3,
 		input [31:0]	readDataFromRegs4,
+		input [31:0] 	ramDataIn,
 		
 		
 		output [7:0] 	dataToUartOutFifo,
@@ -69,6 +70,8 @@ module DebugUnit(
 		output reg	writeFifoFlag,
 		output reg pipeEnable,
 		output reg pipeReset ,
+		output debugRamSrc,
+		output [7:0] debugMemAddr,
 		output reg ledStep,
 		output reg ledCont,
 		output reg ledIdle,
@@ -81,7 +84,11 @@ module DebugUnit(
 		
     );
 	 
-	reg [31:0] mock= 32'd5;
+	reg [31:0] mem0;
+	reg [31:0] mem1;
+	reg [31:0] mem2;
+	reg [31:0] mem3;
+	reg [31:0] mem4;
 	wire [7:0] data [94:0];
     assign data[0]=             FE_pc;
     assign data[1]=             IF_ID_instruction       [31:24];
@@ -158,28 +165,34 @@ module DebugUnit(
     assign data[72]=  readDataFromRegs4[23:16];
     assign data[73]=  readDataFromRegs4[15:8];
     assign data[74]=  readDataFromRegs4[7:0];
-    assign data[75]=    mock[31:24];
-    assign data[76]=  mock[23:16];
-    assign data[77]=  mock[15:8];
-    assign data[78]=  mock[7:0];
-    assign data[79]=    mock[31:24];
-    assign data[80]=  mock[23:16];
-    assign data[81]=  mock[15:8];
-    assign data[82]=  mock[7:0];
-    assign data[83]=    mock[31:24];
-    assign data[84]=  mock[23:16];
-    assign data[85]=  mock[15:8];
-    assign data[86]=  mock[7:0];
-    assign data[87]=    mock[31:24];
-    assign data[88]=  mock[23:16];
-    assign data[89]=  mock[15:8];
-    assign data[90]=  mock[7:0];
-    assign data[91]=    mock[31:24];
-    assign data[92]=  mock[23:16];
-    assign data[93]=  mock[15:8];
-    assign data[94]=  mock[7:0];
-	assign dataToUartOutFifo = data[sendCounter];
-	
+    assign data[75]=  ramDataIn[31:24];
+    assign data[76]=  ramDataIn[23:16];
+    assign data[77]=  ramDataIn[15:8];
+    assign data[78]=  ramDataIn[7:0];
+    assign data[79]=  ramDataIn[31:24];
+    assign data[80]=  ramDataIn[23:16];
+    assign data[81]=  ramDataIn[15:8];
+    assign data[82]=  ramDataIn[7:0];
+    assign data[83]=  ramDataIn[31:24];
+    assign data[84]=  ramDataIn[23:16];
+    assign data[85]=  ramDataIn[15:8];
+    assign data[86]=  ramDataIn[7:0];
+    assign data[87]=  ramDataIn[31:24];
+    assign data[88]=  ramDataIn[23:16];
+    assign data[89]=  ramDataIn[15:8];
+    assign data[90]=  ramDataIn[7:0];
+    assign data[91]=  ramDataIn[31:24];
+    assign data[92]=  ramDataIn[23:16];
+    assign data[93]=  ramDataIn[15:8];
+    assign data[94]=  ramDataIn[7:0];
+	 assign dataToUartOutFifo = data[sendCounter];
+	 
+	 assign debugRamSrc = (current_state==SEND);
+	 assign debugMemAddr = (sendCounter>=75 && sendCounter<=78)? 0 :
+								  (sendCounter>=79 && sendCounter<=82)? 1 :
+								  (sendCounter>=83 && sendCounter<=86)? 2 :
+								  (sendCounter>=87 && sendCounter<=90)? 3 :
+								  (sendCounter>=91 && sendCounter<=94)? 4 : 0;
 	 reg [2:0] current_state;
 	 reg [2:0] next_state;
 //	 reg [7:0]sendCounter;
@@ -192,7 +205,6 @@ module DebugUnit(
 							SEND = 4;
 							
 	 localparam [7:0]cantDatos=8'd95;
-	 
 	 
 	 always @(posedge clock) begin
 		if(reset)begin

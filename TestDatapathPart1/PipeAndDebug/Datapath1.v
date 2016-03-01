@@ -165,7 +165,12 @@ module Datapath1(
 		 assign resultWB = (memToRegWB)? memoryOutWB : aluOutWB;
 		 assign PC = (pcSrc)? pcBranchAddr : pcNext;
 		 
-		 
+		 wire debugRamSrc;
+		 wire [7:0] debugMemAddr;
+		 wire [7:0] ramDataAddr;
+		 wire [3:0] WEA;
+		 assign WEA= (debugRamSrc)? 4'b0: memWriteMEM;
+		 assign ramDataAddr= (debugRamSrc)? debugMemAddr: aluOutMEM[7:0];
 		 
 	//Multiplexores Hazards:
 		 //Declaracion
@@ -209,8 +214,8 @@ module Datapath1(
 	 
 	 RAM ram(
 	  .clka(clock), // input clka niego el clock para no perder un ciclo en la lectura
-	  .wea(memWriteMEM), 
-	  .addra(aluOutMEM[7:0]), // input [7 : 0] addra
+	  .wea(WEA), 
+	  .addra(ramDataAddr), // input [7 : 0] addra
 	  .dina(writeDataMEM), // input [31 : 0] dina
 	  .douta(readDataMemory) // output [31 : 0] douta
 	);
@@ -451,12 +456,14 @@ module Datapath1(
 		.readDataFromRegs2(readDataFromRegsToDebug2),
 		.readDataFromRegs3(readDataFromRegsToDebug3),
 		.readDataFromRegs4(readDataFromRegsToDebug4),
+		.ramDataIn(readDataMemory),
 		.dataToUartOutFifo(dataToUartOutFifo),
 		.readFifoFlag(uartReadFlag),
 		.writeFifoFlag(uartWriteFlag),
 		.pipeEnable(debugEnable),
 		.pipeReset (debugReset),
-		
+		.debugRamSrc(debugRamSrc),
+		.debugMemAddr(debugMemAddr),
 		.ledStep(ledStep),
 		.ledCont(ledCont),
 		.ledIdle(ledIdle),
