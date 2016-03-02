@@ -1,17 +1,11 @@
 package View;
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.Font;
-import java.awt.FontFormatException;
-import java.awt.GraphicsEnvironment;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,10 +20,9 @@ import Utils.Pair;
 public class View implements SubjectSend, ObserverReceive {
 	private ArrayList<ObserverSend> observers = new ArrayList<ObserverSend>();
 	
-//	private JLabel fromText,toText;
 	private JFrame frame;
 	private Model model;
-	private JButton continueModeButton, stepModeButton, nextStepButton;
+	private JButton continueModeButton, stepModeButton, nextStepButton, resetButton;
 	private HashMap<String,ArrayList<Pair<String,JTextField>>> pipelineRegistersData;
 	private ArrayList<Pair<Integer,JTextField>> generalPurposeRegisters;
 	private ArrayList<Pair<Integer,JTextField>> memoryRegisters;
@@ -87,6 +80,7 @@ public class View implements SubjectSend, ObserverReceive {
         continueModeButton = new JButton("Continue");
         stepModeButton = new JButton("Step");
         nextStepButton = new JButton("Next");
+        resetButton = new JButton("Reset");
 
         generalPurposeRegisters = new ArrayList<Pair<Integer,JTextField>>();
         memoryRegisters = new ArrayList<Pair<Integer,JTextField>>();
@@ -160,12 +154,12 @@ public class View implements SubjectSend, ObserverReceive {
         
         continueModeButton.setVisible(true);
         continueModeButton.setEnabled(true);
-        continueModeButton.setBounds(xBase, yBase + windowHeight / 2, 100, 20);
+        continueModeButton.setBounds(xBase, yBase + windowHeight / 2, 80, 20);
         continueModeButton.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				//continueModeButton.setEnabled(false);
-//				stepModeButton.setEnabled(false);
+				continueModeButton.setEnabled(false);
+				stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(false);
 				command = 'c';
 				notifySend();
@@ -174,12 +168,12 @@ public class View implements SubjectSend, ObserverReceive {
         
         stepModeButton.setVisible(true);
         stepModeButton.setEnabled(true);
-        stepModeButton.setBounds(xBase + 150, yBase + windowHeight / 2, 100, 20);
+        stepModeButton.setBounds(xBase + 120, yBase + windowHeight / 2, 80, 20);
         stepModeButton.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-//				continueModeButton.setEnabled(false);
-				//stepModeButton.setEnabled(false);
+				continueModeButton.setEnabled(false);
+				stepModeButton.setEnabled(false);
 				nextStepButton.setEnabled(true);
 				command = 's';
 				notifySend();
@@ -189,7 +183,7 @@ public class View implements SubjectSend, ObserverReceive {
         
         nextStepButton.setVisible(true);
         nextStepButton.setEnabled(false);
-        nextStepButton.setBounds(xBase + 300, yBase + windowHeight / 2, 100, 20);
+        nextStepButton.setBounds(xBase + 240, yBase + windowHeight / 2, 80, 20);
         nextStepButton.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -198,9 +192,38 @@ public class View implements SubjectSend, ObserverReceive {
 			}
         });
         
+        resetButton.setVisible(true);
+        resetButton.setEnabled(true);
+        resetButton.setBounds(xBase + 360, yBase + windowHeight / 2, 80, 20);
+        resetButton.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				continueModeButton.setEnabled(true);
+				stepModeButton.setEnabled(true);
+				nextStepButton.setEnabled(false);
+				
+				for(String reg : datapathRegisters){
+		        	for(Pair<String,JTextField> p : pipelineRegistersData.get(reg)){
+		        		p.getSnd().setText("");
+		        	}
+		        }
+				
+				for(Pair<Integer,JTextField> p : generalPurposeRegisters){
+					p.getSnd().setText("");
+				}
+				
+				for(Pair<Integer,JTextField> p : memoryRegisters){
+					p.getSnd().setText("");
+				}
+				
+				frame.repaint();
+			}
+        });
+        
         contentPane.add(nextStepButton);
         contentPane.add(stepModeButton);
         contentPane.add(continueModeButton);
+        contentPane.add(resetButton);
         contentPane.add(fondo);
 
         frame.repaint();

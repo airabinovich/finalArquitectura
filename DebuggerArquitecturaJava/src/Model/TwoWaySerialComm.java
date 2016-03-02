@@ -15,7 +15,7 @@ import gnu.io.SerialPort;
 public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     private SerialWriter sw;
     private SerialReader sr;
-    private static final int baudRate = 1200;//9600 / 4;
+    private static final int baudRate = 1200;
 	private static int portIndex = -1;
     private static ArrayList<String> puertosLinux;
     private static ArrayList<String> puertosWin;
@@ -29,7 +29,7 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         puertos = new HashMap<String,ArrayList<String>>();    
         puertosLinux = new ArrayList<String>();
         puertosWin = new ArrayList<String>();
-        for(int i = 10; i < 25; i++){
+        for(int i = 0; i < 25; i++){
         	String iStr = Integer.toString(i);
         	puertosLinux.add("/dev/ttyUSB" + iStr);
             puertosLinux.add("/dev/ttyACM" + iStr);
@@ -169,7 +169,6 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     		try {
 				buffer.mark(0);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
     		
@@ -183,7 +182,6 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
         	long startTime= System.currentTimeMillis();
         	boolean alreadyReseted = false;
         	
-        	//BufferedReader buffer= new BufferedReader(new InputStreamReader(in));
         	try {
 				while(!(in.available()>0)){
 					Thread.sleep(200);
@@ -192,12 +190,11 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
             		timeout= Math.abs(currentTime-startTime)>2000;
             		if(timeout && !alreadyReseted){
             			alreadyReseted = true;
-            			System.out.println("--------------------------------");
+//            			System.out.println("--------------------------------");
         				indexDataReceived = 0;
         				subIndexDataReceived = 0;
         			}
 				}
-//				buffer.reset();
 			} catch (IOException e2) {
 				// TODO Auto-generated catch block
 				e2.printStackTrace();
@@ -214,9 +211,9 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
 					}
             		alreadyReseted = false;
             		int readValue = in.read();
-            		System.out.println("Dato recibido: " + Integer.toHexString(readValue).toUpperCase()); 
+//            		System.out.println("Dato recibido: " + Integer.toHexString(readValue).toUpperCase()); 
         			if(indexDataReceived >= dataToReceive.size()){
-        				System.out.println("--------------------------------");
+//        				System.out.println("--------------------------------");
         				indexDataReceived = 0;
         				subIndexDataReceived = 0;
         			}
@@ -284,7 +281,6 @@ public class TwoWaySerialComm implements ObserverSend, SubjectReceive{
     
     class SerialWriter implements ObserverSend{
         OutputStream out;
-        //double auxiliar;
         int datoAEnviar = 0;
         public SerialWriter (OutputStream out){
             this.out = out;
