@@ -19,14 +19,14 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module FE(
-		input clock,
-		input reset,
-		input debugEnable,
-		input debugReset,
-		input notEnable,
-		input [7:0]pc,
-		output reg [7:0]pcOut
-    );
+		input 		clock,
+		input 		reset,
+		input 		debugEnable,
+		input 		debugReset,
+		input 		notEnable,
+		input 		[7:0]pc,
+		output reg 	[7:0]pcOut
+);
 	 
 	 always @(negedge clock,posedge reset)begin
 			if(reset)begin

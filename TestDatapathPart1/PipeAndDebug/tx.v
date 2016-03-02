@@ -49,16 +49,6 @@ module UART_tx (
 			current_state <= next_state;
 	end
 
-	// algoritmo de próximo de estado
-/*	always @* begin
-		case(current_state) 
-			IDLE: next_state <= tx_start? IDLE : START;
-			START: next_state <= SEND;
-			SEND: next_state <= (B_sent>=8)? STOP : SEND;
-			STOP: next_state <= IDLE;
-		endcase
-	end
-*/
 	// contadores
 	always @(posedge clock) begin
 		case(current_state)
@@ -102,15 +92,4 @@ module UART_tx (
 		endcase
 	end
 	
-/*	//algoritmo de salida
-	always @* begin
-		tx_done<= 0;
-		tx <= B_stop;
-		case(current_state)
-			START: 	tx <= B_start;
-			SEND: 	tx <= d_in[B_sent];
-			STOP: 	tx_done <= 1;
-		endcase
-	end
-*/
 endmodule

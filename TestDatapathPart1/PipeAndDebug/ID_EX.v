@@ -38,7 +38,7 @@ module ID_EX(
 		input loadImm,
 		input [3:0]memWrite,
 		input memToReg,
-		input[1:0] memReadWidth,
+		input [1:0] memReadWidth,
 		input regWrite,
 		input eop,
 		

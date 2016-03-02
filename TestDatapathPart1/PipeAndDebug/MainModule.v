@@ -53,14 +53,13 @@ module MainModule(
 		.sendCounter(sendCounter),
 		.sentFlag(sentFlag),
 		.notStartUartTx(notStartUartTx),
-		.waitingForReg(waitingForReg),
 		.ledDataAvailable(ledDataAvailable)
 	 );
 	 
 	 clk_wiz_v3_6(
-		.CLK_IN1(clock),
-		.CLK_OUT1(dcmOut),
-		.CLK_OUT2(dcmOut70)
+		.CLK_IN1(clock),		// clock de la placa a 100MHz
+		.CLK_OUT1(dcmOut),	// clock a 12.5MHz
+		.CLK_OUT2(dcmOut70)	// clock a 12.5MHz desfasado 70 grados
 	 );
 
 

@@ -23,7 +23,7 @@ module MemoryLoadMask(
 		 input [1:0]maskLength, // 0:Word , 1:HalfWord, 2: Byte, 3:Word
 		 output reg [31:0]dataOut
     );
-	 
+	 //enmascara un dato para luego meterlo completo o solo una parte a la memoria
 	 always @* begin
 		case (maskLength)
 			0: dataOut<=dataIn;

@@ -19,16 +19,16 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module IF_ID(
-		input clock,
-		input reset,
-		input debugEnable,
-		input debugReset,
-		input notEnable,
-		input clear,
-		input[31:0] instruction,
-		input[7:0] pcNext,
-		output reg[31:0] instructionOut,
-		output reg[7:0] pcNextOut
+		input 		clock,
+		input 		reset,
+		input 		debugEnable,
+		input 		debugReset,
+		input 		notEnable,
+		input 		clear,
+		input			[31:0] instruction,
+		input			[7:0] pcNext,
+		output reg	[31:0] instructionOut,
+		output reg	[7:0] pcNextOut
     );
 	 
 	 always @(negedge clock,posedge reset)begin

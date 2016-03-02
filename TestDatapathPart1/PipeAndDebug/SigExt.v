@@ -19,20 +19,20 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module SigExt(
-	input[15:0] in,
-	input zeroEx,
-	output reg [31:0]out
-    );
+	input			[15:0] in,
+	input 		zeroEx,		//flag para indicar si se necesita zero extend en lugar de sign extend
+	output reg 	[31:0]out
+);
 	 
 	 always @(*) begin
 		if(zeroEx)begin
-			out<={16'h0000,in};
+			out <= {16'h0000,in};
 		end
 		else if(in[15])begin
-			out<={16'hFFFF,in};
+			out <= {16'hFFFF,in};
 		end
 		else begin
-		   out<={16'h0000,in};
+		   out <= {16'h0000,in};
 		end
 	 end
 

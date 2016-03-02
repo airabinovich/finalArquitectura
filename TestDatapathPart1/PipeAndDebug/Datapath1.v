@@ -19,28 +19,29 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Datapath1(
-		input 	clock,
-		input    clock70,
-		input 	resetGral,
-		input 	uartRxPin,
-		output 	uartTxPin,
+		input 	clock,		// clock principal
+		input    clock70,		// clock desfasado 70 grados respecto del original
+		input 	resetGral,	// reset general
+		input 	uartRxPin,	// pin de recepción de la UART
+		output 	uartTxPin,	// pin de transmisión de la UART
 		
 		output 	ALUzero,
 		output 	ALUOverflow,
 		
-		output ledStep,
+		output ledStep,				// 4 leds de estado de la unidad de debug
 		output ledCont,
 		output ledIdle,
 		output ledSend,
-		output [7:0]sendCounter,
-		output sentFlag,
-		output notStartUartTx,
-		output waitingForReg,
-		output ledDataAvailable
-    ); 
-		assign ALUzero=aluZero;
-		assign ALUOverflow=aluOverflow;
-	   assign ledDataAvailable=uartDataAvailable;
+		
+		output [7:0]sendCounter,	// contador de la unidad de debug
+		output sentFlag,				// bit de dato enviado en la unidad de debug
+		output notStartUartTx,		// bit de frenado de la UART desde la unidad de debug	
+		output ledDataAvailable		// bit de dato disponible para lectura en la unidad de debug
+); 
+	 
+	 assign ALUzero=aluZero;
+	 assign ALUOverflow=aluOverflow;
+	 assign ledDataAvailable=uartDataAvailable;
 	 
 	 
 	 wire [31:0]instruction;
@@ -169,8 +170,11 @@ module Datapath1(
 		 wire [7:0] debugMemAddr;
 		 wire [7:0] ramDataAddr;
 		 wire [3:0] WEA;
-		 assign WEA= (debugRamSrc)? 4'b0: memWriteMEM;
-		 assign ramDataAddr= (debugRamSrc)? debugMemAddr: aluOutMEM[7:0];
+		 
+		 // si se activa el debug de la RAM se activan todos los bytes
+		 assign WEA = (debugRamSrc)? 4'b0: memWriteMEM;
+		 // si se activa el debug de la RAM se utiliza la dirección alternativa
+		 assign ramDataAddr = (debugRamSrc)? debugMemAddr: aluOutMEM[7:0];
 		 
 	//Multiplexores Hazards:
 		 //Declaracion
@@ -213,17 +217,17 @@ module Datapath1(
 	 
 	 
 	 RAM ram(
-	  .clka(clock), // input clka niego el clock para no perder un ciclo en la lectura
+	  .clka(clock),
 	  .wea(WEA), 
-	  .addra(ramDataAddr), // input [7 : 0] addra
-	  .dina(writeDataMEM), // input [31 : 0] dina
-	  .douta(readDataMemory) // output [31 : 0] douta
+	  .addra(ramDataAddr), 		// dirección
+	  .dina(writeDataMEM), 		// dato de entrada
+	  .douta(readDataMemory) 	// dato de salida
 	);
 	
 	instructionROM instructionMemory (
-	  .clka(clock), // input clka
-	  .addra(pcFE), // input [7 : 0] addra
-	  .douta(instruction) // output [31 : 0] douta
+	  .clka(clock), 
+	  .addra(pcFE), 				// dirección
+	  .douta(instruction) 		// dato de salida. Instrucción porque es la memoria de instrucciones
 	);
 
 	 REGBANK_banco bank(
@@ -251,6 +255,7 @@ module Datapath1(
 		.zero(aluZero),
 		.overflow(aluOverflow)
 	 );
+	 
 	 SigExt sigext(
 		.in(instructionID[15:0]),
 		.zeroEx(zeroExtendFlag),
@@ -263,10 +268,11 @@ module Datapath1(
 		.sum(pcBranchAddr)
 	 );
 	 
+	 //sumador del contador de programa
 	 Adder PCAdd(
 		.a(pcFE),
-		.b(8'b1),
-		.sum(pcNext)
+		.b(8'b1),		// suma 1 y no 4 porque la memoria direcciones palabras de 32 bits, no bytes
+		.sum(pcNext)	// genera el próximo contador de programa
 	 );
 
 								
@@ -306,7 +312,7 @@ module Datapath1(
 		.memWriteOut(memWriteMEM),
 		.memReadWidthOut(memReadWidthMEM),
 		.eopOut(eopFlagMEM)
-);
+	);
 			
 	 ID_EX id_ex(
 		.clock(clock),
@@ -357,6 +363,7 @@ module Datapath1(
 		.maskLength(memReadWidthMEM),
 		.dataOut(readDataMemoryMasked)
 	 );
+	 
 	 MEM_WB mem_wb(
 		.clock(clock),
 		.reset(resetGral),
@@ -368,7 +375,6 @@ module Datapath1(
 		.regWrite(regWriteMEM),
 		.memToReg(memToRegMEM),
 		.eop(eopFlagMEM),
-		
 		.writeRegisterOut(writeRegisterWB),
 		.aluOutOut(aluOutWB),
 		.memoryOutOut(memoryOutWB),
@@ -401,7 +407,6 @@ module Datapath1(
 		.regWriteEX(regWriteEX),
 		.regWriteMEM(regWriteMEM),
 		.regWriteWB(regWriteWB),
-
 		.stallFE(stallFE),
 		.stallID(stallID),
 		.forwardAID(forwardAID),
@@ -470,8 +475,7 @@ module Datapath1(
 		.ledSend(ledSend),
 		.notStartUartTrans(notStartUartTrans),
 		.sendCounter(sendCounter),
-		.sentFlag(sentFlag),
-		.waitingForReg(waitingForReg)
+		.sentFlag(sentFlag)
 	 );
 
 	UART_uart uartMod(

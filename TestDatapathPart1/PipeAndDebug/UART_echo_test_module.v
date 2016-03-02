@@ -19,17 +19,17 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module UART_uart(
-	input clock,
-	input uart_rx,
-	input uart_reset,
-	input readFlag,
-	input writeFlag,
-	input [7:0]dataToSend,
-	input uart_tx_start,
-	output [7:0]receivedData,
-	output dataAvailable,
-	output uart_tx,
-	output uart_tx_done
+	input 	clock,
+	input 	uart_rx,
+	input 	uart_reset,
+	input 	readFlag,
+	input 	writeFlag,
+	input 	[7:0]dataToSend,
+	input 	uart_tx_start,
+	output	[7:0]receivedData,
+	output	dataAvailable,
+	output	uart_tx,
+	output	uart_tx_done
    );
 
 	wire 		baud_rate_rx,
@@ -40,13 +40,12 @@ module UART_uart(
 				uart_not_empty_flag_rx,
 				uart_empty_flag_tx,
 				uart_not_empty_flag_tx;
-//				uart_full_flag_rx,
-//				uart_full_flag_tx;
 	
 	wire [7:0]	uart_data_rx;
 	wire [7:0]	uart_data_tx;
 	wire [7:0]	uart_data;
 	
+	// división de frecuencia para llegar a 1200 baudios con clock de 3.125MHz
 	localparam uart_COUNT = 651;
 	
 	UART_baud_rate_generator #(.COUNT(uart_COUNT)) rx_baud_rate(
@@ -71,7 +70,6 @@ module UART_uart(
 		.data_in(uart_data_rx),
 		.data_out(receivedData),
 		.empty_flag(uart_empty_flag_rx)
-//		.full_flag(uart_full_flag_rx)
 	);
 	
 	UART_baud_rate_generator #(.COUNT(uart_COUNT*16)) tx_baud_rate(
@@ -89,15 +87,5 @@ module UART_uart(
 		.tx_done(uart_tx_done)
 	);
 	
-//	UART_fifo_interface #(.bits_depth(8))fifo_tx(
-//		.clock(clock),
-//		.reset(uart_reset),
-//		.write_flag(writeFlag),
-//		.read_next(send_next_tx),
-//		.data_in(dataToSend),
-//		.data_out(uart_data_tx),
-//		.empty_flag(uart_empty_flag_tx)
-////		.full_flag(uart_full_flag_tx)
-//	);
 	assign dataAvailable = ~uart_empty_flag_rx;
 endmodule

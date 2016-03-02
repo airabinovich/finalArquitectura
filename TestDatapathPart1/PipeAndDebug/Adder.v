@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Adder(
-		input signed [7:0] a,
-		input signed [7:0] b,
-		output reg [7:0] sum
-    );
+	input signed [7:0] a,
+	input signed [7:0] b,
+	output reg 	 [7:0] sum
+);
 	always @* begin
 		sum <= a+b;
 	end
